@@ -76,13 +76,13 @@ export default function Header({
               </div>
             </div>
 
-            {/* DESKTOP NAV LINKS */}
-            <nav className="hidden lg:flex items-center gap-7 text-xs font-sans font-bold text-slate-700" id="desktop-nav">
+            {/* DESKTOP NAV LINKS (Exact Precision Alignment) */}
+            <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-xs font-sans font-bold text-slate-700" id="desktop-nav">
               
               <button
                 onClick={() => handleItemClick('home')}
                 className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
-                  activeSection === 'home' ? 'text-orange-600 font-extrabold' : ''
+                  activeSection === 'home' ? 'text-orange-600 font-extrabold border-b-2 border-orange-600' : ''
                 }`}
               >
                 Home
@@ -91,7 +91,7 @@ export default function Header({
               <button
                 onClick={() => handleItemClick('about')}
                 className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
-                  activeSection === 'about' ? 'text-orange-600 font-extrabold' : ''
+                  activeSection === 'about' ? 'text-orange-600 font-extrabold border-b-2 border-orange-600' : ''
                 }`}
               >
                 About Us
@@ -100,7 +100,7 @@ export default function Header({
               <button
                 onClick={() => handleItemClick('destinations')}
                 className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
-                  activeSection === 'destinations' ? 'text-orange-600 font-extrabold' : ''
+                  activeSection === 'destinations' ? 'text-orange-600 font-extrabold border-b-2 border-orange-600' : ''
                 }`}
               >
                 Destinations
@@ -109,15 +109,27 @@ export default function Header({
               <button
                 onClick={() => handleItemClick('cars')}
                 className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
-                  activeSection === 'cars' ? 'text-orange-600 font-extrabold' : ''
+                  activeSection === 'cars' ? 'text-orange-600 font-extrabold border-b-2 border-orange-600' : ''
                 }`}
               >
                 Transport Rent
               </button>
 
+              {/* GALLERY LINK (SEBELAH KANAN TRANSPORT RENT) */}
+              <button
+                onClick={() => handleItemClick('gallery')}
+                className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
+                  activeSection === 'gallery' ? 'text-orange-600 font-extrabold border-b-2 border-orange-600' : ''
+                }`}
+              >
+                Gallery
+              </button>
+
               <button
                 onClick={() => handleItemClick('footer-contact')}
-                className="hover:text-orange-600 transition-colors cursor-pointer py-1"
+                className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
+                  activeSection === 'footer-contact' ? 'text-orange-600 font-extrabold border-b-2 border-orange-600' : ''
+                }`}
               >
                 Contact Us
               </button>
@@ -125,7 +137,7 @@ export default function Header({
               {/* BOOK A TOUR CORAL BUTTON */}
               <button
                 onClick={onBookingClick}
-                className="bg-[#f94a29] hover:bg-[#e03d1e] text-white font-display font-extrabold text-xs uppercase px-5 py-2.5 rounded-xl shadow-md shadow-orange-600/20 transition-all cursor-pointer tracking-wider"
+                className="bg-[#f94a29] hover:bg-[#e03d1e] text-white font-display font-extrabold text-xs uppercase px-5 py-2.5 rounded-xl shadow-md shadow-orange-600/20 transition-all cursor-pointer tracking-wider ml-1"
                 id="header-book-tour-btn"
               >
                 BOOK A TOUR
@@ -180,6 +192,12 @@ export default function Header({
                 className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100"
               >
                 Transport Rent
+              </button>
+              <button
+                onClick={() => handleItemClick('gallery')}
+                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100"
+              >
+                Gallery
               </button>
               <button
                 onClick={() => handleItemClick('footer-contact')}

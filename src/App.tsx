@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import About from './components/About';
 import AboutPage from './components/AboutPage';
 import Services from './components/Services';
 import TransportRentPage from './components/TransportRentPage';
+import GallerySection from './components/GallerySection';
 import BookingSteps from './components/BookingSteps';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
@@ -32,7 +34,7 @@ export default function App() {
       }
 
       if (currentPage === 'home') {
-        const sections = ['home', 'destinations', 'footer-contact'];
+        const sections = ['home', 'about', 'destinations', 'cars', 'gallery', 'footer-contact'];
         const scrollPosition = window.scrollY + 250;
 
         for (const section of sections) {
@@ -122,7 +124,11 @@ export default function App() {
               onBookingClick={() => setSelectedCar(CARS[0])} 
             />
 
+            <About lang={lang} />
+
             <Services lang={lang} />
+
+            <GallerySection lang={lang} />
 
             <BookingSteps lang={lang} />
 
