@@ -193,36 +193,36 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
       {/* PRECISE & PROFESSIONAL DETAIL MODAL */}
       <AnimatePresence>
         {selectedPackage && selectedTier && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 overflow-hidden">
+          <div className="fixed inset-0 z-[100] flex flex-col items-center justify-start pt-24 sm:pt-28 pb-6 px-3 sm:px-6 overflow-hidden">
             {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={handleCloseModal}
-              className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-0"
+              className="fixed inset-0 bg-slate-950/85 backdrop-blur-md z-0"
             />
 
             {/* Modal Precision Box */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: 10 }}
+              initial={{ opacity: 0, scale: 0.95, y: 15 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: 10 }}
+              exit={{ opacity: 0, scale: 0.95, y: 15 }}
               transition={{ duration: 0.2 }}
-              className="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden z-10 text-left max-h-[85vh] flex flex-col my-auto"
+              className="relative w-full max-w-xl bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden z-10 text-left max-h-[calc(100vh-8.5rem)] flex flex-col my-auto"
             >
               {/* Header */}
-              <div className="relative bg-slate-900 text-white p-5 sm:p-6 shrink-0 border-b border-slate-800 z-20">
+              <div className="relative bg-slate-900 text-white p-4 sm:p-5 shrink-0 border-b border-slate-800 z-20">
                 <button
                   onClick={handleCloseModal}
-                  className="absolute top-4 right-4 sm:top-5 sm:right-5 w-9 h-9 rounded-full bg-red-600 hover:bg-red-700 text-white transition-all flex items-center justify-center shadow-lg cursor-pointer z-50 hover:scale-110 border border-white/30"
-                  title="Tutup Modal"
+                  className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 w-9 h-9 rounded-full bg-red-600 hover:bg-red-700 text-white transition-all flex items-center justify-center shadow-xl cursor-pointer z-50 hover:scale-110 border-2 border-white"
+                  title="Tutup Modal (Kembali)"
                   id="close-tour-modal"
                 >
                   <X className="w-5 h-5 stroke-[2.5]" />
                 </button>
 
-                <div className="space-y-1.5 pr-12">
+                <div className="space-y-1.5 pr-14">
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="bg-red-600 text-white text-[10px] font-bold uppercase px-2.5 py-0.5 rounded shadow-xs">
                       {t.pkg_modal_duration}: {selectedPackage.duration}
@@ -231,7 +231,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
                       {t.pkg_route_label}: {selectedPackage.routeDisplay}
                     </span>
                   </div>
-                  <h2 className="font-display font-black text-lg sm:text-2xl uppercase tracking-tight text-white leading-tight">
+                  <h2 className="font-display font-black text-base sm:text-xl uppercase tracking-tight text-white leading-tight pt-0.5">
                     {selectedPackage.title}
                   </h2>
                 </div>
