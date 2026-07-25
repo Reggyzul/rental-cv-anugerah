@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { TOUR_PACKAGES, TourPackage, TourTier } from '../data/packages';
 import { MapPin, Calendar, Bus, ArrowRight, X, MessageCircle, CheckCircle2 } from 'lucide-react';
+import { TRANSLATIONS } from '../utils/translations';
 
 interface PackageTourPageProps {
   lang: 'ID' | 'EN';
@@ -11,6 +12,7 @@ interface PackageTourPageProps {
 export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPageProps) {
   const [selectedPackage, setSelectedPackage] = useState<TourPackage | null>(null);
   const [selectedTier, setSelectedTier] = useState<TourTier | null>(null);
+  const t = TRANSLATIONS[lang];
 
   const handleOpenModal = (pkg: TourPackage) => {
     setSelectedPackage(pkg);
@@ -34,13 +36,13 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
       <div className="bg-gradient-to-r from-red-700 via-red-600 to-red-800 text-white py-12 px-4 sm:px-6 lg:px-8 shadow-md relative overflow-hidden mb-10">
         <div className="max-w-6xl mx-auto text-center space-y-3 relative z-10">
           <span className="inline-block bg-white/10 px-3 py-1 rounded-full border border-white/20 text-[11px] font-bold uppercase tracking-widest text-red-200">
-            Paket Tour Perjalanan Resmi
+            {t.pkg_tag}
           </span>
           <h1 className="font-display font-black text-3xl sm:text-4xl uppercase tracking-tight text-white">
-            PAKET TOUR SPESIAL NUSANTARA
+            {t.pkg_title}
           </h1>
           <p className="font-sans text-white/90 text-xs sm:text-sm max-w-xl mx-auto font-medium leading-relaxed">
-            Pilihan paket perjalanan wisata terpadu dengan Big Bus Eksekutif & VIP Legrest CV. Anugrah Pariwisata.
+            {t.pkg_subtitle}
           </p>
         </div>
       </div>
@@ -87,7 +89,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
                   {/* Route Summary */}
                   <div>
                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-1">
-                      Rute Perjalanan
+                      {t.pkg_route_label}
                     </span>
                     <p className="text-xs font-semibold text-slate-700 leading-snug">
                       {pkg.routeDisplay}
@@ -97,13 +99,13 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
                   {/* Pricing Tiers Preview */}
                   <div className="pt-2.5 border-t border-slate-100 flex items-center justify-between">
                     <div>
-                      <span className="text-[10px] font-bold text-slate-400 uppercase block">Mulai Dari</span>
+                      <span className="text-[10px] font-bold text-slate-400 uppercase block">{t.pkg_starting_from}</span>
                       <span className="font-display font-black text-base text-red-600">
-                        {pkg.minPrice} <span className="text-[10px] font-normal text-slate-500">/ org</span>
+                        {pkg.minPrice} <span className="text-[10px] font-normal text-slate-500">{t.pkg_per_person}</span>
                       </span>
                     </div>
                     <span className="text-[11px] font-semibold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-md">
-                      Eksekutif & VIP
+                      Eksekutif &amp; VIP
                     </span>
                   </div>
                 </div>
@@ -115,7 +117,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
                   onClick={() => handleOpenModal(pkg)}
                   className="w-full bg-slate-900 hover:bg-red-600 text-white font-display font-bold text-xs uppercase py-3 px-4 rounded-xl shadow-xs transition-colors flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  <span>Lihat Detail Paket</span>
+                  <span>{t.pkg_detail_btn}</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </div>
@@ -158,10 +160,10 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
                 <div className="space-y-2 pr-10">
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="bg-red-600 text-white text-[10px] font-bold uppercase px-2.5 py-0.5 rounded shadow-xs">
-                      Durasi: {selectedPackage.duration}
+                      {t.pkg_modal_duration}: {selectedPackage.duration}
                     </span>
                     <span className="text-[11px] font-semibold text-slate-300">
-                      Rute: {selectedPackage.routeDisplay}
+                      {t.pkg_route_label}: {selectedPackage.routeDisplay}
                     </span>
                   </div>
                   <h2 className="font-display font-black text-xl sm:text-2xl uppercase tracking-tight text-white leading-tight">
@@ -176,7 +178,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
                 {/* 1. TIER SELECTION CARDS */}
                 <div>
                   <h3 className="font-display font-bold text-xs uppercase tracking-wider text-slate-500 mb-2.5">
-                    PILIHAN TIPE BUS & AKOMODASI
+                    {t.pkg_modal_tier_title}
                   </h3>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -204,25 +206,25 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
                               </div>
                               {isSelected && (
                                 <span className="text-[10px] font-bold text-red-600 bg-red-100 px-1.5 py-0.5 rounded">
-                                  Terpilih
+                                  {t.pkg_modal_selected}
                                 </span>
                               )}
                             </div>
 
                             <div className="pt-2 border-t border-slate-100 text-[11px] text-slate-700">
-                              <span className="font-bold text-slate-900 block">Fasilitas Hotel:</span>
+                              <span className="font-bold text-slate-900 block">{t.pkg_modal_hotel}:</span>
                               <span>{tier.hotelDetails}</span>
                             </div>
 
                             <div className="text-[10px] text-slate-500 bg-slate-100/80 p-2 rounded border border-slate-200/60">
-                              <span className="font-bold text-slate-700">Catatan:</span> {tier.notes}
+                              <span className="font-bold text-slate-700">{t.pkg_modal_notes}:</span> {tier.notes}
                             </div>
                           </div>
 
                           <div className="mt-3 pt-2 border-t border-slate-200/80 flex items-center justify-between">
-                            <span className="text-[10px] font-bold text-slate-500 uppercase">Biaya Paket</span>
+                            <span className="text-[10px] font-bold text-slate-500 uppercase">{t.pkg_starting_from}</span>
                             <span className="font-display font-black text-sm text-red-600">
-                              {tier.pricePerPerson} <span className="text-[10px] font-normal text-slate-500">/ org</span>
+                              {tier.pricePerPerson} <span className="text-[10px] font-normal text-slate-500">{t.pkg_per_person}</span>
                             </span>
                           </div>
                         </div>
@@ -234,7 +236,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
                 {/* 2. HIGHLIGHTS & DESTINASI */}
                 <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
                   <h4 className="font-display font-bold text-xs uppercase tracking-wider text-slate-700">
-                    Highlight Perjalanan & Destinasi Utama
+                    {t.pkg_modal_highlights}
                   </h4>
                   <ul className="space-y-1 text-slate-700 text-xs font-medium">
                     {selectedPackage.highlights.map((spot, idx) => (
@@ -251,7 +253,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
                   {/* Includes */}
                   <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1.5">
                     <h5 className="font-display font-bold text-xs uppercase tracking-wide text-slate-800">
-                      Fasilitas Termasuk
+                      {t.pkg_modal_includes}
                     </h5>
                     <ul className="space-y-1 text-slate-600 font-medium">
                       {selectedPackage.includes.map((inc, idx) => (
@@ -266,7 +268,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
                   {/* Excludes */}
                   <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1.5">
                     <h5 className="font-display font-bold text-xs uppercase tracking-wide text-slate-800">
-                      Tidak Termasuk (Exclude)
+                      {t.pkg_modal_excludes}
                     </h5>
                     <ul className="space-y-1 text-slate-600 font-medium">
                       {selectedPackage.excludes.map((exc, idx) => (
@@ -284,9 +286,9 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
               {/* Footer */}
               <div className="p-4 bg-slate-900 text-white flex items-center justify-between gap-4 border-t border-slate-800 shrink-0">
                 <div>
-                  <span className="text-[10px] text-slate-400 block font-medium">Opsi Terpilih:</span>
+                  <span className="text-[10px] text-slate-400 block font-medium">{t.pkg_modal_selected}:</span>
                   <span className="font-display font-bold text-xs text-white">
-                    {selectedTier.busType} — <span className="text-red-400">{selectedTier.pricePerPerson}/org</span>
+                    {selectedTier.busType} — <span className="text-red-400">{selectedTier.pricePerPerson}{t.pkg_per_person}</span>
                   </span>
                 </div>
 
@@ -295,7 +297,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
                   className="bg-red-600 hover:bg-red-700 text-white font-display font-bold text-xs uppercase py-2.5 px-5 rounded-xl transition-colors flex items-center gap-2 cursor-pointer shrink-0"
                 >
                   <MessageCircle className="w-4 h-4 fill-current" />
-                  <span>Pesan via WhatsApp</span>
+                  <span>{t.pkg_modal_wa_btn}</span>
                 </button>
               </div>
 

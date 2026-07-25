@@ -76,7 +76,7 @@ export default function Header({
               </div>
             </div>
 
-            {/* 2. CENTER: DESKTOP NAV LINKS (Package Tour Kanan Destinations & Tanpa Contact Us) */}
+            {/* 2. CENTER: DESKTOP NAV LINKS */}
             <nav className="hidden lg:flex items-center justify-center gap-5 xl:gap-7 text-xs font-sans font-bold text-slate-700 flex-1 px-4" id="desktop-nav">
               
               <button
@@ -85,7 +85,7 @@ export default function Header({
                   activeSection === 'home' ? 'text-red-600 font-extrabold border-b-2 border-red-600' : ''
                 }`}
               >
-                Home
+                {t.nav_home}
               </button>
 
               <button
@@ -94,7 +94,7 @@ export default function Header({
                   activeSection === 'about' ? 'text-red-600 font-extrabold border-b-2 border-red-600' : ''
                 }`}
               >
-                About Us
+                {t.nav_about}
               </button>
 
               <button
@@ -103,17 +103,16 @@ export default function Header({
                   activeSection === 'destinations' ? 'text-red-600 font-extrabold border-b-2 border-red-600' : ''
                 }`}
               >
-                Destinations
+                {t.nav_destinations}
               </button>
 
-              {/* PACKAGE TOUR (SEBELAH KANAN DESTINATIONS) */}
               <button
                 onClick={() => handleItemClick('package-tour')}
                 className={`hover:text-red-600 transition-colors cursor-pointer py-1 ${
                   activeSection === 'package-tour' ? 'text-red-600 font-extrabold border-b-2 border-red-600' : ''
                 }`}
               >
-                Package Tour
+                {t.nav_packages}
               </button>
 
               <button
@@ -122,7 +121,7 @@ export default function Header({
                   activeSection === 'cars' ? 'text-red-600 font-extrabold border-b-2 border-red-600' : ''
                 }`}
               >
-                Transport Rent
+                {t.nav_rentals}
               </button>
 
               <button
@@ -131,7 +130,7 @@ export default function Header({
                   activeSection === 'gallery' ? 'text-red-600 font-extrabold border-b-2 border-red-600' : ''
                 }`}
               >
-                Gallery
+                {t.nav_gallery}
               </button>
 
             </nav>
@@ -201,37 +200,37 @@ export default function Header({
                 onClick={() => handleItemClick('home')}
                 className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2 border-b border-slate-100"
               >
-                Home
+                {t.nav_home}
               </button>
               <button
                 onClick={() => handleItemClick('about')}
                 className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2 border-b border-slate-100"
               >
-                About Us
+                {t.nav_about}
               </button>
               <button
                 onClick={() => handleItemClick('destinations')}
                 className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2 border-b border-slate-100"
               >
-                Destinations
+                {t.nav_destinations}
               </button>
               <button
                 onClick={() => handleItemClick('package-tour')}
                 className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2 border-b border-slate-100"
               >
-                Package Tour
+                {t.nav_packages}
               </button>
               <button
                 onClick={() => handleItemClick('cars')}
                 className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2 border-b border-slate-100"
               >
-                Transport Rent
+                {t.nav_rentals}
               </button>
               <button
                 onClick={() => handleItemClick('gallery')}
                 className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2"
               >
-                Gallery
+                {t.nav_gallery}
               </button>
 
               {/* Language Switcher in Mobile Drawer */}

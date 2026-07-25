@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { MapPin, Calendar, Search, ChevronDown } from 'lucide-react';
 import { TRANSLATIONS } from '../utils/translations';
@@ -42,7 +42,7 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
         {/* Top Spacer: Memberikan jarak sedikit kebawah secara presisi */}
         <div className="h-20 sm:h-24" />
 
-        {/* Hero Central Typography (Bayu Buana Elegant Style) */}
+        {/* Hero Central Typography */}
         <div className="relative z-10 max-w-4xl mx-auto px-4 py-6 text-center space-y-3 sm:space-y-4">
           <motion.p
             initial={{ opacity: 0, y: -15 }}
@@ -50,7 +50,7 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
             className="font-serif italic text-3xl sm:text-4xl md:text-5xl text-[#dc2626] drop-shadow-md"
             style={{ fontFamily: "'Great Vibes', cursive, serif" }}
           >
-            Let's Explore The World
+            {t.hero_explore}
           </motion.p>
 
           <motion.h1
@@ -59,7 +59,7 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
             transition={{ delay: 0.1 }}
             className="font-display font-black text-3xl sm:text-5xl md:text-6xl text-white tracking-tight uppercase leading-none drop-shadow-lg"
           >
-            CV. ANUGRAH PARIWISATA
+            {t.hero_title_1}
           </motion.h1>
 
           <motion.div
@@ -68,7 +68,7 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
             transition={{ delay: 0.2 }}
             className="flex items-center justify-center gap-2 text-xs sm:text-sm font-sans font-bold text-red-300 tracking-wider uppercase drop-shadow-sm"
           >
-            <span>WISATA HEMAT BERSAMA TRAVEL HEBAT</span>
+            <span>{t.hero_motto}</span>
           </motion.div>
         </div>
 
@@ -86,7 +86,7 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
             {/* Field 1: Destination Category Selection */}
             <div className="md:col-span-5 px-3 py-2 border-b md:border-b-0 md:border-r border-slate-200">
               <label className="block text-[11px] font-bold text-slate-800 uppercase tracking-wide">
-                Destination Category
+                {t.search_dest_cat}
               </label>
               <div className="flex items-center gap-2 mt-1 relative">
                 <MapPin className="w-4 h-4 text-[#dc2626] shrink-0" />
@@ -106,7 +106,7 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
             {/* Field 2: Travel Dates */}
             <div className="md:col-span-4 px-3 py-2 border-b md:border-b-0 md:border-r border-slate-200">
               <label className="block text-[11px] font-bold text-slate-800 uppercase tracking-wide">
-                Travel Dates
+                {t.search_travel_date}
               </label>
               <div className="flex items-center gap-2 mt-1">
                 <Calendar className="w-4 h-4 text-red-500 shrink-0" />
@@ -114,20 +114,20 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
                   type="text"
                   value={travelDateInput}
                   onChange={(e) => setTravelDateInput(e.target.value)}
-                  placeholder="When will you go on tour?"
+                  placeholder={t.search_date_placeholder}
                   className="w-full text-xs font-semibold text-slate-700 focus:outline-none bg-transparent placeholder:text-slate-400"
                 />
               </div>
             </div>
 
-            {/* Field 3: Search Tour Button (Coral Red Solid) */}
+            {/* Field 3: Search Tour Button */}
             <div className="md:col-span-3">
               <button
                 type="submit"
                 className="w-full bg-[#dc2626] hover:bg-[#b91c1c] text-white font-display font-extrabold text-xs uppercase py-3.5 px-4 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer tracking-wider"
               >
                 <Search className="w-4 h-4" />
-                <span>Search Tour</span>
+                <span>{t.search_btn}</span>
               </button>
             </div>
 

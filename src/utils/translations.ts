@@ -3,10 +3,12 @@ export const TRANSLATIONS = {
     // Navigation
     nav_home: "Beranda",
     nav_about: "Profil & Visi Misi",
-    nav_services: "Destinasi Tour",
-    nav_cars: "Armada Bus & Mobil",
-    nav_steps: "Cara Pemesanan",
+    nav_destinations: "Destinasi Tour",
+    nav_packages: "Paket Tour",
+    nav_rentals: "Sewa Armada",
+    nav_gallery: "Galeri",
     nav_contact: "Kontak & Alamat",
+    nav_book_btn: "PESAN TOUR",
 
     // Top Bar
     topbar_address: "Kantor Pusat: Jl. Rimbo Panjang No. 053, Salido Painan, Pesisir Selatan | Cabang: Jl. Andalas I No. 48 F, Padang Timur",
@@ -14,11 +16,34 @@ export const TRANSLATIONS = {
     topbar_service: "Motto: Wisata Hemat dengan Travel Hebat",
 
     // Hero Section
+    hero_explore: "Mari Jelajahi Nusantara",
     hero_title_1: "CV. ANUGRAH PARIWISATA",
-    hero_title_2: "WISATA HEMAT BERSAMA TRAVEL HEBAT",
+    hero_motto: "WISATA HEMAT BERSAMA TRAVEL HEBAT",
     hero_subtitle: "Perusahaan Tour & Travel Terpercaya No. 1 di Padang, Sumatera Barat. Melayani Tour Pariwisata Domestik & Internasional dengan Armada Bus Eksekutif Full AC, Toilet, Karaoke & Kru Tour Ramah.",
     hero_cta_wa: "Konsultasi Tour via WA",
     hero_cta_cars: "Lihat Pilihan Bus & Mobil",
+    search_dest_cat: "Kategori Destinasi Wisata",
+    search_travel_date: "Tanggal Keberangkatan",
+    search_date_placeholder: "Kapan rencana keberangkatan tour Anda?",
+    search_btn: "CARI PAKET TOUR",
+
+    // Package Tour Page
+    pkg_tag: "PAKET TOUR PERJALANAN RESMI",
+    pkg_title: "PAKET TOUR SPESIAL NUSANTARA",
+    pkg_subtitle: "Pilihan paket perjalanan wisata terpadu dengan Big Bus Eksekutif & VIP Legrest CV. Anugrah Pariwisata.",
+    pkg_route_label: "Rute Perjalanan",
+    pkg_starting_from: "Mulai Dari",
+    pkg_per_person: "/ org",
+    pkg_detail_btn: "Lihat Detail Paket",
+    pkg_modal_duration: "Durasi Tour",
+    pkg_modal_tier_title: "PILIHAN TIPE BUS & AKOMODASI",
+    pkg_modal_hotel: "Fasilitas Hotel",
+    pkg_modal_notes: "Catatan",
+    pkg_modal_highlights: "Highlight Perjalanan & Destinasi Utama",
+    pkg_modal_includes: "Fasilitas Termasuk",
+    pkg_modal_excludes: "Tidak Termasuk (Exclude)",
+    pkg_modal_selected: "Opsi Terpilih",
+    pkg_modal_wa_btn: "Pesan via WhatsApp",
 
     // About Section (Visi & Misi)
     about_tag: "PROFIL & VISI MISI PERUSAHAAN",
@@ -28,7 +53,7 @@ export const TRANSLATIONS = {
     about_desc_2: "Dengan motto 'Wisata Hemat dengan Travel Hebat', kami menyediakan pilihan armada terlengkap mulai dari Big Bus Eksekutif Legrest (Zivanes, Nyaman Holiday, Miyor, KYM, Sutan Raya, Wulyudza), Toyota Hiace, hingga Mini Bus (Alphard, Innova, Avanza, Xenia, Calya, Sigra) yang didukung oleh fasilitas hotel & restoran terbaik serta kru Tour Leader yang ramah.",
     about_read_more: "Lihat Selengkapnya",
     about_read_less: "Tutup Detail",
-    about_badge: "PADANG & SUMBAR TOUR SPECIALIST",
+    about_badge: "SPESIALIS TOUR PADANG & SUMBAR",
     about_card_tag: "CV. ANUGRAH PARIWISATA",
     about_card_sub: "WISATA HEMAT BERSAMA TRAVEL HEBAT",
     about_card_rating_label: "KEPUASAN PESERTA TOUR",
@@ -60,9 +85,9 @@ export const TRANSLATIONS = {
     strength_time_desc: "Rute Sumbar, Nusantara (Bromo, Bali, Aceh, dll) hingga Internasional (Singapura, Malaysia, Eropa, dll).",
 
     // Services (Rute Destinasi Tour)
-    services_tag: "RUTE & DESTINASI TOUR",
-    services_title: "Jelajahi Wisata Pilihan Bersama Kami",
-    services_desc: "Menyediakan pilihan destinasi wisata indah & cantik di dalam Sumatera Barat, Nusantara, hingga mancanegara.",
+    services_tag: "KATALOG RUTE DESTINASI LENGKAP",
+    services_title: "Destinasi Pilihan Wisata",
+    services_desc: "Jelajahi beragam destinasi menakjubkan di Sumatera Barat, Nusantara & Mancanegara bersama CV. Anugrah Pariwisata.",
 
     // Cars Section
     cars_tag: "KATALOG ARMADA BUS & MOBIL",
@@ -79,11 +104,11 @@ export const TRANSLATIONS = {
     steps_tag: "CARA PEMESANAN PRAKTIS",
     steps_title: "3 Langkah Memesan Paket Tour",
     steps_desc: "Proses booking tour cepat, transparan, dan mudah bersama CV. Anugrah Pariwisata.",
-    step_1_title: "Pilih Destinasi & Armada 🚌",
+    step_1_title: "Pilih Destinasi & Armada",
     step_1_desc: "Tentukan rute wisata (In Sumbar / Out Sumbar / Internasional) dan pilihan armada sesuai jumlah rombongan.",
-    step_2_title: "Konsultasi Jadwal & Booking 💬",
+    step_2_title: "Konsultasi Jadwal & Booking",
     step_2_desc: "Hubungi tim kami via WhatsApp untuk penyusunan itinerary, fasilitas hotel/restoran, dan DP tanda jadi.",
-    step_3_title: "Nikmati Tour Impian 🌄",
+    step_3_title: "Nikmati Tour Impian",
     step_3_desc: "Kru Tour Leader dan driver kami siap memandu perjalanan liburan Anda dengan aman dan penuh kegembiraan.",
 
     // Testimonials
@@ -94,14 +119,6 @@ export const TRANSLATIONS = {
     testi_rented_model: "Armada / Paket:",
     testi_btn_next: "Selanjutnya",
     testi_btn_prev: "Sebelumnya",
-    testi_form_title: "Punya Pengalaman Tour Bersama Kami?",
-    testi_form_desc: "Bagikan pengalaman wisata hemat dan menyenangkan Anda bersama CV. Anugrah Pariwisata.",
-    testi_label_name: "Nama Lengkap",
-    testi_label_role: "Jabatan / Instansi / Kota Asal",
-    testi_label_car: "Paket / Armada yang Digunakan",
-    testi_label_text: "Ulasan Anda",
-    testi_btn_submit: "Kirim Ulasan",
-    testi_success_msg: "Terima kasih! Ulasan Anda berhasil diterbitkan.",
 
     // Booking Modal
     modal_title: "FORM RESERVASI TOUR & ARMADA",
@@ -120,20 +137,52 @@ export const TRANSLATIONS = {
     modal_btn_confirm: "Kirim Draf via WhatsApp ➔"
   },
   EN: {
+    // Navigation
     nav_home: "Home",
-    nav_about: "About & Vision",
-    nav_services: "Tour Routes",
-    nav_cars: "Buses & Fleet",
-    nav_steps: "Booking Guide",
-    nav_contact: "Contact & Location",
+    nav_about: "About Us",
+    nav_destinations: "Destinations",
+    nav_packages: "Package Tour",
+    nav_rentals: "Transport Rent",
+    nav_gallery: "Gallery",
+    nav_contact: "Contact & Address",
+    nav_book_btn: "BOOK A TOUR",
+
+    // Top Bar
     topbar_address: "HQ: Jl. Rimbo Panjang No. 053, Salido Painan | Branch: Jl. Andalas I No. 48 F, Padang",
     topbar_whatsapp: "Tour Consultation WA: 0812-3456-7890",
     topbar_service: "Motto: Budget Tour with Great Travel",
+
+    // Hero Section
+    hero_explore: "Let's Explore The World",
     hero_title_1: "CV. ANUGRAH PARIWISATA",
-    hero_title_2: "BUDGET TOUR WITH GREAT TRAVEL",
+    hero_motto: "BUDGET TOUR WITH GREAT TRAVEL",
     hero_subtitle: "Number 1 Tour & Travel Company in Padang & West Sumatra. Serving Domestic & International Tours with Executive Full AC Buses, Toilet, Karaoke & Friendly Tour Crew.",
     hero_cta_wa: "Consult Tour via WA",
     hero_cta_cars: "View Buses & Fleet",
+    search_dest_cat: "Tour Destination Category",
+    search_travel_date: "Travel Departure Date",
+    search_date_placeholder: "When will you go on tour?",
+    search_btn: "SEARCH TOUR",
+
+    // Package Tour Page
+    pkg_tag: "OFFICIAL TOUR PACKAGES",
+    pkg_title: "SPECIAL INDONESIA TOUR PACKAGES",
+    pkg_subtitle: "Integrated travel packages with Executive & VIP Legrest Big Buses by CV. Anugrah Pariwisata.",
+    pkg_route_label: "Tour Route",
+    pkg_starting_from: "Starting From",
+    pkg_per_person: "/ person",
+    pkg_detail_btn: "View Package Details",
+    pkg_modal_duration: "Tour Duration",
+    pkg_modal_tier_title: "SELECT BUS TYPE & ACCOMMODATION",
+    pkg_modal_hotel: "Hotel Amenities",
+    pkg_modal_notes: "Notes",
+    pkg_modal_highlights: "Tour Highlights & Main Destinations",
+    pkg_modal_includes: "Included Amenities",
+    pkg_modal_excludes: "Excluded (Not Included)",
+    pkg_modal_selected: "Selected Option",
+    pkg_modal_wa_btn: "Book via WhatsApp",
+
+    // About Section (Visi & Misi)
     about_tag: "COMPANY PROFILE & VISION MISSION",
     about_title_1: "CV. ANUGRAH PARIWISATA",
     about_title_2: "Your Ultimate Tour Partner",
@@ -145,10 +194,14 @@ export const TRANSLATIONS = {
     about_card_tag: "CV. ANUGRAH PARIWISATA",
     about_card_sub: "BUDGET TOUR WITH GREAT TRAVEL",
     about_card_rating_label: "CUSTOMER SATISFACTION",
+
+    // Vision
     vision_title: "Company Vision",
     vision_1: "To be the best tour & travel company in tourism service in Indonesia",
     vision_2: "To be the best international-scale tour & travel company",
     vision_3: "To be No. 1 company in Padang, West Sumatra & Indonesia in Tourism tours",
+
+    // Mission
     mission_title: "Our Main Missions",
     mission_1: "Providing the best service in Tourism tours",
     mission_2: "Prioritizing safety & comfort of tour participants",
@@ -157,6 +210,8 @@ export const TRANSLATIONS = {
     mission_5: "Providing friendly Tour Leaders & Crew during tours",
     mission_6: "Providing the best Hotel & Restaurant facilities",
     mission_7: "Providing beautiful destination spots in Indonesia & abroad",
+
+    // Strengths
     strength_clean_title: "Full Bus Amenities",
     strength_clean_desc: "Full AC, Clean Toilet, Karaoke, Blankets & Pillows.",
     strength_driver_title: "Friendly Tour Crew",
@@ -165,9 +220,13 @@ export const TRANSLATIONS = {
     strength_price_desc: "Economical tour packages without compromising comfort.",
     strength_time_title: "Complete Destinations",
     strength_time_desc: "West Sumatra, Indonesia (Bromo, Bali, Aceh, etc.) to International.",
-    services_tag: "TOUR ROUTES & DESTINATIONS",
-    services_title: "Explore Beautiful Destinations With Us",
-    services_desc: "Providing scenic tour destinations in West Sumatra, Indonesia, and abroad.",
+
+    // Services (Rute Destinasi Tour)
+    services_tag: "FULL DESTINATION CATALOG",
+    services_title: "Destinations",
+    services_desc: "Explore scenic destinations in West Sumatra, Indonesia, and abroad with CV. Anugrah Pariwisata.",
+
+    // Cars Section
     cars_tag: "BUS & CAR FLEET CATALOG",
     cars_title: "Tour Transportation Fleet Options",
     cars_desc: "Offering Executive Big Buses, Medium Buses, Hiace, and Minibuses.",
@@ -177,15 +236,19 @@ export const TRANSLATIONS = {
     cars_included_label: "Amenities & Services:",
     cars_driver_friendly: "Experienced Friendly Driver & Crew",
     cars_book_btn: "Consult & Book via WA",
+
+    // Steps
     steps_tag: "PRACTICAL BOOKING STEPS",
     steps_title: "3 Easy Steps to Book",
     steps_desc: "Fast, transparent, and simple booking process with CV. Anugrah Pariwisata.",
-    step_1_title: "Choose Route & Fleet 🚌",
+    step_1_title: "Choose Route & Fleet",
     step_1_desc: "Select your tour destination and fleet based on group size.",
-    step_2_title: "Consult Schedule & Book 💬",
+    step_2_title: "Consult Schedule & Book",
     step_2_desc: "Contact us via WhatsApp for itinerary, hotel/restaurant, and DP deposit.",
-    step_3_title: "Enjoy Your Dream Tour 🌄",
+    step_3_title: "Enjoy Your Dream Tour",
     step_3_desc: "Our Tour Leader and driver will safely guide your holiday trip.",
+
+    // Testimonials
     testi_tag: "TOUR PARTICIPANT REVIEWS",
     testi_title: "Experience With CV. Anugrah Pariwisata",
     testi_desc: "Your satisfaction and happy smiles are our pride and priority.",
@@ -193,14 +256,8 @@ export const TRANSLATIONS = {
     testi_rented_model: "Fleet / Package:",
     testi_btn_next: "Next",
     testi_btn_prev: "Previous",
-    testi_form_title: "Have a Great Experience?",
-    testi_form_desc: "Share your happy tour experience with CV. Anugrah Pariwisata.",
-    testi_label_name: "Full Name",
-    testi_label_role: "Role / Institution / City",
-    testi_label_car: "Package / Fleet Used",
-    testi_label_text: "Your Review",
-    testi_btn_submit: "Submit Review",
-    testi_success_msg: "Thank you! Your review has been published.",
+
+    // Booking Modal
     modal_title: "TOUR & FLEET RESERVATION FORM",
     modal_desc: "Fill in the reservation draft below to connect with CV. Anugrah Pariwisata WA admin.",
     modal_summary_base: "Package / Fleet",
