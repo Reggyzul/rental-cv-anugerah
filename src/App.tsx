@@ -1,9 +1,10 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import AboutPage from './components/AboutPage';
 import Services from './components/Services';
 import DestinationHighlightsPage from './components/DestinationHighlightsPage';
+import PackageTourPage from './components/PackageTourPage';
 import TransportRentPage from './components/TransportRentPage';
 import GalleryPage from './components/GalleryPage';
 import BookingSteps from './components/BookingSteps';
@@ -17,7 +18,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { TRANSLATIONS } from './utils/translations';
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'rentals' | 'destinations' | 'gallery'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'rentals' | 'destinations' | 'package-tour' | 'gallery'>('home');
   const [activeSection, setActiveSection] = useState('home');
   const [selectedCar, setSelectedCar] = useState<Car | null>(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -68,6 +69,10 @@ export default function App() {
       setCurrentPage('destinations');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       setActiveSection('destinations');
+    } else if (sectionId === 'package-tour-page' || sectionId === 'package-tour' || sectionId === 'packages') {
+      setCurrentPage('package-tour');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setActiveSection('package-tour');
     } else if (sectionId === 'gallery-page' || sectionId === 'gallery') {
       setCurrentPage('gallery');
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -145,6 +150,8 @@ export default function App() {
           <AboutPage lang={lang} onNavigateHome={() => handleNavClick('home')} />
         ) : currentPage === 'destinations' ? (
           <DestinationHighlightsPage lang={lang} onNavigateHome={() => handleNavClick('home')} />
+        ) : currentPage === 'package-tour' ? (
+          <PackageTourPage lang={lang} onNavigateHome={() => handleNavClick('home')} />
         ) : currentPage === 'gallery' ? (
           <GalleryPage lang={lang} onNavigateHome={() => handleNavClick('home')} />
         ) : (

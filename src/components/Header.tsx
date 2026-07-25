@@ -108,9 +108,9 @@ export default function Header({
 
               {/* PACKAGE TOUR (SEBELAH KANAN DESTINATIONS) */}
               <button
-                onClick={() => handleItemClick('destinations')}
+                onClick={() => handleItemClick('package-tour')}
                 className={`hover:text-red-600 transition-colors cursor-pointer py-1 ${
-                  activeSection === 'destinations' ? 'text-red-600 font-extrabold border-b-2 border-red-600' : ''
+                  activeSection === 'package-tour' ? 'text-red-600 font-extrabold border-b-2 border-red-600' : ''
                 }`}
               >
                 Package Tour
@@ -190,7 +190,7 @@ export default function Header({
                 Destinations
               </button>
               <button
-                onClick={() => handleItemClick('destinations')}
+                onClick={() => handleItemClick('package-tour')}
                 className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2 border-b border-slate-100"
               >
                 Package Tour

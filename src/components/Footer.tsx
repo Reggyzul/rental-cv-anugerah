@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { MapPin, Phone, Mail, Compass, Award, MessageCircle, Clock, ShieldCheck, Heart } from 'lucide-react';
 import { TRANSLATIONS } from '../utils/translations';
 
@@ -132,6 +132,12 @@ export default function Footer({ lang, onNavigateSection }: FooterProps) {
                 className="block hover:text-red-400 transition-colors text-left"
               >
                 ➔ Rute Destinasi Tour
+              </button>
+              <button
+                onClick={() => onNavigateSection('package-tour')}
+                className="block hover:text-red-400 transition-colors text-left"
+              >
+                ➔ Paket Tour Perjalanan (5 Tour)
               </button>
               <button
                 onClick={() => onNavigateSection('cars')}
