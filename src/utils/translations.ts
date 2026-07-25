@@ -45,8 +45,12 @@ export const TRANSLATIONS = {
 
     // Package Tour Page
     pkg_tag: "PAKET TOUR PERJALANAN RESMI",
-    pkg_title: "PAKET TOUR SPESIAL NUSANTARA",
-    pkg_subtitle: "Pilihan paket perjalanan wisata terpadu dengan Big Bus Eksekutif & VIP Legrest CV. Anugrah Pariwisata.",
+    pkg_title: "PAKET TOUR SPESIAL NUSANTARA & MANCANEGARA",
+    pkg_subtitle: "Pilihan paket perjalanan wisata terpadu Dalam Negeri & Luar Negeri dengan Armada Bus Eksekutif CV. Anugrah Pariwisata.",
+    pkg_filter_heading: "PILIH KATEGORI TUJUAN PAKET TOUR",
+    pkg_filter_all: "Semua Paket Tour",
+    pkg_filter_domestik: "Dalam Negeri (Domestik)",
+    pkg_filter_internasional: "Luar Negeri (Internasional)",
     pkg_route_label: "Rute Perjalanan",
     pkg_starting_from: "Mulai Dari",
     pkg_per_person: "/ org",
@@ -193,8 +197,12 @@ export const TRANSLATIONS = {
 
     // Package Tour Page
     pkg_tag: "OFFICIAL TOUR PACKAGES",
-    pkg_title: "SPECIAL INDONESIA TOUR PACKAGES",
-    pkg_subtitle: "Integrated travel packages with Executive & VIP Legrest Big Buses by CV. Anugrah Pariwisata.",
+    pkg_title: "SPECIAL DOMESTIC & INTERNATIONAL PACKAGES",
+    pkg_subtitle: "Integrated Domestic & International travel packages with Executive Fleet by CV. Anugrah Pariwisata.",
+    pkg_filter_heading: "SELECT TOUR CATEGORY",
+    pkg_filter_all: "All Tour Packages",
+    pkg_filter_domestik: "Domestic (Indonesia)",
+    pkg_filter_internasional: "International (Overseas)",
     pkg_route_label: "Tour Route",
     pkg_starting_from: "Starting From",
     pkg_per_person: "/ person",

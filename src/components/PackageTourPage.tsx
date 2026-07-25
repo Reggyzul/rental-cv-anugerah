@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { TOUR_PACKAGES, TourPackage, TourTier } from '../data/packages';
-import { MapPin, Calendar, Bus, ArrowRight, X, MessageCircle, CheckCircle2 } from 'lucide-react';
+import { MapPin, Calendar, Bus, ArrowRight, X, MessageCircle, CheckCircle2, Globe, Plane } from 'lucide-react';
 import { TRANSLATIONS } from '../utils/translations';
 
 interface PackageTourPageProps {
@@ -10,6 +10,7 @@ interface PackageTourPageProps {
 }
 
 export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPageProps) {
+  const [activeCategory, setActiveCategory] = useState<'all' | 'domestik' | 'internasional'>('all');
   const [selectedPackage, setSelectedPackage] = useState<TourPackage | null>(null);
   const [selectedTier, setSelectedTier] = useState<TourTier | null>(null);
   const t = TRANSLATIONS[lang];
@@ -30,6 +31,11 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
     window.open(`https://api.whatsapp.com/send?phone=${waNumber}&text=${encodeURIComponent(message)}`, '_blank', 'noreferrer');
   };
 
+  const filteredPackages = TOUR_PACKAGES.filter((pkg) => {
+    if (activeCategory === 'all') return true;
+    return pkg.categoryKey === activeCategory;
+  });
+
   return (
     <div className="pt-24 pb-20 bg-slate-50 min-h-screen">
       {/* Header Banner */}
@@ -47,11 +53,58 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+        {/* CATEGORY SELECTOR TABS BAR (Dalam Negeri vs Luar Negeri) */}
+        <div className="bg-white p-3.5 sm:p-4 rounded-2xl border border-slate-200 shadow-md max-w-3xl mx-auto text-center space-y-3">
+          <div>
+            <span className="text-[10px] font-black uppercase tracking-wider text-red-600 block">
+              {t.pkg_filter_heading}
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+            <button
+              onClick={() => setActiveCategory('all')}
+              className={`py-3 px-4 rounded-xl font-display font-bold text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
+                activeCategory === 'all'
+                  ? 'bg-red-600 text-white shadow-md shadow-red-600/25 scale-[1.02]'
+                  : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200'
+              }`}
+            >
+              <Globe className="w-4 h-4 shrink-0" />
+              <span>{t.pkg_filter_all}</span>
+            </button>
+
+            <button
+              onClick={() => setActiveCategory('domestik')}
+              className={`py-3 px-4 rounded-xl font-display font-bold text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
+                activeCategory === 'domestik'
+                  ? 'bg-red-600 text-white shadow-md shadow-red-600/25 scale-[1.02]'
+                  : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200'
+              }`}
+            >
+              <MapPin className="w-4 h-4 shrink-0 text-red-500" />
+              <span>{t.pkg_filter_domestik}</span>
+            </button>
+
+            <button
+              onClick={() => setActiveCategory('internasional')}
+              className={`py-3 px-4 rounded-xl font-display font-bold text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
+                activeCategory === 'internasional'
+                  ? 'bg-red-600 text-white shadow-md shadow-red-600/25 scale-[1.02]'
+                  : 'bg-slate-50 text-slate-700 hover:bg-slate-100 border border-slate-200'
+              }`}
+            >
+              <Plane className="w-4 h-4 shrink-0 text-blue-500" />
+              <span>{t.pkg_filter_internasional}</span>
+            </button>
+          </div>
+        </div>
         
         {/* Package Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {TOUR_PACKAGES.map((pkg) => (
+          {filteredPackages.map((pkg) => (
             <motion.div
               key={pkg.id}
               whileHover={{ y: -4 }}

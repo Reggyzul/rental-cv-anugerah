@@ -9,6 +9,7 @@ export interface TourTier {
 export interface TourPackage {
   id: string;
   title: string;
+  categoryKey: 'domestik' | 'internasional';
   duration: string;
   route: string[];
   routeDisplay: string;
@@ -22,10 +23,11 @@ export interface TourPackage {
 }
 
 export const TOUR_PACKAGES: TourPackage[] = [
-  // 1. OPEN TRIP / PRIVATE TOUR GUNUNG BROMO (10 HARI)
+  // 1. TOUR GUNUNG BROMO (10 HARI) - DOMESTIK
   {
     id: 'tour-open-trip-bromo',
     title: 'TOUR GUNUNG BROMO',
+    categoryKey: 'domestik',
     duration: '10 Hari',
     route: ['Gunung Bromo', 'Yogyakarta', 'Bandung', 'Jakarta'],
     routeDisplay: 'Gunung Bromo - Yogyakarta - Bandung - Jakarta',
@@ -60,10 +62,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ]
   },
 
-  // 2. EDISI DANAU TOBA - TITIK NOL SABANG (10 HARI PP)
+  // 2. EDISI DANAU TOBA - TITIK NOL SABANG (10 HARI PP) - DOMESTIK
   {
     id: 'tour-danau-toba-sabang',
     title: 'TOUR DANAU TOBA - TITIK NOL SABANG ACEH',
+    categoryKey: 'domestik',
     duration: '10 Hari PP',
     route: ['D. Toba', 'P. Samosir', 'Berastagi', 'Banda Aceh', 'P. Sabang', 'Medan', 'Pekanbaru'],
     routeDisplay: 'Danau Toba - Pulau Samosir - Berastagi - Banda Aceh - Pulau Sabang - Medan',
@@ -105,10 +108,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ]
   },
 
-  // 3. PROMO SPESIAL TOUR 3 NEGARA (MALAYSIA - SINGAPORE - THAILAND)
+  // 3. PROMO SPESIAL TOUR 3 NEGARA (MALAYSIA - SINGAPORE - THAILAND) - INTERNASIONAL
   {
     id: 'tour-3-negara-asia',
     title: 'TOUR 3 NEGARA (MALAYSIA - SINGAPORE - THAILAND)',
+    categoryKey: 'internasional',
     duration: 'Multi-Durasi (3 s/d 7 Hari)',
     route: ['Malaysia', 'Singapore', 'Thailand (Hatyai)'],
     routeDisplay: 'Malaysia (KL & Genting) - Singapore (Merlion) - Thailand (Hatyai)',
@@ -158,10 +162,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ]
   },
 
-  // 4. RUSSIA SPESIAL 9D6N & 9D7N (MOSCOW, ST. PETERSBURG & AURORA)
+  // 4. RUSSIA SPESIAL 9D6N & 9D7N (MOSCOW, ST. PETERSBURG & AURORA) - INTERNASIONAL
   {
     id: 'tour-russia-aurora',
     title: 'RUSSIA SPESIAL (MOSCOW & ST. PETERSBURG)',
+    categoryKey: 'internasional',
     duration: '9 Hari 6 Malam / 9 Hari 7 Malam',
     route: ['Moscow', 'St. Petersburg', 'Murmansk'],
     routeDisplay: 'Moscow - St. Petersburg - Murmansk (Aurora Hunt)',
@@ -205,10 +210,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ]
   },
 
-  // 5. TOUR BATAM - BINTAN (10 HARI PP)
+  // 5. TOUR BATAM - BINTAN (10 HARI PP) - DOMESTIK
   {
     id: 'tour-batam-bintan-2026',
     title: 'TOUR BATAM - BINTAN',
+    categoryKey: 'domestik',
     duration: '10 Hari PP',
     route: ['Pulau Batam', 'Pulau Bintan', 'Siak', 'Pekanbaru'],
     routeDisplay: 'Pulau Batam - Pulau Bintan - Siak - Pekanbaru',
@@ -250,10 +256,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ]
   },
 
-  // 6. 11D8N WEST EUROPE + VENICE (INTERNASIONAL)
+  // 6. 11D8N WEST EUROPE + VENICE - INTERNASIONAL
   {
     id: 'tour-west-europe-venice',
     title: '11D8N WEST EUROPE + VENICE',
+    categoryKey: 'internasional',
     duration: '11 Hari 8 Malam',
     route: ['France', 'Brussels', 'Netherlands', 'Germany', 'Luxembourg', 'Switzerland', 'Italy'],
     routeDisplay: 'France - Brussels - Netherlands - Germany - Luxembourg - Switzerland - Italy',
@@ -295,10 +302,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ]
   },
 
-  // 7. 9D7N WEST USA (INTERNASIONAL)
+  // 7. 9D7N WEST USA - INTERNASIONAL
   {
     id: 'tour-west-usa-9d7n',
     title: '9D7N WEST USA (LA, LAS VEGAS, SAN FRANCISCO)',
+    categoryKey: 'internasional',
     duration: '9 Hari 7 Malam',
     route: ['Los Angeles', 'Las Vegas', 'San Francisco'],
     routeDisplay: 'Los Angeles - Las Vegas - San Francisco',
@@ -332,10 +340,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ]
   },
 
-  // 8. TOUR LOMBOK, BALI, BROMO (16 HARI PP)
+  // 8. TOUR LOMBOK, BALI, BROMO (16 HARI PP) - DOMESTIK
   {
     id: 'tour-lombok-bali',
     title: 'TOUR LOMBOK - BALI - BROMO',
+    categoryKey: 'domestik',
     duration: '16 Hari PP',
     route: ['Bali', 'Lombok', 'Gunung Bromo', 'Jogjakarta', 'Bandung', 'Jakarta'],
     routeDisplay: 'Bali - Lombok - Gunung Bromo - Jogjakarta - Bandung - Jakarta',
@@ -377,10 +386,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ]
   },
 
-  // 9. TOUR SUMBAWA - LOMBOK - BALI (16 HARI)
+  // 9. TOUR SUMBAWA - LOMBOK - BALI (16 HARI) - DOMESTIK
   {
     id: 'tour-sumbawa-lombok-bali',
     title: 'TOUR SUMBAWA - LOMBOK - BALI',
+    categoryKey: 'domestik',
     duration: '16 Hari',
     route: ['Sumbawa', 'Lombok', 'Bali', 'Jogja', 'Jakarta'],
     routeDisplay: 'Sumbawa - Lombok - Bali - Jogja - Jakarta',
@@ -423,10 +433,11 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ]
   },
 
-  // 10. TOUR BANGKA - BELITUNG (10 HARI)
+  // 10. TOUR BANGKA - BELITUNG (10 HARI) - DOMESTIK
   {
     id: 'tour-bangka-belitung',
     title: 'TOUR BANGKA - BELITUNG',
+    categoryKey: 'domestik',
     duration: '10 Hari',
     route: ['Bangka', 'Belitung', 'Palembang'],
     routeDisplay: 'Bangka - Belitung - Palembang',
