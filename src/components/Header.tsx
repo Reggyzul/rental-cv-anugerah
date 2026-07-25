@@ -57,15 +57,26 @@ export default function Header({
             {/* 1. LEFT: LOGO BRAND */}
             <div 
               onClick={() => handleItemClick('home')}
-              className="flex items-center cursor-pointer group shrink-0"
+              className="flex items-center gap-2 cursor-pointer group shrink-0"
               id="header-logo"
             >
               <img
                 src="/logo_original.jpg"
                 alt="CV. Anugrah Pariwisata Tour & Travel"
                 className="h-14 w-auto object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-200"
-                style={{ maxWidth: '200px' }}
+                style={{ maxWidth: '160px' }}
               />
+              <div className="flex flex-col leading-tight">
+                <span className="font-black text-sm sm:text-base uppercase tracking-tight text-red-600 group-hover:text-red-700 transition-colors" style={{ fontFamily: 'Impact, Arial Black, sans-serif', letterSpacing: '0.03em' }}>
+                  CV. ANUGERAH
+                </span>
+                <span className="font-black text-sm sm:text-base uppercase tracking-tight text-red-600 group-hover:text-red-700 transition-colors" style={{ fontFamily: 'Impact, Arial Black, sans-serif', letterSpacing: '0.03em' }}>
+                  PARIWISATA
+                </span>
+                <span className="font-bold text-[10px] sm:text-xs uppercase tracking-widest text-red-500 group-hover:text-red-600 transition-colors mt-0.5" style={{ fontFamily: 'Arial Black, sans-serif' }}>
+                  Tour &amp; Travel
+                </span>
+              </div>
             </div>
 
             {/* 2. CENTER: DESKTOP NAV LINKS (Package Tour Kanan Destinations & Tanpa Contact Us) */}
