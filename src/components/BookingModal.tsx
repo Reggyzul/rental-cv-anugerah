@@ -175,11 +175,11 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
             {/* Close Button */}
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 sm:top-5 sm:right-5 w-10 h-10 rounded-full bg-red-600 hover:bg-red-700 text-white transition-all flex items-center justify-center shadow-2xl cursor-pointer z-50 hover:scale-110 border-2 border-white"
+              className="absolute top-4 right-4 sm:top-5 sm:right-5 w-9 h-9 rounded-full bg-red-600 hover:bg-red-700 text-white transition-all flex items-center justify-center shadow-2xl cursor-pointer z-50 hover:scale-110 border-2 border-white"
               id="close-booking-modal"
               title="Tutup Modal (Kembali)"
             >
-              <X className="w-5.5 h-5.5 stroke-[2.5]" />
+              <X className="w-5 h-5 stroke-[2.5]" />
             </button>
 
             {!isBooked ? (
