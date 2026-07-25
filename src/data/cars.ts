@@ -8,7 +8,7 @@ export const CARS: Car[] = [
     category: 'Big Bus Eksekutif/Legrest & Bus Medium',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Terbaik',
-    image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800',
+    image: '/zivanes.jpg',
     seats: 48,
     transmission: 'Manual',
     fuel: 'Diesel High Power',
