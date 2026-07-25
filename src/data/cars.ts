@@ -1,11 +1,11 @@
 import { Car, Testimonial } from '../types';
 
 export const CARS: Car[] = [
-  // I. BIG BUS EKSEKUTIF / LEGREST & BUS MEDIUM RENTAL
+  // BIG BUS EKSEKUTIF / LEGREST & BUS MEDIUM RENTAL
   {
     id: 'bus-zivanes',
     name: 'Zivanes (Big Bus Legrest)',
-    category: 'I. Big Bus & Medium',
+    category: 'Big Bus Eksekutif/Legrest & Bus Medium',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Terbaik',
     image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800',
@@ -25,7 +25,7 @@ export const CARS: Car[] = [
   {
     id: 'bus-nyaman-holiday',
     name: 'Nyaman Holiday (Big Bus Pariwisata)',
-    category: 'I. Big Bus & Medium',
+    category: 'Big Bus Eksekutif/Legrest & Bus Medium',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Terbaik',
     image: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&q=80&w=800',
@@ -45,7 +45,7 @@ export const CARS: Car[] = [
   {
     id: 'bus-miyor',
     name: 'Miyor (Big Bus Luxury Legrest)',
-    category: 'I. Big Bus & Medium',
+    category: 'Big Bus Eksekutif/Legrest & Bus Medium',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Terbaik',
     image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800',
@@ -65,7 +65,7 @@ export const CARS: Car[] = [
   {
     id: 'bus-kym',
     name: 'KYM (Big Bus Eksekutif)',
-    category: 'I. Big Bus & Medium',
+    category: 'Big Bus Eksekutif/Legrest & Bus Medium',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Terbaik',
     image: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&q=80&w=800',
@@ -85,7 +85,7 @@ export const CARS: Car[] = [
   {
     id: 'bus-sutan-raya',
     name: 'Sutan Raya (Medium & Big Bus)',
-    category: 'I. Big Bus & Medium',
+    category: 'Big Bus Eksekutif/Legrest & Bus Medium',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Terbaik',
     image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800',
@@ -105,7 +105,7 @@ export const CARS: Car[] = [
   {
     id: 'bus-wulyudza',
     name: 'Wulyudza (Medium Bus Pariwisata)',
-    category: 'I. Big Bus & Medium',
+    category: 'Big Bus Eksekutif/Legrest & Bus Medium',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Terbaik',
     image: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&q=80&w=800',
@@ -123,11 +123,11 @@ export const CARS: Car[] = [
     ]
   },
 
-  // II. MOBIL HIACE RENTAL
+  // MOBIL HIACE RENTAL
   {
     id: 'hiace-premio',
     name: 'Toyota Hiace Premio (VIP Minibus)',
-    category: 'II. Mobil Hiace Rental',
+    category: 'Mobil Hiace Rental',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Terbaik',
     image: '/hiace_premio.png',
@@ -147,7 +147,7 @@ export const CARS: Car[] = [
   {
     id: 'hiace-commuter',
     name: 'Toyota Hiace Commuter',
-    category: 'II. Mobil Hiace Rental',
+    category: 'Mobil Hiace Rental',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Terbaik',
     image: '/hiace.avif',
@@ -165,11 +165,11 @@ export const CARS: Car[] = [
     ]
   },
 
-  // III. MOBIL MINI BUS RENTAL
+  // MOBIL MINI BUS RENTAL
   {
     id: 'innova-reborn',
     name: 'Innova (Innova Reborn / Zenix)',
-    category: 'III. Mobil Mini Bus Rental',
+    category: 'Mobil Mini Bus Rental',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Terbaik',
     image: '/innova3.avif',
@@ -189,7 +189,7 @@ export const CARS: Car[] = [
   {
     id: 'avanza',
     name: 'Avanza (All New Avanza)',
-    category: 'III. Mobil Mini Bus Rental',
+    category: 'Mobil Mini Bus Rental',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Ekonomis',
     image: '/avanza.avif',
@@ -209,7 +209,7 @@ export const CARS: Car[] = [
   {
     id: 'xenia',
     name: 'Xenia (Daihatsu Xenia)',
-    category: 'III. Mobil Mini Bus Rental',
+    category: 'Mobil Mini Bus Rental',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Ekonomis',
     image: '/xenia.avif',
@@ -229,7 +229,7 @@ export const CARS: Car[] = [
   {
     id: 'calya',
     name: 'Calya (Toyota Calya)',
-    category: 'III. Mobil Mini Bus Rental',
+    category: 'Mobil Mini Bus Rental',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Ekonomis',
     image: '/calya.avif',
@@ -249,7 +249,7 @@ export const CARS: Car[] = [
   {
     id: 'sigra',
     name: 'Sigra (Daihatsu Sigra)',
-    category: 'III. Mobil Mini Bus Rental',
+    category: 'Mobil Mini Bus Rental',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Ekonomis',
     image: '/sigra.avif',
@@ -269,7 +269,7 @@ export const CARS: Car[] = [
   {
     id: 'alphard',
     name: 'Alphard (Toyota Alphard VIP)',
-    category: 'III. Mobil Mini Bus Rental',
+    category: 'Mobil Mini Bus Rental',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran VIP',
     image: '/alphard.jpg',

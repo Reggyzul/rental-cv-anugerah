@@ -17,16 +17,16 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
 
   const categories = [
     { id: 'all', label: 'Semua Armada' },
-    { id: 'cat1', label: 'I. Big Bus Eksekutif/Legrest & Bus Medium' },
-    { id: 'cat2', label: 'II. Mobil Hiace Rental' },
-    { id: 'cat3', label: 'III. Mobil Mini Bus Rental' }
+    { id: 'cat1', label: 'Big Bus Eksekutif/Legrest & Bus Medium' },
+    { id: 'cat2', label: 'Mobil Hiace Rental' },
+    { id: 'cat3', label: 'Mobil Mini Bus Rental' }
   ];
 
   const filteredCars = CARS.filter(car => {
     if (filterCategory === 'all') return true;
-    if (filterCategory === 'cat1') return car.category.startsWith('I.');
-    if (filterCategory === 'cat2') return car.category.startsWith('II.');
-    if (filterCategory === 'cat3') return car.category.startsWith('III.');
+    if (filterCategory === 'cat1') return car.category.includes('Big Bus');
+    if (filterCategory === 'cat2') return car.category.includes('Hiace');
+    if (filterCategory === 'cat3') return car.category.includes('Mini Bus');
     return true;
   });
 
@@ -65,86 +65,94 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
         </div>
       </div>
 
-      {/* MAIN CONTAINER CONTENT */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+      {/* MAIN CONTENT CONTAINER */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-10">
         
-        {/* SECTION HEADING */}
-        <div className="text-center max-w-4xl mx-auto space-y-3" id="cars-heading">
-          <h2 className="font-display font-black text-3xl sm:text-4xl text-[#0d1b37] tracking-tight leading-tight uppercase">
-            Katalog Armada & Transportasi Tour
+        {/* Page Description */}
+        <div className="text-center max-w-3xl mx-auto space-y-3">
+          <h2 className="font-display font-black text-3xl sm:text-4xl text-[#0d1b37]">
+            Layanan Sewa Armada Pariwisata
           </h2>
-
-          <div className="w-20 h-1 bg-amber-400 mx-auto rounded-full" />
-
-          <p className="font-sans text-slate-600 text-xs sm:text-sm leading-relaxed font-medium max-w-2xl mx-auto">
-            Fasilitas Armada Lengkap: Bus Full AC, Toilet bersih, Full Karaoke, Selimut & Bantal. Driver & Kru ramah dan berpengalaman.
+          <div className="w-16 h-1 bg-amber-400 mx-auto rounded-full" />
+          <p className="font-sans text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
+            CV. Anugrah Pariwisata menyediakan pilihan armada bus eksekutif, Hiace, dan minibus MPV terawat dengan standar kenyamanan tinggi dan driver profesional berlisensi.
           </p>
-
-          {/* Filter Category Tabs (Exact Roman Numerals) */}
-          <div className="flex flex-wrap items-center justify-center gap-2 pt-4">
-            {categories.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setFilterCategory(cat.id)}
-                className={`px-4 py-2.5 rounded-full font-display font-extrabold text-xs transition-all cursor-pointer ${
-                  filterCategory === cat.id
-                    ? 'bg-[#f94a29] text-white shadow-md shadow-orange-600/20'
-                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200/90'
-                }`}
-              >
-                {cat.label}
-              </button>
-            ))}
-          </div>
         </div>
 
-        {/* Cars Grid */}
+        {/* Category Filter Tabs */}
+        <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
+          {categories.map((cat) => (
+            <button
+              key={cat.id}
+              onClick={() => setFilterCategory(cat.id)}
+              className={`px-5 py-3 rounded-2xl font-display font-extrabold text-xs uppercase transition-all cursor-pointer ${
+                filterCategory === cat.id
+                  ? 'bg-[#f94a29] text-white shadow-lg shadow-orange-600/25 scale-[1.02]'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'
+              }`}
+            >
+              {cat.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Fleet Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredCars.map((car, index) => (
             <motion.div
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: (index % 3) * 0.1 }}
+              transition={{ duration: 0.4, delay: (index % 3) * 0.08 }}
               key={car.id}
-              className="bg-white border border-slate-200/90 rounded-3xl p-6 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden text-left"
+              className="bg-white border border-slate-200/90 rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group text-left"
             >
               <div className="space-y-4">
                 
-                {/* Image Box */}
-                <div className="relative rounded-2xl overflow-hidden bg-slate-50 border border-slate-200/80 aspect-[16/10] flex items-center justify-center p-3">
+                {/* Photo Header */}
+                <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
                   <img
                     src={car.image}
                     alt={car.name}
-                    className="w-full h-auto object-contain max-h-[170px] drop-shadow-md group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90"
                   />
-                  <div className="absolute top-3 left-3 bg-orange-50 text-orange-700 border border-orange-200 font-display font-bold text-[10px] uppercase px-2.5 py-1 rounded-full shadow-xs">
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent" />
+                  
+                  {/* Category Badge */}
+                  <div className="absolute top-3 left-3 bg-[#f94a29] text-white font-display font-extrabold text-[10px] uppercase px-3 py-1 rounded-full shadow-md">
                     {car.category}
                   </div>
-                  <div className="absolute bottom-3 right-3 bg-white/95 text-slate-700 font-sans text-[10px] font-bold px-2.5 py-1 rounded-full border border-slate-200 flex items-center gap-1.5 shadow-xs">
-                    <Users className="w-3.5 h-3.5 text-[#f94a29]" />
+
+                  {/* Seat Capacity Badge */}
+                  <div className="absolute top-3 right-3 bg-white/95 text-slate-900 font-sans text-[10px] font-bold px-2.5 py-1 rounded-full border border-slate-200 flex items-center gap-1 shadow-sm">
+                    <Users className="w-3 h-3 text-orange-600" />
                     <span>{car.seats} Kursi</span>
+                  </div>
+
+                  {/* Title */}
+                  <div className="absolute bottom-3 left-3 right-3 space-y-1">
+                    <h3 className="font-display font-black text-xl text-white tracking-tight leading-snug group-hover:text-amber-300 transition-colors">
+                      {car.name}
+                    </h3>
+                    <div className="w-16 h-1 bg-amber-400 rounded-full group-hover:w-28 transition-all duration-500" />
                   </div>
                 </div>
 
-                {/* Car Name & Sub-description */}
-                <div>
-                  <h3 className="font-display font-black text-xl text-[#0d1b37] group-hover:text-[#f94a29] transition-colors uppercase tracking-tight">
-                    {car.name}
-                  </h3>
-                  <p className="font-sans text-xs text-slate-600 leading-relaxed mt-1 font-medium">
+                {/* Body Details: List of Facilities */}
+                <div className="p-5 pt-1 space-y-3">
+                  <p className="font-sans text-xs text-slate-600 font-medium leading-relaxed">
                     {car.description}
                   </p>
-                </div>
 
-                {/* FACILITIES CHECKLIST */}
-                <div className="space-y-2 pt-2 border-t border-slate-100">
-                  <span className="text-[10px] font-extrabold tracking-wider uppercase text-[#f94a29] block">Fasilitas Utama:</span>
-                  <div className="space-y-1">
-                    {car.includeList.map((facility, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-xs font-semibold text-slate-700">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                        <span className="line-clamp-1">{facility}</span>
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#f94a29] block">
+                    Fasilitas Utama Armada:
+                  </span>
+
+                  <div className="space-y-1.5">
+                    {car.includeList.slice(0, 4).map((inc, idx) => (
+                      <div key={idx} className="flex items-start gap-2 text-xs font-semibold text-slate-700">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                        <span className="leading-snug">{inc}</span>
                       </div>
                     ))}
                   </div>
@@ -152,22 +160,14 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
 
               </div>
 
-              {/* Action Buttons */}
-              <div className="pt-5 mt-5 border-t border-slate-100 flex items-center gap-2">
+              {/* Action Button */}
+              <div className="p-5 pt-0">
                 <button
                   onClick={() => handleWhatsAppBooking(car.name)}
-                  className="flex-1 bg-[#f94a29] hover:bg-[#e03d1e] text-white font-sans font-bold text-xs uppercase py-3.5 px-3 rounded-xl shadow-md shadow-orange-600/20 transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+                  className="w-full bg-[#f94a29] hover:bg-[#e03d1e] text-white font-sans font-bold text-xs uppercase py-3.5 px-4 rounded-xl shadow-md shadow-orange-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <MessageCircle className="w-4 h-4 fill-current shrink-0" />
-                  <span>Pesan WA</span>
-                </button>
-
-                <button
-                  onClick={() => onSelectCar(car)}
-                  className="bg-slate-100 hover:bg-slate-200 text-[#0d1b37] border border-slate-200 font-sans font-bold text-xs uppercase py-3.5 px-3 rounded-xl transition-all cursor-pointer"
-                  title="Form Reservasi Lengkap"
-                >
-                  Book Tour
+                  <span>Sewa Armada WA</span>
                 </button>
               </div>
 
