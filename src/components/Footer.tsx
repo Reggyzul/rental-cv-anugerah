@@ -110,8 +110,8 @@ export default function Footer({ lang, onNavigateSection }: FooterProps) {
             </div>
           </div>
 
-          {/* Column 3: Navigation Links */}
-          <div className="md:col-span-3 space-y-4">
+          {/* Column 3: Navigation Links & Official Social Media */}
+          <div className="md:col-span-3 space-y-5">
             <h4 className="font-display font-black text-sm uppercase text-red-500 tracking-wider">
               Navigasi Cepat
             </h4>
@@ -139,7 +139,7 @@ export default function Footer({ lang, onNavigateSection }: FooterProps) {
                 onClick={() => onNavigateSection('package-tour')}
                 className="block hover:text-red-400 transition-colors text-left"
               >
-                ➔ Paket Tour Perjalanan (5 Tour)
+                ➔ Paket Tour Perjalanan
               </button>
               <button
                 onClick={() => onNavigateSection('cars')}
@@ -147,6 +147,54 @@ export default function Footer({ lang, onNavigateSection }: FooterProps) {
               >
                 ➔ Katalog Armada Bus & Mobil
               </button>
+            </div>
+
+            {/* HIGH-END OFFICIAL SOCIAL MEDIA BLOCK */}
+            <div className="pt-2 space-y-2.5">
+              <span className="text-[10px] font-extrabold text-red-400 uppercase tracking-widest block">
+                MEDIA SOSIAL RESMI
+              </span>
+              
+              <div className="flex items-center gap-2.5">
+                {/* Facebook Button */}
+                <a
+                  href="https://www.facebook.com/share/1CvHKVWo8t/"
+                  target="_blank"
+                  rel="noreferrer"
+                  title="Facebook Resmi CV. Anugrah Pariwisata"
+                  className="w-9 h-9 rounded-xl bg-slate-900 hover:bg-[#1877F2] text-slate-300 hover:text-white border border-slate-800 hover:border-[#1877F2] flex items-center justify-center transition-all duration-300 shadow-sm hover:scale-110"
+                >
+                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                  </svg>
+                </a>
+
+                {/* Instagram Button */}
+                <a
+                  href="https://www.instagram.com/wahyudaanggaraanugrah?igsh=MWk1eWE0MTMxeG95MA=="
+                  target="_blank"
+                  rel="noreferrer"
+                  title="Instagram Official @wahyudaanggaraanugrah"
+                  className="w-9 h-9 rounded-xl bg-slate-900 hover:bg-gradient-to-tr hover:from-amber-500 hover:via-rose-600 hover:to-purple-600 text-slate-300 hover:text-white border border-slate-800 hover:border-pink-500 flex items-center justify-center transition-all duration-300 shadow-sm hover:scale-110"
+                >
+                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                  </svg>
+                </a>
+
+                {/* TikTok Button */}
+                <a
+                  href="https://www.tiktok.com/@anugrahpariwisatac?_r=1&_t=ZS-98Jppe9Fy36"
+                  target="_blank"
+                  rel="noreferrer"
+                  title="TikTok Official @anugrahpariwisatac"
+                  className="w-9 h-9 rounded-xl bg-slate-900 hover:bg-black text-slate-300 hover:text-white border border-slate-800 hover:border-slate-600 flex items-center justify-center transition-all duration-300 shadow-sm hover:scale-110"
+                >
+                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 1 1-5.2-1.74 2.89 2.89 0 0 1 2.31-1.42V8.9a6.34 6.34 0 0 0-5.11 2.5 6.34 6.34 0 0 0 1 8.87 6.34 6.34 0 0 0 8.7-1.39V10.2a8.27 8.27 0 0 0 5.52 2.1V8.85a4.8 4.8 0 0 1-3-2.16z" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
 
