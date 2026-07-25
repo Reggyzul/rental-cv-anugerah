@@ -52,12 +52,12 @@ export default function Header({
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-4">
             
-            {/* LOGO BRAND */}
+            {/* 1. LEFT: LOGO BRAND */}
             <div 
               onClick={() => handleItemClick('home')}
-              className="flex items-center gap-3 cursor-pointer group text-left"
+              className="flex items-center gap-3 cursor-pointer group text-left shrink-0"
               id="header-logo"
             >
               <div className="relative flex items-center justify-center">
@@ -76,8 +76,8 @@ export default function Header({
               </div>
             </div>
 
-            {/* DESKTOP NAV LINKS (Exact Precision Alignment) */}
-            <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-xs font-sans font-bold text-slate-700" id="desktop-nav">
+            {/* 2. CENTER: DESKTOP NAV LINKS (Balanced & Shifted Left) */}
+            <nav className="hidden lg:flex items-center justify-center gap-5 xl:gap-7 text-xs font-sans font-bold text-slate-700 flex-1 px-4" id="desktop-nav">
               
               <button
                 onClick={() => handleItemClick('home')}
@@ -115,7 +115,6 @@ export default function Header({
                 Transport Rent
               </button>
 
-              {/* GALLERY LINK (SEBELAH KANAN TRANSPORT RENT) */}
               <button
                 onClick={() => handleItemClick('gallery')}
                 className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
@@ -134,21 +133,23 @@ export default function Header({
                 Contact Us
               </button>
 
-              {/* BOOK A TOUR CORAL BUTTON */}
+            </nav>
+
+            {/* 3. RIGHT: BOOK A TOUR CORAL BUTTON */}
+            <div className="hidden lg:flex items-center shrink-0">
               <button
                 onClick={onBookingClick}
-                className="bg-[#f94a29] hover:bg-[#e03d1e] text-white font-display font-extrabold text-xs uppercase px-5 py-2.5 rounded-xl shadow-md shadow-orange-600/20 transition-all cursor-pointer tracking-wider ml-1"
+                className="bg-[#f94a29] hover:bg-[#e03d1e] text-white font-display font-extrabold text-xs uppercase px-5 py-2.5 rounded-xl shadow-md shadow-orange-600/20 transition-all cursor-pointer tracking-wider"
                 id="header-book-tour-btn"
               >
                 BOOK A TOUR
               </button>
-
-            </nav>
+            </div>
 
             {/* Mobile Hamburger Toggle Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-xl text-slate-800 hover:bg-slate-100 transition-colors cursor-pointer"
+              className="lg:hidden p-2 rounded-xl text-slate-800 hover:bg-slate-100 transition-colors cursor-pointer shrink-0"
               id="mobile-menu-toggle"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
