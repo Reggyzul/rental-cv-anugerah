@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { UserCheck, Clock, ShieldCheck, Tag, Sparkles, MessageSquare } from 'lucide-react';
+import React from 'react';
+import { motion } from 'motion/react';
+import { ShieldCheck, Sparkles, Compass, Award, CheckCircle2, HeartHandshake, Bus, Hotel, Utensils, Music, Tv, Coffee } from 'lucide-react';
 import { TRANSLATIONS } from '../utils/translations';
 
 interface AboutProps {
@@ -8,173 +8,208 @@ interface AboutProps {
 }
 
 export default function About({ lang }: AboutProps) {
-  const [showFullStory, setShowFullStory] = useState(false);
   const t = TRANSLATIONS[lang];
 
-  const keyStrengths = [
-    {
-      icon: <ShieldCheck className="w-5 h-5 text-luxury-gold" />,
-      title: t.strength_clean_title,
-      description: t.strength_clean_desc
-    },
-    {
-      icon: <UserCheck className="w-5 h-5 text-luxury-gold" />,
-      title: t.strength_driver_title,
-      description: t.strength_driver_desc
-    },
-    {
-      icon: <Tag className="w-5 h-5 text-luxury-gold" />,
-      title: t.strength_price_title,
-      description: t.strength_price_desc
-    },
-    {
-      icon: <Clock className="w-5 h-5 text-luxury-gold" />,
-      title: t.strength_time_title,
-      description: t.strength_time_desc
-    }
-  ];
-
   return (
-    <section id="about" className="py-24 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+    <section id="about" className="py-20 sm:py-24 bg-gradient-to-b from-white via-slate-50 to-white text-[#0f172a] overflow-hidden relative border-b border-slate-200">
+      
+      {/* Background Subtle Soft Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-orange-400/5 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-14">
+        
+        {/* Section Heading Header */}
+        <div className="text-center max-w-3xl mx-auto space-y-3.5" id="about-heading">
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-orange-600 font-display font-extrabold text-xs tracking-widest uppercase shadow-sm"
+          >
+            <Compass className="w-4 h-4 text-orange-600" />
+            <span>PROFIL & VISI MISI PERUSAHAAN</span>
+          </motion.div>
+
+          <motion.h2 
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-[#0f172a] tracking-tight uppercase leading-tight"
+          >
+            CV. ANUGRAH <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-amber-600 to-orange-500">PARIWISATA</span>
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="font-sans text-slate-600 text-sm sm:text-base leading-relaxed font-medium max-w-2xl mx-auto"
+          >
+            "WISATA HEMAT BERSAMA TRAVEL HEBAT" — Penyedia Layanan Tour & Travel Pariwisata No. 1 di Padang, Sumatera Barat & Indonesia.
+          </motion.p>
+        </div>
+
+        {/* 2-COLUMN VISION & MISSION GRID */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
-          {/* About Left: The Artistic Card */}
-          <div className="lg:col-span-5 relative" id="about-image-card">
-            <div className="relative p-6 bg-luxury-charcoal rounded-[40px] shadow-2xl overflow-hidden group">
+          {/* LEFT COLUMN: VISI PERUSAHAAN */}
+          <motion.div
+            initial={{ opacity: 0, x: -25 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="lg:col-span-5 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white rounded-3xl p-8 shadow-2xl border border-slate-700/60 flex flex-col justify-between relative overflow-hidden text-left"
+          >
+            <div className="space-y-6 relative z-10">
               
-              {/* Card Header branding inside */}
-              <div className="flex justify-between items-center mb-8 border-b border-white/10 pb-4">
-                <p className="text-[10px] font-display font-medium tracking-[0.2em] text-gray-400">
-                  {t.about_card_tag}
-                </p>
-                <div className="flex flex-col items-end">
-                  <span className="font-display font-bold text-xs tracking-tight text-luxury-gold">
-                    YOGA TRANSPORT
-                  </span>
-                  <span className="text-[7px] text-gray-400 tracking-wider">MALANG - EAST JAVA</span>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-2xl bg-orange-500/20 border border-orange-500/30 flex items-center justify-center text-orange-400 shadow-md">
+                  <Award className="w-6 h-6" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-orange-400 block">VISI UTAMA</span>
+                  <h3 className="font-display font-black text-xl text-white uppercase tracking-tight">
+                    CV. ANUGRAH PARIWISATA
+                  </h3>
                 </div>
               </div>
 
-              {/* Central Premium vehicle image inside frame */}
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/3] shadow-lg mb-6 border border-white/5 bg-black/20">
-                <img
-                  src="/elf_long.png"
-                  alt="Isuzu Elf Long Yoga Transport Malang"
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 flex items-center gap-1.5 bg-luxury-gold/90 text-white font-display font-bold text-[10px] px-2.5 py-1 rounded">
-                  <Sparkles className="w-3 h-3" />
-                  <span>{t.about_badge}</span>
+              {/* 3 Point Vision */}
+              <div className="space-y-4 pt-2">
+                <div className="p-4 rounded-2xl bg-white/5 border border-white/10 flex items-start gap-3">
+                  <span className="w-6 h-6 rounded-full bg-orange-500 text-white font-black text-xs flex items-center justify-center shrink-0 mt-0.5">1</span>
+                  <p className="font-sans text-xs text-slate-200 leading-relaxed font-medium">
+                    Menjadikan perusahaan tour & travel terbaik dibidang pelayanan pariwisata di Indonesia.
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-white/5 border border-white/10 flex items-start gap-3">
+                  <span className="w-6 h-6 rounded-full bg-orange-500 text-white font-black text-xs flex items-center justify-center shrink-0 mt-0.5">2</span>
+                  <p className="font-sans text-xs text-slate-200 leading-relaxed font-medium">
+                    Menjadikan perusahaan tour & travel terbaik yang berskala internasional.
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-white/5 border border-white/10 flex items-start gap-3">
+                  <span className="w-6 h-6 rounded-full bg-orange-500 text-white font-black text-xs flex items-center justify-center shrink-0 mt-0.5">3</span>
+                  <p className="font-sans text-xs text-slate-200 leading-relaxed font-medium">
+                    Menjadikan Perusahaan no 1 di Padang, Sumatera Barat & di Indonesia dalam tour Pariwisata.
+                  </p>
                 </div>
               </div>
 
-              {/* Gold Accented Callout Text inside frame */}
-              <div className="space-y-3">
-                <div className="flex items-baseline justify-between">
-                  <h4 className="font-display font-bold text-base text-white tracking-tight uppercase leading-snug">
-                    {lang === 'EN' ? (
-                      <>
-                        BEST TRAVEL <br />
-                        <span className="text-luxury-gold">EXPERIENCE</span> IN JAVA
-                      </>
-                    ) : (
-                      <>
-                        PENGALAMAN TRAVEL <br />
-                        TERBAIK DI <span className="text-luxury-gold">JAWA TIMUR</span>
-                      </>
-                    )}
-                  </h4>
-                  <div className="text-right">
-                    <span className="block font-display font-black text-3xl text-luxury-gold leading-none">4.9</span>
-                    <span className="text-[8px] text-gray-400">{t.about_card_rating_label}</span>
-                  </div>
-                </div>
-                <p className="text-[11px] text-gray-400 leading-relaxed font-sans">
-                  {lang === 'EN' 
-                    ? 'Enjoy the beauty of Malang Batu Bromo without driving stress. Leave your journey to the local experts!' 
-                    : 'Nikmati indahnya alam Malang, Batu, dan Bromo tanpa lelah menyetir. Serahkan perjalanan Anda kepada tim ahli kami!'}
-                </p>
-              </div>
-
-              {/* Decorative design nodes in frame */}
-              <div className="absolute top-0 right-0 w-24 h-24 bg-luxury-gold/5 rounded-full blur-xl pointer-events-none" />
-              <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-luxury-gold/10 rounded-full blur-xl pointer-events-none" />
             </div>
-          </div>
 
-          {/* About Right: The Content */}
-          <div className="lg:col-span-7 space-y-6 flex flex-col justify-center animate-fade-in" id="about-content">
-            
-            <div className="space-y-2">
-              <span className="font-display font-bold text-sm text-luxury-gold tracking-widest uppercase">
-                {t.about_tag}
+            {/* Motto Footnote */}
+            <div className="pt-6 mt-6 border-t border-slate-800 text-center relative z-10">
+              <span className="font-display font-extrabold text-xs text-orange-400 tracking-wider uppercase block">
+                MOTO: Wisata Hemat dengan Travel Hebat
               </span>
-              <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-gray-900 tracking-tight leading-none uppercase">
-                {t.about_title_1} <br />
-                <span className="text-luxury-gold">{t.about_title_2}</span>
-              </h2>
             </div>
+          </motion.div>
 
-            <div className="space-y-4 font-sans text-gray-600 leading-relaxed text-sm sm:text-base">
-              <p>
-                {t.about_desc_1}
-              </p>
-              <p>
-                {t.about_desc_2}
-              </p>
-            </div>
-
-            {/* Read More Accordion showing strengths details */}
-            <AnimatePresence>
-              {showFullStory && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
-                  className="space-y-4 pt-4 border-t border-gray-100"
-                >
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-                    {keyStrengths.map((strength, idx) => (
-                      <div key={idx} className="bg-amber-50/20 p-4 rounded-2xl border border-amber-100/30">
-                        <div className="mb-2">{strength.icon}</div>
-                        <h4 className="font-display font-bold text-sm text-gray-900 mb-1">{strength.title}</h4>
-                        <p className="font-sans text-xs text-gray-500 leading-relaxed">{strength.description}</p>
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-
-            {/* Buttons Row */}
-            <div className="flex items-center gap-4 pt-4">
-              <button
-                onClick={() => setShowFullStory(!showFullStory)}
-                className="bg-luxury-gold hover:bg-luxury-gold-dark text-white font-display font-bold text-sm px-6 py-3.5 rounded-full shadow-md transition-colors cursor-pointer"
-                id="about-readmore-btn"
-              >
-                {showFullStory ? t.about_read_less : t.about_read_more}
-              </button>
+          {/* RIGHT COLUMN: MISI PERUSAHAAN (7 POINTS) */}
+          <motion.div
+            initial={{ opacity: 0, x: 25 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="lg:col-span-7 bg-white border border-slate-200/90 rounded-3xl p-8 shadow-xl flex flex-col justify-between text-left space-y-6"
+          >
+            <div className="space-y-5">
               
-              <button
-                onClick={() => {
-                  const target = document.getElementById('contact');
-                  if (target) target.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className="border border-gray-200 hover:bg-gray-50 text-gray-700 hover:text-luxury-gold p-3 rounded-full transition-all cursor-pointer"
-                title="Hubungi Kami"
-                id="about-contact-icon-btn"
-              >
-                <MessageSquare className="w-5 h-5" />
-              </button>
-            </div>
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 rounded-2xl bg-orange-50 border border-orange-200 flex items-center justify-center text-orange-600 shadow-sm">
+                  <ShieldCheck className="w-6 h-6" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-orange-600 block">7 MISI PELAYANAN</span>
+                  <h3 className="font-display font-black text-xl text-[#0f172a] uppercase tracking-tight">
+                    Komitmen Kualitas Tour
+                  </h3>
+                </div>
+              </div>
 
-          </div>
+              {/* 7 Missions List */}
+              <div className="space-y-2.5 text-xs text-slate-700 font-medium">
+                <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80 flex items-center gap-3">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>1. Memberikan Pelayanan yang terbaik dalam tour Pariwisata.</span>
+                </div>
+                <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80 flex items-center gap-3">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>2. Mengutamakan keselamatan & kenyamanan Peserta tour.</span>
+                </div>
+                <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80 flex items-center gap-3">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>3. Memberikan Harga Hemat & Ekonomis untuk tour.</span>
+                </div>
+                <div className="p-3 rounded-xl bg-orange-50/80 border border-orange-200 flex items-center gap-3 font-semibold text-orange-950">
+                  <Bus className="w-4 h-4 text-orange-600 shrink-0" />
+                  <span>4. Armada/Transportasi tour Fasilitas Lengkap: Bus Full AC, Toilet Bersih, Full Karaoke, Selimut & Bantal.</span>
+                </div>
+                <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80 flex items-center gap-3">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>5. Memberikan Tour Leader & Kru Tour yang ramah dalam pelayanan ketika tour.</span>
+                </div>
+                <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80 flex items-center gap-3">
+                  <Hotel className="w-4 h-4 text-orange-600 shrink-0" />
+                  <span>6. Memberikan fasilitas lainnya seperti Hotel & Restoran yang terbaik.</span>
+                </div>
+                <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80 flex items-center gap-3">
+                  <Sparkles className="w-4 h-4 text-orange-600 shrink-0" />
+                  <span>7. Memberikan destinasi-destinasi wisata yang Indah & Cantik di Indonesia & Luar Negeri.</span>
+                </div>
+              </div>
+
+            </div>
+          </motion.div>
 
         </div>
+
+        {/* FLEET AMENITIES SHOWCASE */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-sm flex items-center gap-3 text-left">
+            <div className="w-10 h-10 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center shrink-0 font-bold">
+              AC
+            </div>
+            <div>
+              <span className="font-display font-bold text-xs text-[#0f172a] block">Bus Full AC</span>
+              <span className="text-[10px] text-slate-500 font-medium block">Kabin sejuk merata</span>
+            </div>
+          </div>
+
+          <div className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-sm flex items-center gap-3 text-left">
+            <div className="w-10 h-10 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center shrink-0">
+              <Utensils className="w-5 h-5" />
+            </div>
+            <div>
+              <span className="font-display font-bold text-xs text-[#0f172a] block">Toilet Bersih</span>
+              <span className="text-[10px] text-slate-500 font-medium block">Higienis di dalam bus</span>
+            </div>
+          </div>
+
+          <div className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-sm flex items-center gap-3 text-left">
+            <div className="w-10 h-10 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center shrink-0">
+              <Music className="w-5 h-5" />
+            </div>
+            <div>
+              <span className="font-display font-bold text-xs text-[#0f172a] block">Full Karaoke</span>
+              <span className="text-[10px] text-slate-500 font-medium block">Sound system jernih</span>
+            </div>
+          </div>
+
+          <div className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-sm flex items-center gap-3 text-left">
+            <div className="w-10 h-10 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center shrink-0">
+              <Coffee className="w-5 h-5" />
+            </div>
+            <div>
+              <span className="font-display font-bold text-xs text-[#0f172a] block">Selimut & Bantal</span>
+              <span className="text-[10px] text-slate-500 font-medium block">Istirahat hangat & nyaman</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );

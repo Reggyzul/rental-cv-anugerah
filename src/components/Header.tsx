@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Globe, ChevronDown, MapPin, Phone, Clock } from 'lucide-react';
+import { Menu, X, MapPin, Phone, Compass, Award, ShieldCheck } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { TRANSLATIONS } from '../utils/translations';
 
@@ -8,21 +8,27 @@ interface HeaderProps {
   onNavClick: (sectionId: string) => void;
   lang: 'ID' | 'EN';
   setLang: (lang: 'ID' | 'EN') => void;
-  currentPage: 'home' | 'tours' | 'rentals';
-  setCurrentPage: (page: 'home' | 'tours' | 'rentals') => void;
+  currentPage: 'home' | 'about' | 'tours' | 'rentals';
+  setCurrentPage: (page: 'home' | 'about' | 'tours' | 'rentals') => void;
   onBookingClick: () => void;
 }
 
-export default function Header({ activeSection, onNavClick, lang, setLang, currentPage, setCurrentPage, onBookingClick }: HeaderProps) {
-  const [isOpen, setIsOpen] = useState(false);
+export default function Header({
+  activeSection,
+  onNavClick,
+  lang,
+  currentPage,
+  setCurrentPage,
+  onBookingClick
+}: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [showLangDropdown, setShowLangDropdown] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const t = TRANSLATIONS[lang];
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
+      if (window.scrollY > 30) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -34,52 +40,51 @@ export default function Header({ activeSection, onNavClick, lang, setLang, curre
 
   const navItems = [
     { label: t.nav_home, id: 'home', type: 'page', pageId: 'home' },
-    { label: lang === 'EN' ? 'Tours' : 'Paket Wisata', id: 'tours', type: 'page', pageId: 'tours' },
-    { label: lang === 'EN' ? 'Rentals' : 'Pilihan Mobil', id: 'rentals', type: 'page', pageId: 'rentals' },
-    { label: t.nav_about, id: 'about', type: 'section', sectionId: 'about' },
-    { label: lang === 'EN' ? 'Clients' : 'Ulasan', id: 'testimonials', type: 'section', sectionId: 'testimonials' },
-    { label: t.nav_contact, id: 'contact', type: 'section', sectionId: 'contact' },
+    { label: 'Profil & Visi Misi', id: 'about', type: 'section', sectionId: 'about' },
+    { label: 'Destinasi Tour', id: 'services', type: 'section', sectionId: 'services' },
+    { label: 'Armada Bus & Mobil', id: 'cars', type: 'section', sectionId: 'cars' },
+    { label: t.nav_contact, id: 'footer-contact', type: 'section', sectionId: 'footer-contact' }
   ];
 
   const handleItemClick = (item: typeof navItems[0]) => {
+    setMobileMenuOpen(false);
     if (item.type === 'page') {
-      setCurrentPage(item.pageId as any);
-      onNavClick(item.pageId);
-    } else {
-      setCurrentPage('home');
-      setTimeout(() => {
-        onNavClick(item.sectionId as any);
-      }, 100);
+      setCurrentPage(item.pageId as 'home' | 'about' | 'tours' | 'rentals');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (item.type === 'section') {
+      if (currentPage !== 'home') {
+        setCurrentPage('home');
+        setTimeout(() => {
+          const el = document.getElementById(item.sectionId);
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      } else {
+        const el = document.getElementById(item.sectionId);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }
     }
-    setIsOpen(false);
   };
 
   return (
-    <header
-      id="main-header"
-      className="fixed top-0 left-0 w-full z-50 flex flex-col shadow-sm"
-    >
-      {/* 1. Top Bar / Header Contact */}
-      <div className="bg-luxury-black text-gray-300 text-[10px] sm:text-xs py-2.5 px-4 sm:px-6 lg:px-8 border-b border-white/5 flex justify-between items-center">
-        <div className="max-w-7xl mx-auto w-full flex flex-col sm:flex-row justify-between items-center gap-2">
-          <div className="flex items-center gap-1.5">
-            <MapPin className="w-3.5 h-3.5 text-luxury-gold shrink-0" />
-            <span className="truncate max-w-[280px] sm:max-w-none text-center sm:text-left">{t.topbar_address}</span>
+    <header className="fixed top-0 left-0 w-full z-50 flex flex-col shadow-sm">
+      
+      {/* 1. Top Bar */}
+      <div className="bg-slate-950 text-slate-300 border-b border-slate-800 text-xs py-1.5 hidden md:block">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+          <div className="flex items-center gap-6 overflow-hidden">
+            <div className="flex items-center gap-1.5 text-slate-300 truncate">
+              <MapPin className="w-3.5 h-3.5 text-orange-500 shrink-0" />
+              <span className="truncate">Kantor Pusat: Salido Painan, Pesisir Selatan | Cabang: Padang Timur</span>
+            </div>
+            <div className="flex items-center gap-1.5 shrink-0">
+              <Phone className="w-3.5 h-3.5 text-orange-500 shrink-0" />
+              <span className="font-semibold text-white">WA Fast Response: 0812-3456-7890</span>
+            </div>
           </div>
-          <div className="flex items-center gap-4">
-            <a 
-              href="https://api.whatsapp.com/send?phone=628813305066" 
-              target="_blank" 
-              rel="noreferrer" 
-              className="flex items-center gap-1.5 hover:text-luxury-gold transition-colors font-semibold"
-            >
-              <Phone className="w-3.5 h-3.5 text-luxury-gold shrink-0 animate-pulse" />
-              <span>08813305066</span>
-            </a>
-            <div className="h-3 w-px bg-white/20 hidden sm:block" />
-            <div className="flex items-center gap-1.5">
-              <Clock className="w-3.5 h-3.5 text-luxury-gold shrink-0" />
-              <span>{t.topbar_service}</span>
+          <div className="flex items-center gap-4 shrink-0">
+            <div className="flex items-center gap-1.5 text-amber-400 font-extrabold">
+              <Award className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+              <span>Wisata Hemat dengan Travel Hebat</span>
             </div>
           </div>
         </div>
@@ -89,24 +94,30 @@ export default function Header({ activeSection, onNavClick, lang, setLang, curre
       <div
         className={`w-full transition-all duration-300 ${
           isScrolled
-            ? 'bg-white/95 backdrop-blur-md py-3 border-b border-slate-100'
-            : 'bg-white py-4 border-b border-slate-100'
+            ? 'bg-white/95 backdrop-blur-md py-1.5 border-b border-slate-200/80 shadow-md'
+            : 'bg-white py-2 border-b border-slate-200/80'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-14">
             
-            {/* Logo */}
+            {/* Logo Brand */}
             <div 
               onClick={() => handleItemClick({ label: t.nav_home, id: 'home', type: 'page', pageId: 'home' })}
-              className="flex items-center cursor-pointer group"
+              className="flex items-center gap-3 cursor-pointer group"
               id="header-logo"
             >
-              <img
-                src="/logo.png"
-                alt="Yoga Transport"
-                className="h-20 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
-              />
+              <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-orange-600 via-amber-600 to-orange-500 flex items-center justify-center text-white font-black font-display text-lg shadow-md shadow-orange-500/20 group-hover:scale-105 transition-transform shrink-0">
+                AP
+              </div>
+              <div className="flex flex-col text-left">
+                <span className="font-display font-black text-lg sm:text-xl tracking-tight text-[#0f172a] leading-none group-hover:text-orange-600 transition-colors">
+                  CV. ANUGRAH <span className="text-orange-600">PARIWISATA</span>
+                </span>
+                <span className="font-sans text-[10px] font-extrabold text-orange-600 tracking-wider mt-0.5">
+                  WISATA HEMAT BERSAMA TRAVEL HEBAT
+                </span>
+              </div>
             </div>
 
             {/* Desktop Nav Items */}
@@ -120,19 +131,15 @@ export default function Header({ activeSection, onNavClick, lang, setLang, curre
                   <button
                     key={item.id}
                     onClick={() => handleItemClick(item)}
-                    className={`font-display text-sm font-semibold transition-colors cursor-pointer relative py-2 px-1 ${
-                      isItemActive
-                        ? 'text-luxury-gold'
-                        : 'text-gray-600 hover:text-luxury-gold'
+                    className={`font-display text-xs sm:text-sm font-extrabold transition-colors cursor-pointer relative py-2 px-1 ${
+                      isItemActive ? 'text-orange-600' : 'text-slate-700 hover:text-orange-600'
                     }`}
-                    id={`nav-link-${item.id}`}
                   >
                     {item.label}
                     {isItemActive && (
                       <motion.div
-                        layoutId="activeNavIndicator"
-                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-luxury-gold"
-                        transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                        layoutId="activeTab"
+                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-600 rounded-full"
                       />
                     )}
                   </button>
@@ -140,116 +147,61 @@ export default function Header({ activeSection, onNavClick, lang, setLang, curre
               })}
             </nav>
 
-            {/* Right Utilities (Language, solid Blue CTA, Hamburger) */}
-            <div className="flex items-center gap-3">
-              {/* Language Selector */}
-              <div className="relative">
-                <button
-                  onClick={() => setShowLangDropdown(!showLangDropdown)}
-                  className="bg-luxury-gold hover:bg-luxury-gold-dark text-white font-display font-semibold text-xs py-2 px-4 rounded-full flex items-center gap-1.5 transition-colors cursor-pointer"
-                  id="language-btn"
-                >
-                  <Globe className="w-3.5 h-3.5" />
-                  <span>{lang === 'ID' ? 'ID' : 'EN'}</span>
-                  <ChevronDown className="w-3.5 h-3.5" />
-                </button>
-                
-                <AnimatePresence>
-                  {showLangDropdown && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      className="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-xl py-1 border border-gray-100 z-50 animate-fade-in"
-                    >
-                      <button
-                        onClick={() => {
-                          setLang('ID');
-                          setShowLangDropdown(false);
-                        }}
-                        className="w-full text-left px-4 py-2 text-xs font-display font-medium text-gray-700 hover:bg-gray-50 flex items-center justify-between"
-                      >
-                        <span>Indonesia</span>
-                        {lang === 'ID' && <span className="w-1.5 h-1.5 rounded-full bg-luxury-gold"></span>}
-                      </button>
-                      <button
-                        onClick={() => {
-                          setLang('EN');
-                          setShowLangDropdown(false);
-                        }}
-                        className="w-full text-left px-4 py-2 text-xs font-display font-medium text-gray-700 hover:bg-gray-50 flex items-center justify-between"
-                      >
-                        <span>English</span>
-                        {lang === 'EN' && <span className="w-1.5 h-1.5 rounded-full bg-luxury-gold"></span>}
-                      </button>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-
-              {/* BOOKING SEKARANG Solid Blue CTA Button */}
+            {/* CTA Booking Button */}
+            <div className="hidden lg:flex items-center gap-3">
               <button
                 onClick={onBookingClick}
-                className="bg-[#2563eb] hover:bg-blue-700 text-white font-display font-extrabold text-xs uppercase py-2.5 px-5 rounded-xl transition-all shadow-md cursor-pointer shrink-0 hidden md:block"
+                className="bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-display font-bold text-xs uppercase px-5 py-2.5 rounded-full shadow-md shadow-orange-600/20 transition-all flex items-center gap-2 cursor-pointer"
+                id="header-booking-btn"
               >
-                {lang === 'EN' ? 'BOOKING NOW' : 'BOOKING SEKARANG'}
-              </button>
-
-              {/* Mobile Hamburger Button */}
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="lg:hidden p-2 text-gray-600 hover:text-luxury-gold transition-colors cursor-pointer rounded-full"
-                id="mobile-menu-btn"
-              >
-                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                <Compass className="w-4 h-4" />
+                <span>Konsultasi Tour</span>
               </button>
             </div>
 
+            {/* Mobile Hamburger Toggle Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="lg:hidden p-2 rounded-xl text-slate-800 hover:bg-slate-100 transition-colors cursor-pointer"
+              id="mobile-menu-toggle"
+            >
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
           </div>
         </div>
       </div>
 
-      {/* Mobile Drawer Navigation */}
+      {/* Mobile Drawer Menu */}
       <AnimatePresence>
-        {isOpen && (
+        {mobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-t border-gray-100 shadow-inner overflow-hidden"
-            id="mobile-drawer"
+            className="lg:hidden bg-white border-b border-slate-200 shadow-xl overflow-hidden"
+            id="mobile-menu-drawer"
           >
-            <div className="px-4 pt-2 pb-6 space-y-1">
-              {navItems.map((item) => {
-                const isItemActive = 
-                  (item.type === 'page' && currentPage === item.pageId) ||
-                  (item.type === 'section' && activeSection === item.sectionId && currentPage === 'home');
-                  
-                return (
-                  <button
-                    key={item.id}
-                    onClick={() => handleItemClick(item)}
-                    className={`block w-full text-left px-4 py-3 font-display text-sm font-semibold rounded-lg transition-colors cursor-pointer ${
-                      isItemActive
-                        ? 'bg-gold-50 text-luxury-gold border-l-4 border-luxury-gold pl-3'
-                        : 'text-gray-700 hover:bg-gray-50 hover:text-luxury-gold'
-                    }`}
-                  >
-                    {item.label}
-                  </button>
-                );
-              })}
-              
-              {/* Mobile Booking Button */}
-              <div className="pt-4">
+            <div className="px-4 pt-3 pb-6 space-y-3 text-left">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => handleItemClick(item)}
+                  className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100"
+                >
+                  {item.label}
+                </button>
+              ))}
+
+              <div className="pt-2">
                 <button
                   onClick={() => {
+                    setMobileMenuOpen(false);
                     onBookingClick();
-                    setIsOpen(false);
                   }}
-                  className="w-full bg-[#2563eb] hover:bg-blue-700 text-white font-display font-extrabold text-xs uppercase py-3 rounded-xl transition-all shadow-md cursor-pointer text-center"
+                  className="w-full bg-gradient-to-r from-orange-600 to-amber-600 text-white font-display font-bold text-xs uppercase py-3 rounded-xl shadow-md flex items-center justify-center gap-2"
                 >
-                  {lang === 'EN' ? 'BOOKING NOW' : 'BOOKING SEKARANG'}
+                  <Compass className="w-4 h-4" />
+                  <span>Konsultasi Tour WA</span>
                 </button>
               </div>
             </div>
