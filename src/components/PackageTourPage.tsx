@@ -193,7 +193,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
       {/* PRECISE & PROFESSIONAL DETAIL MODAL */}
       <AnimatePresence>
         {selectedPackage && selectedTier && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center pt-16 sm:pt-20 pb-4 px-3 sm:px-6 overflow-hidden">
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-4 overflow-hidden">
             {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -209,87 +209,87 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 10 }}
               transition={{ duration: 0.2 }}
-              className="relative w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden z-10 text-left max-h-[calc(100vh-5.5rem)] flex flex-col my-auto"
+              className="relative w-full max-w-lg sm:max-w-xl bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-10 text-left max-h-[82vh] flex flex-col my-auto"
             >
               {/* Header */}
-              <div className="relative bg-slate-900 text-white p-5 sm:p-6 shrink-0 border-b border-slate-800 z-20">
+              <div className="relative bg-slate-900 text-white p-4 sm:p-5 shrink-0 border-b border-slate-800 z-20">
                 <button
                   onClick={handleCloseModal}
-                  className="absolute top-4 right-4 sm:top-5 sm:right-5 w-10 h-10 rounded-full bg-red-600 hover:bg-red-700 text-white transition-all flex items-center justify-center shadow-2xl cursor-pointer z-50 hover:scale-110 border-2 border-white"
-                  title="Tutup Modal (Kembali)"
+                  className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 w-8.5 h-8.5 rounded-full bg-red-600 hover:bg-red-700 text-white transition-all flex items-center justify-center shadow-lg cursor-pointer z-50 hover:scale-110 border border-white/30"
+                  title="Tutup Modal"
                   id="close-tour-modal"
                 >
-                  <X className="w-5.5 h-5.5 stroke-[2.5]" />
+                  <X className="w-5 h-5 stroke-[2.5]" />
                 </button>
 
-                <div className="space-y-1.5 pr-14">
+                <div className="space-y-1 pr-11">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="bg-red-600 text-white text-[10px] font-bold uppercase px-2.5 py-0.5 rounded shadow-xs">
+                    <span className="bg-red-600 text-white text-[10px] font-bold uppercase px-2 py-0.5 rounded shadow-xs">
                       {t.pkg_modal_duration}: {selectedPackage.duration}
                     </span>
                     <span className="text-[11px] font-semibold text-slate-300">
                       {t.pkg_route_label}: {selectedPackage.routeDisplay}
                     </span>
                   </div>
-                  <h2 className="font-display font-black text-lg sm:text-2xl uppercase tracking-tight text-white leading-tight">
+                  <h2 className="font-display font-black text-base sm:text-xl uppercase tracking-tight text-white leading-tight pt-0.5">
                     {selectedPackage.title}
                   </h2>
                 </div>
               </div>
 
               {/* Scrollable Body */}
-              <div className="p-5 sm:p-6 overflow-y-auto space-y-6 flex-1 text-slate-800 text-xs">
+              <div className="p-4 sm:p-5 overflow-y-auto space-y-4 flex-1 text-slate-800 text-xs">
                 
                 {/* 1. TIER SELECTION CARDS */}
                 <div>
-                  <h3 className="font-display font-bold text-xs uppercase tracking-wider text-slate-500 mb-2.5">
+                  <h3 className="font-display font-bold text-[11px] uppercase tracking-wider text-slate-500 mb-2">
                     {t.pkg_modal_tier_title}
                   </h3>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                     {selectedPackage.tiers.map((tier, idx) => {
                       const isSelected = selectedTier.busType === tier.busType;
                       return (
                         <div
                           key={idx}
                           onClick={() => setSelectedTier(tier)}
-                          className={`p-4 rounded-xl border transition-all cursor-pointer flex flex-col justify-between ${
+                          className={`p-3 rounded-xl border transition-all cursor-pointer flex flex-col justify-between ${
                             isSelected
                               ? 'border-red-600 bg-red-50/50 shadow-xs ring-1 ring-red-600'
                               : 'border-slate-200 bg-white hover:border-slate-300'
                           }`}
                         >
-                          <div className="space-y-2">
+                          <div className="space-y-1.5">
                             <div className="flex items-start justify-between">
                               <div>
-                                <h4 className="font-display font-extrabold text-sm text-slate-900">
+                                <h4 className="font-display font-extrabold text-xs sm:text-sm text-slate-900">
                                   {tier.busType}
                                 </h4>
-                                <span className="text-[10px] font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded mt-0.5 inline-block">
+                                <span className="text-[10px] font-bold text-slate-600 bg-slate-100 px-1.5 py-0.5 rounded mt-0.5 inline-block">
                                   {tier.capacity}
                                 </span>
                               </div>
                               {isSelected && (
-                                <span className="text-[10px] font-bold text-red-600 bg-red-100 px-1.5 py-0.5 rounded">
+                                <span className="text-[9px] font-bold text-red-600 bg-red-100 px-1.5 py-0.5 rounded">
                                   {t.pkg_modal_selected}
                                 </span>
                               )}
                             </div>
 
-                            <div className="pt-2 border-t border-slate-100 text-[11px] text-slate-700">
+                            <div className="pt-1.5 border-t border-slate-100 text-[11px] text-slate-700">
                               <span className="font-bold text-slate-900 block">{t.pkg_modal_hotel}:</span>
                               <span>{tier.hotelDetails}</span>
                             </div>
 
-                            <div className="text-[10px] text-slate-500 bg-slate-100/80 p-2 rounded border border-slate-200/60">
+                            <div className="text-[10px] text-slate-500 bg-slate-100/80 p-1.5 rounded border border-slate-200/60">
                               <span className="font-bold text-slate-700">{t.pkg_modal_notes}:</span> {tier.notes}
                             </div>
                           </div>
 
-                          <div className="mt-3 pt-2 border-t border-slate-200/80 flex items-center justify-between">
-                            <span className="text-[10px] font-bold text-slate-500 uppercase">{t.pkg_starting_from}</span>
-                            <span className="font-display font-black text-sm text-red-600">
-                              {tier.pricePerPerson} <span className="text-[10px] font-normal text-slate-500">{t.pkg_per_person}</span>
+                          <div className="mt-2.5 pt-1.5 border-t border-slate-200/80 flex items-center justify-between">
+                            <span className="text-[9px] font-bold text-slate-500 uppercase">{t.pkg_starting_from}</span>
+                            <span className="font-display font-black text-xs sm:text-sm text-red-600">
+                              {tier.pricePerPerson} <span className="text-[9px] font-normal text-slate-500">{t.pkg_per_person}</span>
                             </span>
                           </div>
                         </div>
@@ -299,11 +299,11 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
                 </div>
 
                 {/* 2. HIGHLIGHTS & DESTINASI */}
-                <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
-                  <h4 className="font-display font-bold text-xs uppercase tracking-wider text-slate-700">
+                <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200 space-y-1.5">
+                  <h4 className="font-display font-bold text-[11px] uppercase tracking-wider text-slate-700">
                     {t.pkg_modal_highlights}
                   </h4>
-                  <ul className="space-y-1 text-slate-700 text-xs font-medium">
+                  <ul className="space-y-1 text-slate-700 text-[11px] font-medium">
                     {selectedPackage.highlights.map((spot, idx) => (
                       <li key={idx} className="flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-red-600 shrink-0" />
@@ -314,13 +314,13 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
                 </div>
 
                 {/* 3. INCLUDES & EXCLUDES */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[11px]">
                   {/* Includes */}
-                  <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1.5">
-                    <h5 className="font-display font-bold text-xs uppercase tracking-wide text-slate-800">
+                  <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200 space-y-1">
+                    <h5 className="font-display font-bold text-[11px] uppercase tracking-wide text-slate-800">
                       {t.pkg_modal_includes}
                     </h5>
-                    <ul className="space-y-1 text-slate-600 font-medium">
+                    <ul className="space-y-0.5 text-slate-600 font-medium">
                       {selectedPackage.includes.map((inc, idx) => (
                         <li key={idx} className="flex items-start gap-1.5">
                           <span className="text-slate-400 font-bold">•</span>
@@ -331,11 +331,11 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
                   </div>
 
                   {/* Excludes */}
-                  <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-1.5">
-                    <h5 className="font-display font-bold text-xs uppercase tracking-wide text-slate-800">
+                  <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200 space-y-1">
+                    <h5 className="font-display font-bold text-[11px] uppercase tracking-wide text-slate-800">
                       {t.pkg_modal_excludes}
                     </h5>
-                    <ul className="space-y-1 text-slate-600 font-medium">
+                    <ul className="space-y-0.5 text-slate-600 font-medium">
                       {selectedPackage.excludes.map((exc, idx) => (
                         <li key={idx} className="flex items-start gap-1.5">
                           <span className="text-slate-400 font-bold">•</span>
@@ -349,17 +349,17 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
               </div>
 
               {/* Sticky Footer */}
-              <div className="p-4 bg-slate-900 text-white flex items-center justify-between gap-4 border-t border-slate-800 shrink-0 z-20">
-                <div>
-                  <span className="text-[10px] text-slate-400 block font-medium">{t.pkg_modal_selected}:</span>
-                  <span className="font-display font-bold text-xs text-white">
+              <div className="p-3.5 sm:p-4 bg-slate-900 text-white flex items-center justify-between gap-3 border-t border-slate-800 shrink-0 z-20">
+                <div className="min-w-0">
+                  <span className="text-[9px] text-slate-400 block font-medium uppercase tracking-wider">{t.pkg_modal_selected}:</span>
+                  <span className="font-display font-bold text-xs text-white truncate block">
                     {selectedTier.busType} — <span className="text-red-400">{selectedTier.pricePerPerson}{t.pkg_per_person}</span>
                   </span>
                 </div>
 
                 <button
                   onClick={() => handleWhatsAppBooking(selectedPackage, selectedTier)}
-                  className="bg-red-600 hover:bg-red-700 text-white font-display font-bold text-xs uppercase py-2.5 px-5 rounded-xl transition-colors flex items-center gap-2 cursor-pointer shrink-0 shadow-md"
+                  className="bg-red-600 hover:bg-red-700 text-white font-display font-bold text-xs uppercase py-2.5 px-4 sm:px-5 rounded-xl transition-colors flex items-center gap-1.5 cursor-pointer shrink-0 shadow-md"
                 >
                   <MessageCircle className="w-4 h-4 fill-current" />
                   <span>{t.pkg_modal_wa_btn}</span>
