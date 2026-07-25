@@ -127,44 +127,44 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
       {/* PRECISE & PROFESSIONAL DETAIL MODAL */}
       <AnimatePresence>
         {selectedPackage && selectedTier && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 pt-24 sm:pt-28 pb-6 overflow-y-auto">
             {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={handleCloseModal}
-              className="fixed inset-0 bg-slate-950/70 backdrop-blur-xs"
+              className="fixed inset-0 bg-slate-950/80 backdrop-blur-sm"
             />
 
             {/* Modal Precision Box */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.96, y: 15 }}
+              initial={{ opacity: 0, scale: 0.95, y: 10 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.96, y: 15 }}
+              exit={{ opacity: 0, scale: 0.95, y: 10 }}
               transition={{ duration: 0.2 }}
-              className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-10 my-4 text-left max-h-[85vh] flex flex-col"
+              className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-10 text-left max-h-[calc(100vh-8rem)] flex flex-col"
             >
               {/* Header */}
               <div className="relative bg-slate-900 text-white p-5 sm:p-6 shrink-0 border-b border-slate-800">
                 <button
                   onClick={handleCloseModal}
-                  className="absolute top-4 right-4 p-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors cursor-pointer border border-slate-700"
+                  className="absolute top-4 right-4 p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors cursor-pointer border border-slate-700"
                   title="Tutup"
                 >
                   <X className="w-4 h-4" />
                 </button>
 
-                <div className="space-y-1.5 pr-8">
-                  <div className="flex items-center gap-2">
-                    <span className="bg-red-600 text-white text-[10px] font-bold uppercase px-2 py-0.5 rounded">
-                      {selectedPackage.duration}
+                <div className="space-y-2 pr-10">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="bg-red-600 text-white text-[10px] font-bold uppercase px-2.5 py-0.5 rounded shadow-xs">
+                      Durasi: {selectedPackage.duration}
                     </span>
-                    <span className="text-[11px] font-semibold text-slate-400">
+                    <span className="text-[11px] font-semibold text-slate-300">
                       Rute: {selectedPackage.routeDisplay}
                     </span>
                   </div>
-                  <h2 className="font-display font-black text-xl sm:text-2xl uppercase tracking-tight text-white">
+                  <h2 className="font-display font-black text-xl sm:text-2xl uppercase tracking-tight text-white leading-tight">
                     {selectedPackage.title}
                   </h2>
                 </div>
