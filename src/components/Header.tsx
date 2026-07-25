@@ -66,14 +66,11 @@ export default function Header({
                 className="h-14 w-auto object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-200"
                 style={{ maxWidth: '160px' }}
               />
-              <div className="flex flex-col leading-tight">
-                <span className="font-black text-sm sm:text-base uppercase tracking-tight text-red-600 group-hover:text-red-700 transition-colors" style={{ fontFamily: 'Impact, Arial Black, sans-serif', letterSpacing: '0.03em' }}>
-                  CV. ANUGERAH
+              <div className="flex flex-col leading-snug">
+                <span className="font-semibold text-sm sm:text-base uppercase tracking-wide text-rose-600 group-hover:text-rose-700 transition-colors">
+                  CV. ANUGRAH PARIWISATA
                 </span>
-                <span className="font-black text-sm sm:text-base uppercase tracking-tight text-red-600 group-hover:text-red-700 transition-colors" style={{ fontFamily: 'Impact, Arial Black, sans-serif', letterSpacing: '0.03em' }}>
-                  PARIWISATA
-                </span>
-                <span className="font-bold text-[10px] sm:text-xs uppercase tracking-widest text-red-500 group-hover:text-red-600 transition-colors mt-0.5" style={{ fontFamily: 'Arial Black, sans-serif' }}>
+                <span className="font-medium text-[10px] sm:text-xs uppercase tracking-widest text-rose-400 group-hover:text-rose-500 transition-colors">
                   Tour &amp; Travel
                 </span>
               </div>
