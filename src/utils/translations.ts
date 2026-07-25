@@ -45,9 +45,9 @@ export const TRANSLATIONS = {
 
     // Package Tour Page
     pkg_tag: "PAKET TOUR RESMI PERIODE 2026 / 2027",
-    pkg_title: "PAKET TOUR SPESIAL NUSANTARA & MANCANEGARA (2026/2027)",
-    pkg_subtitle: "Pilihan paket perjalanan wisata terpadu Dalam Negeri & Luar Negeri Periode 2026/2027 dengan Armada Bus Eksekutif CV. Anugrah Pariwisata.",
-    pkg_filter_heading: "PILIH KATEGORI TUJUAN PAKET TOUR (PERIODE 2026/2027)",
+    pkg_title: "PAKET TOUR SPESIAL NUSANTARA & MANCANEGARA",
+    pkg_subtitle: "Pilihan paket perjalanan wisata terpadu Dalam Negeri & Luar Negeri dengan Armada Bus Eksekutif CV. Anugrah Pariwisata.",
+    pkg_filter_heading: "PILIH KATEGORI TUJUAN PAKET TOUR",
     pkg_filter_all: "Semua Paket Tour",
     pkg_filter_domestik: "Dalam Negeri (Domestik)",
     pkg_filter_internasional: "Luar Negeri (Internasional)",
@@ -197,9 +197,9 @@ export const TRANSLATIONS = {
 
     // Package Tour Page
     pkg_tag: "OFFICIAL 2026 / 2027 TOUR PACKAGES",
-    pkg_title: "SPECIAL DOMESTIC & INTERNATIONAL PACKAGES (2026/2027)",
-    pkg_subtitle: "Integrated Domestic & International travel packages for 2026/2027 season by CV. Anugrah Pariwisata.",
-    pkg_filter_heading: "SELECT TOUR CATEGORY (2026/2027 SEASON)",
+    pkg_title: "SPECIAL DOMESTIC & INTERNATIONAL PACKAGES",
+    pkg_subtitle: "Integrated Domestic & International travel packages by CV. Anugrah Pariwisata.",
+    pkg_filter_heading: "SELECT TOUR CATEGORY",
     pkg_filter_all: "All Tour Packages",
     pkg_filter_domestik: "Domestic (Indonesia)",
     pkg_filter_internasional: "International (Overseas)",
