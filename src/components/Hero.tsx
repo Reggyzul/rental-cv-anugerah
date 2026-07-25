@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { MapPin, Calendar, Search, ChevronUp, ChevronDown } from 'lucide-react';
+import { MapPin, Calendar, Search, ChevronDown, Sparkles } from 'lucide-react';
 import { TRANSLATIONS } from '../utils/translations';
 
 interface HeroProps {
@@ -25,8 +25,8 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
   return (
     <section id="home" className="relative pt-16 pb-4 bg-white overflow-hidden text-center">
       
-      {/* 1. HERO MOUNTAIN SCENIC BANNER */}
-      <div className="relative w-full min-h-[480px] sm:min-h-[520px] flex flex-col justify-between bg-slate-900 text-white overflow-hidden border-b border-slate-200">
+      {/* 1. HERO MOUNTAIN SCENIC BANNER (Presisi Kebawah & High-End Luxury Typography) */}
+      <div className="relative w-full min-h-[520px] sm:min-h-[580px] flex flex-col justify-between bg-slate-950 text-white overflow-hidden border-b border-slate-200">
         
         {/* Full-width Scenic Mountain Background Photo */}
         <div 
@@ -37,43 +37,50 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
         />
 
         {/* Dark Soft Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/65 via-slate-950/45 to-slate-950/75" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/50 to-slate-950/85" />
 
-        {/* Top Spacer for Header Fixed Nav */}
-        <div className="h-16" />
+        {/* Top Spacer: Pushes content gracefully downward for visual precision */}
+        <div className="h-20 sm:h-24" />
 
-        {/* Hero Central Typography (Bayu Buana Elegant Style) */}
-        <div className="relative z-10 max-w-4xl mx-auto px-4 py-8 text-center space-y-4">
-          <motion.p
+        {/* Hero Central Typography Block */}
+        <div className="relative z-10 max-w-4xl mx-auto px-4 py-6 text-center space-y-4">
+          
+          {/* Subheading Badge: Welcome to CV. Anugrah Pariwisata */}
+          <motion.div
             initial={{ opacity: 0, y: -15 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-serif italic text-3xl sm:text-4xl text-[#ff6b52] drop-shadow-md"
-            style={{ fontFamily: "'Great Vibes', cursive, serif" }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/60 backdrop-blur-md border border-amber-400/40 text-amber-300 font-sans font-extrabold text-xs sm:text-sm uppercase tracking-[0.25em] shadow-lg"
           >
-            Let's Explore The World
-          </motion.p>
+            <Sparkles className="w-4 h-4 text-amber-400 shrink-0" />
+            <span>Welcome to CV. Anugrah Pariwisata</span>
+          </motion.div>
 
+          {/* Main Headline: Let's Explore The World */}
           <motion.h1
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.1 }}
-            className="font-display font-black text-3xl sm:text-5xl md:text-6xl text-white tracking-tight uppercase leading-none drop-shadow-lg"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="font-serif italic text-4xl sm:text-6xl md:text-7xl text-white tracking-tight drop-shadow-2xl leading-tight"
+            style={{ fontFamily: "'Great Vibes', cursive, serif" }}
           >
-            CV. ANUGRAH PARIWISATA
+            Let's Explore The World
           </motion.h1>
 
-          <motion.div
+          {/* Subtitle Description */}
+          <motion.p
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="flex items-center justify-center gap-2 text-xs sm:text-sm font-sans font-bold text-amber-300 tracking-wider uppercase drop-shadow-sm"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="font-sans font-medium text-xs sm:text-sm md:text-base text-slate-200/95 leading-relaxed max-w-2xl mx-auto drop-shadow-md"
           >
-            <span>WISATA HEMAT BERSAMA TRAVEL HEBAT</span>
-          </motion.div>
+            Dapatkan pengalaman liburan yang istimewa dengan harga menarik dan layanan terbaik untuk memuaskan setiap perjalanan! <span className="font-extrabold text-amber-300">#WisataHematTravelHebat</span>
+          </motion.p>
+
         </div>
 
         {/* Bottom Spacer inside Banner */}
-        <div className="h-12" />
+        <div className="h-16 sm:h-20" />
 
       </div>
 
