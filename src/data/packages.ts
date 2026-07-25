@@ -136,10 +136,17 @@ export const TOUR_PACKAGES: TourPackage[] = [
       },
       {
         busType: 'Tour 3 Negara (Malaysia - Singapore - Thailand Hatyai)',
-        capacity: '7 Hari 6 Malam (All In)',
+        capacity: '7 Hari 6 Malam (Land Tour Only)',
         pricePerPerson: 'Rp 4.750.000',
         hotelDetails: 'Hotel Bintang 3* / 4* di Malaysia, Singapore & Hatyai Thailand',
         notes: 'Bebas Tentukan Tanggal Keberangkatan (Private Group / Open Trip Flexible)'
+      },
+      {
+        busType: 'Tour 3 Negara (Malaysia - Singapore - Thailand Hatyai) + Flight Padang',
+        capacity: '7 Hari 6 Malam (Inc Tiket Pesawat dari Padang)',
+        pricePerPerson: 'Rp 6.750.000',
+        hotelDetails: 'Hotel Bintang 3* / 4* di Malaysia, Singapore & Hatyai Thailand',
+        notes: 'Termasuk Tiket Pesawat PP dari Padang & Bebas Tentukan Tanggal Keberangkatan'
       }
     ],
     highlights: [
