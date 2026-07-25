@@ -8,8 +8,8 @@ interface HeaderProps {
   onNavClick: (sectionId: string) => void;
   lang: 'ID' | 'EN';
   setLang: (lang: 'ID' | 'EN') => void;
-  currentPage: 'home' | 'about' | 'tours' | 'rentals';
-  setCurrentPage: (page: 'home' | 'about' | 'tours' | 'rentals') => void;
+  currentPage: 'home' | 'about' | 'tours' | 'rentals' | 'highlights';
+  setCurrentPage: (page: 'home' | 'about' | 'tours' | 'rentals' | 'highlights') => void;
   onBookingClick: () => void;
 }
 
@@ -47,7 +47,7 @@ export default function Header({
   return (
     <header className="fixed top-0 left-0 w-full z-50 transition-all duration-300">
       
-      {/* MAIN NAVBAR (Exact Bayu Buana Travel Style) */}
+      {/* MAIN NAVBAR */}
       <div
         className={`w-full transition-all duration-300 ${
           isScrolled
@@ -58,13 +58,12 @@ export default function Header({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             
-            {/* LOGO BRAND: Bayu Buana Style (Warm Orange Feather Swoosh + Green/Teal Typography) */}
+            {/* LOGO BRAND */}
             <div 
               onClick={() => handleItemClick('home')}
               className="flex items-center gap-3 cursor-pointer group text-left"
               id="header-logo"
             >
-              {/* Swoosh Feather Icon */}
               <div className="relative flex items-center justify-center">
                 <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-amber-500 via-orange-500 to-red-500 flex items-center justify-center text-white shadow-md shadow-orange-500/20 group-hover:scale-105 transition-transform">
                   <Feather className="w-6 h-6 transform -rotate-45" />
@@ -81,13 +80,13 @@ export default function Header({
               </div>
             </div>
 
-            {/* DESKTOP NAV LINKS (Exact Bayu Buana Menu Items) */}
+            {/* DESKTOP NAV LINKS */}
             <nav className="hidden lg:flex items-center gap-7 text-xs font-sans font-bold text-slate-700" id="desktop-nav">
               
               <button
                 onClick={() => handleItemClick('home')}
                 className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
-                  activeSection === 'home' ? 'text-orange-600 font-extrabold' : ''
+                  currentPage === 'home' && activeSection === 'home' ? 'text-orange-600 font-extrabold' : ''
                 }`}
               >
                 Home
@@ -96,7 +95,7 @@ export default function Header({
               <button
                 onClick={() => handleItemClick('about')}
                 className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
-                  activeSection === 'about' ? 'text-orange-600 font-extrabold' : ''
+                  currentPage === 'about' ? 'text-orange-600 font-extrabold' : ''
                 }`}
               >
                 About Us
@@ -105,7 +104,7 @@ export default function Header({
               <button
                 onClick={() => handleItemClick('services')}
                 className={`hover:text-orange-600 transition-colors cursor-pointer py-1 flex items-center gap-0.5 ${
-                  activeSection === 'services' ? 'text-orange-600 font-extrabold' : ''
+                  currentPage === 'home' && activeSection === 'services' ? 'text-orange-600 font-extrabold' : ''
                 }`}
               >
                 <span>Destinations</span>
@@ -113,19 +112,19 @@ export default function Header({
               </button>
 
               <button
-                onClick={() => handleItemClick('cars')}
+                onClick={() => handleItemClick('highlights')}
                 className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
-                  activeSection === 'cars' ? 'text-orange-600 font-extrabold' : ''
+                  currentPage === 'highlights' ? 'text-orange-600 font-extrabold' : ''
                 }`}
               >
                 Destination Highlights
               </button>
 
               <button
-                onClick={() => handleItemClick('steps')}
+                onClick={() => handleItemClick('cars')}
                 className="hover:text-orange-600 transition-colors cursor-pointer py-1"
               >
-                Special Offers
+                Transport Rent
               </button>
 
               <button
@@ -196,7 +195,7 @@ export default function Header({
                 Destinations
               </button>
               <button
-                onClick={() => handleItemClick('cars')}
+                onClick={() => handleItemClick('highlights')}
                 className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100"
               >
                 Destination Highlights

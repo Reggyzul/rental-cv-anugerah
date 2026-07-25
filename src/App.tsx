@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import AboutPage from './components/AboutPage';
+import DestinationHighlightsPage from './components/DestinationHighlightsPage';
 import Services from './components/Services';
 import ToursList from './components/ToursList';
 import CarList from './components/CarList';
@@ -16,7 +17,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { TRANSLATIONS } from './utils/translations';
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'tours' | 'rentals'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'tours' | 'rentals' | 'highlights'>('home');
   const [activeSection, setActiveSection] = useState('home');
   const [selectedCar, setSelectedCar] = useState<Car | null>(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -59,6 +60,10 @@ export default function App() {
       setCurrentPage('about');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       setActiveSection('about');
+    } else if (sectionId === 'highlights' || sectionId === 'destination-highlights') {
+      setCurrentPage('highlights');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setActiveSection('highlights');
     } else if (sectionId === 'home') {
       setCurrentPage('home');
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -119,7 +124,7 @@ export default function App() {
         onBookingClick={() => setSelectedCar(CARS[0])}
       />
 
-      {/* Main Page Content */}
+      {/* Main Page Content Flow */}
       <main className="relative z-10">
         {currentPage === 'home' ? (
           <>
@@ -139,6 +144,8 @@ export default function App() {
           </>
         ) : currentPage === 'about' ? (
           <AboutPage lang={lang} onNavigateHome={() => handleNavClick('home')} />
+        ) : currentPage === 'highlights' ? (
+          <DestinationHighlightsPage lang={lang} onNavigateHome={() => handleNavClick('home')} />
         ) : currentPage === 'tours' ? (
           <div className="pt-24">
             <Services lang={lang} />
