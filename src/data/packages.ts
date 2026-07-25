@@ -22,15 +22,15 @@ export interface TourPackage {
 }
 
 export const TOUR_PACKAGES: TourPackage[] = [
-  // 1. OPEN TRIP GUNUNG BROMO (10 HARI)
+  // 1. OPEN TRIP / PRIVATE TOUR GUNUNG BROMO (10 HARI)
   {
     id: 'tour-open-trip-bromo',
-    title: 'OPEN TRIP GUNUNG BROMO',
+    title: 'TOUR GUNUNG BROMO',
     duration: '10 Hari',
     route: ['Gunung Bromo', 'Yogyakarta', 'Bandung', 'Jakarta'],
     routeDisplay: 'Gunung Bromo - Yogyakarta - Bandung - Jakarta',
     image: 'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&q=80&w=800',
-    badge: '10 Hari Open Trip',
+    badge: '10 Hari (Jadwal Fleksibel)',
     minPrice: 'Rp 2.650.000',
     tiers: [
       {
@@ -38,7 +38,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
         capacity: 'Kapasitas 43 Seats (Minibar & Toilet)',
         pricePerPerson: 'Rp 2.650.000',
         hotelDetails: 'Hotel 2 Malam di Yogyakarta & 1 Malam di Bandung',
-        notes: 'Periode Keberangkatan: 16 - 25 Oktober 2026'
+        notes: 'Bebas Tentukan Tanggal Keberangkatan (Custom Schedule Sesuai Dealing Customer)'
       }
     ],
     highlights: [
@@ -68,7 +68,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     route: ['D. Toba', 'P. Samosir', 'Berastagi', 'Banda Aceh', 'P. Sabang', 'Medan', 'Pekanbaru'],
     routeDisplay: 'Danau Toba - Pulau Samosir - Berastagi - Banda Aceh - Pulau Sabang - Medan',
     image: '/gallery_sabang.jpg',
-    badge: '10 Hari PP (22 - 31 Aug 2026)',
+    badge: '10 Hari PP (Jadwal Fleksibel)',
     minPrice: 'Rp 2.750.000',
     tiers: [
       {
@@ -76,14 +76,14 @@ export const TOUR_PACKAGES: TourPackage[] = [
         capacity: 'Isi 43 Orang',
         pricePerPerson: 'Rp 2.750.000',
         hotelDetails: 'Penginapan Hotel di Danau Toba, Banda Aceh & Sabang',
-        notes: 'Periode Keberangkatan: 22 Agustus 2026 - 31 Agustus 2026'
+        notes: 'Bebas Tentukan Tanggal Keberangkatan (Bisa Kapan Saja Sesuai Dealing Customer)'
       },
       {
         busType: 'Big Bus Legrest V.I.P',
         capacity: 'Isi 32 Orang',
         pricePerPerson: 'Rp 3.750.000',
         hotelDetails: 'Penginapan Hotel di Danau Toba, Banda Aceh & Sabang',
-        notes: 'Periode Keberangkatan: 22 Agustus 2026 - 31 Agustus 2026'
+        notes: 'Bebas Tentukan Tanggal Keberangkatan (Bisa Kapan Saja Sesuai Dealing Customer)'
       }
     ],
     highlights: [
@@ -113,7 +113,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     route: ['Malaysia', 'Singapore', 'Thailand (Hatyai)'],
     routeDisplay: 'Malaysia (KL & Genting) - Singapore (Merlion) - Thailand (Hatyai)',
     image: 'https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&q=80&w=800',
-    badge: 'Internasional Asia Promo',
+    badge: 'Internasional Asia (Jadwal Custom)',
     minPrice: 'Rp 2.400.000',
     tiers: [
       {
@@ -121,21 +121,21 @@ export const TOUR_PACKAGES: TourPackage[] = [
         capacity: '3 Hari 2 Malam (All In)',
         pricePerPerson: 'Rp 2.400.000',
         hotelDetails: 'Hotel Bintang 3* / 4* di Kuala Lumpur & Melaka (Gratis Cable Car Genting)',
-        notes: 'Berangkat Setiap Bulan (Juli - Desember 2026)'
+        notes: 'Bebas Tentukan Tanggal Keberangkatan Sesuai Kesepakatan Dealing'
       },
       {
         busType: 'Tour 2 Negara (Malaysia - Singapore)',
         capacity: '4 Hari 3 Malam (All In)',
         pricePerPerson: 'Rp 3.500.000',
         hotelDetails: 'Hotel Bintang 3* / 4* di Kuala Lumpur & Singapore',
-        notes: 'Berangkat Setiap Bulan (Juli - Desember 2026)'
+        notes: 'Bebas Tentukan Tanggal Keberangkatan Sesuai Kesepakatan Dealing'
       },
       {
         busType: 'Tour 3 Negara (Malaysia - Singapore - Thailand Hatyai)',
         capacity: '7 Hari 6 Malam (All In)',
         pricePerPerson: 'Rp 4.750.000',
         hotelDetails: 'Hotel Bintang 3* / 4* di Malaysia, Singapore & Hatyai Thailand',
-        notes: 'Berangkat Setiap Bulan (Juli - Desember 2026). Bisa 1 Orang Gabung'
+        notes: 'Bebas Tentukan Tanggal Keberangkatan (Private Group / Open Trip Flexible)'
       }
     ],
     highlights: [
@@ -161,27 +161,27 @@ export const TOUR_PACKAGES: TourPackage[] = [
   // 4. RUSSIA SPESIAL 9D6N & 9D7N (MOSCOW, ST. PETERSBURG & AURORA)
   {
     id: 'tour-russia-aurora',
-    title: '9D6N / 9D7N RUSSIA SPESIAL (MOSCOW & ST. PETERSBURG)',
+    title: 'RUSSIA SPESIAL (MOSCOW & ST. PETERSBURG)',
     duration: '9 Hari 6 Malam / 9 Hari 7 Malam',
     route: ['Moscow', 'St. Petersburg', 'Murmansk'],
     routeDisplay: 'Moscow - St. Petersburg - Murmansk (Aurora Hunt)',
     image: 'https://images.unsplash.com/photo-1513326718677-b964603b136d?auto=format&fit=crop&q=80&w=800',
-    badge: 'Internasional Russia',
+    badge: 'Internasional Russia (Jadwal Custom)',
     minPrice: 'Rp 26.990.000',
     tiers: [
       {
         busType: '9D6N Russia Classic (Moscow + St. Petersburg)',
-        capacity: 'Keberangkatan 12 - 20 September 2025',
+        capacity: 'Jadwal Fleksibel (Private / Group)',
         pricePerPerson: 'Rp 26.990.000',
         hotelDetails: 'Akomodasi Hotel Bintang 4* di Moscow & St. Petersburg',
-        notes: 'Penerbangan Emirates (EK), Sapsan High-Speed Train & Wearing Russian Costume'
+        notes: 'Bebas Tentukan Tanggal Keberangkatan (Flight Emirates, Sapsan Train & Russian Costume)'
       },
       {
         busType: '9D7N Russia Aurora + Murmansk (Northern Lights)',
-        capacity: 'Keberangkatan 25 November 2025',
+        capacity: 'Jadwal Fleksibel (Musim Dingin)',
         pricePerPerson: 'Rp 37.500.000',
         hotelDetails: 'Hotel Bintang 4* di Moscow, St. Petersburg & Murmansk',
-        notes: 'Penerbangan Emirates (EK), Sapsan Train, Domestic Flight & Aurora Hunt'
+        notes: 'Bebas Tentukan Tanggal Keberangkatan Sesuai Kesepakatan Dealing Customer'
       }
     ],
     highlights: [
@@ -205,15 +205,15 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ]
   },
 
-  // 5. TOUR BATAM - BINTAN 2026 (10 HARI PP)
+  // 5. TOUR BATAM - BINTAN (10 HARI PP)
   {
     id: 'tour-batam-bintan-2026',
-    title: 'TOUR BATAM - BINTAN 2026',
+    title: 'TOUR BATAM - BINTAN',
     duration: '10 Hari PP',
     route: ['Pulau Batam', 'Pulau Bintan', 'Siak', 'Pekanbaru'],
     routeDisplay: 'Pulau Batam - Pulau Bintan - Siak - Pekanbaru',
     image: '/dest_batam.jpg',
-    badge: '10 Hari PP (Juni - Des 2026)',
+    badge: '10 Hari PP (Jadwal Fleksibel)',
     minPrice: 'Rp 2.850.000',
     tiers: [
       {
@@ -221,14 +221,14 @@ export const TOUR_PACKAGES: TourPackage[] = [
         capacity: 'Isi 43 Orang',
         pricePerPerson: 'Rp 2.850.000',
         hotelDetails: 'Hotel 3 Malam di Batam & Akomodasi Rute Perjalanan',
-        notes: 'Periode Keberangkatan: Juni - Desember 2026'
+        notes: 'Bebas Tentukan Tanggal Keberangkatan (Sesuai Kebutuhan Rombongan)'
       },
       {
         busType: 'Big Bus Legrest V.I.P',
         capacity: 'Isi 32 Orang',
         pricePerPerson: 'Rp 3.850.000',
         hotelDetails: 'Hotel 3 Malam di Batam & Akomodasi Rute Perjalanan',
-        notes: 'Periode Keberangkatan: Juni - Desember 2026'
+        notes: 'Bebas Tentukan Tanggal Keberangkatan (Sesuai Kebutuhan Rombongan)'
       }
     ],
     highlights: [
@@ -258,22 +258,22 @@ export const TOUR_PACKAGES: TourPackage[] = [
     route: ['France', 'Brussels', 'Netherlands', 'Germany', 'Luxembourg', 'Switzerland', 'Italy'],
     routeDisplay: 'France - Brussels - Netherlands - Germany - Luxembourg - Switzerland - Italy',
     image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=800',
-    badge: 'Internasional Europe',
+    badge: 'Internasional Europe (Jadwal Custom)',
     minPrice: 'Rp 29.650.000',
     tiers: [
       {
         busType: 'Flight Etihad + Bus Pariwisata Eropa',
-        capacity: 'Paket Promo Special (07 - 17 Oct 2025)',
+        capacity: 'Paket Standard 3*/4* Hotel',
         pricePerPerson: 'Rp 29.650.000',
         hotelDetails: 'Hotel Bintang 3* / 4* di Kota Utama Eropa (8 Malam Inap)',
-        notes: 'Penerbangan Etihad Airways (EY) dengan Bagasi 35kg'
+        notes: 'Bebas Tentukan Tanggal Keberangkatan (Custom Schedule Dealing Customer)'
       },
       {
         busType: 'Flight Etihad + Bus Eksekutif Eropa',
-        capacity: 'Paket Regular (Nov - Dec 2026)',
+        capacity: 'Paket Executive 4* Hotel',
         pricePerPerson: 'Rp 32.500.000',
         hotelDetails: 'Hotel Bintang 4* di Prancis, Swiss & Italia (8 Malam Inap)',
-        notes: 'Penerbangan Etihad Airways (EY) dengan Bagasi 35kg'
+        notes: 'Bebas Tentukan Tanggal Keberangkatan (Custom Schedule Dealing Customer)'
       }
     ],
     highlights: [
@@ -303,15 +303,15 @@ export const TOUR_PACKAGES: TourPackage[] = [
     route: ['Los Angeles', 'Las Vegas', 'San Francisco'],
     routeDisplay: 'Los Angeles - Las Vegas - San Francisco',
     image: 'https://images.unsplash.com/photo-1580655653885-65763b2597d0?auto=format&fit=crop&q=80&w=800',
-    badge: 'Internasional USA',
+    badge: 'Internasional USA (Jadwal Custom)',
     minPrice: 'Rp 39.050.000',
     tiers: [
       {
         busType: 'Flight STARLUX + Bus Eksekutif USA',
-        capacity: 'Minimal 10 Pax (15 Aug & 19 Sep 2025)',
+        capacity: 'Minimal 10 Pax (Group Tour)',
         pricePerPerson: 'Rp 39.050.000',
         hotelDetails: 'Hotel Bintang 3* / 4* di Los Angeles, Las Vegas, San Francisco',
-        notes: 'Periode Keberangkatan: 15 Aug 2025 & 19 Sep 2025'
+        notes: 'Bebas Tentukan Tanggal Keberangkatan (Sesuai Kebutuhan Rombongan)'
       }
     ],
     highlights: [
@@ -340,7 +340,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     route: ['Bali', 'Lombok', 'Gunung Bromo', 'Jogjakarta', 'Bandung', 'Jakarta'],
     routeDisplay: 'Bali - Lombok - Gunung Bromo - Jogjakarta - Bandung - Jakarta',
     image: '/dest_lombok.jpg',
-    badge: '16 Hari Spesial (26 Apr - 10 Mei 2026)',
+    badge: '16 Hari PP (Jadwal Fleksibel)',
     minPrice: 'Rp 3.875.000',
     tiers: [
       {
@@ -348,14 +348,14 @@ export const TOUR_PACKAGES: TourPackage[] = [
         capacity: 'Isi 43 Orang',
         pricePerPerson: 'Rp 3.875.000',
         hotelDetails: 'Hotel 2 Malam di Lombok, 2 Malam di Bali & 2 Malam di Jogja',
-        notes: 'Tidak termasuk Biaya masuk wisata & Biaya makan'
+        notes: 'Bebas Tentukan Tanggal Keberangkatan (Sesuai Kesepakatan Dealing)'
       },
       {
         busType: 'Big Bus Legrest V.I.P',
-        capacity: 'Isi 33 Orang (Edisi 26 Apr - 10 Mei 2026)',
+        capacity: 'Isi 33 Orang',
         pricePerPerson: 'Rp 4.775.000',
         hotelDetails: 'Hotel 2 Malam di Lombok, 2 Malam di Bali & 2 Malam di Jogja',
-        notes: 'Periode Spesial: 26 April 2026 - 10 Mei 2026'
+        notes: 'Bebas Tentukan Tanggal Keberangkatan (Sesuai Kesepakatan Dealing)'
       }
     ],
     highlights: [
@@ -385,7 +385,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     route: ['Sumbawa', 'Lombok', 'Bali', 'Jogja', 'Jakarta'],
     routeDisplay: 'Sumbawa - Lombok - Bali - Jogja - Jakarta',
     image: '/dest_sumbawa.jpg',
-    badge: '16 Hari Cross Island',
+    badge: '16 Hari Cross Island (Jadwal Fleksibel)',
     minPrice: 'Rp 4.275.000',
     tiers: [
       {
@@ -393,14 +393,14 @@ export const TOUR_PACKAGES: TourPackage[] = [
         capacity: 'Isi 43 Orang',
         pricePerPerson: 'Rp 4.275.000',
         hotelDetails: 'Hotel 2 Malam di Bima, 2 Malam di Lombok, 2 Malam di Bali & 2 Malam di Jogja',
-        notes: 'Tidak termasuk Biaya masuk wisata & Biaya makan selama tour'
+        notes: 'Bebas Tentukan Tanggal Keberangkatan (Sesuai Kesepakatan Dealing)'
       },
       {
         busType: 'Big Bus Legrest V.I.P',
         capacity: 'Isi 33 Orang',
         pricePerPerson: 'Rp 5.275.000',
         hotelDetails: 'Hotel 2 Malam di Bima, 2 Malam di Lombok, 2 Malam di Bali & 2 Malam di Jogja',
-        notes: 'Tidak termasuk biaya masuk destinasi wisata & Biaya Makan'
+        notes: 'Bebas Tentukan Tanggal Keberangkatan (Sesuai Kesepakatan Dealing)'
       }
     ],
     highlights: [
@@ -431,7 +431,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     route: ['Bangka', 'Belitung', 'Palembang'],
     routeDisplay: 'Bangka - Belitung - Palembang',
     image: '/dest_belitung.jpg',
-    badge: '10 Hari Bahari & Eksotik',
+    badge: '10 Hari (Jadwal Fleksibel)',
     minPrice: 'Rp 2.975.000',
     tiers: [
       {
@@ -439,14 +439,14 @@ export const TOUR_PACKAGES: TourPackage[] = [
         capacity: 'Isi 43 Orang',
         pricePerPerson: 'Rp 2.975.000',
         hotelDetails: 'Hotel 2 Malam di Bangka, 2 Malam di Belitung',
-        notes: 'Tidak termasuk Biaya masuk wisata & Biaya makan selama tour'
+        notes: 'Bebas Tentukan Tanggal Keberangkatan (Sesuai Kesepakatan Dealing)'
       },
       {
         busType: 'Big Bus Legrest V.I.P',
         capacity: 'Isi 33 Orang',
         pricePerPerson: 'Rp 3.975.000',
         hotelDetails: 'Hotel 2 Malam di Bangka, 2 Malam di Belitung',
-        notes: 'Tidak termasuk biaya masuk wisata & Biaya makan selama Tour'
+        notes: 'Bebas Tentukan Tanggal Keberangkatan (Sesuai Kesepakatan Dealing)'
       }
     ],
     highlights: [
