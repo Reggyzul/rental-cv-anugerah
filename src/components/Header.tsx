@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Search, ChevronDown, Phone, Mail, MapPin, Award, Compass, ShieldCheck } from 'lucide-react';
+import { Menu, X, Compass, Feather } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { TRANSLATIONS } from '../utils/translations';
 
@@ -24,7 +24,6 @@ export default function Header({
 }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [tourDropdownOpen, setTourDropdownOpen] = useState(false);
 
   const t = TRANSLATIONS[lang];
 
@@ -42,160 +41,114 @@ export default function Header({
 
   const handleItemClick = (sectionId: string) => {
     setMobileMenuOpen(false);
-    setTourDropdownOpen(false);
     onNavClick(sectionId);
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 flex flex-col transition-all duration-300">
+    <header className="fixed top-0 left-0 w-full z-50 transition-all duration-300">
       
-      {/* 1. TOP BAR INFO (Raja-Wisata Style Top Bar) */}
-      <div className="bg-slate-900 text-slate-300 text-xs py-2 border-b border-slate-800 hidden md:block">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          
-          <div className="flex items-center gap-6">
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 hover:text-orange-400 transition-colors">
-              <Phone className="w-3.5 h-3.5 text-orange-500" />
-              <span className="font-semibold">0812-3456-7890</span>
-            </a>
-            <div className="flex items-center gap-1.5 text-slate-400">
-              <MapPin className="w-3.5 h-3.5 text-orange-500" />
-              <span>Kantor Pusat: Salido Painan, Pesisir Selatan | Cabang: Padang Timur</span>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-4 text-[11px]">
-            <span className="font-display font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1">
-              <Award className="w-3.5 h-3.5 text-amber-400" />
-              <span>Wisata Hemat dengan Travel Hebat</span>
-            </span>
-          </div>
-
-        </div>
-      </div>
-
-      {/* 2. MAIN NAVBAR (Raja-Wisata Clean Corporate Header) */}
+      {/* MAIN NAVBAR (Exact Bayu Buana Travel Style) */}
       <div
         className={`w-full transition-all duration-300 ${
           isScrolled
             ? 'bg-white/95 backdrop-blur-md py-3 shadow-md border-b border-slate-200/90'
-            : 'bg-white py-4 border-b border-slate-200/70'
+            : 'bg-white py-4 border-b border-slate-100'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             
-            {/* LOGO BRAND */}
+            {/* LOGO BRAND: Bayu Buana Style (Warm Orange Feather Swoosh + Green/Teal Typography) */}
             <div 
               onClick={() => handleItemClick('home')}
-              className="flex items-center gap-3 cursor-pointer group"
+              className="flex items-center gap-3 cursor-pointer group text-left"
               id="header-logo"
             >
-              <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-orange-600 via-amber-600 to-orange-500 flex items-center justify-center text-white font-black font-display text-xl shadow-md shadow-orange-500/20 group-hover:scale-105 transition-transform shrink-0">
-                AP
+              {/* Swoosh Feather Icon */}
+              <div className="relative flex items-center justify-center">
+                <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-amber-500 via-orange-500 to-red-500 flex items-center justify-center text-white shadow-md shadow-orange-500/20 group-hover:scale-105 transition-transform">
+                  <Feather className="w-6 h-6 transform -rotate-45" />
+                </div>
               </div>
-              <div className="flex flex-col text-left">
-                <span className="font-display font-black text-xl tracking-tight text-[#0d1b37] leading-none group-hover:text-orange-600 transition-colors uppercase">
-                  CV. ANUGRAH <span className="text-orange-600">PARIWISATA</span>
+
+              <div className="flex flex-col">
+                <span className="font-display font-black text-xl sm:text-2xl tracking-tight text-[#00685f] leading-none uppercase group-hover:text-emerald-700 transition-colors">
+                  ANUGRAH <span className="text-emerald-700">PARIWISATA</span>
                 </span>
-                <span className="font-sans text-[10px] font-bold text-slate-500 tracking-wider mt-0.5 uppercase">
+                <span className="font-sans text-[10px] font-extrabold text-orange-600 tracking-wider mt-0.5 uppercase">
                   WISATA HEMAT BERSAMA TRAVEL HEBAT
                 </span>
               </div>
             </div>
 
-            {/* DESKTOP NAVIGATION MENU ITEMS (Exact Raja-Wisata Style) */}
-            <nav className="hidden lg:flex items-center gap-8 text-xs font-sans font-bold text-[#0d1b37]" id="desktop-nav">
+            {/* DESKTOP NAV LINKS (Exact Bayu Buana Menu Items) */}
+            <nav className="hidden lg:flex items-center gap-7 text-xs font-sans font-bold text-slate-700" id="desktop-nav">
               
               <button
                 onClick={() => handleItemClick('home')}
                 className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
-                  activeSection === 'home' ? 'text-orange-600 font-extrabold border-b-2 border-orange-600' : ''
+                  activeSection === 'home' ? 'text-orange-600 font-extrabold' : ''
+                }`}
+              >
+                Home
+              </button>
+
+              <button
+                onClick={() => handleItemClick('about')}
+                className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
+                  activeSection === 'about' ? 'text-orange-600 font-extrabold' : ''
                 }`}
               >
                 About Us
               </button>
 
               <button
-                onClick={() => handleItemClick('about')}
-                className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
-                  activeSection === 'about' ? 'text-orange-600 font-extrabold border-b-2 border-orange-600' : ''
+                onClick={() => handleItemClick('services')}
+                className={`hover:text-orange-600 transition-colors cursor-pointer py-1 flex items-center gap-0.5 ${
+                  activeSection === 'services' ? 'text-orange-600 font-extrabold' : ''
                 }`}
               >
-                Corporate Services
+                <span>Destinations</span>
+                <span className="text-orange-500 font-extrabold text-xs">+</span>
               </button>
-
-              {/* Tour Package Dropdown */}
-              <div 
-                className="relative group py-1"
-                onMouseEnter={() => setTourDropdownOpen(true)}
-                onMouseLeave={() => setTourDropdownOpen(false)}
-              >
-                <button
-                  onClick={() => handleItemClick('services')}
-                  className={`hover:text-orange-600 transition-colors cursor-pointer flex items-center gap-1.5 ${
-                    activeSection === 'services' ? 'text-orange-600 font-extrabold border-b-2 border-orange-600' : ''
-                  }`}
-                >
-                  <span>Tour Package</span>
-                  <ChevronDown className="w-3.5 h-3.5 text-slate-400 group-hover:text-orange-600" />
-                </button>
-
-                {/* Dropdown Card */}
-                {tourDropdownOpen && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-2xl shadow-xl border border-slate-200/90 py-3 z-50 text-left">
-                    <button
-                      onClick={() => handleItemClick('services')}
-                      className="w-full text-left px-5 py-2.5 text-xs font-semibold text-slate-700 hover:bg-orange-50 hover:text-orange-600 block transition-colors"
-                    >
-                      🇲🇨 Tour In Sumatera Barat
-                    </button>
-                    <button
-                      onClick={() => handleItemClick('services')}
-                      className="w-full text-left px-5 py-2.5 text-xs font-semibold text-slate-700 hover:bg-orange-50 hover:text-orange-600 block transition-colors"
-                    >
-                      🌋 Tour Out Sumbar (Nusantara)
-                    </button>
-                    <button
-                      onClick={() => handleItemClick('services')}
-                      className="w-full text-left px-5 py-2.5 text-xs font-semibold text-slate-700 hover:bg-orange-50 hover:text-orange-600 block transition-colors"
-                    >
-                      ✈️ Tour Internasional Mancanegara
-                    </button>
-                  </div>
-                )}
-              </div>
 
               <button
                 onClick={() => handleItemClick('cars')}
                 className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
-                  activeSection === 'cars' ? 'text-orange-600 font-extrabold border-b-2 border-orange-600' : ''
+                  activeSection === 'cars' ? 'text-orange-600 font-extrabold' : ''
                 }`}
               >
-                Transport Rent
+                Destination Highlights
               </button>
 
               <button
                 onClick={() => handleItemClick('steps')}
                 className="hover:text-orange-600 transition-colors cursor-pointer py-1"
               >
-                Portofolio
+                Special Offers
               </button>
 
               <button
                 onClick={() => handleItemClick('footer-contact')}
                 className="hover:text-orange-600 transition-colors cursor-pointer py-1"
               >
-                Travel Notes
+                Contact Us
               </button>
 
-              {/* Search Icon button */}
               <button
                 onClick={onBookingClick}
-                className="text-slate-600 hover:text-orange-600 transition-colors p-2 cursor-pointer rounded-full hover:bg-slate-100"
-                title="Cari atau Reservasi Paket Tour"
+                className="text-orange-600 hover:text-orange-700 font-bold transition-colors cursor-pointer py-1"
               >
-                <Search className="w-4 h-4" />
+                Sign In
+              </button>
+
+              {/* BOOK A TOUR CORAL BUTTON */}
+              <button
+                onClick={onBookingClick}
+                className="bg-[#f94a29] hover:bg-[#e03d1e] text-white font-display font-extrabold text-xs uppercase px-5 py-2.5 rounded-xl shadow-md shadow-orange-600/20 transition-all cursor-pointer tracking-wider"
+                id="header-book-tour-btn"
+              >
+                BOOK A TOUR
               </button>
 
             </nav>
@@ -228,31 +181,31 @@ export default function Header({
                 onClick={() => handleItemClick('home')}
                 className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100"
               >
-                About Us
+                Home
               </button>
               <button
                 onClick={() => handleItemClick('about')}
                 className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100"
               >
-                Corporate Services
+                About Us
               </button>
               <button
                 onClick={() => handleItemClick('services')}
                 className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100"
               >
-                Tour Package
+                Destinations
               </button>
               <button
                 onClick={() => handleItemClick('cars')}
                 className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100"
               >
-                Transport Rent
+                Destination Highlights
               </button>
               <button
                 onClick={() => handleItemClick('footer-contact')}
                 className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2"
               >
-                Travel Notes
+                Contact Us
               </button>
 
               <div className="pt-2">
@@ -261,9 +214,9 @@ export default function Header({
                     setMobileMenuOpen(false);
                     onBookingClick();
                   }}
-                  className="w-full bg-gradient-to-r from-orange-600 to-amber-600 text-white font-display font-bold text-xs uppercase py-3 rounded-xl shadow-md flex items-center justify-center gap-2"
+                  className="w-full bg-[#f94a29] text-white font-display font-bold text-xs uppercase py-3 rounded-xl shadow-md flex items-center justify-center gap-2"
                 >
-                  <span>Konsultasi Tour WA</span>
+                  <span>BOOK A TOUR</span>
                 </button>
               </div>
             </div>

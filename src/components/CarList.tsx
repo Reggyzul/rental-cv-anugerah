@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CARS } from '../data/cars';
 import { Car } from '../types';
-import { Users, CheckCircle2, MessageCircle, Bus, Car as CarIcon, Sparkles } from 'lucide-react';
+import { Users, CheckCircle2, MessageCircle, Bus } from 'lucide-react';
 import { motion } from 'motion/react';
 import { TRANSLATIONS } from '../utils/translations';
 
@@ -31,30 +31,27 @@ export default function CarList({ onSelectCar, lang }: CarListProps) {
 
   const handleWhatsAppBooking = (carName: string) => {
     const waNumber = '6281234567890';
-    const message = `Halo CV. Anugrah Pariwisata, saya berminat berkonsultasi sewa armada: ${carName}. Mohon informasi penawaran harga & ketersediaan tanggal. Terima kasih!`;
+    const message = `Halo CV. Anugrah Pariwisata, saya berminat sewa armada: ${carName}. Mohon informasi penawaran harga & ketersediaan tanggal. Terima kasih!`;
     window.open(`https://api.whatsapp.com/send?phone=${waNumber}&text=${encodeURIComponent(message)}`, '_blank', 'noreferrer');
   };
 
   return (
-    <section id="cars" className="py-20 bg-slate-50 text-[#0d1b37] overflow-hidden relative border-b border-slate-200">
+    <section id="cars" className="py-20 bg-slate-50 text-[#0d1b37] overflow-hidden relative border-b border-slate-200 text-left">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Heading */}
         <div className="text-center max-w-4xl mx-auto mb-12 space-y-3" id="cars-heading">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange-50 border border-orange-200 text-orange-600 font-display font-extrabold text-xs tracking-wider uppercase shadow-xs">
-            <Bus className="w-4 h-4 text-orange-600" />
-            <span>KATALOG TRANSPORT RENT</span>
-          </div>
-
-          <h2 className="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-[#0d1b37] tracking-tight uppercase leading-tight">
-            Jenis Armada <span className="text-orange-600">CV. Anugrah Pariwisata</span>
+          <h2 className="font-display font-black text-4xl sm:text-5xl text-[#0d1b37] tracking-tight leading-tight">
+            Destination Highlights & Transport Rent
           </h2>
 
-          <p className="font-sans text-slate-600 text-sm sm:text-base leading-relaxed font-medium max-w-2xl mx-auto">
-            Armada/Transportasi tour dengan Fasilitas Lengkap: Bus Full AC, Toilet bersih, Full Karaoke, Selimut & Bantal.
+          <div className="w-20 h-1 bg-amber-400 mx-auto rounded-full" />
+
+          <p className="font-sans text-slate-600 text-xs sm:text-sm leading-relaxed font-medium max-w-2xl mx-auto">
+            Fasilitas Armada Lengkap: Bus Full AC, Toilet bersih, Full Karaoke, Selimut & Bantal.
           </p>
 
-          {/* Filter Category Tabs (Exact Roman Numerals) */}
+          {/* Filter Category Tabs */}
           <div className="flex flex-wrap items-center justify-center gap-2 pt-4">
             {categories.map((cat) => (
               <button
@@ -62,7 +59,7 @@ export default function CarList({ onSelectCar, lang }: CarListProps) {
                 onClick={() => setFilterCategory(cat.id)}
                 className={`px-4 py-2.5 rounded-full font-display font-extrabold text-xs transition-all cursor-pointer ${
                   filterCategory === cat.id
-                    ? 'bg-gradient-to-r from-orange-600 to-amber-600 text-white shadow-md shadow-orange-600/20'
+                    ? 'bg-[#f94a29] text-white shadow-md shadow-orange-600/20'
                     : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200/90'
                 }`}
               >
@@ -81,7 +78,7 @@ export default function CarList({ onSelectCar, lang }: CarListProps) {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: (index % 3) * 0.1 }}
               key={car.id}
-              className="bg-white border border-slate-200/90 rounded-3xl p-6 shadow-md hover:shadow-xl hover:border-orange-300 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden text-left"
+              className="bg-white border border-slate-200/90 rounded-3xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group relative overflow-hidden text-left"
             >
               <div className="space-y-4">
                 
@@ -96,14 +93,14 @@ export default function CarList({ onSelectCar, lang }: CarListProps) {
                     {car.category}
                   </div>
                   <div className="absolute bottom-3 right-3 bg-white/95 text-slate-700 font-sans text-[10px] font-bold px-2.5 py-1 rounded-full border border-slate-200 flex items-center gap-1.5 shadow-xs">
-                    <Users className="w-3.5 h-3.5 text-orange-600" />
+                    <Users className="w-3.5 h-3.5 text-[#f94a29]" />
                     <span>{car.seats} Kursi</span>
                   </div>
                 </div>
 
                 {/* Car Name & Sub-description */}
                 <div>
-                  <h3 className="font-display font-black text-xl text-[#0d1b37] group-hover:text-orange-600 transition-colors uppercase tracking-tight">
+                  <h3 className="font-display font-black text-xl text-[#0d1b37] group-hover:text-[#f94a29] transition-colors uppercase tracking-tight">
                     {car.name}
                   </h3>
                   <p className="font-sans text-xs text-slate-600 leading-relaxed mt-1 font-medium">
@@ -113,7 +110,7 @@ export default function CarList({ onSelectCar, lang }: CarListProps) {
 
                 {/* FACILITIES CHECKLIST */}
                 <div className="space-y-2 pt-2 border-t border-slate-100">
-                  <span className="text-[10px] font-extrabold tracking-wider uppercase text-orange-600 block">Fasilitas Utama:</span>
+                  <span className="text-[10px] font-extrabold tracking-wider uppercase text-[#f94a29] block">Fasilitas Utama:</span>
                   <div className="space-y-1">
                     {car.includeList.map((facility, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-xs font-semibold text-slate-700">
@@ -130,7 +127,7 @@ export default function CarList({ onSelectCar, lang }: CarListProps) {
               <div className="pt-5 mt-5 border-t border-slate-100 flex items-center gap-2">
                 <button
                   onClick={() => handleWhatsAppBooking(car.name)}
-                  className="flex-1 bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-sans font-bold text-xs uppercase py-3 px-3 rounded-xl shadow-md shadow-orange-600/20 transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+                  className="flex-1 bg-[#f94a29] hover:bg-[#e03d1e] text-white font-sans font-bold text-xs uppercase py-3 px-3 rounded-xl shadow-md shadow-orange-600/20 transition-all flex items-center justify-center gap-1.5 cursor-pointer"
                 >
                   <MessageCircle className="w-4 h-4 fill-current shrink-0" />
                   <span>Pesan WA</span>
@@ -141,7 +138,7 @@ export default function CarList({ onSelectCar, lang }: CarListProps) {
                   className="bg-slate-100 hover:bg-slate-200 text-[#0d1b37] border border-slate-200 font-sans font-bold text-xs uppercase py-3 px-3 rounded-xl transition-all cursor-pointer"
                   title="Form Reservasi Lengkap"
                 >
-                  Reservasi
+                  Book Tour
                 </button>
               </div>
 
