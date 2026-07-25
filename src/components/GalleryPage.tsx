@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Camera, Sparkles, X, Bus, MapPin, Users, Globe, Eye, ZoomIn } from 'lucide-react';
+import { Camera, Sparkles, X, MapPin, Users, Globe, Eye, ZoomIn } from 'lucide-react';
 import { TRANSLATIONS } from '../utils/translations';
 
 interface GalleryPageProps {
@@ -9,7 +9,7 @@ interface GalleryPageProps {
 }
 
 export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) {
-  const [activeFilter, setActiveFilter] = useState<'all' | 'gathering' | 'armada'>('all');
+  const [activeFilter, setActiveFilter] = useState<'all' | 'domestik' | 'mancanegara'>('all');
   const [selectedPhoto, setSelectedPhoto] = useState<{ image: string; title: string; subtitle: string; location: string } | null>(null);
 
   const t = TRANSLATIONS[lang];
@@ -17,7 +17,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
   const galleryItems = [
     {
       id: 1,
-      category: 'gathering',
+      category: 'domestik',
       title: 'Tour Silaturahmi Sipiso-Piso & Danau Toba',
       subtitle: 'Keluarga Besar Sepakat bersama CV. Anugrah Pariwisata',
       location: 'Air Terjun Sipiso-Piso, Danau Toba, Sumatera Utara',
@@ -26,7 +26,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
     },
     {
       id: 2,
-      category: 'gathering',
+      category: 'domestik',
       title: 'Tour Monumen Kapal Apung W.K.B Banda Aceh',
       subtitle: 'Kunjungan Wisata Sejarah & Edukasi Tsunami Aceh',
       location: 'Monumen Kapal Apung PLN, Banda Aceh',
@@ -35,7 +35,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
     },
     {
       id: 3,
-      category: 'gathering',
+      category: 'domestik',
       title: 'Wisata Keagamaan Masjid Raya Baiturrahman',
       subtitle: 'Momentum Kebersamaan Peserta Tour Aceh CV. Anugrah Pariwisata',
       location: 'Masjid Raya Baiturrahman, Banda Aceh',
@@ -44,7 +44,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
     },
     {
       id: 4,
-      category: 'gathering',
+      category: 'domestik',
       title: 'Tour Silaturahmi Senggigi View Lombok',
       subtitle: 'Peserta Tour Nusantara di Spot Ikonik Senggigi',
       location: 'Senggigi View Beach, Lombok, NTB',
@@ -53,7 +53,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
     },
     {
       id: 5,
-      category: 'gathering',
+      category: 'domestik',
       title: 'Tour Silaturahmi Candi Prambanan Jogja',
       subtitle: 'Keluarga Besar Sepakat Jelajah Heritage Nusantara',
       location: 'Kompleks Candi Prambanan, DI Yogyakarta',
@@ -62,7 +62,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
     },
     {
       id: 6,
-      category: 'gathering',
+      category: 'domestik',
       title: 'Tour Tugu Kilometer 0 Indonesia Sabang',
       subtitle: 'Titik Ujung Barat Indonesia bersama Rombongan Keluarga Besar Sepakat',
       location: 'Tugu Kilometer 0 Indonesia, Sabang, Aceh',
@@ -71,7 +71,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
     },
     {
       id: 7,
-      category: 'gathering',
+      category: 'domestik',
       title: 'Tour Wisata Keagamaan Masjid Istiqlal Jakarta',
       subtitle: 'Kunjungan Rombongan Peserta Wisata di Masjid Istiqlal',
       location: 'Masjid Istiqlal, DKI Jakarta',
@@ -80,16 +80,16 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
     },
     {
       id: 8,
-      category: 'gathering',
+      category: 'mancanegara',
       title: 'Tour Internasional Petronas Twin Towers',
       subtitle: 'Kunjungan Wisata Mancanegara Kuala Lumpur Malaysia',
       location: 'Petronas Twin Towers, Kuala Lumpur, Malaysia',
       image: '/gallery_petronas.jpg',
-      badge: 'Kuala Lumpur'
+      badge: 'Kuala Lumpur Malaysia'
     },
     {
       id: 9,
-      category: 'gathering',
+      category: 'mancanegara',
       title: 'Tour Mancanegara Bangkok & Thailand',
       subtitle: 'Peserta MT. Sakinah Warahmah BMKT Padang Panjang di Patung Sleeping Buddha',
       location: 'Bangkok & Hat Yai, Thailand',
@@ -98,7 +98,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
     },
     {
       id: 10,
-      category: 'gathering',
+      category: 'domestik',
       title: 'Tour HeHa Sky View & Jogja bersama Bus Zivanes',
       subtitle: 'Kebersamaan Rombongan Anugrah Pariwisata & Team Zivanes Bus',
       location: 'HeHa Sky View, Gunungkidul, Yogyakarta',
@@ -107,7 +107,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
     },
     {
       id: 11,
-      category: 'gathering',
+      category: 'domestik',
       title: 'Tour Jeep Offroad Gunung Bromo & Pasir Berbisik',
       subtitle: 'Petualangan Seru Peserta Rombongan CV. Anugrah Pariwisata di Bromo',
       location: 'Kawasan Wisata Gunung Bromo, Jawa Timur',
@@ -116,75 +116,12 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
     },
     {
       id: 12,
-      category: 'gathering',
+      category: 'domestik',
       title: 'Tour Silaturahmi Jam Gadang Bukittinggi',
       subtitle: 'Keluarga Besar Bagindo bersama Team CV. Anugrah Pariwisata',
       location: 'Taman Jam Gadang, Bukittinggi, Sumatera Barat',
       image: '/gallery_jam_gadang.jpg',
       badge: 'Jam Gadang Bukittinggi'
-    },
-    {
-      id: 13,
-      category: 'armada',
-      title: 'Big Bus Eksekutif Zivanes Legrest',
-      subtitle: 'Jetbus 3+ Voyager Full AC, Toilet & Sound Karaoke',
-      location: 'Armada Utama CV. Anugrah Pariwisata',
-      image: '/zivanes.jpg',
-      badge: 'Big Bus Zivanes'
-    },
-    {
-      id: 14,
-      category: 'armada',
-      title: 'Big Bus Pariwisata Nyaman Holiday',
-      subtitle: 'Fasilitas Komplit & Kursi Nyaman Reclining',
-      location: 'Armada Pariwisata Sumatera & Jawa',
-      image: '/nyaman_holiday.jpg',
-      badge: 'Nyaman Holiday'
-    },
-    {
-      id: 15,
-      category: 'armada',
-      title: 'Big Bus Luxury Miyor Holiday',
-      subtitle: 'Jetbus 5 Mercedes-Benz Eksekutif Legrest',
-      location: 'Armada Luxury Tour Nusantara',
-      image: '/miyor.jpg',
-      badge: 'Miyor Holiday'
-    },
-    {
-      id: 16,
-      category: 'armada',
-      title: 'Big Bus Eksekutif KYM Trans',
-      subtitle: 'Jetbus 5 Pariwisata Terawat & Tangguh',
-      location: 'Armada Wisata Antar Provinsi',
-      image: '/kym.jpg',
-      badge: 'KYM Trans'
-    },
-    {
-      id: 17,
-      category: 'armada',
-      title: 'Skylander R22 Sutan Raya Bus',
-      subtitle: 'Pilihan Mewah Rute Sumatera & Jawa',
-      location: 'Armada Bus Sutan Raya',
-      image: '/sutan_raya.jpg',
-      badge: 'Sutan Raya'
-    },
-    {
-      id: 18,
-      category: 'armada',
-      title: 'Medium Bus Wulyudza Tourista',
-      subtitle: 'Armada Lincah & Ekonomis Rute Sumatera Barat',
-      location: 'Medium Bus Wulyudza',
-      image: '/wulyudza.jpg',
-      badge: 'Wulyudza Tourista'
-    },
-    {
-      id: 19,
-      category: 'armada',
-      title: 'Toyota Alphard HEV & Hiace Premio VIP',
-      subtitle: 'Layanan VIP Transfer & Tour Minibus Eksekutif',
-      location: 'Armada VIP Minibus',
-      image: '/alphard.jpg',
-      badge: 'Alphard VIP'
     }
   ];
 
@@ -213,7 +150,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-600/90 text-white font-extrabold text-[11px] uppercase tracking-widest mb-1 shadow-lg"
           >
             <Camera className="w-4 h-4 text-amber-300" />
-            <span>GALERI DOKUMENTASI RESMI CV. ANUGRAH PARIWISATA</span>
+            <span>GALERI DOKUMENTASI PERJALANAN CV. ANUGRAH PARIWISATA</span>
           </motion.div>
 
           <motion.h1 
@@ -240,11 +177,11 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
         {/* Subtitle Description */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <h2 className="font-display font-black text-3xl sm:text-4xl text-[#0d1b37]">
-            Dokumentasi Perjalanan & Keandalan Armada
+            Dokumentasi Perjalanan & Tour Silaturahmi
           </h2>
           <div className="w-20 h-1 bg-[#f94a29] mx-auto rounded-full" />
           <p className="font-sans text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
-            Momen kebersamaan peserta rombongan tour silaturahmi CV. Anugrah Pariwisata di berbagai destinasi favorit domestik & mancanegara (Sabang, Danau Toba, Bromo, Jam Gadang, Jakarta, Jogja, Lombok, Malaysia, Thailand) serta keandalan armada terawat.
+            Kumpulan momen kebersamaan dan kenangan indah peserta rombongan tour silaturahmi CV. Anugrah Pariwisata di berbagai destinasi favorit domestik & mancanegara (Sabang, Danau Toba, Bromo, Jam Gadang, Jakarta, Jogja, Lombok, Malaysia, Thailand).
           </p>
         </div>
 
@@ -258,29 +195,29 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
                 : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
             }`}
           >
-            Semua Dokumentasi ({galleryItems.length})
+            Semua Foto ({galleryItems.length})
           </button>
           <button
-            onClick={() => setActiveFilter('gathering')}
+            onClick={() => setActiveFilter('domestik')}
             className={`px-6 py-3 rounded-2xl font-display font-extrabold text-xs uppercase transition-all flex items-center gap-2 cursor-pointer ${
-              activeFilter === 'gathering'
+              activeFilter === 'domestik'
                 ? 'bg-[#f94a29] text-white shadow-lg shadow-orange-600/25 scale-[1.02]'
                 : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
             }`}
           >
             <Users className="w-4 h-4 text-amber-400 shrink-0" />
-            <span>Tour & Silaturahmi ({galleryItems.filter(i => i.category === 'gathering').length})</span>
+            <span>Tour Domestik Nusantara ({galleryItems.filter(i => i.category === 'domestik').length})</span>
           </button>
           <button
-            onClick={() => setActiveFilter('armada')}
+            onClick={() => setActiveFilter('mancanegara')}
             className={`px-6 py-3 rounded-2xl font-display font-extrabold text-xs uppercase transition-all flex items-center gap-2 cursor-pointer ${
-              activeFilter === 'armada'
+              activeFilter === 'mancanegara'
                 ? 'bg-[#f94a29] text-white shadow-lg shadow-orange-600/25 scale-[1.02]'
                 : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
             }`}
           >
-            <Bus className="w-4 h-4 text-amber-400 shrink-0" />
-            <span>Armada Bus & Mobil ({galleryItems.filter(i => i.category === 'armada').length})</span>
+            <Globe className="w-4 h-4 text-amber-400 shrink-0" />
+            <span>Tour Mancanegara ({galleryItems.filter(i => i.category === 'mancanegara').length})</span>
           </button>
         </div>
 
