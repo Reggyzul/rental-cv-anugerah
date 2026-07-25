@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import About from './components/About';
 import AboutPage from './components/AboutPage';
 import Services from './components/Services';
 import ToursList from './components/ToursList';
@@ -34,7 +33,7 @@ export default function App() {
       }
 
       if (currentPage === 'home') {
-        const sections = ['home', 'about', 'services', 'cars', 'footer-contact'];
+        const sections = ['home', 'services', 'cars', 'footer-contact'];
         const scrollPosition = window.scrollY + 250;
 
         for (const section of sections) {
@@ -131,8 +130,6 @@ export default function App() {
             />
 
             <Services lang={lang} />
-
-            <About lang={lang} />
 
             <CarList onSelectCar={handleSelectCar} lang={lang} />
 
