@@ -47,7 +47,7 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
           <motion.p
             initial={{ opacity: 0, y: -15 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-serif italic text-3xl sm:text-4xl md:text-5xl text-[#dc2626] drop-shadow-md"
+            className="font-serif italic text-3xl sm:text-4xl md:text-5xl text-white drop-shadow-lg"
             style={{ fontFamily: "'Great Vibes', cursive, serif" }}
           >
             {t.hero_explore}
