@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Compass, Feather } from 'lucide-react';
+import { Menu, X, Feather } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { TRANSLATIONS } from '../utils/translations';
 
@@ -8,8 +8,6 @@ interface HeaderProps {
   onNavClick: (sectionId: string) => void;
   lang: 'ID' | 'EN';
   setLang: (lang: 'ID' | 'EN') => void;
-  currentPage: 'home' | 'about' | 'tours' | 'rentals' | 'highlights';
-  setCurrentPage: (page: 'home' | 'about' | 'tours' | 'rentals' | 'highlights') => void;
   onBookingClick: () => void;
 }
 
@@ -18,8 +16,6 @@ export default function Header({
   onNavClick,
   lang,
   setLang,
-  currentPage,
-  setCurrentPage,
   onBookingClick
 }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -86,7 +82,7 @@ export default function Header({
               <button
                 onClick={() => handleItemClick('home')}
                 className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
-                  currentPage === 'home' && activeSection === 'home' ? 'text-orange-600 font-extrabold' : ''
+                  activeSection === 'home' ? 'text-orange-600 font-extrabold' : ''
                 }`}
               >
                 Home
@@ -95,34 +91,26 @@ export default function Header({
               <button
                 onClick={() => handleItemClick('about')}
                 className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
-                  currentPage === 'about' ? 'text-orange-600 font-extrabold' : ''
+                  activeSection === 'about' ? 'text-orange-600 font-extrabold' : ''
                 }`}
               >
                 About Us
               </button>
 
               <button
-                onClick={() => handleItemClick('services')}
-                className={`hover:text-orange-600 transition-colors cursor-pointer py-1 flex items-center gap-0.5 ${
-                  currentPage === 'home' && activeSection === 'services' ? 'text-orange-600 font-extrabold' : ''
-                }`}
-              >
-                <span>Destinations</span>
-                <span className="text-orange-500 font-extrabold text-xs">+</span>
-              </button>
-
-              <button
-                onClick={() => handleItemClick('highlights')}
+                onClick={() => handleItemClick('destinations')}
                 className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
-                  currentPage === 'highlights' ? 'text-orange-600 font-extrabold' : ''
+                  activeSection === 'destinations' ? 'text-orange-600 font-extrabold' : ''
                 }`}
               >
-                Destination Highlights
+                Destinations
               </button>
 
               <button
                 onClick={() => handleItemClick('cars')}
-                className="hover:text-orange-600 transition-colors cursor-pointer py-1"
+                className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
+                  activeSection === 'cars' ? 'text-orange-600 font-extrabold' : ''
+                }`}
               >
                 Transport Rent
               </button>
@@ -182,16 +170,16 @@ export default function Header({
                 About Us
               </button>
               <button
-                onClick={() => handleItemClick('services')}
+                onClick={() => handleItemClick('destinations')}
                 className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100"
               >
                 Destinations
               </button>
               <button
-                onClick={() => handleItemClick('highlights')}
+                onClick={() => handleItemClick('cars')}
                 className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100"
               >
-                Destination Highlights
+                Transport Rent
               </button>
               <button
                 onClick={() => handleItemClick('footer-contact')}

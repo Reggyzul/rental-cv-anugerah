@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import AboutPage from './components/AboutPage';
-import DestinationHighlightsPage from './components/DestinationHighlightsPage';
+import About from './components/About';
 import Services from './components/Services';
 import CarList from './components/CarList';
 import BookingSteps from './components/BookingSteps';
@@ -16,7 +15,6 @@ import { motion, AnimatePresence } from 'motion/react';
 import { TRANSLATIONS } from './utils/translations';
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'tours' | 'rentals' | 'highlights'>('home');
   const [activeSection, setActiveSection] = useState('home');
   const [selectedCar, setSelectedCar] = useState<Car | null>(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -31,6 +29,21 @@ export default function App() {
       } else {
         setShowScrollTop(false);
       }
+
+      const sections = ['home', 'about', 'destinations', 'cars', 'footer-contact'];
+      const scrollPosition = window.scrollY + 250;
+
+      for (const section of sections) {
+        const el = document.getElementById(section);
+        if (el) {
+          const top = el.offsetTop;
+          const height = el.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -38,39 +51,14 @@ export default function App() {
   }, []);
 
   const handleNavClick = (sectionId: string) => {
-    if (sectionId === 'about-page' || sectionId === 'about') {
-      setCurrentPage('about');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      setActiveSection('about');
-    } else if (sectionId === 'highlights' || sectionId === 'destination-highlights') {
-      setCurrentPage('highlights');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      setActiveSection('highlights');
-    } else if (sectionId === 'services' || sectionId === 'tours' || sectionId === 'destinations') {
-      setCurrentPage('tours');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      setActiveSection('tours');
-    } else if (sectionId === 'cars' || sectionId === 'rentals' || sectionId === 'transport-rent') {
-      setCurrentPage('rentals');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      setActiveSection('rentals');
-    } else if (sectionId === 'home') {
-      setCurrentPage('home');
+    if (sectionId === 'home') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
       setActiveSection('home');
     } else {
-      if (currentPage !== 'home') {
-        setCurrentPage('home');
-        setTimeout(() => {
-          const el = document.getElementById(sectionId);
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
-      } else {
-        const el = document.getElementById(sectionId);
-        if (el) {
-          el.scrollIntoView({ behavior: 'smooth' });
-          setActiveSection(sectionId);
-        }
+      const el = document.getElementById(sectionId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        setActiveSection(sectionId);
       }
     }
   };
@@ -101,40 +89,26 @@ export default function App() {
         onNavClick={handleNavClick} 
         lang={lang} 
         setLang={setLang} 
-        currentPage={currentPage}
-        setCurrentPage={setCurrentPage}
         onBookingClick={() => setSelectedCar(CARS[0])}
       />
 
-      {/* Main Page Content Flow */}
+      {/* Main Single Landing Page Flow */}
       <main className="relative z-10">
-        {currentPage === 'home' ? (
-          <>
-            <Hero 
-              onExploreClick={() => handleNavClick('tours')} 
-              lang={lang} 
-              onBookingClick={() => setSelectedCar(CARS[0])} 
-            />
+        <Hero 
+          onExploreClick={() => handleNavClick('destinations')} 
+          lang={lang} 
+          onBookingClick={() => setSelectedCar(CARS[0])} 
+        />
 
-            <BookingSteps lang={lang} />
+        <About lang={lang} />
 
-            <Testimonials lang={lang} />
-          </>
-        ) : currentPage === 'about' ? (
-          <AboutPage lang={lang} onNavigateHome={() => handleNavClick('home')} />
-        ) : currentPage === 'highlights' ? (
-          <DestinationHighlightsPage lang={lang} onNavigateHome={() => handleNavClick('home')} />
-        ) : currentPage === 'tours' ? (
-          <div className="pt-24">
-            <Services lang={lang} />
-            <Testimonials lang={lang} />
-          </div>
-        ) : (
-          <div className="pt-24">
-            <CarList onSelectCar={handleSelectCar} lang={lang} />
-            <Testimonials lang={lang} />
-          </div>
-        )}
+        <Services lang={lang} />
+
+        <CarList onSelectCar={handleSelectCar} lang={lang} />
+
+        <BookingSteps lang={lang} />
+
+        <Testimonials lang={lang} />
       </main>
 
       {/* Footer Contact */}
@@ -143,7 +117,7 @@ export default function App() {
       {/* Booking Popup Modal */}
       <BookingModal car={selectedCar} onClose={() => setSelectedCar(null)} lang={lang} onCarChange={setSelectedCar} />
 
-      {/* FLOATING ASSISTANT AVATAR WIDGET (Bayu Buana Travel Screenshot Style) */}
+      {/* FLOATING ASSISTANT AVATAR WIDGET */}
       <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-2">
         <AnimatePresence>
           {showScrollTop && (
