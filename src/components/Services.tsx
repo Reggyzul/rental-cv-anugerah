@@ -525,25 +525,19 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
           ))}
         </div>
 
-        {/* ELEGANT FLOATING TEXT & BOUNCING DOWN ARROW */}
-        <div className="pt-10 pb-4 flex flex-col items-center justify-center">
+        {/* MINIMALIST & PRECISE FLOATING TEXT WITH BOUNCING ARROW */}
+        <div className="pt-8 pb-2 flex flex-col items-center justify-center">
           <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
+            animate={{ y: [0, 6, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
             onClick={onViewAllDestinations}
-            className="group flex flex-col items-center gap-3 cursor-pointer text-center select-none bg-slate-50 hover:bg-white p-4 px-8 rounded-full border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300"
+            className="group flex flex-col items-center gap-1.5 cursor-pointer text-center select-none"
             id="view-all-destinations-btn"
           >
-            <div className="relative flex items-center gap-2">
-              <span className="font-display font-black text-xs sm:text-sm uppercase tracking-[0.2em] text-slate-800 group-hover:text-[#dc2626] transition-colors duration-300">
-                {t.dest_view_all}
-              </span>
-              <span className="text-red-600 font-extrabold text-sm">➔</span>
-            </div>
-
-            <div className="w-10 h-10 rounded-full bg-[#dc2626] text-white flex items-center justify-center shadow-lg shadow-red-600/30 group-hover:scale-110 transition-transform duration-300">
-              <ChevronDown className="w-5 h-5 animate-bounce" />
-            </div>
+            <span className="font-display font-black text-xs sm:text-sm uppercase tracking-[0.25em] text-slate-800 group-hover:text-[#dc2626] transition-colors duration-300">
+              {t.dest_view_all}
+            </span>
+            <ChevronDown className="w-5 h-5 text-[#dc2626] group-hover:scale-125 transition-transform duration-300" />
           </motion.div>
         </div>
 
