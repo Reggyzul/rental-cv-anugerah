@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { MapPin, Compass, Globe, Star, ArrowRight, MessageCircle, CheckCircle2 } from 'lucide-react';
+import { MapPin, Compass, Globe, Star, MessageCircle, CheckCircle2, ChevronRight, Sparkles } from 'lucide-react';
 import { TRANSLATIONS } from '../utils/translations';
 
 interface DestinationHighlightsPageProps {
@@ -9,177 +9,291 @@ interface DestinationHighlightsPageProps {
 }
 
 export default function DestinationHighlightsPage({ lang, onNavigateHome }: DestinationHighlightsPageProps) {
-  const [activeCategory, setActiveCategory] = useState<'all' | 'sumbar' | 'nusantara' | 'internasional'>('all');
+  const [activeCategory, setActiveCategory] = useState<'all' | 'in_sumbar' | 'out_sumbar' | 'internasional'>('all');
   const t = TRANSLATIONS[lang];
 
-  const handleWhatsAppBooking = (highlightTitle: string) => {
+  const handleWhatsAppBooking = (highlightTitle: string, categoryName: string) => {
     const waNumber = '6281234567890';
-    const message = `Halo CV. Anugrah Pariwisata, saya berminat dengan Destination Highlight: ${highlightTitle}. Mohon informasi jadwal tour, fasilitas hotel/restoran, & penawaran terbaik. Terima kasih!`;
+    const message = `Halo CV. Anugrah Pariwisata, saya ingin berkonsultasi mengenai paket tour: ${highlightTitle} (${categoryName}). Mohon informasi jadwal, fasilitas hotel/restoran & penawaran harga terbaik. Terima kasih!`;
     window.open(`https://api.whatsapp.com/send?phone=${waNumber}&text=${encodeURIComponent(message)}`, '_blank', 'noreferrer');
   };
 
-  const highlights = [
-    // SUMATERA BARAT HIGHLIGHTS
+  const allDestinationHighlights = [
+    // 1. IN SUMATERA BARAT
     {
-      id: 'bukittinggi',
-      title: 'Jam Gadang & Ngarai Sianok',
-      location: 'Bukittinggi, Sumatera Barat',
-      category: 'sumbar',
-      rating: 4.9,
-      reviews: 142,
-      badge: 'Must Visit Sumbar',
+      id: 'padang',
+      categoryKey: 'in_sumbar',
+      categoryName: 'In Sumatera Barat',
+      title: '1. Padang',
+      subtitle: 'Kota Pantai, Kuliner & Sejarah',
+      badge: 'Domestik Sumbar',
       image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800',
-      description: 'Pesona Jam Gadang bersejarah dan keindahan tebing terjal Ngarai Sianok yang menakjubkan.'
+      rating: 4.9,
+      reviews: 145,
+      spots: ['Pantai Air Manis & Malin Kundang', 'Kota Tua Padang & Jembatan Siti Nurbaya', 'Museum Adityawarman', 'Pantai Padang (Taplau) & Kuliner Minang']
     },
     {
-      id: 'mandeh',
-      title: 'Kawasan Wisata Mandeh & Painan',
-      location: 'Pesisir Selatan, Sumatera Barat',
-      category: 'sumbar',
-      rating: 4.9,
-      reviews: 128,
+      id: 'pesisir-selatan',
+      categoryKey: 'in_sumbar',
+      categoryName: 'In Sumatera Barat',
+      title: '2. Pesisir Selatan',
+      subtitle: 'Mandeh, Painan & Salido',
       badge: 'Raja Ampat Sumbar',
       image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
-      description: 'Gugusan pulau eksotis dengan perairan tenang dan pemandangan laut kelas dunia.'
-    },
-    {
-      id: 'pagaruyung',
-      title: 'Istana Basa Pagaruyung',
-      location: 'Batusangkar, Sumatera Barat',
-      category: 'sumbar',
-      rating: 4.8,
-      reviews: 110,
-      badge: 'Wisata Budaya Minang',
-      image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800',
-      description: 'Rumah gadang kemegahan adat dan sejarah Minangkabau di Batusangkar.'
-    },
-    {
-      id: 'harau',
-      title: 'Lembah Harau & Kelok 9',
-      location: 'Payakumbuh, Sumatera Barat',
-      category: 'sumbar',
       rating: 4.9,
-      reviews: 135,
-      badge: 'Nature & Landmark',
-      image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800',
-      description: 'Lembah tebing granit menjulang tinggi dan jembatan ikonik Kelok 9.'
+      reviews: 130,
+      spots: ['Kawasan Wisata Mandeh (Pulau Setan & Kapo-Kapo)', 'Bukit Langkisau Painan', 'Pantai Carocok & Pulau Cingkuak', 'Kampung Laban Salido (Kantor Pusat CV. Anugrah Pariwisata)']
     },
     {
-      id: 'ahan-panjang',
-      title: 'Danau Diatas & Danau Dibawah',
-      location: 'Alahan Panjang, Sumatera Barat',
-      category: 'sumbar',
+      id: 'bukittinggi',
+      categoryKey: 'in_sumbar',
+      categoryName: 'In Sumatera Barat',
+      title: '3. Bukittinggi',
+      subtitle: 'Jam Gadang & Ngarai Sianok',
+      badge: 'Ikon Wisata Sumbar',
+      image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800',
+      rating: 5.0,
+      reviews: 185,
+      spots: ['Jam Gadang & Pasar Atas', 'Ngarai Sianok & Lobang Jepang', 'Taman Marga Satwa & Benteng Fort de Kock', 'Janjang Koto Gadang (Great Wall Minangkabau)']
+    },
+    {
+      id: 'batu-sangkar',
+      categoryKey: 'in_sumbar',
+      categoryName: 'In Sumatera Barat',
+      title: '4. Batu Sangkar',
+      subtitle: 'Pusat Kebudayaan Minangkabau',
+      badge: 'Wisata Budaya',
+      image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800',
+      rating: 4.8,
+      reviews: 112,
+      spots: ['Istana Basa Pagaruyung', 'Nagari Pariangan (Desa Terindah di Dunia)', 'Danau Singkarak', 'Batu Angsak & Balai Saruang']
+    },
+    {
+      id: 'payakumbuh',
+      categoryKey: 'in_sumbar',
+      categoryName: 'In Sumatera Barat',
+      title: '5. Payakumbuh',
+      subtitle: 'Lembah Harau & Kelok 9',
+      badge: 'Pesona Tebing Alam',
+      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
+      rating: 4.9,
+      reviews: 140,
+      spots: ['Lembah Harau (Air Terjun & Tebing Granit)', 'Jembatan Layang Kelok 9', 'Kampung Eropa Harau', 'Padang Mangateh (New Zealand van Simalanggang)']
+    },
+    {
+      id: 'alahan-panjang',
+      categoryKey: 'in_sumbar',
+      categoryName: 'In Sumatera Barat',
+      title: '6. Alahan Panjang',
+      subtitle: 'Danau Diatas & Danau Dibawah',
+      badge: 'Swiss van Sumatra',
+      image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800',
+      rating: 4.8,
+      reviews: 98,
+      spots: ['Danau Diatas & Danau Dibawah (Danau Kembar)', 'Kebun Teh Alahan Panjang', 'Bukit Cambai 360°', 'Kebun Strawberry & Sayur Segar']
+    },
+
+    // 2. OUT SUMATERA BARAT (NUSANTARA)
+    {
+      id: 'danau-toba',
+      categoryKey: 'out_sumbar',
+      categoryName: 'Out Sumatera Barat',
+      title: '1. Danau Toba',
+      subtitle: 'Sumatera Utara',
+      badge: 'Destinasi Super Prioritas',
+      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
+      rating: 4.9,
+      reviews: 160,
+      spots: ['Pulau Samosir & Tomok', 'Parapat & Berastagi', 'Air Terjun Sipiso-piso', 'Taman Simalem Resort']
+    },
+    {
+      id: 'sabang-aceh',
+      categoryKey: 'out_sumbar',
+      categoryName: 'Out Sumatera Barat',
+      title: '2. Titik O Km Sabang Aceh',
+      subtitle: 'Nanggroe Aceh Darussalam',
+      badge: 'Ujung Barat Indonesia',
+      image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800',
+      rating: 4.9,
+      reviews: 125,
+      spots: ['Tugu Nol Kilometer Indonesia', 'Pantai Iboih & Pulau Rubiah', 'Masjid Raya Baiturrahman Banda Aceh', 'Museum Tsunami Aceh']
+    },
+    {
+      id: 'pekanbaru-riau',
+      categoryKey: 'out_sumbar',
+      categoryName: 'Out Sumatera Barat',
+      title: '3. Pekanbaru',
+      subtitle: 'Provinsi Riau',
+      badge: 'Wisata Melayu',
+      image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800',
       rating: 4.8,
       reviews: 95,
-      badge: 'Danau Kembar Sejuk',
-      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
-      description: 'Nikmati suasana pegunungan sejuk ala Swiss di Alahan Panjang dengan dua danau berdampingan.'
+      spots: ['Masjid An-Nur Pekanbaru', 'Istana Siak Sri Indrapura', 'Pasar Bawah Pekanbaru', 'Danau Buatan Lembah Sari']
     },
-
-    // NUSANTARA HIGHLIGHTS
     {
-      id: 'toba',
-      title: 'Danau Toba & Pulau Samosir',
-      location: 'Sumatera Utara',
-      category: 'nusantara',
+      id: 'batam-bintan',
+      categoryKey: 'out_sumbar',
+      categoryName: 'Out Sumatera Barat',
+      title: '4. Batam & P. Bintan',
+      subtitle: 'Kepulauan Riau',
+      badge: 'Wisata Bahari & Belanja',
+      image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=800',
       rating: 4.9,
-      reviews: 150,
-      badge: 'Danau Vulkanik Terbesar',
-      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
-      description: 'Danau vulkanik spektakuler dengan kebudayaan Batak yang kaya di Pulau Samosir.'
+      reviews: 138,
+      spots: ['Jembatan Barelang Batam', 'Gurun Pasir Telaga Biru Bintan', 'Treasure Bay Bintan (Kolam Renang Terbesar)', 'Nagoya Shopping District']
     },
     {
-      id: 'sabang',
-      title: 'Titik 0 Km Sabang Aceh',
-      location: 'Sabang, Aceh',
-      category: 'nusantara',
+      id: 'bangka-belitung',
+      categoryKey: 'out_sumbar',
+      categoryName: 'Out Sumatera Barat',
+      title: '5. P. Bangka & P. Belitung',
+      subtitle: 'Kepulauan Bangka Belitung',
+      badge: 'Laskar Pelangi',
+      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
       rating: 4.9,
-      reviews: 118,
-      badge: 'Ujung Barat Indonesia',
-      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
-      description: 'Tugu ikonik Titik Nol Kilometer Indonesia dengan keindahan bahari Sabang.'
+      reviews: 142,
+      spots: ['Pantai Tanjung Tinggi Belitung', 'Pulau Lengkuas & Mercusuar', 'Danau Kaolin', 'Museum Kata Andrea Hirata']
     },
     {
-      id: 'bromo',
-      title: 'Gunung Bromo & Batu Malang',
-      location: 'Jawa Timur',
-      category: 'nusantara',
+      id: 'bali-lombok-sumbawa',
+      categoryKey: 'out_sumbar',
+      categoryName: 'Out Sumatera Barat',
+      title: '6. Lombok, Bali & Sumbawa',
+      subtitle: 'Nusa Tenggara Barat & Bali',
+      badge: 'Surga Wisata Dunia',
+      image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=800',
       rating: 5.0,
-      reviews: 180,
-      badge: 'Sunrise Popular',
-      image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800',
-      description: 'Sensasi lautan pasir Bromo, jeep tour, dan udara segar pegunungan Batu Malang.'
+      reviews: 230,
+      spots: ['Kintamani, Tanah Lot & Uluwatu Bali', 'Gili Trawangan & Kuta Mandalika Lombok', 'Pantai Pink & Senggigi', 'Pulau Kenawa Sumbawa']
     },
     {
-      id: 'bali',
-      title: 'Pulau Bali & Lombok Sumbawa',
-      location: 'Bali & NTB',
-      category: 'nusantara',
+      id: 'malang-bromo',
+      categoryKey: 'out_sumbar',
+      categoryName: 'Out Sumatera Barat',
+      title: '7. Malang & G. Bromo',
+      subtitle: 'Jawa Timur',
+      badge: 'Sunrise Favorite',
+      image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800',
       rating: 5.0,
       reviews: 210,
-      badge: 'World Class Paradise',
-      image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=800',
-      description: 'Pesona pantai pasir putih, pura magis, dan keindahan Gili Trawangan.'
+      spots: ['Penanjakan Sunrise Bromo & Kawah Bromo', 'Pasir Berbisik & Bukit Teletubbies', 'Kota Batu Malang (Jatim Park, Museum Angkut)', 'Petik Apel & Coban Rondo']
+    },
+    {
+      id: 'jogja-bandung-jakarta',
+      categoryKey: 'out_sumbar',
+      categoryName: 'Out Sumatera Barat',
+      title: '8. Jogja, Bandung & Jakarta',
+      subtitle: 'DIY, Jawa Barat & DKI Jakarta',
+      badge: 'Popular City Tour',
+      image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800',
+      rating: 4.9,
+      reviews: 190,
+      spots: ['Malioboro, Borobudur & Prambanan (Jogja)', 'Tangkuban Perahu & Kawah Putih (Bandung)', 'Monas, Ancol & Dufan (Jakarta)', 'Puncak Bogor & Dusun Bambu']
     },
 
-    // INTERNASIONAL HIGHLIGHTS
+    // 3. INTERNASIONAL (MANCANEGARA)
     {
       id: 'singapura',
-      title: 'Singapura & Universal Studio',
-      location: 'Singapura',
-      category: 'internasional',
-      rating: 4.9,
-      reviews: 165,
-      badge: 'Modern Metropolis',
+      categoryKey: 'internasional',
+      categoryName: 'Internasional',
+      title: '1. Singapura',
+      subtitle: 'Southeast Asia Lion City',
+      badge: 'World Class City',
       image: 'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&q=80&w=800',
-      description: 'Jewel Changi, Merlion Park, Marina Bay Sands, & keseruan Universal Studios.'
+      rating: 4.9,
+      reviews: 175,
+      spots: ['Marina Bay Sands & Merlion Park', 'Universal Studios Singapore (Sentosa)', 'Gardens by the Bay & Flower Dome', 'Orchard Road & Jewel Changi Airport']
     },
     {
       id: 'malaysia',
-      title: 'Kuala Lumpur & Genting Highlands',
-      location: 'Malaysia',
-      category: 'internasional',
-      rating: 4.8,
-      reviews: 140,
-      badge: 'Twin Towers & Cable Car',
+      categoryKey: 'internasional',
+      categoryName: 'Internasional',
+      title: '2. Malaysia',
+      subtitle: 'Truly Asia Destination',
+      badge: 'Twin Towers & Genting',
       image: 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&q=80&w=800',
-      description: 'Menara Kembar Petronas, Batu Caves, & resort dingin Genting Highlands.'
+      rating: 4.8,
+      reviews: 155,
+      spots: ['Menara Kembar Petronas (KLCC)', 'Genting Highlands & Awana SkyWay Cable Car', 'Batu Caves Rainbow Stairs', 'Putrajaya & Dataran Merdeka']
+    },
+    {
+      id: 'thailand',
+      categoryKey: 'internasional',
+      categoryName: 'Internasional',
+      title: '3. Thailand',
+      subtitle: 'Land of Smiles',
+      badge: 'Bangkok & Phuket',
+      image: 'https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&q=80&w=800',
+      rating: 4.9,
+      reviews: 145,
+      spots: ['Wat Arun & Grand Palace Bangkok', 'Chaophraya River Cruise', 'Asiatique The Riverfront', 'Phuket Island & James Bond Island']
+    },
+    {
+      id: 'korea',
+      categoryKey: 'internasional',
+      categoryName: 'Internasional',
+      title: '4. Korea Selatan',
+      subtitle: 'K-Culture & Winter Wonderland',
+      badge: 'Seoul & Nami Island',
+      image: 'https://images.unsplash.com/photo-1538485399081-7191377e8241?auto=format&fit=crop&q=80&w=800',
+      rating: 5.0,
+      reviews: 180,
+      spots: ['Nami Island (Winter Sonata)', 'Gyeongbokgung Palace & Hanbok Dress', 'N Seoul Tower (Namsan)', 'Myeongdong Shopping Street & Hongdae']
     },
     {
       id: 'jepang',
-      title: 'Tokyo & Mt. Fuji Sakura',
-      location: 'Jepang',
-      category: 'internasional',
-      rating: 5.0,
-      reviews: 195,
-      badge: 'Land of Rising Sun',
+      categoryKey: 'internasional',
+      categoryName: 'Internasional',
+      title: '5. Jepang',
+      subtitle: 'Land of the Rising Sun',
+      badge: 'Tokyo & Mt. Fuji',
       image: 'https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&q=80&w=800',
-      description: 'Keindahan bunga Sakura, keagungan Gunung Fuji, & modernitas kota Tokyo.'
+      rating: 5.0,
+      reviews: 210,
+      spots: ['Gunung Fuji & Danau Kawaguchiko', 'Asakusa Sensoji Temple & Skytree Tokyo', 'Shibuya Crossing & Harajuku', 'Universal Studios Japan (Osaka)']
+    },
+    {
+      id: 'eropa-amerika',
+      categoryKey: 'internasional',
+      categoryName: 'Internasional',
+      title: '6. Eropa & 7. Amerika',
+      subtitle: 'Europe & USA World Tour',
+      badge: 'Global Dream Vacation',
+      image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=800',
+      rating: 5.0,
+      reviews: 190,
+      spots: ['Prancis (Menara Eiffel & Louvre)', 'Swiss (Mount Titlis & Interlaken)', 'Belanda (Keukenhof & Volendam)', 'Amerika Serikat (New York, LA & Grand Canyon)']
     }
   ];
 
-  const filteredHighlights = highlights.filter(h => {
+  const filteredHighlights = allDestinationHighlights.filter(item => {
     if (activeCategory === 'all') return true;
-    return h.category === activeCategory;
+    return item.categoryKey === activeCategory;
   });
 
   return (
     <div className="bg-white text-[#0d1b37] min-h-screen pt-20 text-left">
       
-      {/* 1. TOP HEADER BANNER (Bayu Buana Travel Style) */}
-      <div className="relative w-full h-[220px] sm:h-[280px] bg-slate-950 text-white overflow-hidden flex items-center justify-center">
+      {/* 1. TOP HEADER BANNER (Bayu Buana Style) */}
+      <div className="relative w-full h-[230px] sm:h-[290px] bg-slate-950 text-white overflow-hidden flex items-center justify-center">
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-40 transform scale-105"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=1920')`
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/50 to-slate-950/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/60 to-slate-950/90" />
 
         <div className="relative z-10 text-center space-y-2 px-4">
-          <h1 className="font-display font-black text-4xl sm:text-5xl text-white tracking-tight leading-tight">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-600/90 text-white font-extrabold text-[10px] uppercase tracking-widest mb-1 shadow-md">
+            <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+            <span>CV. ANUGRAH PARIWISATA OFFICIAL</span>
+          </div>
+
+          <h1 className="font-display font-black text-3xl sm:text-5xl text-white tracking-tight leading-tight uppercase">
             Destination Highlights
           </h1>
+
           <p className="font-sans text-xs font-bold text-slate-300 uppercase tracking-widest">
             <span onClick={onNavigateHome} className="hover:text-orange-400 cursor-pointer">HOME</span> / DESTINATION HIGHLIGHTS
           </p>
@@ -187,71 +301,83 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
       </div>
 
       {/* MAIN CONTAINER CONTENT */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 space-y-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
         
-        {/* SECTION HEADER */}
-        <div className="text-center max-w-3xl mx-auto space-y-3">
-          <h2 className="font-display font-black text-3xl sm:text-4xl text-[#0d1b37] tracking-tight leading-tight">
-            Spot Wisata Pilihan CV. Anugrah Pariwisata
-          </h2>
-          <div className="w-20 h-1 bg-amber-400 mx-auto rounded-full" />
-          <p className="font-sans text-slate-600 text-xs sm:text-sm font-medium leading-relaxed">
-            Temukan berbagai tempat destinasi wisata impian yang Indah & Cantik di Sumatera Barat, Nusantara & Internasional.
-          </p>
+        {/* PROMINENT TOP CATEGORY BUTTON BAR (Rapi, Mudah Diakses & Profesional) */}
+        <div className="bg-slate-50 p-4 sm:p-5 rounded-3xl border border-slate-200 shadow-md max-w-4xl mx-auto text-center space-y-4">
+          
+          <div>
+            <span className="text-[11px] font-black uppercase tracking-wider text-orange-600 block">
+              PILIH KATEGORI RUTE DESTINASI
+            </span>
+            <h2 className="font-display font-black text-xl sm:text-2xl text-[#0d1b37]">
+              Jelajahi Rute Wisata Impian Anda
+            </h2>
+          </div>
 
-          {/* Filter Category Tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-2 pt-4">
+          {/* 4 STYLIZED CATEGORY BUTTONS */}
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-2.5 pt-1">
+            
             <button
               onClick={() => setActiveCategory('all')}
-              className={`px-4 py-2 rounded-full font-display font-extrabold text-xs transition-all cursor-pointer ${
+              className={`py-3.5 px-4 rounded-2xl font-display font-black text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
                 activeCategory === 'all'
-                  ? 'bg-[#f94a29] text-white shadow-md shadow-orange-600/20'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                  ? 'bg-gradient-to-r from-[#f94a29] to-orange-500 text-white shadow-lg shadow-orange-600/25 scale-[1.02]'
+                  : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
               }`}
             >
-              Semua Highlights
+              <Globe className="w-4 h-4 shrink-0" />
+              <span>Semua Rute</span>
             </button>
+
             <button
-              onClick={() => setActiveCategory('sumbar')}
-              className={`px-4 py-2 rounded-full font-display font-extrabold text-xs transition-all cursor-pointer ${
-                activeCategory === 'sumbar'
-                  ? 'bg-[#f94a29] text-white shadow-md shadow-orange-600/20'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+              onClick={() => setActiveCategory('in_sumbar')}
+              className={`py-3.5 px-4 rounded-2xl font-display font-black text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
+                activeCategory === 'in_sumbar'
+                  ? 'bg-gradient-to-r from-[#f94a29] to-orange-500 text-white shadow-lg shadow-orange-600/25 scale-[1.02]'
+                  : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
               }`}
             >
-              In Sumatera Barat
+              <MapPin className="w-4 h-4 shrink-0 text-red-500" />
+              <span>In Sumbar</span>
             </button>
+
             <button
-              onClick={() => setActiveCategory('nusantara')}
-              className={`px-4 py-2 rounded-full font-display font-extrabold text-xs transition-all cursor-pointer ${
-                activeCategory === 'nusantara'
-                  ? 'bg-[#f94a29] text-white shadow-md shadow-orange-600/20'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+              onClick={() => setActiveCategory('out_sumbar')}
+              className={`py-3.5 px-4 rounded-2xl font-display font-black text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
+                activeCategory === 'out_sumbar'
+                  ? 'bg-gradient-to-r from-[#f94a29] to-orange-500 text-white shadow-lg shadow-orange-600/25 scale-[1.02]'
+                  : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
               }`}
             >
-              Out Sumbar (Nusantara)
+              <Compass className="w-4 h-4 shrink-0 text-amber-500" />
+              <span>Out Sumbar</span>
             </button>
+
             <button
               onClick={() => setActiveCategory('internasional')}
-              className={`px-4 py-2 rounded-full font-display font-extrabold text-xs transition-all cursor-pointer ${
+              className={`py-3.5 px-4 rounded-2xl font-display font-black text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
                 activeCategory === 'internasional'
-                  ? 'bg-[#f94a29] text-white shadow-md shadow-orange-600/20'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                  ? 'bg-gradient-to-r from-[#f94a29] to-orange-500 text-white shadow-lg shadow-orange-600/25 scale-[1.02]'
+                  : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
               }`}
             >
-              Internasional
+              <Globe className="w-4 h-4 shrink-0 text-blue-500" />
+              <span>Internasional</span>
             </button>
+
           </div>
+
         </div>
 
-        {/* HIGHLIGHTS GRID CARDS (Bayu Buana Style Cards with Gold Bar & Bottom Overlay) */}
+        {/* DESTINATION HIGHLIGHTS CARDS GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredHighlights.map((item, index) => (
             <motion.div
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.08 }}
+              transition={{ duration: 0.4, delay: (index % 3) * 0.08 }}
               key={item.id}
               className="bg-white border border-slate-200/90 rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group text-left"
             >
@@ -264,9 +390,9 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent" />
                   
-                  {/* Top Badge Tag */}
+                  {/* Top Category Badge */}
                   <div className="absolute top-3 left-3 bg-[#f94a29] text-white font-display font-extrabold text-[10px] uppercase px-3 py-1 rounded-full shadow-md">
                     {item.badge}
                   </div>
@@ -277,25 +403,32 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
                     <span>{item.rating} ({item.reviews})</span>
                   </div>
 
-                  {/* Title Overlay on Photo */}
+                  {/* Title & Subtitle Overlay on Photo */}
                   <div className="absolute bottom-3 left-3 right-3 space-y-1">
+                    <span className="text-[10px] font-extrabold uppercase text-amber-300 tracking-wider block">
+                      {item.categoryName}
+                    </span>
                     <h3 className="font-display font-black text-xl text-white tracking-tight leading-snug group-hover:text-amber-300 transition-colors">
                       {item.title}
                     </h3>
-                    <div className="w-12 h-1 bg-amber-400 rounded-full group-hover:w-24 transition-all duration-500" />
+                    <div className="w-16 h-1 bg-amber-400 rounded-full group-hover:w-28 transition-all duration-500" />
                   </div>
                 </div>
 
-                {/* Details Body */}
+                {/* Body Details: List of Spots */}
                 <div className="p-5 pt-1 space-y-3">
-                  <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-500">
-                    <MapPin className="w-3.5 h-3.5 text-[#f94a29] shrink-0" />
-                    <span>{item.location}</span>
-                  </div>
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-orange-600 block">
+                    Spot Wisata Populer:
+                  </span>
 
-                  <p className="font-sans text-xs text-slate-600 leading-relaxed font-medium">
-                    {item.description}
-                  </p>
+                  <div className="space-y-1.5">
+                    {item.spots.map((spot, idx) => (
+                      <div key={idx} className="flex items-start gap-2 text-xs font-semibold text-slate-700">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                        <span className="leading-snug">{spot}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
               </div>
@@ -303,11 +436,11 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
               {/* Action Button */}
               <div className="p-5 pt-0">
                 <button
-                  onClick={() => handleWhatsAppBooking(item.title)}
-                  className="w-full bg-[#f94a29] hover:bg-[#e03d1e] text-white font-sans font-bold text-xs uppercase py-3 px-4 rounded-xl shadow-md shadow-orange-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                  onClick={() => handleWhatsAppBooking(item.title, item.categoryName)}
+                  className="w-full bg-[#f94a29] hover:bg-[#e03d1e] text-white font-sans font-bold text-xs uppercase py-3.5 px-4 rounded-xl shadow-md shadow-orange-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <MessageCircle className="w-4 h-4 fill-current shrink-0" />
-                  <span>Konsultasi Highlight WA</span>
+                  <span>Konsultasi Paket Tour WA</span>
                 </button>
               </div>
 
