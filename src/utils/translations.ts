@@ -16,7 +16,7 @@ export const TRANSLATIONS = {
     topbar_service: "Motto: Wisata Hemat dengan Travel Hebat",
 
     // Hero Section
-    hero_explore: "Mari Jelajahi Nusantara & Dunia (Periode 2026/2027)",
+    hero_explore: "Mari Jelajahi Nusantara & Dunia",
     hero_title_1: "CV. ANUGRAH PARIWISATA",
     hero_motto: "WISATA HEMAT BERSAMA TRAVEL HEBAT",
     hero_subtitle: "Perusahaan Tour & Travel Terpercaya No. 1 di Padang, Sumatera Barat. Melayani Tour Pariwisata Domestik & Internasional Periode 2026/2027 dengan Armada Bus Eksekutif Full AC, Toilet, Karaoke & Kru Tour Ramah.",
@@ -168,7 +168,7 @@ export const TRANSLATIONS = {
     topbar_service: "Motto: Budget Tour with Great Travel",
 
     // Hero Section
-    hero_explore: "Let's Explore The World (2026/2027 Period)",
+    hero_explore: "Let's Explore The World",
     hero_title_1: "CV. ANUGRAH PARIWISATA",
     hero_motto: "BUDGET TOUR WITH GREAT TRAVEL",
     hero_subtitle: "Number 1 Tour & Travel Company in Padang & West Sumatra. Serving Domestic & International Tours for 2026/2027 Season with Executive Full AC Buses, Toilet, Karaoke & Friendly Tour Crew.",
