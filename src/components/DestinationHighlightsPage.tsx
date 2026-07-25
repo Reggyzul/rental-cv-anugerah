@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { MapPin, Compass, Globe, Star, MessageCircle, CheckCircle2, ChevronRight, Sparkles } from 'lucide-react';
 import { TRANSLATIONS } from '../utils/translations';
@@ -375,11 +375,11 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
           </div>
 
           <h1 className="font-display font-black text-3xl sm:text-5xl text-white tracking-tight leading-tight uppercase">
-            Destination Highlights
+            {t.dest_title}
           </h1>
 
           <p className="font-sans text-xs font-bold text-slate-300 uppercase tracking-widest">
-            <span onClick={onNavigateHome} className="hover:text-red-400 cursor-pointer">HOME</span> / DESTINATION HIGHLIGHTS
+            <span onClick={onNavigateHome} className="hover:text-red-400 cursor-pointer">{t.dest_breadcrumb_home}</span> / {t.dest_breadcrumb_page}
           </p>
         </div>
       </div>
@@ -392,10 +392,10 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
           
           <div>
             <span className="text-[11px] font-black uppercase tracking-wider text-red-600 block">
-              PILIH KATEGORI RUTE DESTINASI
+              {t.dest_select_cat}
             </span>
             <h2 className="font-display font-black text-xl sm:text-2xl text-[#0d1b37]">
-              Jelajahi Rute Wisata Impian Anda
+              {t.dest_cat_subtitle}
             </h2>
           </div>
 
@@ -411,7 +411,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
               }`}
             >
               <Globe className="w-4 h-4 shrink-0" />
-              <span>Semua Rute</span>
+              <span>{t.dest_cat_all}</span>
             </button>
 
             <button
@@ -423,7 +423,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
               }`}
             >
               <MapPin className="w-4 h-4 shrink-0 text-red-500" />
-              <span>In Sumbar</span>
+              <span>{t.dest_cat_in_sumbar}</span>
             </button>
 
             <button
@@ -435,7 +435,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
               }`}
             >
               <Compass className="w-4 h-4 shrink-0 text-red-500" />
-              <span>Out Sumbar</span>
+              <span>{t.dest_cat_out_sumbar}</span>
             </button>
 
             <button
@@ -447,7 +447,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
               }`}
             >
               <Globe className="w-4 h-4 shrink-0 text-blue-500" />
-              <span>Internasional</span>
+              <span>{t.dest_cat_inter}</span>
             </button>
 
           </div>
@@ -502,7 +502,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
                 {/* Body Details: List of Spots */}
                 <div className="p-5 pt-1 space-y-3">
                   <span className="text-[10px] font-extrabold uppercase tracking-wider text-red-600 block">
-                    Spot Wisata Populer:
+                    {t.dest_spots_label}
                   </span>
 
                   <div className="space-y-1.5">
@@ -524,7 +524,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
                   className="w-full bg-[#dc2626] hover:bg-[#b91c1c] text-white font-sans font-bold text-xs uppercase py-3.5 px-4 rounded-xl shadow-md shadow-red-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <MessageCircle className="w-4 h-4 fill-current shrink-0" />
-                  <span>Konsultasi Paket Tour WA</span>
+                  <span>{t.dest_wa_consult}</span>
                 </button>
               </div>
 

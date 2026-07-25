@@ -27,6 +27,22 @@ export const TRANSLATIONS = {
     search_date_placeholder: "Kapan rencana keberangkatan tour Anda?",
     search_btn: "CARI PAKET TOUR",
 
+    // Destinations Section & Page
+    dest_tag: "KATALOG RUTE DESTINASI LENGKAP",
+    dest_title: "Destinasi Pilihan Wisata",
+    dest_desc: "Jelajahi beragam destinasi menakjubkan di Sumatera Barat, Nusantara & Mancanegara bersama CV. Anugrah Pariwisata.",
+    dest_select_cat: "PILIH KATEGORI RUTE DESTINASI",
+    dest_cat_subtitle: "Jelajahi Rute Wisata Impian Anda",
+    dest_cat_all: "Semua Rute",
+    dest_cat_in_sumbar: "In Sumbar",
+    dest_cat_out_sumbar: "Out Sumbar",
+    dest_cat_inter: "Internasional",
+    dest_spots_label: "Spot Wisata Populer:",
+    dest_wa_consult: "Konsultasi Rute Tour WA",
+    dest_view_all: "Lihat Selengkapnya",
+    dest_breadcrumb_home: "BERANDA",
+    dest_breadcrumb_page: "DESTINASI WISATA",
+
     // Package Tour Page
     pkg_tag: "PAKET TOUR PERJALANAN RESMI",
     pkg_title: "PAKET TOUR SPESIAL NUSANTARA",
@@ -83,11 +99,6 @@ export const TRANSLATIONS = {
     strength_price_desc: "Paket tour hemat tanpa mengurangi standar kualitas pelayanan & kenyamanan.",
     strength_time_title: "Destinasi Terlengkap",
     strength_time_desc: "Rute Sumbar, Nusantara (Bromo, Bali, Aceh, dll) hingga Internasional (Singapura, Malaysia, Eropa, dll).",
-
-    // Services (Rute Destinasi Tour)
-    services_tag: "KATALOG RUTE DESTINASI LENGKAP",
-    services_title: "Destinasi Pilihan Wisata",
-    services_desc: "Jelajahi beragam destinasi menakjubkan di Sumatera Barat, Nusantara & Mancanegara bersama CV. Anugrah Pariwisata.",
 
     // Cars Section
     cars_tag: "KATALOG ARMADA BUS & MOBIL",
@@ -164,6 +175,22 @@ export const TRANSLATIONS = {
     search_date_placeholder: "When will you go on tour?",
     search_btn: "SEARCH TOUR",
 
+    // Destinations Section & Page
+    dest_tag: "FULL DESTINATION CATALOG",
+    dest_title: "Destination Highlights",
+    dest_desc: "Explore scenic destinations in West Sumatra, Indonesia, and abroad with CV. Anugrah Pariwisata.",
+    dest_select_cat: "SELECT DESTINATION CATEGORY",
+    dest_cat_subtitle: "Explore Your Dream Tour Routes",
+    dest_cat_all: "All Routes",
+    dest_cat_in_sumbar: "In West Sumatra",
+    dest_cat_out_sumbar: "Out West Sumatra",
+    dest_cat_inter: "International",
+    dest_spots_label: "Popular Tourist Spots:",
+    dest_wa_consult: "Consult Tour Route via WA",
+    dest_view_all: "View All Destinations",
+    dest_breadcrumb_home: "HOME",
+    dest_breadcrumb_page: "DESTINATIONS",
+
     // Package Tour Page
     pkg_tag: "OFFICIAL TOUR PACKAGES",
     pkg_title: "SPECIAL INDONESIA TOUR PACKAGES",
@@ -220,11 +247,6 @@ export const TRANSLATIONS = {
     strength_price_desc: "Economical tour packages without compromising comfort.",
     strength_time_title: "Complete Destinations",
     strength_time_desc: "West Sumatra, Indonesia (Bromo, Bali, Aceh, etc.) to International.",
-
-    // Services (Rute Destinasi Tour)
-    services_tag: "FULL DESTINATION CATALOG",
-    services_title: "Destinations",
-    services_desc: "Explore scenic destinations in West Sumatra, Indonesia, and abroad with CV. Anugrah Pariwisata.",
 
     // Cars Section
     cars_tag: "BUS & CAR FLEET CATALOG",

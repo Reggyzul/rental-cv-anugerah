@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { MapPin, Compass, Globe, Star, MessageCircle, CheckCircle2, Sparkles, ChevronDown } from 'lucide-react';
 import { TRANSLATIONS } from '../utils/translations';
@@ -362,21 +362,21 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
     <section id="destinations" className="pt-4 sm:pt-6 pb-16 bg-white text-[#0d1b37] overflow-hidden relative border-b border-slate-100 text-left">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8">
         
-        {/* SECTION HEADER (Tight Precision Spacing Under Hero Box) */}
+        {/* SECTION HEADER */}
         <div className="text-center max-w-3xl mx-auto space-y-2.5" id="destinations-heading">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-red-50 border border-red-200 text-[#dc2626] font-display font-extrabold text-xs tracking-wider uppercase">
             <Sparkles className="w-4 h-4 text-[#dc2626]" />
-            <span>KATALOG RUTE DESTINASI LENGKAP</span>
+            <span>{t.dest_tag}</span>
           </div>
 
           <h2 className="font-display font-black text-3xl sm:text-4xl text-[#0d1b37] tracking-tight leading-tight">
-            Destinations
+            {t.dest_title}
           </h2>
 
           <div className="w-16 h-1 bg-red-500 mx-auto rounded-full" />
 
           <p className="font-sans text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
-            Jelajahi beragam destinasi menakjubkan di Sumatera Barat, Nusantara & Mancanegara dan rasakan pesona setiap perjalanan yang tak terlupakan bersama #CVAnugrahPariwisata!
+            {t.dest_desc}
           </p>
         </div>
 
@@ -385,10 +385,10 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
           
           <div>
             <span className="text-[10px] font-black uppercase tracking-wider text-[#dc2626] block">
-              PILIH KATEGORI RUTE TOUR
+              {t.dest_select_cat}
             </span>
             <h3 className="font-display font-black text-lg sm:text-xl text-[#0d1b37]">
-              Jelajahi Rute Wisata Impian Anda
+              {t.dest_cat_subtitle}
             </h3>
           </div>
 
@@ -404,7 +404,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
               }`}
             >
               <Globe className="w-4 h-4 shrink-0" />
-              <span>Semua Rute</span>
+              <span>{t.dest_cat_all}</span>
             </button>
 
             <button
@@ -416,7 +416,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
               }`}
             >
               <MapPin className="w-4 h-4 shrink-0 text-red-500" />
-              <span>In Sumbar</span>
+              <span>{t.dest_cat_in_sumbar}</span>
             </button>
 
             <button
@@ -428,7 +428,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
               }`}
             >
               <Compass className="w-4 h-4 shrink-0 text-red-500" />
-              <span>Out Sumbar</span>
+              <span>{t.dest_cat_out_sumbar}</span>
             </button>
 
             <button
@@ -440,14 +440,14 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
               }`}
             >
               <Globe className="w-4 h-4 shrink-0 text-blue-500" />
-              <span>Internasional</span>
+              <span>{t.dest_cat_inter}</span>
             </button>
 
           </div>
 
         </div>
 
-        {/* DESTINATIONS CARDS GRID (MAX 6 DESTINATIONS - 2 ROWS) */}
+        {/* DESTINATIONS CARDS GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 pt-2">
           {displayedHighlights.map((item, index) => (
             <motion.div
@@ -495,7 +495,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
                 {/* Body Details: List of Spots */}
                 <div className="p-5 pt-1 space-y-3">
                   <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#dc2626] block">
-                    Spot Wisata Populer:
+                    {t.dest_spots_label}
                   </span>
 
                   <div className="space-y-1.5">
@@ -517,7 +517,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
                   className="w-full bg-[#dc2626] hover:bg-[#b91c1c] text-white font-sans font-bold text-xs uppercase py-3.5 px-4 rounded-xl shadow-md shadow-red-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <MessageCircle className="w-4 h-4 fill-current shrink-0" />
-                  <span>Konsultasi Rute Tour WA</span>
+                  <span>{t.dest_wa_consult}</span>
                 </button>
               </div>
 
@@ -525,7 +525,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
           ))}
         </div>
 
-        {/* ELEGANT FLOATING TEXT + DOWNWARD ARROW (NO BACKGROUND, ULTRA MODERN HIGH-END STYLE) */}
+        {/* ELEGANT FLOATING TEXT */}
         <div className="pt-6 pb-2 flex flex-col items-center justify-center">
           <motion.div
             animate={{ y: [0, 8, 0] }}
@@ -534,15 +534,13 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
             className="group flex flex-col items-center gap-3 cursor-pointer text-center select-none"
             id="view-all-destinations-btn"
           >
-            {/* Floating Classy Modern Text */}
             <div className="relative flex flex-col items-center">
               <span className="font-display font-black text-xs sm:text-sm uppercase tracking-[0.25em] text-slate-800 group-hover:text-[#dc2626] transition-colors duration-300">
-                Lihat Selengkapnya
+                {t.dest_view_all}
               </span>
               <span className="w-8 group-hover:w-full h-0.5 bg-gradient-to-r from-[#dc2626] to-amber-500 transition-all duration-300 rounded-full mt-1" />
             </div>
 
-            {/* Downward Arrow Circle Accent */}
             <div className="w-11 h-11 rounded-full border-2 border-slate-300 group-hover:border-[#dc2626] flex items-center justify-center text-slate-700 group-hover:text-white group-hover:bg-[#dc2626] transition-all duration-300 shadow-sm group-hover:shadow-lg group-hover:shadow-red-600/30 group-hover:scale-110">
               <ChevronDown className="w-5 h-5 group-hover:translate-y-0.5 transition-transform duration-300" />
             </div>
