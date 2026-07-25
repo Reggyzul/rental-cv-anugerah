@@ -22,6 +22,172 @@ export interface TourPackage {
 }
 
 export const TOUR_PACKAGES: TourPackage[] = [
+  // 1. OPEN TRIP GUNUNG BROMO (10 HARI)
+  {
+    id: 'tour-open-trip-bromo',
+    title: 'OPEN TRIP GUNUNG BROMO',
+    duration: '10 Hari',
+    route: ['Gunung Bromo', 'Yogyakarta', 'Bandung', 'Jakarta'],
+    routeDisplay: 'Gunung Bromo - Yogyakarta - Bandung - Jakarta',
+    image: 'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&q=80&w=800',
+    badge: '10 Hari Open Trip',
+    minPrice: 'Rp 2.650.000',
+    tiers: [
+      {
+        busType: 'Big Bus Mercedes Benz Eksekutif',
+        capacity: 'Kapasitas 43 Seats (Minibar & Toilet)',
+        pricePerPerson: 'Rp 2.650.000',
+        hotelDetails: 'Hotel 2 Malam di Yogyakarta & 1 Malam di Bandung',
+        notes: 'Periode Keberangkatan: 16 - 25 Oktober 2026'
+      }
+    ],
+    highlights: [
+      'Menikmati keindahan alam & sunrise Gunung Bromo',
+      'Wisata budaya & belanja Malioboro Yogyakarta',
+      'City tour & udara sejuk kota Bandung',
+      'Penyeberangan kapal Merak - Bakauheni (PP)'
+    ],
+    includes: [
+      'Transportasi Big Bus Mercedes Benz Eksekutif (Full AC, Minibar, Toilet, Karaoke)',
+      'Penginapan Hotel 2 Malam di Yogyakarta & 1 Malam di Bandung',
+      'Tiket Penyeberangan Kapal Merak - Bakauheni (PP)',
+      'Dokumentasi & Guide Pendamping Tour'
+    ],
+    excludes: [
+      'Biaya Tiket Masuk Objek Wisata',
+      'Biaya Makan Selama Perjalanan',
+      'Pengeluaran Pribadi'
+    ]
+  },
+
+  // 2. TOUR BATAM - BINTAN 2026 (10 HARI PP)
+  {
+    id: 'tour-batam-bintan-2026',
+    title: 'TOUR BATAM - BINTAN 2026',
+    duration: '10 Hari PP',
+    route: ['Pulau Batam', 'Pulau Bintan', 'Siak', 'Pekanbaru'],
+    routeDisplay: 'Pulau Batam - Pulau Bintan - Siak - Pekanbaru',
+    image: '/dest_batam.jpg',
+    badge: '10 Hari PP (Juni - Des 2026)',
+    minPrice: 'Rp 2.850.000',
+    tiers: [
+      {
+        busType: 'Big Bus Eksekutif',
+        capacity: 'Isi 43 Orang',
+        pricePerPerson: 'Rp 2.850.000',
+        hotelDetails: 'Hotel 3 Malam di Batam & Akomodasi Rute Perjalanan',
+        notes: 'Periode Keberangkatan: Juni - Desember 2026'
+      },
+      {
+        busType: 'Big Bus Legrest V.I.P',
+        capacity: 'Isi 32 Orang',
+        pricePerPerson: 'Rp 3.850.000',
+        hotelDetails: 'Hotel 3 Malam di Batam & Akomodasi Rute Perjalanan',
+        notes: 'Periode Keberangkatan: Juni - Desember 2026'
+      }
+    ],
+    highlights: [
+      'Jembatan Barelang & Peninggalan Sejarah Galang Batam',
+      'Patung Buddha Tidur & Resort Pantai Pulau Bintan',
+      'Kunjungan Istana Siak Sri Indrapura',
+      'Wisata Belanja & Kuliner Kota Pekanbaru'
+    ],
+    includes: [
+      'Transportasi Armada Big Bus AC (Eksekutif 43 seat / VIP Legrest 32 seat)',
+      'Penginapan Hotel 3 Malam di Batam & Hotel Rute',
+      'Driver Berpengalaman, BBM, Toll & Feri/Roro',
+      'Layanan Pendamping Rombongan'
+    ],
+    excludes: [
+      'Biaya Tiket Masuk Objek Wisata',
+      'Biaya Makan Selama Tour',
+      'Pengeluaran Pribadi'
+    ]
+  },
+
+  // 3. 11D8N WEST EUROPE + VENICE (INTERNASIONAL)
+  {
+    id: 'tour-west-europe-venice',
+    title: '11D8N WEST EUROPE + VENICE',
+    duration: '11 Hari 8 Malam',
+    route: ['France', 'Brussels', 'Netherlands', 'Germany', 'Luxembourg', 'Switzerland', 'Italy'],
+    routeDisplay: 'France - Brussels - Netherlands - Germany - Luxembourg - Switzerland - Italy',
+    image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=800',
+    badge: 'Internasional Europe',
+    minPrice: 'Rp 29.650.000',
+    tiers: [
+      {
+        busType: 'Flight Etihad + Bus Pariwisata Eropa',
+        capacity: 'Paket Promo Special (07 - 17 Oct 2025)',
+        pricePerPerson: 'Rp 29.650.000',
+        hotelDetails: 'Hotel Bintang 3* / 4* di Kota Utama Eropa (8 Malam Inap)',
+        notes: 'Penerbangan Etihad Airways (EY) dengan Bagasi 35kg'
+      },
+      {
+        busType: 'Flight Etihad + Bus Eksekutif Eropa',
+        capacity: 'Paket Regular (Nov - Dec 2026)',
+        pricePerPerson: 'Rp 32.500.000',
+        hotelDetails: 'Hotel Bintang 4* di Prancis, Swiss & Italia (8 Malam Inap)',
+        notes: 'Penerbangan Etihad Airways (EY) dengan Bagasi 35kg'
+      }
+    ],
+    highlights: [
+      'Menara Eiffel & Museum Louvre Paris',
+      'Kincir Angin Belanda & Kota Tua Brussels',
+      'Pemandangan Pegunungan Salju Swiss',
+      'Kanal Eksotis Venice & Duomo Milan Italia'
+    ],
+    includes: [
+      'Tiket Penerbangan Internasional PP (Etihad Airways / EY)',
+      'Bagasi Kabin 7Kg & Bagasi Terdaftar 35Kg',
+      'Akomodasi Hotel Bintang 3* / 4* Selama 8 Malam',
+      'Transportasi Bus AC Eropa & Tour Leader Profesional'
+    ],
+    excludes: [
+      'Biaya Visa Schengen & Asuransi Perjalanan',
+      'Tipping Guide & Driver Eropa',
+      'Pengeluaran Pribadi'
+    ]
+  },
+
+  // 4. 9D7N WEST USA (INTERNASIONAL)
+  {
+    id: 'tour-west-usa-9d7n',
+    title: '9D7N WEST USA (LA, LAS VEGAS, SAN FRANCISCO)',
+    duration: '9 Hari 7 Malam',
+    route: ['Los Angeles', 'Las Vegas', 'San Francisco'],
+    routeDisplay: 'Los Angeles - Las Vegas - San Francisco',
+    image: 'https://images.unsplash.com/photo-1580655653885-65763b2597d0?auto=format&fit=crop&q=80&w=800',
+    badge: 'Internasional USA',
+    minPrice: 'Rp 39.050.000',
+    tiers: [
+      {
+        busType: 'Flight STARLUX + Bus Eksekutif USA',
+        capacity: 'Minimal 10 Pax (15 Aug & 19 Sep 2025)',
+        pricePerPerson: 'Rp 39.050.000',
+        hotelDetails: 'Hotel Bintang 3* / 4* di Los Angeles, Las Vegas, San Francisco',
+        notes: 'Periode Keberangkatan: 15 Aug 2025 & 19 Sep 2025'
+      }
+    ],
+    highlights: [
+      'Tanda Ikonik Hollywood Sign & Walk of Fame Los Angeles',
+      'Gemerlap Kota Las Vegas & Strip Boulevard',
+      'Jembatan Golden Gate & Fisherman Wharf San Francisco'
+    ],
+    includes: [
+      'Tiket Penerbangan Internasional STARLUX Airlines',
+      'Bagasi Kabin & Bagasi Terdaftar',
+      'Akomodasi Hotel Bintang 3* / 4*',
+      'Transportasi Bus AC & Konsumsi Makan Terjadwal'
+    ],
+    excludes: [
+      'Biaya Visa USA & Asuransi Perjalanan',
+      'Tipping Guide & Driver',
+      'Pengeluaran Pribadi'
+    ]
+  },
+
+  // 5. TOUR LOMBOK - BALI (16 HARI)
   {
     id: 'tour-lombok-bali',
     title: 'TOUR LOMBOK - BALI',
@@ -66,6 +232,8 @@ export const TOUR_PACKAGES: TourPackage[] = [
       'Pengeluaran Pribadi & Tips Crew'
     ]
   },
+
+  // 6. TOUR SUMBAWA - LOMBOK - BALI (16 HARI)
   {
     id: 'tour-sumbawa-lombok-bali',
     title: 'TOUR SUMBAWA - LOMBOK - BALI',
@@ -110,6 +278,8 @@ export const TOUR_PACKAGES: TourPackage[] = [
       'Pengeluaran Pribadi & Tips Crew'
     ]
   },
+
+  // 7. TOUR BANGKA - BELITUNG (10 HARI)
   {
     id: 'tour-bangka-belitung',
     title: 'TOUR BANGKA - BELITUNG',
@@ -117,7 +287,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     route: ['Bangka', 'Belitung', 'Palembang'],
     routeDisplay: 'Bangka - Belitung - Palembang',
     image: '/dest_belitung.jpg',
-    badge: '10 Hari Bahari & Laskar Pelangi',
+    badge: '10 Hari Bahari & Eksotik',
     minPrice: 'Rp 2.975.000',
     tiers: [
       {
@@ -153,49 +323,8 @@ export const TOUR_PACKAGES: TourPackage[] = [
       'Pengeluaran Pribadi'
     ]
   },
-  {
-    id: 'tour-batam-bintan',
-    title: 'TOUR BATAM - BINTAN',
-    duration: '10 Hari',
-    route: ['P. Batam', 'P. Bintan', 'Pekanbaru'],
-    routeDisplay: 'P. Batam - P. Bintan - Pekanbaru',
-    image: '/dest_batam.jpg',
-    badge: '10 Hari Kepri Landmark',
-    minPrice: 'Rp 2.875.000',
-    tiers: [
-      {
-        busType: 'Big Bus Eksekutif',
-        capacity: 'Isi 43 Orang',
-        pricePerPerson: 'Rp 2.875.000',
-        hotelDetails: 'Hotel 2 Malam di Batam, 2 Malam di Tanjung Pinang',
-        notes: 'Tidak termasuk Biaya masuk wisata & Biaya makan selama tour'
-      },
-      {
-        busType: 'Big Bus Legrest V.I.P',
-        capacity: 'Isi 33 Orang',
-        pricePerPerson: 'Rp 3.875.000',
-        hotelDetails: 'Hotel 2 Malam di Batam, 2 Malam di Tanjung Pinang',
-        notes: 'Tidak termasuk biaya masuk wisata & Biaya Makan'
-      }
-    ],
-    highlights: [
-      'Jembatan Barelang & Wisata Belanja Nagoya Batam',
-      'Resort Lagoi Bay & Treasure Bay Kolam Terbesar Bintan',
-      'Gurun Pasir Telaga Biru Bintan & Tanjung Pinang',
-      'Masjid Agung An-Nur & Wisata Melayu Pekanbaru'
-    ],
-    includes: [
-      'Transportasi Big Bus AC Pariwisata (Eksekutif 43 / VIP Legrest 33)',
-      'Penginapan Hotel 2 Malam Batam & 2 Malam Tanjung Pinang',
-      'Driver Ramah, BBM, Parkir & Penyeberangan Roro/Feri',
-      'Layanan Pendamping Rombongan'
-    ],
-    excludes: [
-      'Biaya Tiket Masuk Objek Wisata',
-      'Biaya Makan Selama Tour',
-      'Pengeluaran Pribadi'
-    ]
-  },
+
+  // 8. TOUR DANAU TOBA - P. SABANG (TITIK 0 KM)
   {
     id: 'tour-danau-toba-sabang',
     title: 'TOUR DANAU TOBA - P. SABANG (TITIK 0 KM)',
