@@ -50,9 +50,11 @@ export default function Footer({ lang, onNavigateSection }: FooterProps) {
           {/* Column 1: Company Profile & Logo */}
           <div className="md:col-span-5 space-y-5">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-red-600 to-amber-600 flex items-center justify-center text-white font-black font-display text-xl shadow-lg shadow-red-600/20 shrink-0">
-                AP
-              </div>
+              <img
+                src="/logo_original.jpg"
+                alt="CV. Anugrah Pariwisata Logo"
+                className="h-14 w-auto object-contain rounded-lg bg-white p-1 shadow-md shrink-0"
+              />
               <div>
                 <span className="font-display font-black text-xl tracking-tight text-white uppercase block">
                   CV. ANUGRAH <span className="text-red-500">PARIWISATA</span>
@@ -150,10 +152,17 @@ export default function Footer({ lang, onNavigateSection }: FooterProps) {
 
         </div>
 
-        {/* Bottom Copyright */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500 font-medium">
-          <p>© 2026 CV. ANUGRAH PARIWISATA. All rights reserved.</p>
-          <p className="flex items-center gap-1">
+        {/* Bottom Copyright Bar with Logo */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400 font-medium">
+          <div className="flex items-center gap-2.5">
+            <img
+              src="/logo_original.jpg"
+              alt="CV. Anugrah Pariwisata"
+              className="h-8 w-auto object-contain rounded bg-white p-0.5 shadow-xs shrink-0"
+            />
+            <span>© 2026 CV. ANUGRAH PARIWISATA. All rights reserved.</span>
+          </div>
+          <p className="flex items-center gap-1 text-slate-500">
             <span>Wisata Hemat bersama Travel Hebat</span>
           </p>
         </div>
