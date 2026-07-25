@@ -173,7 +173,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
       title: 'Pulau Belitung',
       subtitle: 'Surga Laskar Pelangi (Bangka Belitung)',
       badge: 'Laskar Pelangi',
-      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
+      image: '/dest_belitung.jpg',
       rating: 4.9,
       reviews: 142,
       spots: ['Pantai Tanjung Tinggi (Batu Granit Raksasa)', 'Pulau Lengkuas & Mercusuar Bersejarah', 'Museum Kata Andrea Hirata', 'Danau Kaolin Belitung']
@@ -197,7 +197,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
       title: 'Lombok',
       subtitle: 'Pulau Seribu Masjid & Pantai Eksotis (NTB)',
       badge: 'Gili & Mandalika',
-      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
+      image: '/dest_lombok.jpg',
       rating: 4.9,
       reviews: 185,
       spots: ['Gili Trawangan, Gili Meno & Gili Air', 'Sirkuit Internasional Mandalika', 'Pantai Pink (Tangsi)', 'Desa Adat Sade & Sukarara']
@@ -209,7 +209,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
       title: 'Sumbawa',
       subtitle: 'Pesona Alam & Island Hopping (NTB)',
       badge: 'Savana Kenawa',
-      image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800',
+      image: '/dest_sumbawa.jpg',
       rating: 4.8,
       reviews: 95,
       spots: ['Pulau Kenawa (Savana & Sunset)', 'Pulau Moyo & Air Terjun Mata Jitu', 'Pantai Lakey (Surfing World Spot)', 'Istana Dalam Loka Sumbawa']
@@ -221,7 +221,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
       title: 'Malang & G. Bromo',
       subtitle: 'Jawa Timur',
       badge: 'Sunrise Favorite',
-      image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800',
+      image: '/dest_bromo.jpg',
       rating: 5.0,
       reviews: 210,
       spots: ['Penanjakan Sunrise Bromo & Kawah Bromo', 'Pasir Berbisik & Bukit Teletubbies', 'Kota Batu Malang (Jatim Park, Museum Angkut)', 'Petik Apel & Coban Rondo']
