@@ -9,7 +9,6 @@ interface GalleryPageProps {
 }
 
 export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) {
-  const [activeFilter, setActiveFilter] = useState<'all' | 'domestik' | 'mancanegara'>('all');
   const [selectedPhoto, setSelectedPhoto] = useState<{ image: string; title: string; subtitle: string; location: string } | null>(null);
 
   const t = TRANSLATIONS[lang];
@@ -17,7 +16,6 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
   const galleryItems = [
     {
       id: 1,
-      category: 'domestik',
       title: 'Tour Silaturahmi Sipiso-Piso & Danau Toba',
       subtitle: 'Keluarga Besar Sepakat bersama CV. Anugrah Pariwisata',
       location: 'Air Terjun Sipiso-Piso, Danau Toba, Sumatera Utara',
@@ -26,7 +24,6 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
     },
     {
       id: 2,
-      category: 'domestik',
       title: 'Tour Monumen Kapal Apung W.K.B Banda Aceh',
       subtitle: 'Kunjungan Wisata Sejarah & Edukasi Tsunami Aceh',
       location: 'Monumen Kapal Apung PLN, Banda Aceh',
@@ -35,7 +32,6 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
     },
     {
       id: 3,
-      category: 'domestik',
       title: 'Wisata Keagamaan Masjid Raya Baiturrahman',
       subtitle: 'Momentum Kebersamaan Peserta Tour Aceh CV. Anugrah Pariwisata',
       location: 'Masjid Raya Baiturrahman, Banda Aceh',
@@ -44,7 +40,6 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
     },
     {
       id: 4,
-      category: 'domestik',
       title: 'Tour Silaturahmi Senggigi View Lombok',
       subtitle: 'Peserta Tour Nusantara di Spot Ikonik Senggigi',
       location: 'Senggigi View Beach, Lombok, NTB',
@@ -53,7 +48,6 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
     },
     {
       id: 5,
-      category: 'domestik',
       title: 'Tour Silaturahmi Candi Prambanan Jogja',
       subtitle: 'Keluarga Besar Sepakat Jelajah Heritage Nusantara',
       location: 'Kompleks Candi Prambanan, DI Yogyakarta',
@@ -62,7 +56,6 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
     },
     {
       id: 6,
-      category: 'domestik',
       title: 'Tour Tugu Kilometer 0 Indonesia Sabang',
       subtitle: 'Titik Ujung Barat Indonesia bersama Rombongan Keluarga Besar Sepakat',
       location: 'Tugu Kilometer 0 Indonesia, Sabang, Aceh',
@@ -71,7 +64,6 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
     },
     {
       id: 7,
-      category: 'domestik',
       title: 'Tour Wisata Keagamaan Masjid Istiqlal Jakarta',
       subtitle: 'Kunjungan Rombongan Peserta Wisata di Masjid Istiqlal',
       location: 'Masjid Istiqlal, DKI Jakarta',
@@ -80,7 +72,6 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
     },
     {
       id: 8,
-      category: 'mancanegara',
       title: 'Tour Internasional Petronas Twin Towers',
       subtitle: 'Kunjungan Wisata Mancanegara Kuala Lumpur Malaysia',
       location: 'Petronas Twin Towers, Kuala Lumpur, Malaysia',
@@ -89,7 +80,6 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
     },
     {
       id: 9,
-      category: 'mancanegara',
       title: 'Tour Mancanegara Bangkok & Thailand',
       subtitle: 'Peserta MT. Sakinah Warahmah BMKT Padang Panjang di Patung Sleeping Buddha',
       location: 'Bangkok & Hat Yai, Thailand',
@@ -98,7 +88,6 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
     },
     {
       id: 10,
-      category: 'domestik',
       title: 'Tour HeHa Sky View & Jogja bersama Bus Zivanes',
       subtitle: 'Kebersamaan Rombongan Anugrah Pariwisata & Team Zivanes Bus',
       location: 'HeHa Sky View, Gunungkidul, Yogyakarta',
@@ -107,7 +96,6 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
     },
     {
       id: 11,
-      category: 'domestik',
       title: 'Tour Jeep Offroad Gunung Bromo & Pasir Berbisik',
       subtitle: 'Petualangan Seru Peserta Rombongan CV. Anugrah Pariwisata di Bromo',
       location: 'Kawasan Wisata Gunung Bromo, Jawa Timur',
@@ -116,7 +104,6 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
     },
     {
       id: 12,
-      category: 'domestik',
       title: 'Tour Silaturahmi Jam Gadang Bukittinggi',
       subtitle: 'Keluarga Besar Bagindo bersama Team CV. Anugrah Pariwisata',
       location: 'Taman Jam Gadang, Bukittinggi, Sumatera Barat',
@@ -124,11 +111,6 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: 'Jam Gadang Bukittinggi'
     }
   ];
-
-  const filteredPhotos = galleryItems.filter(item => {
-    if (activeFilter === 'all') return true;
-    return item.category === activeFilter;
-  });
 
   return (
     <div className="bg-slate-50 text-[#0d1b37] min-h-screen pt-20 text-left">
@@ -185,50 +167,13 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
           </p>
         </div>
 
-        {/* Filter Buttons Bar */}
-        <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
-          <button
-            onClick={() => setActiveFilter('all')}
-            className={`px-6 py-3 rounded-2xl font-display font-extrabold text-xs uppercase transition-all cursor-pointer ${
-              activeFilter === 'all'
-                ? 'bg-[#f94a29] text-white shadow-lg shadow-orange-600/25 scale-[1.02]'
-                : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
-            }`}
-          >
-            Semua Foto ({galleryItems.length})
-          </button>
-          <button
-            onClick={() => setActiveFilter('domestik')}
-            className={`px-6 py-3 rounded-2xl font-display font-extrabold text-xs uppercase transition-all flex items-center gap-2 cursor-pointer ${
-              activeFilter === 'domestik'
-                ? 'bg-[#f94a29] text-white shadow-lg shadow-orange-600/25 scale-[1.02]'
-                : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
-            }`}
-          >
-            <Users className="w-4 h-4 text-amber-400 shrink-0" />
-            <span>Tour Domestik Nusantara ({galleryItems.filter(i => i.category === 'domestik').length})</span>
-          </button>
-          <button
-            onClick={() => setActiveFilter('mancanegara')}
-            className={`px-6 py-3 rounded-2xl font-display font-extrabold text-xs uppercase transition-all flex items-center gap-2 cursor-pointer ${
-              activeFilter === 'mancanegara'
-                ? 'bg-[#f94a29] text-white shadow-lg shadow-orange-600/25 scale-[1.02]'
-                : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
-            }`}
-          >
-            <Globe className="w-4 h-4 text-amber-400 shrink-0" />
-            <span>Tour Mancanegara ({galleryItems.filter(i => i.category === 'mancanegara').length})</span>
-          </button>
-        </div>
-
         {/* Gallery Grid: Modern Cards Layout */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredPhotos.map((item, index) => (
+          {galleryItems.map((item, index) => (
             <motion.div
               layout
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.4, delay: (index % 3) * 0.08 }}
               key={item.id}
               onClick={() => setSelectedPhoto({ image: item.image, title: item.title, subtitle: item.subtitle, location: item.location })}
