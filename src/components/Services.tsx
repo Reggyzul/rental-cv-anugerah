@@ -359,21 +359,21 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
   const displayedHighlights = filteredHighlights.slice(0, 6);
 
   return (
-    <section id="destinations" className="py-20 bg-white text-[#0d1b37] overflow-hidden relative border-b border-slate-100 text-left">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
+    <section id="destinations" className="pt-4 sm:pt-6 pb-16 bg-white text-[#0d1b37] overflow-hidden relative border-b border-slate-100 text-left">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8">
         
-        {/* SECTION HEADER (Bayu Buana Style Title) */}
-        <div className="text-center max-w-3xl mx-auto space-y-3" id="destinations-heading">
+        {/* SECTION HEADER (Tight Precision Spacing Under Hero Box) */}
+        <div className="text-center max-w-3xl mx-auto space-y-2.5" id="destinations-heading">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-orange-50 border border-orange-200 text-[#f94a29] font-display font-extrabold text-xs tracking-wider uppercase">
             <Sparkles className="w-4 h-4 text-[#f94a29]" />
             <span>KATALOG RUTE DESTINASI LENGKAP</span>
           </div>
 
-          <h2 className="font-display font-black text-4xl sm:text-5xl text-[#0d1b37] tracking-tight leading-tight">
+          <h2 className="font-display font-black text-3xl sm:text-4xl text-[#0d1b37] tracking-tight leading-tight">
             Destinations
           </h2>
 
-          <div className="w-20 h-1 bg-amber-400 mx-auto rounded-full" />
+          <div className="w-16 h-1 bg-amber-400 mx-auto rounded-full" />
 
           <p className="font-sans text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
             Jelajahi beragam destinasi menakjubkan di Sumatera Barat, Nusantara & Mancanegara dan rasakan pesona setiap perjalanan yang tak terlupakan bersama #CVAnugrahPariwisata!
@@ -381,23 +381,23 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
         </div>
 
         {/* PROMINENT TOP CATEGORY SELECTOR BUTTON BAR */}
-        <div className="bg-slate-50 p-4 sm:p-5 rounded-3xl border border-slate-200 shadow-md max-w-4xl mx-auto text-center space-y-4">
+        <div className="bg-slate-50 p-3.5 sm:p-4 rounded-3xl border border-slate-200 shadow-md max-w-4xl mx-auto text-center space-y-3">
           
           <div>
-            <span className="text-[11px] font-black uppercase tracking-wider text-[#f94a29] block">
+            <span className="text-[10px] font-black uppercase tracking-wider text-[#f94a29] block">
               PILIH KATEGORI RUTE TOUR
             </span>
-            <h3 className="font-display font-black text-xl sm:text-2xl text-[#0d1b37]">
+            <h3 className="font-display font-black text-lg sm:text-xl text-[#0d1b37]">
               Jelajahi Rute Wisata Impian Anda
             </h3>
           </div>
 
           {/* 4 STYLIZED CATEGORY BUTTONS */}
-          <div className="grid grid-cols-1 sm:grid-cols-4 gap-2.5 pt-1">
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-2 pt-0.5">
             
             <button
               onClick={() => setActiveCategory('all')}
-              className={`py-3.5 px-4 rounded-2xl font-display font-black text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
+              className={`py-3 px-3.5 rounded-2xl font-display font-black text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
                 activeCategory === 'all'
                   ? 'bg-gradient-to-r from-[#f94a29] to-orange-500 text-white shadow-lg shadow-orange-600/25 scale-[1.02]'
                   : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
@@ -409,7 +409,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
 
             <button
               onClick={() => setActiveCategory('in_sumbar')}
-              className={`py-3.5 px-4 rounded-2xl font-display font-black text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
+              className={`py-3 px-3.5 rounded-2xl font-display font-black text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
                 activeCategory === 'in_sumbar'
                   ? 'bg-gradient-to-r from-[#f94a29] to-orange-500 text-white shadow-lg shadow-orange-600/25 scale-[1.02]'
                   : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
@@ -421,7 +421,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
 
             <button
               onClick={() => setActiveCategory('out_sumbar')}
-              className={`py-3.5 px-4 rounded-2xl font-display font-black text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
+              className={`py-3 px-3.5 rounded-2xl font-display font-black text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
                 activeCategory === 'out_sumbar'
                   ? 'bg-gradient-to-r from-[#f94a29] to-orange-500 text-white shadow-lg shadow-orange-600/25 scale-[1.02]'
                   : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
@@ -433,7 +433,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
 
             <button
               onClick={() => setActiveCategory('internasional')}
-              className={`py-3.5 px-4 rounded-2xl font-display font-black text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
+              className={`py-3 px-3.5 rounded-2xl font-display font-black text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
                 activeCategory === 'internasional'
                   ? 'bg-gradient-to-r from-[#f94a29] to-orange-500 text-white shadow-lg shadow-orange-600/25 scale-[1.02]'
                   : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
@@ -448,7 +448,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
         </div>
 
         {/* DESTINATIONS CARDS GRID (MAX 6 DESTINATIONS - 2 ROWS) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 pt-2">
           {displayedHighlights.map((item, index) => (
             <motion.div
               initial={{ opacity: 0, y: 25 }}
@@ -526,7 +526,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
         </div>
 
         {/* ELEGANT FLOATING TEXT + DOWNWARD ARROW (NO BACKGROUND, ULTRA MODERN HIGH-END STYLE) */}
-        <div className="pt-8 pb-4 flex flex-col items-center justify-center">
+        <div className="pt-6 pb-2 flex flex-col items-center justify-center">
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}

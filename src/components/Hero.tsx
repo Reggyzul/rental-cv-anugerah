@@ -23,7 +23,7 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
   };
 
   return (
-    <section id="home" className="relative pt-16 pb-12 bg-white overflow-hidden text-center">
+    <section id="home" className="relative pt-16 pb-4 bg-white overflow-hidden text-center">
       
       {/* 1. HERO MOUNTAIN SCENIC BANNER */}
       <div className="relative w-full min-h-[480px] sm:min-h-[520px] flex flex-col justify-between bg-slate-900 text-white overflow-hidden border-b border-slate-200">
@@ -39,81 +39,67 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
         {/* Dark Soft Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/65 via-slate-950/45 to-slate-950/75" />
 
-        {/* Right Slider Arrow Controls */}
-        <div className="absolute right-6 top-1/2 -translate-y-1/2 hidden md:flex flex-col gap-3 z-20">
-          <button 
-            onClick={onExploreClick}
-            className="w-10 h-10 rounded-full border border-white/40 bg-black/20 hover:bg-white hover:text-slate-900 text-white flex items-center justify-center transition-all cursor-pointer backdrop-blur-xs"
-            title="Slide Up"
-          >
-            <ChevronUp className="w-5 h-5" />
-          </button>
-          <button 
-            onClick={onExploreClick}
-            className="w-10 h-10 rounded-full border border-white/40 bg-black/20 hover:bg-white hover:text-slate-900 text-white flex items-center justify-center transition-all cursor-pointer backdrop-blur-xs"
-            title="Slide Down"
-          >
-            <ChevronDown className="w-5 h-5" />
-          </button>
-        </div>
+        {/* Top Spacer for Header Fixed Nav */}
+        <div className="h-16" />
 
-        {/* CENTERED HERO TEXT CONTENT */}
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-10 sm:pt-14 pb-20 space-y-3">
-          
+        {/* Hero Central Typography (Bayu Buana Elegant Style) */}
+        <div className="relative z-10 max-w-4xl mx-auto px-4 py-8 text-center space-y-4">
           <motion.p
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: -15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="font-sans text-xs sm:text-sm font-semibold tracking-wider text-slate-200 uppercase"
-          >
-            Welcome to CV. Anugrah Pariwisata
-          </motion.p>
-
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-display font-black text-4xl sm:text-6xl lg:text-7xl text-white tracking-tight uppercase leading-tight drop-shadow-md"
+            className="font-serif italic text-3xl sm:text-4xl text-[#ff6b52] drop-shadow-md"
+            style={{ fontFamily: "'Great Vibes', cursive, serif" }}
           >
             Let's Explore The World
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="font-sans text-slate-100 text-xs sm:text-base leading-relaxed max-w-2xl mx-auto font-medium drop-shadow-sm"
-          >
-            Dapatkan pengalaman liburan yang istimewa dengan harga menarik dan layanan terbaik untuk memuaskan setiap perjalanan! #WisataHematTravelHebat
           </motion.p>
 
+          <motion.h1
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.1 }}
+            className="font-display font-black text-3xl sm:text-5xl md:text-6xl text-white tracking-tight uppercase leading-none drop-shadow-lg"
+          >
+            CV. ANUGRAH PARIWISATA
+          </motion.h1>
+
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="flex items-center justify-center gap-2 text-xs sm:text-sm font-sans font-bold text-amber-300 tracking-wider uppercase drop-shadow-sm"
+          >
+            <span>WISATA HEMAT BERSAMA TRAVEL HEBAT</span>
+          </motion.div>
         </div>
 
-        {/* 2. ELEVATED FLOATING SEARCH BOX OVERLAY (Naik Ke Atas) */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30 w-full -mt-20 sm:-mt-22 mb-4">
-          <form 
-            onSubmit={handleSearchSubmit}
-            className="bg-white rounded-2xl sm:rounded-3xl p-3 sm:p-4 shadow-2xl border border-slate-200/90 grid grid-cols-1 md:grid-cols-12 gap-3 items-center text-left"
-            id="hero-search-box"
-          >
+        {/* Bottom Spacer inside Banner */}
+        <div className="h-12" />
+
+      </div>
+
+      {/* 2. ELEVATED SEARCH TOUR BOX */}
+      <div className="max-w-5xl mx-auto px-4 -mt-16 sm:-mt-20 relative z-20">
+        <div className="bg-white rounded-3xl p-4 sm:p-5 shadow-2xl border border-slate-200/90 text-left">
+          
+          <form onSubmit={handleSearchSubmit} className="grid grid-cols-1 md:grid-cols-12 gap-3 items-center">
             
-            {/* Field 1: Destination */}
+            {/* Field 1: Destination Category Selection */}
             <div className="md:col-span-5 px-3 py-2 border-b md:border-b-0 md:border-r border-slate-200">
               <label className="block text-[11px] font-bold text-slate-800 uppercase tracking-wide">
-                Destination
+                Destination Category
               </label>
-              <div className="flex items-center gap-2 mt-1">
-                <MapPin className="w-4 h-4 text-red-500 shrink-0" />
+              <div className="flex items-center gap-2 mt-1 relative">
+                <MapPin className="w-4 h-4 text-[#f94a29] shrink-0" />
                 <select
                   value={destinationInput}
                   onChange={(e) => setDestinationInput(e.target.value)}
-                  className="w-full text-xs font-semibold text-slate-700 focus:outline-none bg-transparent cursor-pointer"
+                  className="w-full text-xs sm:text-sm font-black text-slate-900 focus:outline-none bg-transparent cursor-pointer appearance-none pr-4"
                 >
-                  <option value="In Sumatera Barat">In Sumatera Barat (Padang, Bukittinggi, Painan, Harau)</option>
-                  <option value="Out Sumatera Barat (Nusantara)">Out Sumatera Barat (Danau Toba, Sabang, Bromo, Bali)</option>
-                  <option value="Internasional (Singapura, Malaysia, Asia)">Internasional (Singapura, Malaysia, Thailand, Korea, Jepang)</option>
-                  <option value="Sewa Big Bus & Transport Rent">Sewa Big Bus Eksekutif, Hiace & Mini Bus</option>
+                  <option value="In Sumatera Barat">In Sumatera Barat (Padang, Mandeh, Bukittinggi, dll)</option>
+                  <option value="Out Sumatera Barat">Out Sumatera Barat (Danau Toba, Sabang, Bali, Bromo, dll)</option>
+                  <option value="Internasional">Internasional (Singapura, Malaysia, Thailand, Korea, Jepang, Eropa, Amerika)</option>
                 </select>
+                <ChevronDown className="w-3.5 h-3.5 text-slate-400 absolute right-0 pointer-events-none" />
               </div>
             </div>
 
