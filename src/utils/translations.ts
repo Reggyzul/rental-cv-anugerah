@@ -11,7 +11,7 @@ export const TRANSLATIONS = {
     nav_book_btn: "PESAN TOUR",
 
     // Top Bar
-    topbar_address: "Kantor Pusat: Jl. Rimbo Panjang No. 053, Salido Painan, Pesisir Selatan | Cabang: Jl. Andalas I No. 48 F, Padang Timur",
+    topbar_address: "Kantor Pusat: Jl. Rimbo Panjang No. 052, Salido Painan, Pesisir Selatan | Cabang: Jl. Andalas I No. 48 F, Padang Timur",
     topbar_whatsapp: "Konsultasi Tour WA: 0821-7828-4459",
     topbar_service: "Motto: Wisata Hemat dengan Travel Hebat",
 
@@ -163,7 +163,7 @@ export const TRANSLATIONS = {
     nav_book_btn: "BOOK A TOUR",
 
     // Top Bar
-    topbar_address: "HQ: Jl. Rimbo Panjang No. 053, Salido Painan | Branch: Jl. Andalas I No. 48 F, Padang",
+    topbar_address: "HQ: Jl. Rimbo Panjang No. 052, Salido Painan | Branch: Jl. Andalas I No. 48 F, Padang",
     topbar_whatsapp: "Tour Consultation WA: 0821-7828-4459",
     topbar_service: "Motto: Budget Tour with Great Travel",
 

@@ -90,7 +90,7 @@ export default function Footer({ lang, onNavigateSection }: FooterProps) {
                 <div>
                   <span className="font-bold text-white block">Kantor Pusat:</span>
                   <span className="text-slate-400 leading-relaxed block">
-                    Jl. Rimbo Panjang, Kampung Laban No. 053, Salido Painan, Kec. IV Jurai, Kab. Pesisir Selatan, Prov. Sumatera Barat
+                    Jl. Rimbo Panjang, Kampung Laban No. 052, Salido Painan, Kec. IV Jurai, Kab. Pesisir Selatan, Prov. Sumatera Barat
                   </span>
                 </div>
               </div>
