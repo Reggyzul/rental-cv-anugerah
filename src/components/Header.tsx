@@ -76,7 +76,7 @@ export default function Header({
               </div>
             </div>
 
-            {/* 2. CENTER: DESKTOP NAV LINKS (Balanced & Shifted Left) */}
+            {/* 2. CENTER: DESKTOP NAV LINKS (Package Tour Kanan Destinations & Tanpa Contact Us) */}
             <nav className="hidden lg:flex items-center justify-center gap-5 xl:gap-7 text-xs font-sans font-bold text-slate-700 flex-1 px-4" id="desktop-nav">
               
               <button
@@ -106,6 +106,16 @@ export default function Header({
                 Destinations
               </button>
 
+              {/* PACKAGE TOUR (SEBELAH KANAN DESTINATIONS) */}
+              <button
+                onClick={() => handleItemClick('destinations')}
+                className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
+                  activeSection === 'destinations' ? 'text-orange-600 font-extrabold border-b-2 border-orange-600' : ''
+                }`}
+              >
+                Package Tour
+              </button>
+
               <button
                 onClick={() => handleItemClick('cars')}
                 className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
@@ -122,15 +132,6 @@ export default function Header({
                 }`}
               >
                 Gallery
-              </button>
-
-              <button
-                onClick={() => handleItemClick('footer-contact')}
-                className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
-                  activeSection === 'footer-contact' ? 'text-orange-600 font-extrabold border-b-2 border-orange-600' : ''
-                }`}
-              >
-                Contact Us
               </button>
 
             </nav>
@@ -189,6 +190,12 @@ export default function Header({
                 Destinations
               </button>
               <button
+                onClick={() => handleItemClick('destinations')}
+                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100"
+              >
+                Package Tour
+              </button>
+              <button
                 onClick={() => handleItemClick('cars')}
                 className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100"
               >
@@ -196,15 +203,9 @@ export default function Header({
               </button>
               <button
                 onClick={() => handleItemClick('gallery')}
-                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100"
-              >
-                Gallery
-              </button>
-              <button
-                onClick={() => handleItemClick('footer-contact')}
                 className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2"
               >
-                Contact Us
+                Gallery
               </button>
 
               <div className="pt-2">
