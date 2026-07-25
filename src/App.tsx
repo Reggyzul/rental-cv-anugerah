@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import About from './components/About';
+import AboutPage from './components/AboutPage';
 import Services from './components/Services';
-import CarList from './components/CarList';
+import TransportRentPage from './components/TransportRentPage';
 import BookingSteps from './components/BookingSteps';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
@@ -15,6 +15,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { TRANSLATIONS } from './utils/translations';
 
 export default function App() {
+  const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'rentals'>('home');
   const [activeSection, setActiveSection] = useState('home');
   const [selectedCar, setSelectedCar] = useState<Car | null>(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -30,17 +31,19 @@ export default function App() {
         setShowScrollTop(false);
       }
 
-      const sections = ['home', 'about', 'destinations', 'cars', 'footer-contact'];
-      const scrollPosition = window.scrollY + 250;
+      if (currentPage === 'home') {
+        const sections = ['home', 'destinations', 'footer-contact'];
+        const scrollPosition = window.scrollY + 250;
 
-      for (const section of sections) {
-        const el = document.getElementById(section);
-        if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
-          if (scrollPosition >= top && scrollPosition < top + height) {
-            setActiveSection(section);
-            break;
+        for (const section of sections) {
+          const el = document.getElementById(section);
+          if (el) {
+            const top = el.offsetTop;
+            const height = el.offsetHeight;
+            if (scrollPosition >= top && scrollPosition < top + height) {
+              setActiveSection(section);
+              break;
+            }
           }
         }
       }
@@ -48,17 +51,34 @@ export default function App() {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [currentPage]);
 
   const handleNavClick = (sectionId: string) => {
-    if (sectionId === 'home') {
+    if (sectionId === 'about-page' || sectionId === 'about') {
+      setCurrentPage('about');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setActiveSection('about');
+    } else if (sectionId === 'cars' || sectionId === 'rentals' || sectionId === 'transport-rent') {
+      setCurrentPage('rentals');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setActiveSection('rentals');
+    } else if (sectionId === 'home') {
+      setCurrentPage('home');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       setActiveSection('home');
     } else {
-      const el = document.getElementById(sectionId);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-        setActiveSection(sectionId);
+      if (currentPage !== 'home') {
+        setCurrentPage('home');
+        setTimeout(() => {
+          const el = document.getElementById(sectionId);
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      } else {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+          setActiveSection(sectionId);
+        }
       }
     }
   };
@@ -92,23 +112,31 @@ export default function App() {
         onBookingClick={() => setSelectedCar(CARS[0])}
       />
 
-      {/* Main Single Landing Page Flow */}
+      {/* Main Page Content Flow */}
       <main className="relative z-10">
-        <Hero 
-          onExploreClick={() => handleNavClick('destinations')} 
-          lang={lang} 
-          onBookingClick={() => setSelectedCar(CARS[0])} 
-        />
+        {currentPage === 'home' ? (
+          <>
+            <Hero 
+              onExploreClick={() => handleNavClick('destinations')} 
+              lang={lang} 
+              onBookingClick={() => setSelectedCar(CARS[0])} 
+            />
 
-        <About lang={lang} />
+            <Services lang={lang} />
 
-        <Services lang={lang} />
+            <BookingSteps lang={lang} />
 
-        <CarList onSelectCar={handleSelectCar} lang={lang} />
-
-        <BookingSteps lang={lang} />
-
-        <Testimonials lang={lang} />
+            <Testimonials lang={lang} />
+          </>
+        ) : currentPage === 'about' ? (
+          <AboutPage lang={lang} onNavigateHome={() => handleNavClick('home')} />
+        ) : (
+          <TransportRentPage 
+            onSelectCar={handleSelectCar} 
+            lang={lang} 
+            onNavigateHome={() => handleNavClick('home')} 
+          />
+        )}
       </main>
 
       {/* Footer Contact */}
