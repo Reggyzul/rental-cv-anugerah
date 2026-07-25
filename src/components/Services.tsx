@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { MapPin, Compass, Globe, Star, MessageCircle, CheckCircle2, Sparkles, ChevronDown } from 'lucide-react';
 import { TRANSLATIONS } from '../utils/translations';
@@ -364,8 +364,8 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
         
         {/* SECTION HEADER (Tight Precision Spacing Under Hero Box) */}
         <div className="text-center max-w-3xl mx-auto space-y-2.5" id="destinations-heading">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-orange-50 border border-orange-200 text-[#f94a29] font-display font-extrabold text-xs tracking-wider uppercase">
-            <Sparkles className="w-4 h-4 text-[#f94a29]" />
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-red-50 border border-red-200 text-[#dc2626] font-display font-extrabold text-xs tracking-wider uppercase">
+            <Sparkles className="w-4 h-4 text-[#dc2626]" />
             <span>KATALOG RUTE DESTINASI LENGKAP</span>
           </div>
 
@@ -373,7 +373,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
             Destinations
           </h2>
 
-          <div className="w-16 h-1 bg-amber-400 mx-auto rounded-full" />
+          <div className="w-16 h-1 bg-red-500 mx-auto rounded-full" />
 
           <p className="font-sans text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
             Jelajahi beragam destinasi menakjubkan di Sumatera Barat, Nusantara & Mancanegara dan rasakan pesona setiap perjalanan yang tak terlupakan bersama #CVAnugrahPariwisata!
@@ -384,7 +384,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
         <div className="bg-slate-50 p-3.5 sm:p-4 rounded-3xl border border-slate-200 shadow-md max-w-4xl mx-auto text-center space-y-3">
           
           <div>
-            <span className="text-[10px] font-black uppercase tracking-wider text-[#f94a29] block">
+            <span className="text-[10px] font-black uppercase tracking-wider text-[#dc2626] block">
               PILIH KATEGORI RUTE TOUR
             </span>
             <h3 className="font-display font-black text-lg sm:text-xl text-[#0d1b37]">
@@ -399,7 +399,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
               onClick={() => setActiveCategory('all')}
               className={`py-3 px-3.5 rounded-2xl font-display font-black text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
                 activeCategory === 'all'
-                  ? 'bg-gradient-to-r from-[#f94a29] to-orange-500 text-white shadow-lg shadow-orange-600/25 scale-[1.02]'
+                  ? 'bg-gradient-to-r from-[#dc2626] to-red-600 text-white shadow-lg shadow-red-600/25 scale-[1.02]'
                   : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
               }`}
             >
@@ -411,7 +411,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
               onClick={() => setActiveCategory('in_sumbar')}
               className={`py-3 px-3.5 rounded-2xl font-display font-black text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
                 activeCategory === 'in_sumbar'
-                  ? 'bg-gradient-to-r from-[#f94a29] to-orange-500 text-white shadow-lg shadow-orange-600/25 scale-[1.02]'
+                  ? 'bg-gradient-to-r from-[#dc2626] to-red-600 text-white shadow-lg shadow-red-600/25 scale-[1.02]'
                   : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
               }`}
             >
@@ -423,11 +423,11 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
               onClick={() => setActiveCategory('out_sumbar')}
               className={`py-3 px-3.5 rounded-2xl font-display font-black text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
                 activeCategory === 'out_sumbar'
-                  ? 'bg-gradient-to-r from-[#f94a29] to-orange-500 text-white shadow-lg shadow-orange-600/25 scale-[1.02]'
+                  ? 'bg-gradient-to-r from-[#dc2626] to-red-600 text-white shadow-lg shadow-red-600/25 scale-[1.02]'
                   : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
               }`}
             >
-              <Compass className="w-4 h-4 shrink-0 text-amber-500" />
+              <Compass className="w-4 h-4 shrink-0 text-red-500" />
               <span>Out Sumbar</span>
             </button>
 
@@ -435,7 +435,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
               onClick={() => setActiveCategory('internasional')}
               className={`py-3 px-3.5 rounded-2xl font-display font-black text-xs uppercase transition-all flex items-center justify-center gap-2 cursor-pointer ${
                 activeCategory === 'internasional'
-                  ? 'bg-gradient-to-r from-[#f94a29] to-orange-500 text-white shadow-lg shadow-orange-600/25 scale-[1.02]'
+                  ? 'bg-gradient-to-r from-[#dc2626] to-red-600 text-white shadow-lg shadow-red-600/25 scale-[1.02]'
                   : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
               }`}
             >
@@ -470,38 +470,38 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent" />
                   
                   {/* Top Category Badge */}
-                  <div className="absolute top-3 left-3 bg-[#f94a29] text-white font-display font-extrabold text-[10px] uppercase px-3 py-1 rounded-full shadow-md">
+                  <div className="absolute top-3 left-3 bg-[#dc2626] text-white font-display font-extrabold text-[10px] uppercase px-3 py-1 rounded-full shadow-md">
                     {item.badge}
                   </div>
 
                   {/* Rating Tag */}
                   <div className="absolute top-3 right-3 bg-white/95 text-slate-900 font-sans text-[10px] font-bold px-2.5 py-1 rounded-full border border-slate-200 flex items-center gap-1 shadow-sm">
-                    <Star className="w-3 h-3 text-amber-500 fill-amber-500" />
+                    <Star className="w-3 h-3 text-red-500 fill-red-500" />
                     <span>{item.rating} ({item.reviews})</span>
                   </div>
 
                   {/* Title & Subtitle Overlay on Photo */}
                   <div className="absolute bottom-3 left-3 right-3 space-y-1">
-                    <span className="text-[10px] font-extrabold uppercase text-amber-300 tracking-wider block">
+                    <span className="text-[10px] font-extrabold uppercase text-red-300 tracking-wider block">
                       {item.categoryName}
                     </span>
-                    <h3 className="font-display font-black text-xl text-white tracking-tight leading-snug group-hover:text-amber-300 transition-colors">
+                    <h3 className="font-display font-black text-xl text-white tracking-tight leading-snug group-hover:text-red-300 transition-colors">
                       {item.title}
                     </h3>
-                    <div className="w-16 h-1 bg-amber-400 rounded-full group-hover:w-28 transition-all duration-500" />
+                    <div className="w-16 h-1 bg-red-500 rounded-full group-hover:w-28 transition-all duration-500" />
                   </div>
                 </div>
 
                 {/* Body Details: List of Spots */}
                 <div className="p-5 pt-1 space-y-3">
-                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#f94a29] block">
+                  <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#dc2626] block">
                     Spot Wisata Populer:
                   </span>
 
                   <div className="space-y-1.5">
                     {item.spots.map((spot, idx) => (
                       <div key={idx} className="flex items-start gap-2 text-xs font-semibold text-slate-700">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-green-600 shrink-0 mt-0.5" />
                         <span className="leading-snug">{spot}</span>
                       </div>
                     ))}
@@ -514,7 +514,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
               <div className="p-5 pt-0">
                 <button
                   onClick={() => handleWhatsAppBooking(item.title, item.categoryName)}
-                  className="w-full bg-[#f94a29] hover:bg-[#e03d1e] text-white font-sans font-bold text-xs uppercase py-3.5 px-4 rounded-xl shadow-md shadow-orange-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full bg-[#dc2626] hover:bg-[#b91c1c] text-white font-sans font-bold text-xs uppercase py-3.5 px-4 rounded-xl shadow-md shadow-red-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <MessageCircle className="w-4 h-4 fill-current shrink-0" />
                   <span>Konsultasi Rute Tour WA</span>
@@ -536,14 +536,14 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
           >
             {/* Floating Classy Modern Text */}
             <div className="relative flex flex-col items-center">
-              <span className="font-display font-black text-xs sm:text-sm uppercase tracking-[0.25em] text-slate-800 group-hover:text-[#f94a29] transition-colors duration-300">
+              <span className="font-display font-black text-xs sm:text-sm uppercase tracking-[0.25em] text-slate-800 group-hover:text-[#dc2626] transition-colors duration-300">
                 Lihat Selengkapnya
               </span>
-              <span className="w-8 group-hover:w-full h-0.5 bg-gradient-to-r from-[#f94a29] to-amber-500 transition-all duration-300 rounded-full mt-1" />
+              <span className="w-8 group-hover:w-full h-0.5 bg-gradient-to-r from-[#dc2626] to-amber-500 transition-all duration-300 rounded-full mt-1" />
             </div>
 
             {/* Downward Arrow Circle Accent */}
-            <div className="w-11 h-11 rounded-full border-2 border-slate-300 group-hover:border-[#f94a29] flex items-center justify-center text-slate-700 group-hover:text-white group-hover:bg-[#f94a29] transition-all duration-300 shadow-sm group-hover:shadow-lg group-hover:shadow-orange-600/30 group-hover:scale-110">
+            <div className="w-11 h-11 rounded-full border-2 border-slate-300 group-hover:border-[#dc2626] flex items-center justify-center text-slate-700 group-hover:text-white group-hover:bg-[#dc2626] transition-all duration-300 shadow-sm group-hover:shadow-lg group-hover:shadow-red-600/30 group-hover:scale-110">
               <ChevronDown className="w-5 h-5 group-hover:translate-y-0.5 transition-transform duration-300" />
             </div>
           </motion.div>
@@ -553,3 +553,5 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
     </section>
   );
 }
+
+

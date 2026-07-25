@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { TRANSLATIONS } from '../utils/translations';
@@ -57,23 +57,23 @@ export default function Header({
             {/* 1. LEFT: LOGO BRAND */}
             <div 
               onClick={() => handleItemClick('home')}
-              className="flex items-center gap-2 cursor-pointer group shrink-0"
+              className="flex flex-col items-start cursor-pointer group shrink-0"
               id="header-logo"
             >
-              <img
-                src="/logo_original.jpg"
-                alt="CV. Anugrah Pariwisata Tour & Travel"
-                className="h-14 w-auto object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-200"
-                style={{ maxWidth: '160px' }}
-              />
-              <div className="flex flex-col leading-snug">
-                <span className="font-semibold text-sm sm:text-base uppercase tracking-wide text-rose-600 group-hover:text-rose-700 transition-colors">
+              <div className="flex flex-col leading-snug mb-0.5">
+                <span className="font-semibold text-sm sm:text-base uppercase tracking-wide text-red-600 group-hover:text-red-700 transition-colors">
                   CV. ANUGRAH PARIWISATA
                 </span>
-                <span className="font-medium text-[10px] sm:text-xs uppercase tracking-widest text-rose-400 group-hover:text-rose-500 transition-colors">
+                <span className="font-medium text-[10px] sm:text-xs uppercase tracking-widest text-red-400 group-hover:text-red-500 transition-colors">
                   Tour &amp; Travel
                 </span>
               </div>
+              <img
+                src="/logo_original.jpg"
+                alt="CV. Anugrah Pariwisata Tour & Travel"
+                className="h-12 w-auto object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-200"
+                style={{ maxWidth: '150px' }}
+              />
             </div>
 
             {/* 2. CENTER: DESKTOP NAV LINKS (Package Tour Kanan Destinations & Tanpa Contact Us) */}
@@ -81,8 +81,8 @@ export default function Header({
               
               <button
                 onClick={() => handleItemClick('home')}
-                className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
-                  activeSection === 'home' ? 'text-orange-600 font-extrabold border-b-2 border-orange-600' : ''
+                className={`hover:text-red-600 transition-colors cursor-pointer py-1 ${
+                  activeSection === 'home' ? 'text-red-600 font-extrabold border-b-2 border-red-600' : ''
                 }`}
               >
                 Home
@@ -90,8 +90,8 @@ export default function Header({
 
               <button
                 onClick={() => handleItemClick('about')}
-                className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
-                  activeSection === 'about' ? 'text-orange-600 font-extrabold border-b-2 border-orange-600' : ''
+                className={`hover:text-red-600 transition-colors cursor-pointer py-1 ${
+                  activeSection === 'about' ? 'text-red-600 font-extrabold border-b-2 border-red-600' : ''
                 }`}
               >
                 About Us
@@ -99,8 +99,8 @@ export default function Header({
 
               <button
                 onClick={() => handleItemClick('destinations')}
-                className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
-                  activeSection === 'destinations' ? 'text-orange-600 font-extrabold border-b-2 border-orange-600' : ''
+                className={`hover:text-red-600 transition-colors cursor-pointer py-1 ${
+                  activeSection === 'destinations' ? 'text-red-600 font-extrabold border-b-2 border-red-600' : ''
                 }`}
               >
                 Destinations
@@ -109,8 +109,8 @@ export default function Header({
               {/* PACKAGE TOUR (SEBELAH KANAN DESTINATIONS) */}
               <button
                 onClick={() => handleItemClick('destinations')}
-                className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
-                  activeSection === 'destinations' ? 'text-orange-600 font-extrabold border-b-2 border-orange-600' : ''
+                className={`hover:text-red-600 transition-colors cursor-pointer py-1 ${
+                  activeSection === 'destinations' ? 'text-red-600 font-extrabold border-b-2 border-red-600' : ''
                 }`}
               >
                 Package Tour
@@ -118,8 +118,8 @@ export default function Header({
 
               <button
                 onClick={() => handleItemClick('cars')}
-                className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
-                  activeSection === 'cars' ? 'text-orange-600 font-extrabold border-b-2 border-orange-600' : ''
+                className={`hover:text-red-600 transition-colors cursor-pointer py-1 ${
+                  activeSection === 'cars' ? 'text-red-600 font-extrabold border-b-2 border-red-600' : ''
                 }`}
               >
                 Transport Rent
@@ -127,8 +127,8 @@ export default function Header({
 
               <button
                 onClick={() => handleItemClick('gallery')}
-                className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
-                  activeSection === 'gallery' ? 'text-orange-600 font-extrabold border-b-2 border-orange-600' : ''
+                className={`hover:text-red-600 transition-colors cursor-pointer py-1 ${
+                  activeSection === 'gallery' ? 'text-red-600 font-extrabold border-b-2 border-red-600' : ''
                 }`}
               >
                 Gallery
@@ -140,7 +140,7 @@ export default function Header({
             <div className="hidden lg:flex items-center shrink-0">
               <button
                 onClick={onBookingClick}
-                className="bg-[#f94a29] hover:bg-[#e03d1e] text-white font-display font-extrabold text-xs uppercase px-5 py-2.5 rounded-xl shadow-md shadow-orange-600/20 transition-all cursor-pointer tracking-wider"
+                className="bg-[#dc2626] hover:bg-[#b91c1c] text-white font-display font-extrabold text-xs uppercase px-5 py-2.5 rounded-xl shadow-md shadow-red-600/20 transition-all cursor-pointer tracking-wider"
                 id="header-book-tour-btn"
               >
                 BOOK A TOUR
@@ -173,37 +173,37 @@ export default function Header({
             <div className="px-4 pt-3 pb-6 space-y-3">
               <button
                 onClick={() => handleItemClick('home')}
-                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100"
+                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2 border-b border-slate-100"
               >
                 Home
               </button>
               <button
                 onClick={() => handleItemClick('about')}
-                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100"
+                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2 border-b border-slate-100"
               >
                 About Us
               </button>
               <button
                 onClick={() => handleItemClick('destinations')}
-                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100"
+                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2 border-b border-slate-100"
               >
                 Destinations
               </button>
               <button
                 onClick={() => handleItemClick('destinations')}
-                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100"
+                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2 border-b border-slate-100"
               >
                 Package Tour
               </button>
               <button
                 onClick={() => handleItemClick('cars')}
-                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100"
+                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2 border-b border-slate-100"
               >
                 Transport Rent
               </button>
               <button
                 onClick={() => handleItemClick('gallery')}
-                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2"
+                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-red-600 py-2"
               >
                 Gallery
               </button>
@@ -214,7 +214,7 @@ export default function Header({
                     setMobileMenuOpen(false);
                     onBookingClick();
                   }}
-                  className="w-full bg-[#f94a29] text-white font-display font-bold text-xs uppercase py-3 rounded-xl shadow-md flex items-center justify-center gap-2"
+                  className="w-full bg-[#dc2626] text-white font-display font-bold text-xs uppercase py-3 rounded-xl shadow-md flex items-center justify-center gap-2"
                 >
                   <span>BOOK A TOUR</span>
                 </button>
@@ -226,3 +226,5 @@ export default function Header({
     </header>
   );
 }
+
+

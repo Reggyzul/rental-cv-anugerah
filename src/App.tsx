@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import AboutPage from './components/AboutPage';
@@ -109,7 +109,7 @@ export default function App() {
 
   return (
     <div 
-      className="relative min-h-screen bg-white text-slate-900 selection:bg-orange-600 selection:text-white font-sans" 
+      className="relative min-h-screen bg-white text-slate-900 selection:bg-red-600 selection:text-white font-sans" 
       id="main-app-container"
     >
       
@@ -190,13 +190,13 @@ export default function App() {
             <span>Hi, I am CS ANUGRAH</span>
           </div>
 
-          <div className="w-13 h-13 rounded-full bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 p-0.5 shadow-2xl border-2 border-white relative shrink-0">
+          <div className="w-13 h-13 rounded-full bg-gradient-to-br from-amber-400 via-red-500 to-red-700 p-0.5 shadow-2xl border-2 border-white relative shrink-0">
             <img
               src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200"
               alt="CS Anugrah Pariwisata"
               className="w-full h-full object-cover rounded-full"
             />
-            <div className="w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white absolute bottom-0 right-0 shadow-xs" />
+            <div className="w-3.5 h-3.5 rounded-full bg-green-100 border-2 border-white absolute bottom-0 right-0 shadow-xs" />
           </div>
         </motion.div>
 
@@ -205,3 +205,5 @@ export default function App() {
     </div>
   );
 }
+
+

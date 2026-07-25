@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'motion/react';
 import { Check, MapPin, Phone, Award, ShieldCheck, Bus } from 'lucide-react';
 import { TRANSLATIONS } from '../utils/translations';
@@ -31,7 +31,7 @@ export default function AboutPage({ lang, onNavigateHome }: AboutPageProps) {
             About Us
           </h1>
           <p className="font-sans text-xs font-bold text-slate-300 uppercase tracking-widest">
-            <span onClick={onNavigateHome} className="hover:text-orange-400 cursor-pointer">HOME</span> / ABOUT US
+            <span onClick={onNavigateHome} className="hover:text-red-400 cursor-pointer">HOME</span> / ABOUT US
           </p>
         </div>
       </div>
@@ -42,7 +42,7 @@ export default function AboutPage({ lang, onNavigateHome }: AboutPageProps) {
         {/* SECTION 1: ABOUT OUR COMPANY */}
         <section className="space-y-6">
           <span 
-            className="font-serif italic text-2xl sm:text-3xl text-[#ff6b52] block"
+            className="font-serif italic text-2xl sm:text-3xl text-[#dc2626] block"
             style={{ fontFamily: "'Great Vibes', cursive, serif" }}
           >
             About Our Company
@@ -52,7 +52,7 @@ export default function AboutPage({ lang, onNavigateHome }: AboutPageProps) {
             
             {/* Visi Perusahaan */}
             <div className="flex items-start gap-3">
-              <span className="text-[#f94a29] font-black text-base shrink-0 mt-0.5">✓</span>
+              <span className="text-[#dc2626] font-black text-base shrink-0 mt-0.5">✓</span>
               <div className="space-y-1">
                 <span className="font-bold text-slate-900 block">Visi Perusahaan:</span>
                 <ul className="list-disc pl-5 space-y-1 text-slate-600">
@@ -65,7 +65,7 @@ export default function AboutPage({ lang, onNavigateHome }: AboutPageProps) {
 
             {/* Misi Perusahaan */}
             <div className="flex items-start gap-3 pt-2">
-              <span className="text-[#f94a29] font-black text-base shrink-0 mt-0.5">✓</span>
+              <span className="text-[#dc2626] font-black text-base shrink-0 mt-0.5">✓</span>
               <div className="space-y-1">
                 <span className="font-bold text-slate-900 block">Misi Perusahaan:</span>
                 <ul className="list-disc pl-5 space-y-1 text-slate-600">
@@ -86,7 +86,7 @@ export default function AboutPage({ lang, onNavigateHome }: AboutPageProps) {
         {/* SECTION 2: SCOPE OF SERVICES */}
         <section className="space-y-8 border-t border-slate-100 pt-12">
           <span 
-            className="font-serif italic text-2xl sm:text-3xl text-[#ff6b52] block"
+            className="font-serif italic text-2xl sm:text-3xl text-[#dc2626] block"
             style={{ fontFamily: "'Great Vibes', cursive, serif" }}
           >
             Scope of Services
@@ -121,7 +121,7 @@ export default function AboutPage({ lang, onNavigateHome }: AboutPageProps) {
         {/* SECTION 3: NETWORK & FLEET SERVICES */}
         <section className="space-y-8 border-t border-slate-100 pt-12">
           <span 
-            className="font-serif italic text-2xl sm:text-3xl text-[#ff6b52] block"
+            className="font-serif italic text-2xl sm:text-3xl text-[#dc2626] block"
             style={{ fontFamily: "'Great Vibes', cursive, serif" }}
           >
             Network of Service Coverage Both Domestically and Worldwide
@@ -200,3 +200,4 @@ export default function AboutPage({ lang, onNavigateHome }: AboutPageProps) {
     </div>
   );
 }
+

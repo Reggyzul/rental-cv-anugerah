@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   Waves, 
@@ -192,7 +192,7 @@ export default function VillaPage({ lang }: VillaPageProps) {
               href={waUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-700 text-white font-display font-bold text-base py-4 px-9 rounded-full shadow-2xl shadow-emerald-600/30 hover:scale-105 transition-all cursor-pointer border border-emerald-400/30"
+              className="inline-flex items-center gap-3 bg-green-100 hover:bg-green-100 text-white font-display font-bold text-base py-4 px-9 rounded-full shadow-2xl shadow-emerald-600/30 hover:scale-105 transition-all cursor-pointer border border-green-500/30"
               id="villa-hero-wa-cta"
             >
               <PhoneCall className="w-5 h-5 shrink-0" />
@@ -367,3 +367,4 @@ export default function VillaPage({ lang }: VillaPageProps) {
     </div>
   );
 }
+

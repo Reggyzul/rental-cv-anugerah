@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { MapPin, Calendar, Search, ChevronDown } from 'lucide-react';
 import { TRANSLATIONS } from '../utils/translations';
@@ -47,7 +47,7 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
           <motion.p
             initial={{ opacity: 0, y: -15 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-serif italic text-3xl sm:text-4xl md:text-5xl text-[#ff6b52] drop-shadow-md"
+            className="font-serif italic text-3xl sm:text-4xl md:text-5xl text-[#dc2626] drop-shadow-md"
             style={{ fontFamily: "'Great Vibes', cursive, serif" }}
           >
             Let's Explore The World
@@ -66,7 +66,7 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="flex items-center justify-center gap-2 text-xs sm:text-sm font-sans font-bold text-amber-300 tracking-wider uppercase drop-shadow-sm"
+            className="flex items-center justify-center gap-2 text-xs sm:text-sm font-sans font-bold text-red-300 tracking-wider uppercase drop-shadow-sm"
           >
             <span>WISATA HEMAT BERSAMA TRAVEL HEBAT</span>
           </motion.div>
@@ -89,7 +89,7 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
                 Destination Category
               </label>
               <div className="flex items-center gap-2 mt-1 relative">
-                <MapPin className="w-4 h-4 text-[#f94a29] shrink-0" />
+                <MapPin className="w-4 h-4 text-[#dc2626] shrink-0" />
                 <select
                   value={destinationInput}
                   onChange={(e) => setDestinationInput(e.target.value)}
@@ -109,7 +109,7 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
                 Travel Dates
               </label>
               <div className="flex items-center gap-2 mt-1">
-                <Calendar className="w-4 h-4 text-orange-500 shrink-0" />
+                <Calendar className="w-4 h-4 text-red-500 shrink-0" />
                 <input
                   type="text"
                   value={travelDateInput}
@@ -124,7 +124,7 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
             <div className="md:col-span-3">
               <button
                 type="submit"
-                className="w-full bg-[#f94a29] hover:bg-[#e03d1e] text-white font-display font-extrabold text-xs uppercase py-3.5 px-4 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer tracking-wider"
+                className="w-full bg-[#dc2626] hover:bg-[#b91c1c] text-white font-display font-extrabold text-xs uppercase py-3.5 px-4 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer tracking-wider"
               >
                 <Search className="w-4 h-4" />
                 <span>Search Tour</span>
@@ -139,3 +139,4 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
     </section>
   );
 }
+

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Car } from '../types';
 import { CARS } from '../data/cars';
 import { motion, AnimatePresence } from 'motion/react';
@@ -104,8 +104,8 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
           <div className="lg:col-span-4 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-950 text-white p-6 sm:p-7 flex flex-col justify-between relative overflow-hidden text-left">
             <div className="space-y-5 relative z-10">
               
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/20 border border-orange-500/30 text-orange-400 text-[10px] font-extrabold uppercase tracking-widest">
-                <Sparkles className="w-3.5 h-3.5 text-orange-400" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-500/20 border border-red-500/30 text-red-400 text-[10px] font-extrabold uppercase tracking-widest">
+                <Sparkles className="w-3.5 h-3.5 text-red-400" />
                 <span>CV. ANUGRAH PARIWISATA</span>
               </div>
 
@@ -113,7 +113,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                 <h3 className="font-display font-black text-2xl text-white uppercase tracking-tight">
                   {currentSelectedCar.name}
                 </h3>
-                <p className="font-sans text-xs text-orange-400 font-bold mt-0.5">
+                <p className="font-sans text-xs text-red-400 font-bold mt-0.5">
                   {currentSelectedCar.category} ({currentSelectedCar.seats} Kursi)
                 </p>
               </div>
@@ -135,18 +135,18 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                 </div>
                 <div className="flex justify-between py-1 border-b border-white/5">
                   <span className="text-slate-400">Fasilitas Bus:</span>
-                  <span className="font-semibold text-emerald-400">Full AC, Toilet, Karaoke</span>
+                  <span className="font-semibold text-green-600">Full AC, Toilet, Karaoke</span>
                 </div>
                 <div className="flex justify-between py-1 border-b border-white/5">
                   <span className="text-slate-400">Pelayanan:</span>
-                  <span className="font-semibold text-orange-400">Driver & Kru Ramah</span>
+                  <span className="font-semibold text-red-400">Driver & Kru Ramah</span>
                 </div>
               </div>
 
               {/* Motto Card */}
-              <div className="p-3.5 rounded-2xl bg-orange-500/10 border border-orange-500/30 text-left space-y-1">
-                <div className="flex items-center gap-1.5 text-orange-400 font-extrabold text-[11px] uppercase tracking-wide">
-                  <Award className="w-4 h-4 shrink-0 text-orange-400" />
+              <div className="p-3.5 rounded-2xl bg-red-500/10 border border-red-500/30 text-left space-y-1">
+                <div className="flex items-center gap-1.5 text-red-400 font-extrabold text-[11px] uppercase tracking-wide">
+                  <Award className="w-4 h-4 shrink-0 text-red-400" />
                   <span>Wisata Hemat Travel Hebat</span>
                 </div>
                 <p className="font-sans text-[11px] text-slate-300 leading-relaxed font-medium">
@@ -158,7 +158,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
 
             {/* Footer Trust Info */}
             <div className="pt-4 border-t border-white/10 mt-6 text-[10px] text-slate-400 font-medium flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+              <CheckCircle2 className="w-4 h-4 text-green-600 shrink-0" />
               <span>Respon Cepat via WhatsApp Official</span>
             </div>
           </div>
@@ -190,7 +190,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
 
                 {/* 1. PILIH KATEGORI TOUR & ARMADA */}
                 <div className="space-y-4 pt-2">
-                  <span className="text-xs font-extrabold uppercase tracking-wider text-orange-600 block">
+                  <span className="text-xs font-extrabold uppercase tracking-wider text-red-600 block">
                     1. PILIH KATEGORI TOUR & ARMADA
                   </span>
 
@@ -200,7 +200,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                       onClick={() => setRouteCategory('in_sumbar')}
                       className={`p-2.5 rounded-xl border text-left transition-all cursor-pointer ${
                         routeCategory === 'in_sumbar'
-                          ? 'border-orange-500 bg-orange-50/70 text-orange-950 font-bold shadow-xs'
+                          ? 'border-red-500 bg-red-50/70 text-red-950 font-bold shadow-xs'
                           : 'border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium'
                       }`}
                     >
@@ -213,7 +213,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                       onClick={() => setRouteCategory('out_sumbar')}
                       className={`p-2.5 rounded-xl border text-left transition-all cursor-pointer ${
                         routeCategory === 'out_sumbar'
-                          ? 'border-amber-500 bg-amber-50/70 text-amber-950 font-bold shadow-xs'
+                          ? 'border-amber-500 bg-red-50/70 text-red-950 font-bold shadow-xs'
                           : 'border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium'
                       }`}
                     >
@@ -239,7 +239,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                       onClick={() => setRouteCategory('sewa_armada')}
                       className={`p-2.5 rounded-xl border text-left transition-all cursor-pointer ${
                         routeCategory === 'sewa_armada'
-                          ? 'border-emerald-500 bg-emerald-50/70 text-emerald-950 font-bold shadow-xs'
+                          ? 'border-green-500 bg-green-100/70 text-green-600 font-bold shadow-xs'
                           : 'border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-medium'
                       }`}
                     >
@@ -260,7 +260,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                         const newCar = CARS.find(c => c.id === e.target.value);
                         if (newCar && onCarChange) onCarChange(newCar);
                       }}
-                      className="block w-full px-3.5 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-orange-500 text-xs font-sans font-semibold text-slate-900 cursor-pointer bg-white"
+                      className="block w-full px-3.5 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-red-500 text-xs font-sans font-semibold text-slate-900 cursor-pointer bg-white"
                     >
                       {CARS.map(c => (
                         <option key={c.id} value={c.id}>
@@ -273,7 +273,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
 
                 {/* 2. DATA PEMESAN */}
                 <div className="space-y-3 pt-2">
-                  <span className="text-xs font-extrabold uppercase tracking-wider text-orange-600 block">
+                  <span className="text-xs font-extrabold uppercase tracking-wider text-red-600 block">
                     2. DATA PEMESAN & KONTAK
                   </span>
 
@@ -290,7 +290,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                           value={name}
                           onChange={(e) => setName(e.target.value)}
                           placeholder="Contoh: Hj. Rahmawati / SMAN 1 Padang"
-                          className="block w-full pl-9 pr-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-orange-500 text-xs font-sans text-slate-900"
+                          className="block w-full pl-9 pr-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-red-500 text-xs font-sans text-slate-900"
                         />
                       </div>
                     </div>
@@ -307,7 +307,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
                           placeholder="Contoh: 081234567890"
-                          className="block w-full pl-9 pr-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-orange-500 text-xs font-sans text-slate-900"
+                          className="block w-full pl-9 pr-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-red-500 text-xs font-sans text-slate-900"
                         />
                       </div>
                     </div>
@@ -316,7 +316,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
 
                 {/* 3. JADWAL & LOKASI PENJEMPUTAN */}
                 <div className="space-y-3 pt-2">
-                  <span className="text-xs font-extrabold uppercase tracking-wider text-orange-600 block">
+                  <span className="text-xs font-extrabold uppercase tracking-wider text-red-600 block">
                     3. JADWAL & ALAMAT PENJEMPUTAN
                   </span>
 
@@ -330,7 +330,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                         required
                         value={departureDate}
                         onChange={(e) => setDepartureDate(e.target.value)}
-                        className="block w-full px-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-orange-500 text-xs font-sans text-slate-900"
+                        className="block w-full px-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-red-500 text-xs font-sans text-slate-900"
                       />
                     </div>
 
@@ -343,7 +343,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                         value={durationDays}
                         onChange={(e) => setDurationDays(e.target.value)}
                         placeholder="3 Hari 2 Malam / 1 Hari"
-                        className="block w-full px-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-orange-500 text-xs font-sans text-slate-900"
+                        className="block w-full px-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-red-500 text-xs font-sans text-slate-900"
                       />
                     </div>
 
@@ -356,7 +356,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                         value={passengers}
                         onChange={(e) => setPassengers(e.target.value)}
                         placeholder="40 Orang / 1 Bus"
-                        className="block w-full px-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-orange-500 text-xs font-sans text-slate-900"
+                        className="block w-full px-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-red-500 text-xs font-sans text-slate-900"
                       />
                     </div>
                   </div>
@@ -373,7 +373,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                         value={pickupAddress}
                         onChange={(e) => setPickupAddress(e.target.value)}
                         placeholder="Contoh: Jl. Andalas I No. 48 F Padang Timur..."
-                        className="block w-full px-3 py-2 border border-slate-200 rounded-xl focus:ring-2 focus:ring-orange-500 text-xs font-sans text-slate-900"
+                        className="block w-full px-3 py-2 border border-slate-200 rounded-xl focus:ring-2 focus:ring-red-500 text-xs font-sans text-slate-900"
                       />
                     </div>
 
@@ -386,7 +386,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                         value={destinations}
                         onChange={(e) => setDestinations(e.target.value)}
                         placeholder="Contoh: Jam Gadang, Ngarai Sianok, Lembah Harau..."
-                        className="block w-full px-3 py-2 border border-slate-200 rounded-xl focus:ring-2 focus:ring-orange-500 text-xs font-sans text-slate-900"
+                        className="block w-full px-3 py-2 border border-slate-200 rounded-xl focus:ring-2 focus:ring-red-500 text-xs font-sans text-slate-900"
                       />
                     </div>
                   </div>
@@ -401,7 +401,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
 
                   <button
                     type="submit"
-                    className="w-full sm:w-auto bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-display font-black text-sm px-8 py-3.5 rounded-full shadow-lg shadow-orange-600/20 transition-all flex items-center justify-center gap-2.5 cursor-pointer"
+                    className="w-full sm:w-auto bg-gradient-to-r from-red-600 to-amber-600 hover:from-red-600 hover:to-amber-700 text-white font-display font-black text-sm px-8 py-3.5 rounded-full shadow-lg shadow-red-600/20 transition-all flex items-center justify-center gap-2.5 cursor-pointer"
                     id="submit-booking-to-whatsapp"
                   >
                     <Send className="w-4 h-4" />
@@ -417,7 +417,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                 className="flex flex-col items-center justify-center text-center py-12 space-y-4"
                 id="booking-success-message"
               >
-                <div className="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 mb-2 shadow-sm">
+                <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center text-green-600 mb-2 shadow-sm">
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
                 <h4 className="font-display font-black text-2xl text-slate-900 uppercase">
@@ -428,7 +428,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                 </p>
                 <button
                   onClick={onClose}
-                  className="bg-orange-600 hover:bg-orange-700 text-white font-display font-bold text-sm px-7 py-3 rounded-full shadow-md transition-colors cursor-pointer mt-2"
+                  className="bg-red-600 hover:bg-red-700 text-white font-display font-bold text-sm px-7 py-3 rounded-full shadow-md transition-colors cursor-pointer mt-2"
                 >
                   Tutup Form
                 </button>
@@ -441,3 +441,5 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
     </AnimatePresence>
   );
 }
+
+

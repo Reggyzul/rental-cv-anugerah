@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Image as ImageIcon, Camera, Sparkles, X, ChevronRight, Bus, MapPin, Users } from 'lucide-react';
 import { TRANSLATIONS } from '../utils/translations';
@@ -83,16 +83,16 @@ export default function GallerySection({ lang }: GallerySectionProps) {
         
         {/* SECTION HEADER */}
         <div className="text-center max-w-3xl mx-auto space-y-3" id="gallery-heading">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 text-amber-400 font-display font-extrabold text-xs tracking-wider uppercase">
-            <Camera className="w-4 h-4 text-amber-400" />
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-red-500/20 border border-amber-500/40 text-red-400 font-display font-extrabold text-xs tracking-wider uppercase">
+            <Camera className="w-4 h-4 text-red-400" />
             <span>GALERI DOKUMENTASI & FLEET</span>
           </div>
 
           <h2 className="font-display font-black text-4xl sm:text-5xl text-white tracking-tight leading-tight uppercase">
-            Galeri <span className="text-amber-400">Anugrah Pariwisata</span>
+            Galeri <span className="text-red-400">Anugrah Pariwisata</span>
           </h2>
 
-          <div className="w-20 h-1 bg-amber-400 mx-auto rounded-full" />
+          <div className="w-20 h-1 bg-red-500 mx-auto rounded-full" />
 
           <p className="font-sans text-slate-300 text-xs sm:text-sm leading-relaxed font-medium">
             Dokumentasi armada bus, mobil rental, kegiatan gathering perusahaan & keindahan destinasi wisata CV. Anugrah Pariwisata.
@@ -104,7 +104,7 @@ export default function GallerySection({ lang }: GallerySectionProps) {
               onClick={() => setActiveFilter('all')}
               className={`px-4 py-2 rounded-full font-display font-extrabold text-xs transition-all cursor-pointer ${
                 activeFilter === 'all'
-                  ? 'bg-[#f94a29] text-white shadow-lg shadow-orange-600/30'
+                  ? 'bg-[#dc2626] text-white shadow-lg shadow-red-600/30'
                   : 'bg-white/10 text-slate-300 hover:bg-white/20 border border-white/10'
               }`}
             >
@@ -114,7 +114,7 @@ export default function GallerySection({ lang }: GallerySectionProps) {
               onClick={() => setActiveFilter('armada')}
               className={`px-4 py-2 rounded-full font-display font-extrabold text-xs transition-all cursor-pointer ${
                 activeFilter === 'armada'
-                  ? 'bg-[#f94a29] text-white shadow-lg shadow-orange-600/30'
+                  ? 'bg-[#dc2626] text-white shadow-lg shadow-red-600/30'
                   : 'bg-white/10 text-slate-300 hover:bg-white/20 border border-white/10'
               }`}
             >
@@ -124,7 +124,7 @@ export default function GallerySection({ lang }: GallerySectionProps) {
               onClick={() => setActiveFilter('gathering')}
               className={`px-4 py-2 rounded-full font-display font-extrabold text-xs transition-all cursor-pointer ${
                 activeFilter === 'gathering'
-                  ? 'bg-[#f94a29] text-white shadow-lg shadow-orange-600/30'
+                  ? 'bg-[#dc2626] text-white shadow-lg shadow-red-600/30'
                   : 'bg-white/10 text-slate-300 hover:bg-white/20 border border-white/10'
               }`}
             >
@@ -134,7 +134,7 @@ export default function GallerySection({ lang }: GallerySectionProps) {
               onClick={() => setActiveFilter('destinasi')}
               className={`px-4 py-2 rounded-full font-display font-extrabold text-xs transition-all cursor-pointer ${
                 activeFilter === 'destinasi'
-                  ? 'bg-[#f94a29] text-white shadow-lg shadow-orange-600/30'
+                  ? 'bg-[#dc2626] text-white shadow-lg shadow-red-600/30'
                   : 'bg-white/10 text-slate-300 hover:bg-white/20 border border-white/10'
               }`}
             >
@@ -163,7 +163,7 @@ export default function GallerySection({ lang }: GallerySectionProps) {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity" />
 
               <div className="absolute bottom-0 left-0 right-0 p-5 space-y-1">
-                <h3 className="font-display font-black text-lg text-white group-hover:text-amber-400 transition-colors">
+                <h3 className="font-display font-black text-lg text-white group-hover:text-red-400 transition-colors">
                   {item.title}
                 </h3>
                 <p className="font-sans text-xs text-slate-300 font-medium line-clamp-1">
@@ -188,7 +188,7 @@ export default function GallerySection({ lang }: GallerySectionProps) {
           >
             <button
               onClick={() => setSelectedPhoto(null)}
-              className="absolute top-6 right-6 text-white hover:text-amber-400 p-2 rounded-full bg-white/10"
+              className="absolute top-6 right-6 text-white hover:text-red-400 p-2 rounded-full bg-white/10"
             >
               <X className="w-6 h-6" />
             </button>
@@ -203,3 +203,5 @@ export default function GallerySection({ lang }: GallerySectionProps) {
     </section>
   );
 }
+
+

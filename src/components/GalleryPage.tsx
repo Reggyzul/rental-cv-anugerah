@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Camera, Sparkles, X, MapPin, Users, Globe, Eye, ZoomIn } from 'lucide-react';
 import { TRANSLATIONS } from '../utils/translations';
@@ -129,9 +129,9 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-600/90 text-white font-extrabold text-[11px] uppercase tracking-widest mb-1 shadow-lg"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-600/90 text-white font-extrabold text-[11px] uppercase tracking-widest mb-1 shadow-lg"
           >
-            <Camera className="w-4 h-4 text-amber-300" />
+            <Camera className="w-4 h-4 text-red-300" />
             <span>GALERI DOKUMENTASI PERJALANAN CV. ANUGRAH PARIWISATA</span>
           </motion.div>
 
@@ -148,7 +148,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
             animate={{ opacity: 1, y: 0 }}
             className="font-sans text-xs sm:text-sm font-bold text-slate-300 uppercase tracking-widest"
           >
-            <span onClick={onNavigateHome} className="hover:text-orange-400 cursor-pointer transition-colors">HOME</span> / GALLERY DOKUMENTASI
+            <span onClick={onNavigateHome} className="hover:text-red-400 cursor-pointer transition-colors">HOME</span> / GALLERY DOKUMENTASI
           </motion.p>
         </div>
       </div>
@@ -161,7 +161,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
           <h2 className="font-display font-black text-3xl sm:text-4xl text-[#0d1b37]">
             Dokumentasi Perjalanan & Tour Silaturahmi
           </h2>
-          <div className="w-20 h-1 bg-[#f94a29] mx-auto rounded-full" />
+          <div className="w-20 h-1 bg-[#dc2626] mx-auto rounded-full" />
           <p className="font-sans text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
             Kumpulan momen kebersamaan dan kenangan indah peserta rombongan tour silaturahmi CV. Anugrah Pariwisata di berbagai destinasi favorit domestik & mancanegara (Sabang, Danau Toba, Bromo, Jam Gadang, Jakarta, Jogja, Lombok, Malaysia, Thailand).
           </p>
@@ -187,23 +187,23 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/35 to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
 
               {/* Badge Tag */}
-              <div className="absolute top-3.5 left-3.5 bg-[#f94a29] text-white font-display font-extrabold text-[10px] uppercase px-3 py-1 rounded-full shadow-md z-10">
+              <div className="absolute top-3.5 left-3.5 bg-[#dc2626] text-white font-display font-extrabold text-[10px] uppercase px-3 py-1 rounded-full shadow-md z-10">
                 {item.badge}
               </div>
 
               {/* Zoom Icon Floater */}
               <div className="absolute top-3.5 right-3.5 bg-white/90 p-2 rounded-full text-slate-900 opacity-0 group-hover:opacity-100 transition-opacity shadow-md z-10">
-                <ZoomIn className="w-4 h-4 text-[#f94a29]" />
+                <ZoomIn className="w-4 h-4 text-[#dc2626]" />
               </div>
 
               {/* Card Footer Content */}
               <div className="absolute bottom-4 left-4 right-4 text-left space-y-1.5 z-10">
-                <div className="flex items-center gap-1.5 text-[11px] font-bold text-amber-300">
-                  <MapPin className="w-3.5 h-3.5 shrink-0 text-amber-400" />
+                <div className="flex items-center gap-1.5 text-[11px] font-bold text-red-300">
+                  <MapPin className="w-3.5 h-3.5 shrink-0 text-red-400" />
                   <span className="truncate">{item.location}</span>
                 </div>
                 
-                <h3 className="font-display font-black text-lg text-white leading-tight group-hover:text-amber-300 transition-colors">
+                <h3 className="font-display font-black text-lg text-white leading-tight group-hover:text-red-300 transition-colors">
                   {item.title}
                 </h3>
 
@@ -247,8 +247,8 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
               </div>
 
               <div className="p-6 bg-slate-900 space-y-2 border-t border-slate-800">
-                <div className="flex items-center gap-2 text-xs font-bold text-amber-400">
-                  <MapPin className="w-4 h-4 text-amber-400 shrink-0" />
+                <div className="flex items-center gap-2 text-xs font-bold text-red-400">
+                  <MapPin className="w-4 h-4 text-red-400 shrink-0" />
                   <span>{selectedPhoto.location}</span>
                 </div>
                 <h3 className="font-display font-black text-xl text-white">
@@ -266,3 +266,4 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
     </div>
   );
 }
+
