@@ -158,41 +158,48 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ]
   },
 
-  // 4. RUSSIA AURORA 9D7N (MOSCOW - ST. PETERSBURG - MURMANSK)
+  // 4. RUSSIA SPESIAL 9D6N & 9D7N (MOSCOW, ST. PETERSBURG & AURORA)
   {
     id: 'tour-russia-aurora',
-    title: 'RUSSIA AURORA 9D7N (NORTHERN LIGHTS)',
-    duration: '9 Hari 7 Malam',
-    route: ['Moscow', 'St. Petersburg', 'Murmansk', 'Moscow'],
+    title: '9D6N / 9D7N RUSSIA SPESIAL (MOSCOW & ST. PETERSBURG)',
+    duration: '9 Hari 6 Malam / 9 Hari 7 Malam',
+    route: ['Moscow', 'St. Petersburg', 'Murmansk'],
     routeDisplay: 'Moscow - St. Petersburg - Murmansk (Aurora Hunt)',
     image: 'https://images.unsplash.com/photo-1513326718677-b964603b136d?auto=format&fit=crop&q=80&w=800',
     badge: 'Internasional Russia',
-    minPrice: 'Rp 37.500.000',
+    minPrice: 'Rp 26.990.000',
     tiers: [
       {
-        busType: 'Flight Emirates + Kereta Sapsan + Bus AC Russia',
+        busType: '9D6N Russia Classic (Moscow + St. Petersburg)',
+        capacity: 'Keberangkatan 12 - 20 September 2025',
+        pricePerPerson: 'Rp 26.990.000',
+        hotelDetails: 'Akomodasi Hotel Bintang 4* di Moscow & St. Petersburg',
+        notes: 'Penerbangan Emirates (EK), Sapsan High-Speed Train & Wearing Russian Costume'
+      },
+      {
+        busType: '9D7N Russia Aurora + Murmansk (Northern Lights)',
         capacity: 'Keberangkatan 25 November 2025',
         pricePerPerson: 'Rp 37.500.000',
         hotelDetails: 'Hotel Bintang 4* di Moscow, St. Petersburg & Murmansk',
-        notes: 'Penerbangan Ekonomi PP dengan Emirates Airlines'
+        notes: 'Penerbangan Emirates (EK), Sapsan Train, Domestic Flight & Aurora Hunt'
       }
     ],
     highlights: [
-      'Berburu Fenomena Cahaya Aurora Borealis di Murmansk Kutub Utara',
       'Red Square, Kremlin & Saint Basil Cathedral Moscow',
       'Hermitage Museum & Palace Square St. Petersburg',
-      'Pengalaman Kereta Cepat Sapsan Rusia'
+      'Pengalaman Spesial Memakai Baju Adat Tradisional Rusia (Wearing Russian Costume)',
+      'Perjalanan Mewah & Cepat dengan Kereta Sapsan (Moscow - St. Petersburg)',
+      'Opsional Berburu Aurora Borealis & Eksplorasi Kutub Utara Murmansk'
     ],
     includes: [
-      'Tiket Pesawat Internasional Ekonomi PP (Emirates Airlines)',
-      'Tiket Pesawat Domestik Rusia & Tiket Kereta Cepat Sapsan',
-      'Guide & Tour Leader Berpengalaman',
-      'Bagasi Sesuai Maskapai & Makan Sesuai Program',
-      'Transportasi Bus AC & Tiket Masuk Objek Wisata',
-      'Akomodasi Hotel Bintang 4*'
+      'Tiket Pesawat Internasional PP by Emirates (EK)',
+      'Tiket Kereta Cepat Sapsan (Moscow - St. Petersburg)',
+      'Akomodasi Hotel Bintang 4*',
+      'Pengalaman Memakai Baju Adat Tradisional Rusia',
+      'Transportasi Bus Pariwisata AC & Guide / Tour Leader Profesional'
     ],
     excludes: [
-      'Tipping Guide & Tour Leader',
+      'Biaya Visa Rusia & Tipping Guide / Driver',
       'Optional Tour & Kelebihan Bagasi',
       'Asuransi Perjalanan & Pengeluaran Pribadi'
     ]
