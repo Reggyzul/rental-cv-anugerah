@@ -10,7 +10,7 @@ interface HeroProps {
 }
 
 export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps) {
-  const [destinationInput, setDestinationInput] = useState('Padang / Sumatera Barat');
+  const [destinationInput, setDestinationInput] = useState('In Sumatera Barat');
   const [travelDateInput, setTravelDateInput] = useState('');
 
   const t = TRANSLATIONS[lang];
@@ -23,12 +23,12 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
   };
 
   return (
-    <section id="home" className="relative pt-20 pb-20 bg-white overflow-hidden text-center">
+    <section id="home" className="relative pt-16 pb-12 bg-white overflow-hidden text-center">
       
-      {/* 1. HERO MOUNTAIN SCENIC BANNER (Exact Bayu Buana Travel Screenshot 1 Layout) */}
-      <div className="relative w-full min-h-[560px] sm:min-h-[620px] flex flex-col justify-between bg-slate-900 text-white overflow-hidden border-b border-slate-200">
+      {/* 1. HERO MOUNTAIN SCENIC BANNER */}
+      <div className="relative w-full min-h-[480px] sm:min-h-[520px] flex flex-col justify-between bg-slate-900 text-white overflow-hidden border-b border-slate-200">
         
-        {/* Full-width Scenic Mountain & Hot Air Balloon Background Photo */}
+        {/* Full-width Scenic Mountain Background Photo */}
         <div 
           className="absolute inset-0 bg-cover bg-center transform scale-105 transition-transform duration-1000"
           style={{
@@ -37,9 +37,9 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
         />
 
         {/* Dark Soft Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-950/40 to-slate-950/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/65 via-slate-950/45 to-slate-950/75" />
 
-        {/* Right Slider Arrow Controls (Exact Screenshot 1) */}
+        {/* Right Slider Arrow Controls */}
         <div className="absolute right-6 top-1/2 -translate-y-1/2 hidden md:flex flex-col gap-3 z-20">
           <button 
             onClick={onExploreClick}
@@ -58,7 +58,7 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
         </div>
 
         {/* CENTERED HERO TEXT CONTENT */}
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-20 sm:pt-24 pb-32 space-y-4">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-10 sm:pt-14 pb-20 space-y-3">
           
           <motion.p
             initial={{ opacity: 0, y: 15 }}
@@ -89,8 +89,8 @@ export default function Hero({ onExploreClick, lang, onBookingClick }: HeroProps
 
         </div>
 
-        {/* 2. FLOATING SEARCH BOX OVERLAY (Exact Bayu Buana Screenshot 1 Style) */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30 w-full -mt-20 sm:-mt-16 mb-8">
+        {/* 2. ELEVATED FLOATING SEARCH BOX OVERLAY (Naik Ke Atas) */}
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-30 w-full -mt-20 sm:-mt-22 mb-4">
           <form 
             onSubmit={handleSearchSubmit}
             className="bg-white rounded-2xl sm:rounded-3xl p-3 sm:p-4 shadow-2xl border border-slate-200/90 grid grid-cols-1 md:grid-cols-12 gap-3 items-center text-left"
