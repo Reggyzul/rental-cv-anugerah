@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
+import AboutPage from './components/AboutPage';
 import Services from './components/Services';
 import ToursList from './components/ToursList';
 import CarList from './components/CarList';
@@ -11,12 +12,12 @@ import Footer from './components/Footer';
 import BookingModal from './components/BookingModal';
 import { Car } from './types';
 import { CARS } from './data/cars';
-import { ChevronUp, MessageCircle, X } from 'lucide-react';
+import { ChevronUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { TRANSLATIONS } from './utils/translations';
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'tours' | 'rentals'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'about' | 'tours' | 'rentals'>('home');
   const [activeSection, setActiveSection] = useState('home');
   const [selectedCar, setSelectedCar] = useState<Car | null>(null);
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -55,10 +56,22 @@ export default function App() {
   }, [currentPage]);
 
   const handleNavClick = (sectionId: string) => {
-    if (sectionId === 'home') {
+    if (sectionId === 'about-page' || sectionId === 'about') {
+      setCurrentPage('about');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setActiveSection('about');
+    } else if (sectionId === 'home') {
       setCurrentPage('home');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       setActiveSection('home');
+    } else if (sectionId === 'tours') {
+      setCurrentPage('tours');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setActiveSection('tours');
+    } else if (sectionId === 'rentals') {
+      setCurrentPage('rentals');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setActiveSection('rentals');
     } else {
       if (currentPage !== 'home') {
         setCurrentPage('home');
@@ -109,21 +122,37 @@ export default function App() {
 
       {/* Main Page Content */}
       <main className="relative z-10">
-        <Hero 
-          onExploreClick={() => handleNavClick('services')} 
-          lang={lang} 
-          onBookingClick={() => setSelectedCar(CARS[0])} 
-        />
+        {currentPage === 'home' ? (
+          <>
+            <Hero 
+              onExploreClick={() => handleNavClick('services')} 
+              lang={lang} 
+              onBookingClick={() => setSelectedCar(CARS[0])} 
+            />
 
-        <Services lang={lang} />
+            <Services lang={lang} />
 
-        <About lang={lang} />
+            <About lang={lang} />
 
-        <CarList onSelectCar={handleSelectCar} lang={lang} />
+            <CarList onSelectCar={handleSelectCar} lang={lang} />
 
-        <BookingSteps lang={lang} />
+            <BookingSteps lang={lang} />
 
-        <Testimonials lang={lang} />
+            <Testimonials lang={lang} />
+          </>
+        ) : currentPage === 'about' ? (
+          <AboutPage lang={lang} onNavigateHome={() => handleNavClick('home')} />
+        ) : currentPage === 'tours' ? (
+          <div className="pt-24">
+            <Services lang={lang} />
+            <Testimonials lang={lang} />
+          </div>
+        ) : (
+          <div className="pt-24">
+            <CarList onSelectCar={handleSelectCar} lang={lang} />
+            <Testimonials lang={lang} />
+          </div>
+        )}
       </main>
 
       {/* Footer Contact */}
@@ -132,10 +161,8 @@ export default function App() {
       {/* Booking Popup Modal */}
       <BookingModal car={selectedCar} onClose={() => setSelectedCar(null)} lang={lang} onCarChange={setSelectedCar} />
 
-      {/* 🟡 FLOATING ASSISTANT AVATAR WIDGET (Exact Bayu Buana Travel Screenshot 1, 2, 3 Bottom-Right Avatar Style) */}
+      {/* FLOATING ASSISTANT AVATAR WIDGET (Bayu Buana Travel Screenshot Style) */}
       <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-2">
-        
-        {/* Scroll To Top Pill */}
         <AnimatePresence>
           {showScrollTop && (
             <motion.button
@@ -158,19 +185,16 @@ export default function App() {
           className="flex items-center gap-2 cursor-pointer group"
           id="floating-cs-avatar-widget"
         >
-          {/* Yellow Chat Tag Pill */}
           <div className="bg-gradient-to-r from-amber-400 to-orange-400 text-slate-950 font-sans font-black text-[10px] sm:text-xs px-3 py-1.5 rounded-xl shadow-lg border border-amber-300 uppercase tracking-wider flex items-center gap-1 group-hover:scale-105 transition-transform">
             <span>Hi, I am CS ANUGRAH</span>
           </div>
 
-          {/* Avatar Circle */}
           <div className="w-13 h-13 rounded-full bg-gradient-to-br from-amber-400 via-orange-500 to-red-500 p-0.5 shadow-2xl border-2 border-white relative shrink-0">
             <img
               src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200"
               alt="CS Anugrah Pariwisata"
               className="w-full h-full object-cover rounded-full"
             />
-            {/* Green Active Dot */}
             <div className="w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white absolute bottom-0 right-0 shadow-xs" />
           </div>
         </motion.div>
