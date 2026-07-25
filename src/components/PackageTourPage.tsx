@@ -193,7 +193,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
       {/* PRECISE & PROFESSIONAL DETAIL MODAL */}
       <AnimatePresence>
         {selectedPackage && selectedTier && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 overflow-hidden">
+          <div className="fixed inset-0 z-[100] flex items-center justify-center pt-20 sm:pt-24 pb-4 px-3 sm:px-6 overflow-hidden">
             {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -209,19 +209,19 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 10 }}
               transition={{ duration: 0.2 }}
-              className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-10 text-left max-h-[85vh] sm:max-h-[90vh] flex flex-col my-auto"
+              className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-10 text-left max-h-[calc(100vh-6.5rem)] flex flex-col my-auto"
             >
               {/* Header */}
-              <div className="relative bg-slate-900 text-white p-5 sm:p-6 shrink-0 border-b border-slate-800">
+              <div className="relative bg-slate-900 text-white p-4 sm:p-5 shrink-0 border-b border-slate-800">
                 <button
                   onClick={handleCloseModal}
-                  className="absolute top-4 right-4 p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white transition-colors cursor-pointer border border-slate-700"
-                  title="Tutup"
+                  className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 w-8 h-8 rounded-full bg-red-600 hover:bg-red-700 text-white transition-all flex items-center justify-center shadow-lg cursor-pointer z-20 hover:scale-110"
+                  title="Tutup Modal"
                 >
-                  <X className="w-4 h-4" />
+                  <X className="w-4 h-4 stroke-[2.5]" />
                 </button>
 
-                <div className="space-y-2 pr-10">
+                <div className="space-y-1.5 pr-10">
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="bg-red-600 text-white text-[10px] font-bold uppercase px-2.5 py-0.5 rounded shadow-xs">
                       {t.pkg_modal_duration}: {selectedPackage.duration}
@@ -230,7 +230,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
                       {t.pkg_route_label}: {selectedPackage.routeDisplay}
                     </span>
                   </div>
-                  <h2 className="font-display font-black text-xl sm:text-2xl uppercase tracking-tight text-white leading-tight">
+                  <h2 className="font-display font-black text-lg sm:text-2xl uppercase tracking-tight text-white leading-tight">
                     {selectedPackage.title}
                   </h2>
                 </div>

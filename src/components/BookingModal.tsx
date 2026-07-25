@@ -86,7 +86,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+      <div className="fixed inset-0 z-50 flex items-center justify-center pt-20 sm:pt-24 pb-4 px-3 sm:px-6 overflow-y-auto">
         {/* Backdrop overlay */}
         <motion.div
           initial={{ opacity: 0 }}
