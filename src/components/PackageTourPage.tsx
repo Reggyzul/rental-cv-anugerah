@@ -25,6 +25,17 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
     setSelectedTier(null);
   };
 
+  React.useEffect(() => {
+    if (selectedPackage) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedPackage]);
+
   const handleWhatsAppBooking = (pkg: TourPackage, tier: TourTier) => {
     const waNumber = '6282178284459';
     const message = `Halo CV. Anugrah Pariwisata, saya ingin berkonsultasi mengenai reservasi paket tour:\n\nPaket Tour: ${pkg.title} (${pkg.duration})\nPilihan Bus: ${tier.busType} (${tier.capacity})\nBiaya: ${tier.pricePerPerson}/org\nFasilitas Hotel: ${tier.hotelDetails}\nRute Perjalanan: ${pkg.routeDisplay}\n\nMohon informasi ketersediaan jadwal & mekanisme reservasi. Terima kasih.`;
@@ -182,14 +193,14 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
       {/* PRECISE & PROFESSIONAL DETAIL MODAL */}
       <AnimatePresence>
         {selectedPackage && selectedTier && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 pt-24 sm:pt-28 pb-6 overflow-y-auto">
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 overflow-hidden">
             {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={handleCloseModal}
-              className="fixed inset-0 bg-slate-950/80 backdrop-blur-sm"
+              className="absolute inset-0 bg-slate-950/80 backdrop-blur-md"
             />
 
             {/* Modal Precision Box */}
@@ -198,7 +209,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 10 }}
               transition={{ duration: 0.2 }}
-              className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-10 text-left max-h-[calc(100vh-8rem)] flex flex-col"
+              className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-10 text-left max-h-[85vh] sm:max-h-[90vh] flex flex-col my-auto"
             >
               {/* Header */}
               <div className="relative bg-slate-900 text-white p-5 sm:p-6 shrink-0 border-b border-slate-800">

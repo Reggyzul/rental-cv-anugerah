@@ -31,7 +31,13 @@ export default function BookingModal({ car, onClose, lang, onCarChange }: Bookin
   useEffect(() => {
     if (car) {
       setSelectedCarId(car.id);
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
     }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
   }, [car]);
 
   if (!car) return null;
