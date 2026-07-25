@@ -108,7 +108,7 @@ export const CARS: Car[] = [
     category: 'Big Bus Eksekutif/Legrest & Bus Medium',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Terbaik',
-    image: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&q=80&w=800',
+    image: '/wulyudza.jpg',
     seats: 33,
     transmission: 'Manual',
     fuel: 'Diesel',
