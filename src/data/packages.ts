@@ -37,10 +37,10 @@ export const TOUR_PACKAGES: TourPackage[] = [
     tiers: [
       {
         busType: 'Big Bus Mercedes Benz Eksekutif',
-        capacity: 'Kapasitas 43 Seats (Minibar & Toilet)',
+        capacity: 'Isi 43 Orang',
         pricePerPerson: 'Rp 2.650.000',
         hotelDetails: 'Hotel 2 Malam di Yogyakarta & 1 Malam di Bandung',
-        notes: 'Bebas Tentukan Tanggal Keberangkatan (Custom Schedule Sesuai Dealing Customer)'
+        notes: 'Tidak Termasuk Biaya Masuk Wisata & Biaya Makan Selama Tour'
       }
     ],
     highlights: [
@@ -62,31 +62,31 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ]
   },
 
-  // 2. EDISI DANAU TOBA - TITIK NOL SABANG (10 HARI PP) - DOMESTIK
+  // 2. TOUR DANAU TOBA - P. SABANG (TITIK 0 KM) (10 HARI) - DOMESTIK
   {
     id: 'tour-danau-toba-sabang',
-    title: 'TOUR DANAU TOBA - TITIK NOL SABANG ACEH',
+    title: 'TOUR DANAU TOBA - P. SABANG (TITIK 0 KM)',
     categoryKey: 'domestik',
-    duration: '10 Hari PP',
-    route: ['D. Toba', 'P. Samosir', 'Berastagi', 'Banda Aceh', 'P. Sabang', 'Medan', 'Pekanbaru'],
-    routeDisplay: 'Danau Toba - Pulau Samosir - Berastagi - Banda Aceh - Pulau Sabang - Medan',
+    duration: '10 Hari',
+    route: ['D. Toba', 'Brastagi', 'P. Sabang', 'Banda Aceh', 'Medan', 'Pekanbaru'],
+    routeDisplay: 'D. Toba - Brastagi - P. Sabang - Banda Aceh - Medan - Pekanbaru',
     image: '/gallery_sabang.jpg',
     badge: 'Domestik (Jadwal Custom)',
-    minPrice: 'Rp 2.750.000',
+    minPrice: 'Rp 2.850.000',
     tiers: [
       {
         busType: 'Big Bus Eksekutif',
         capacity: 'Isi 43 Orang',
-        pricePerPerson: 'Rp 2.750.000',
-        hotelDetails: 'Penginapan Hotel di Danau Toba, Banda Aceh & Sabang',
-        notes: 'Bebas Tentukan Tanggal Keberangkatan Sesuai Dealing Customer'
+        pricePerPerson: 'Rp 2.850.000',
+        hotelDetails: 'Hotel 1 Malam di D. Toba, 3 Malam di Banda Aceh',
+        notes: 'Tidak Termasuk Biaya Masuk Wisata & Biaya Makan Selama Tour'
       },
       {
         busType: 'Big Bus Legrest V.I.P',
-        capacity: 'Isi 32 Orang',
-        pricePerPerson: 'Rp 3.750.000',
-        hotelDetails: 'Penginapan Hotel di Danau Toba, Banda Aceh & Sabang',
-        notes: 'Bebas Tentukan Tanggal Keberangkatan Sesuai Dealing Customer'
+        capacity: 'Isi 33 Orang',
+        pricePerPerson: 'Rp 3.850.000',
+        hotelDetails: 'Hotel 1 Malam di D. Toba, 3 Malam di Banda Aceh',
+        notes: 'Tidak Termasuk Biaya Masuk Wisata & Biaya Makan'
       }
     ],
     highlights: [
@@ -96,8 +96,8 @@ export const TOUR_PACKAGES: TourPackage[] = [
       'Wisata Kuliner Medan & Riau'
     ],
     includes: [
-      'Transportasi Armada Big Bus AC (Eksekutif 43 seat / VIP Legrest 32 seat)',
-      'Penginapan Hotel di Danau Toba & Banda Aceh',
+      'Transportasi Armada Big Bus AC (Eksekutif 43 seat / VIP Legrest 33 seat)',
+      'Penginapan Hotel 1 Malam di D. Toba & 3 Malam di Banda Aceh',
       'Penyeberangan Feri Sabang & Danau Toba',
       'Driver Handal & Paham Rute Sumatera-Aceh'
     ],
@@ -108,7 +108,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ]
   },
 
-  // 3. PROMO SPESIAL TOUR 3 NEGARA (MALAYSIA - SINGAPORE - THAILAND) - INTERNASIONAL ASIA (HARGA TETAP)
+  // 3. PROMO SPESIAL TOUR 3 NEGARA (MALAYSIA - SINGAPORE - THAILAND) - INTERNASIONAL ASIA
   {
     id: 'tour-3-negara-asia',
     title: 'TOUR 3 NEGARA (MALAYSIA - SINGAPORE - THAILAND)',
@@ -162,7 +162,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ]
   },
 
-  // 4. RUSSIA SPESIAL 9D6N & 9D7N - INTERNASIONAL (NAIK RP 5.000.000)
+  // 4. RUSSIA SPESIAL 9D6N & 9D7N - INTERNASIONAL
   {
     id: 'tour-russia-aurora',
     title: 'RUSSIA SPESIAL (MOSCOW & ST. PETERSBURG)',
@@ -210,31 +210,31 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ]
   },
 
-  // 5. TOUR BATAM - BINTAN (10 HARI PP) - DOMESTIK
+  // 5. TOUR BATAM - BINTAN (10 HARI) - DOMESTIK
   {
     id: 'tour-batam-bintan-2026',
     title: 'TOUR BATAM - BINTAN',
     categoryKey: 'domestik',
-    duration: '10 Hari PP',
-    route: ['Pulau Batam', 'Pulau Bintan', 'Siak', 'Pekanbaru'],
-    routeDisplay: 'Pulau Batam - Pulau Bintan - Siak - Pekanbaru',
+    duration: '10 Hari',
+    route: ['Pulau Batam', 'Pulau Bintan', 'Pekanbaru'],
+    routeDisplay: 'P. Batam - P. Bintan - Pekanbaru',
     image: '/dest_batam.jpg',
     badge: 'Domestik (Jadwal Custom)',
-    minPrice: 'Rp 2.850.000',
+    minPrice: 'Rp 2.875.000',
     tiers: [
       {
         busType: 'Big Bus Eksekutif',
         capacity: 'Isi 43 Orang',
-        pricePerPerson: 'Rp 2.850.000',
-        hotelDetails: 'Hotel 3 Malam di Batam & Akomodasi Rute Perjalanan',
-        notes: 'Bebas Tentukan Tanggal Keberangkatan Sesuai Kebutuhan Rombongan'
+        pricePerPerson: 'Rp 2.875.000',
+        hotelDetails: 'Hotel 2 Malam di Batam, 2 Malam di Tanjung Pinang',
+        notes: 'Tidak Termasuk Biaya Masuk Wisata & Biaya Makan Selama Tour'
       },
       {
         busType: 'Big Bus Legrest V.I.P',
-        capacity: 'Isi 32 Orang',
-        pricePerPerson: 'Rp 3.850.000',
-        hotelDetails: 'Hotel 3 Malam di Batam & Akomodasi Rute Perjalanan',
-        notes: 'Bebas Tentukan Tanggal Keberangkatan Sesuai Kebutuhan Rombongan'
+        capacity: 'Isi 33 Orang',
+        pricePerPerson: 'Rp 3.875.000',
+        hotelDetails: 'Hotel 2 Malam di Batam, 2 Malam di Tanjung Pinang',
+        notes: 'Tidak Termasuk Biaya Masuk Wisata & Biaya Makan'
       }
     ],
     highlights: [
@@ -244,8 +244,8 @@ export const TOUR_PACKAGES: TourPackage[] = [
       'Wisata Belanja & Kuliner Kota Pekanbaru'
     ],
     includes: [
-      'Transportasi Armada Big Bus AC (Eksekutif 43 seat / VIP Legrest 32 seat)',
-      'Penginapan Hotel 3 Malam di Batam & Hotel Rute',
+      'Transportasi Armada Big Bus AC (Eksekutif 43 seat / VIP Legrest 33 seat)',
+      'Penginapan Hotel 2 Malam di Batam & 2 Malam di Tanjung Pinang',
       'Driver Berpengalaman, BBM, Toll & Feri/Roro',
       'Layanan Pendamping Rombongan'
     ],
@@ -256,7 +256,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ]
   },
 
-  // 6. 11D8N WEST EUROPE + VENICE - INTERNASIONAL (NAIK RP 5.000.000)
+  // 6. 11D8N WEST EUROPE + VENICE - INTERNASIONAL
   {
     id: 'tour-west-europe-venice',
     title: '11D8N WEST EUROPE + VENICE',
@@ -302,7 +302,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ]
   },
 
-  // 7. 9D7N WEST USA - INTERNASIONAL (NAIK RP 5.000.000)
+  // 7. 9D7N WEST USA - INTERNASIONAL
   {
     id: 'tour-west-usa-9d7n',
     title: '9D7N WEST USA (LA, LAS VEGAS, SAN FRANCISCO)',
@@ -340,14 +340,14 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ]
   },
 
-  // 8. TOUR LOMBOK, BALI, BROMO (16 HARI PP) - DOMESTIK
+  // 8. TOUR LOMBOK - BALI (16 HARI) - DOMESTIK
   {
     id: 'tour-lombok-bali',
-    title: 'TOUR LOMBOK - BALI - BROMO',
+    title: 'TOUR LOMBOK - BALI',
     categoryKey: 'domestik',
-    duration: '16 Hari PP',
-    route: ['Bali', 'Lombok', 'Gunung Bromo', 'Jogjakarta', 'Bandung', 'Jakarta'],
-    routeDisplay: 'Bali - Lombok - Gunung Bromo - Jogjakarta - Bandung - Jakarta',
+    duration: '16 Hari',
+    route: ['Lombok', 'Bali', 'Bromo', 'Jogja', 'Jakarta'],
+    routeDisplay: 'Lombok - Bali - Bromo - Jogja - Jakarta',
     image: '/dest_lombok.jpg',
     badge: 'Domestik (Jadwal Custom)',
     minPrice: 'Rp 3.875.000',
@@ -357,14 +357,14 @@ export const TOUR_PACKAGES: TourPackage[] = [
         capacity: 'Isi 43 Orang',
         pricePerPerson: 'Rp 3.875.000',
         hotelDetails: 'Hotel 2 Malam di Lombok, 2 Malam di Bali & 2 Malam di Jogja',
-        notes: 'Bebas Tentukan Tanggal Keberangkatan Sesuai Kesepakatan Dealing'
+        notes: 'Tidak Termasuk Biaya Masuk Wisata & Biaya Makan Selama Tour'
       },
       {
         busType: 'Big Bus Legrest V.I.P',
         capacity: 'Isi 33 Orang',
-        pricePerPerson: 'Rp 4.775.000',
+        pricePerPerson: 'Rp 4.875.000',
         hotelDetails: 'Hotel 2 Malam di Lombok, 2 Malam di Bali & 2 Malam di Jogja',
-        notes: 'Bebas Tentukan Tanggal Keberangkatan Sesuai Kesepakatan Dealing'
+        notes: 'Tidak Termasuk Biaya Masuk Destinasi Pariwisata & Biaya Makan'
       }
     ],
     highlights: [
@@ -374,8 +374,8 @@ export const TOUR_PACKAGES: TourPackage[] = [
       'Wisata Budaya Yogyakarta, Bandung & Jakarta'
     ],
     includes: [
-      'Transportasi Big Bus Legrest AC Pariwisata',
-      'Penginapan Hotel di Lombok, Bali, Jogja & Bandung',
+      'Transportasi Big Bus Legrest AC Pariwisata (43 seat / VIP Legrest 33 seat)',
+      'Penginapan Hotel 2 Malam di Lombok, 2 Malam di Bali & 2 Malam di Jogja',
       'Guide Lokal & Tour Leader Berpengalaman',
       'Penyeberangan Feri Antar Pulau'
     ],
@@ -403,14 +403,14 @@ export const TOUR_PACKAGES: TourPackage[] = [
         capacity: 'Isi 43 Orang',
         pricePerPerson: 'Rp 4.275.000',
         hotelDetails: 'Hotel 2 Malam di Bima, 2 Malam di Lombok, 2 Malam di Bali & 2 Malam di Jogja',
-        notes: 'Bebas Tentukan Tanggal Keberangkatan Sesuai Kesepakatan Dealing'
+        notes: 'Tidak Termasuk Biaya Masuk Wisata & Biaya Makan Selama Tour'
       },
       {
         busType: 'Big Bus Legrest V.I.P',
         capacity: 'Isi 33 Orang',
         pricePerPerson: 'Rp 5.275.000',
         hotelDetails: 'Hotel 2 Malam di Bima, 2 Malam di Lombok, 2 Malam di Bali & 2 Malam di Jogja',
-        notes: 'Bebas Tentukan Tanggal Keberangkatan Sesuai Kesepakatan Dealing'
+        notes: 'Tidak Termasuk Biaya Masuk Destinasi Wisata & Biaya Makan'
       }
     ],
     highlights: [
@@ -422,7 +422,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ],
     includes: [
       'Transportasi Armada Big Bus AC (Eksekutif 43 seat / VIP Legrest 33 seat)',
-      'Penginapan Hotel sesuai rincian per malam (Bima, Lombok, Bali, Jogja)',
+      'Penginapan Hotel 2 Malam Bima, 2 Malam Lombok, 2 Malam Bali & 2 Malam Jogja',
       'Driver Handal, BBM, Parkir & Toll',
       'Tiket Penyeberangan Feri Antar Pulau'
     ],
@@ -450,14 +450,14 @@ export const TOUR_PACKAGES: TourPackage[] = [
         capacity: 'Isi 43 Orang',
         pricePerPerson: 'Rp 2.975.000',
         hotelDetails: 'Hotel 2 Malam di Bangka, 2 Malam di Belitung',
-        notes: 'Bebas Tentukan Tanggal Keberangkatan Sesuai Kesepakatan Dealing'
+        notes: 'Tidak Termasuk Biaya Masuk Wisata & Biaya Makan Selama Tour'
       },
       {
         busType: 'Big Bus Legrest V.I.P',
         capacity: 'Isi 33 Orang',
         pricePerPerson: 'Rp 3.975.000',
         hotelDetails: 'Hotel 2 Malam di Bangka, 2 Malam di Belitung',
-        notes: 'Bebas Tentukan Tanggal Keberangkatan Sesuai Kesepakatan Dealing'
+        notes: 'Tidak Termasuk Biaya Masuk Wisata & Biaya Makan Selama Tour'
       }
     ],
     highlights: [
