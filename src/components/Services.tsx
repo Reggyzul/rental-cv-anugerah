@@ -12,90 +12,92 @@ export default function Services({ lang }: ServicesProps) {
 
   const handleWhatsAppBooking = (routeTitle: string) => {
     const waNumber = '6281234567890';
-    const message = `Halo CV. Anugrah Pariwisata, saya berminat konsultasi paket tour untuk rute: ${routeTitle}. Mohon informasi jadwal, fasilitas hotel/restoran & penawaran terbaik. Terima kasih!`;
+    const message = `Halo CV. Anugrah Pariwisata, saya ingin berkonsultasi mengenai rute tour: ${routeTitle}. Mohon informasi penawaran fasilitas hotel, restoran & harga terbaik. Terima kasih!`;
     window.open(`https://api.whatsapp.com/send?phone=${waNumber}&text=${encodeURIComponent(message)}`, '_blank', 'noreferrer');
   };
 
   const tourCategories = [
     {
       id: 'in-sumbar',
-      title: 'Tour In Sumatera Barat',
-      subtitle: 'Destinasi Wisata Ranah Minang',
+      title: 'In Sumatera Barat',
+      subtitle: 'Destinasi Pariwisata Sumbar',
       badge: 'Rute Domestik Sumbar',
       badgeBg: 'bg-orange-50 text-orange-700 border-orange-200',
       icon: MapPin,
       destinations: [
-        'Padang (Pantai Air Manis, Kota Tua)',
-        'Pesisir Selatan (Mandeh & Painan)',
-        'Bukittinggi (Jam Gadang & Ngarai Sianok)',
-        'Batusangkar (Istana Pasa Basa Pagaruyung)',
-        'Payakumbuh (Lembah Harau)',
-        'Alahan Panjang (Danau Diatas Dibawah)'
+        '1. Padang',
+        '2. Pesisir Selatan',
+        '3. Bukittinggi',
+        '4. Batu Sangkar',
+        '5. Payakumbuh',
+        '6. Alahan Panjang',
+        '7. Dll.'
       ],
-      description: 'Nikmati keindahan wisata alam, budaya, dan kuliner terpopuler di Sumatera Barat dengan bus pariwisata nyaman.'
+      description: 'Menikmati keindahan destinasi wisata alam & sejarah Sumatera Barat bersama fasilitas hotel & restoran terbaik.'
     },
     {
       id: 'out-sumbar',
-      title: 'Tour Out Sumatera Barat',
+      title: 'Out Sumatera Barat',
       subtitle: 'Destinasi Favorit Nusantara',
       badge: 'Rute Nusantara Domestik',
       badgeBg: 'bg-amber-50 text-amber-700 border-amber-200',
       icon: Compass,
       destinations: [
-        'Danau Toba & Samosir',
-        'Titik 0 Km Sabang Aceh',
-        'Pekanbaru, Batam & P. Bintan',
-        'P. Bangka & P. Belitung',
-        'G. Bromo & Malang',
-        'Bali, Lombok & Sumbawa',
-        'Jogja, Bandung & Jakarta'
+        '1. Danau Toba',
+        '2. Titik O Km Sabang Aceh',
+        '3. Pekanbaru & Batam',
+        '4. P. Bintan, P. Bangka & P. Belitung',
+        '5. Lombok & Bali',
+        '6. Malang & G.Bromo',
+        '7. Jogja, Bandung, Jakarta & Sumbawa'
       ],
-      description: 'Jelajahi berbagai keajaiban destinasi wisata unggulan Nusantara dengan bus eksekutif full fasilitas & kru ramah.'
+      description: 'Menyediakan tour perjalanan antar provinsi & pulau terlengkap dengan armada Big Bus Eksekutif & kru ramah.'
     },
     {
       id: 'internasional',
-      title: 'Tour Internasional',
+      title: 'Internasional',
       subtitle: 'Destinasi Mancanegara Popular',
       badge: 'Rute Mancanegara VIP',
       badgeBg: 'bg-blue-50 text-blue-700 border-blue-200',
       icon: Globe,
       destinations: [
-        'Singapura (Universal Studio, Marina Bay)',
-        'Malaysia (Kuala Lumpur, Genting)',
-        'Thailand (Bangkok & Phuket)',
-        'Korea Selatan (Seoul & Nami Island)',
-        'Jepang (Tokyo & Mt. Fuji)',
-        'Eropa & Amerika Serikat'
+        '1. Singapura',
+        '2. Malaysia',
+        '3. Thailand',
+        '4. Korea',
+        '5. Jepang',
+        '6. Eropa',
+        '7. Amerika'
       ],
-      description: 'Layanan tour internasional serba hemat dan praktis, mencakup tiket pesawat, hotel bintang, dan pendampingan Tour Leader.'
+      description: 'Layanan tour internasional terpercaya berskala global dengan penanganan visa, hotel, dan Tour Leader berpengalaman.'
     }
   ];
 
   return (
-    <section id="services" className="py-20 bg-white text-[#0f172a] overflow-hidden relative border-b border-slate-200">
+    <section id="services" className="py-20 bg-white text-[#0d1b37] overflow-hidden relative border-b border-slate-200">
       
-      {/* Background Decorative Pattern */}
+      {/* Background Decorative Grid */}
       <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#ea580c_1px,transparent_1px)] [background-size:32px_32px]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3" id="services-heading">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange-50 border border-orange-200 text-orange-600 font-display font-extrabold text-xs tracking-wider uppercase shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange-50 border border-orange-200 text-orange-600 font-display font-extrabold text-xs tracking-wider uppercase shadow-xs">
             <Route className="w-4 h-4 text-orange-600" />
-            <span>KATEGORI DESTINASI TOUR</span>
+            <span>RUTE TOUR PARIWISATA</span>
           </div>
 
-          <h2 className="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-[#0f172a] tracking-tight uppercase leading-tight">
+          <h2 className="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-[#0d1b37] tracking-tight uppercase leading-tight">
             Rute Tour <span className="text-orange-600">CV. Anugrah Pariwisata</span>
           </h2>
 
           <p className="font-sans text-slate-600 text-sm sm:text-base leading-relaxed font-medium">
-            Melayani perjalanan pariwisata In Sumatera Barat, Luar Sumatera Barat (Nusantara), hingga Internasional.
+            Memberikan tempat-tempat destinasi wisata yang Indah & Cantik di Indonesia maupun luar negeri.
           </p>
         </div>
 
-        {/* 3 Categories Grid Cards */}
+        {/* 3 Tour Categories Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {tourCategories.map((item, index) => {
             const IconComponent = item.icon;
@@ -119,8 +121,8 @@ export default function Services({ lang }: ServicesProps) {
                   </div>
 
                   <div>
-                    <h3 className="font-display font-black text-2xl text-[#0f172a] group-hover:text-orange-600 transition-colors">
-                      {item.title}
+                    <h3 className="font-display font-black text-2xl text-[#0d1b37] group-hover:text-orange-600 transition-colors">
+                      Rute {item.title}
                     </h3>
                     <p className="text-xs text-orange-600 font-extrabold uppercase tracking-wide mt-1">
                       {item.subtitle}
@@ -133,7 +135,7 @@ export default function Services({ lang }: ServicesProps) {
 
                   {/* Destination List */}
                   <div className="space-y-2 pt-3 border-t border-slate-100">
-                    <span className="text-[10px] font-extrabold tracking-wider uppercase text-slate-500 block">Destinasi Populer:</span>
+                    <span className="text-[10px] font-extrabold tracking-wider uppercase text-slate-500 block">Destinasi Pilihan:</span>
                     <div className="space-y-1.5">
                       {item.destinations.map((dest, idx) => (
                         <div key={idx} className="flex items-center gap-2 text-xs font-semibold text-slate-700">
@@ -152,7 +154,7 @@ export default function Services({ lang }: ServicesProps) {
                     onClick={() => handleWhatsAppBooking(item.title)}
                     className="w-full bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-sans font-bold text-xs uppercase py-3.5 px-4 rounded-xl shadow-md shadow-orange-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer"
                   >
-                    <span>Konsultasi Paket WA</span>
+                    <span>Konsultasi Rute WA</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>

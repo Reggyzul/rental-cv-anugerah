@@ -31,30 +31,30 @@ export default function CarList({ onSelectCar, lang }: CarListProps) {
 
   const handleWhatsAppBooking = (carName: string) => {
     const waNumber = '6281234567890';
-    const message = `Halo CV. Anugrah Pariwisata, saya ingin berkonsultasi ketersediaan armada: ${carName}. Mohon informasi penawaran harga & jadwal. Terima kasih!`;
+    const message = `Halo CV. Anugrah Pariwisata, saya berminat berkonsultasi sewa armada: ${carName}. Mohon informasi penawaran harga & ketersediaan tanggal. Terima kasih!`;
     window.open(`https://api.whatsapp.com/send?phone=${waNumber}&text=${encodeURIComponent(message)}`, '_blank', 'noreferrer');
   };
 
   return (
-    <section id="cars" className="py-20 bg-slate-50 text-[#0f172a] overflow-hidden relative border-b border-slate-200">
+    <section id="cars" className="py-20 bg-slate-50 text-[#0d1b37] overflow-hidden relative border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Heading */}
         <div className="text-center max-w-4xl mx-auto mb-12 space-y-3" id="cars-heading">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange-50 border border-orange-200 text-orange-600 font-display font-extrabold text-xs tracking-wider uppercase shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange-50 border border-orange-200 text-orange-600 font-display font-extrabold text-xs tracking-wider uppercase shadow-xs">
             <Bus className="w-4 h-4 text-orange-600" />
-            <span>KATALOG ARMADA PARIWISATA</span>
+            <span>KATALOG TRANSPORT RENT</span>
           </div>
 
-          <h2 className="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-[#0f172a] tracking-tight uppercase leading-tight">
+          <h2 className="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-[#0d1b37] tracking-tight uppercase leading-tight">
             Jenis Armada <span className="text-orange-600">CV. Anugrah Pariwisata</span>
           </h2>
 
           <p className="font-sans text-slate-600 text-sm sm:text-base leading-relaxed font-medium max-w-2xl mx-auto">
-            Armada transportasi tour terlengkap & terawat dengan fasilitas Full AC, Toilet, Karaoke, Bantal & Selimut.
+            Armada/Transportasi tour dengan Fasilitas Lengkap: Bus Full AC, Toilet bersih, Full Karaoke, Selimut & Bantal.
           </p>
 
-          {/* Filter Category Tabs (Roman Numerals Exact Match) */}
+          {/* Filter Category Tabs (Exact Roman Numerals) */}
           <div className="flex flex-wrap items-center justify-center gap-2 pt-4">
             {categories.map((cat) => (
               <button
@@ -72,7 +72,7 @@ export default function CarList({ onSelectCar, lang }: CarListProps) {
           </div>
         </div>
 
-        {/* Cars Responsive Grid */}
+        {/* Cars Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredCars.map((car, index) => (
             <motion.div
@@ -85,17 +85,17 @@ export default function CarList({ onSelectCar, lang }: CarListProps) {
             >
               <div className="space-y-4">
                 
-                {/* Image Showcase */}
+                {/* Image Box */}
                 <div className="relative rounded-2xl overflow-hidden bg-slate-50 border border-slate-200/80 aspect-[16/10] flex items-center justify-center p-3">
                   <img
                     src={car.image}
                     alt={car.name}
                     className="w-full h-auto object-contain max-h-[170px] drop-shadow-md group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute top-3 left-3 bg-orange-50 text-orange-700 border border-orange-200 font-display font-bold text-[10px] uppercase px-2.5 py-1 rounded-full shadow-sm">
+                  <div className="absolute top-3 left-3 bg-orange-50 text-orange-700 border border-orange-200 font-display font-bold text-[10px] uppercase px-2.5 py-1 rounded-full shadow-xs">
                     {car.category}
                   </div>
-                  <div className="absolute bottom-3 right-3 bg-white/95 text-slate-700 font-sans text-[10px] font-bold px-2.5 py-1 rounded-full border border-slate-200 flex items-center gap-1.5 shadow-sm">
+                  <div className="absolute bottom-3 right-3 bg-white/95 text-slate-700 font-sans text-[10px] font-bold px-2.5 py-1 rounded-full border border-slate-200 flex items-center gap-1.5 shadow-xs">
                     <Users className="w-3.5 h-3.5 text-orange-600" />
                     <span>{car.seats} Kursi</span>
                   </div>
@@ -103,7 +103,7 @@ export default function CarList({ onSelectCar, lang }: CarListProps) {
 
                 {/* Car Name & Sub-description */}
                 <div>
-                  <h3 className="font-display font-black text-xl text-[#0f172a] group-hover:text-orange-600 transition-colors uppercase tracking-tight">
+                  <h3 className="font-display font-black text-xl text-[#0d1b37] group-hover:text-orange-600 transition-colors uppercase tracking-tight">
                     {car.name}
                   </h3>
                   <p className="font-sans text-xs text-slate-600 leading-relaxed mt-1 font-medium">
@@ -138,7 +138,7 @@ export default function CarList({ onSelectCar, lang }: CarListProps) {
 
                 <button
                   onClick={() => onSelectCar(car)}
-                  className="bg-slate-100 hover:bg-slate-200 text-[#0f172a] border border-slate-200 font-sans font-bold text-xs uppercase py-3 px-3 rounded-xl transition-all cursor-pointer"
+                  className="bg-slate-100 hover:bg-slate-200 text-[#0d1b37] border border-slate-200 font-sans font-bold text-xs uppercase py-3 px-3 rounded-xl transition-all cursor-pointer"
                   title="Form Reservasi Lengkap"
                 >
                   Reservasi

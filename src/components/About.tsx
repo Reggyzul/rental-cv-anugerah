@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ShieldCheck, Sparkles, Compass, Award, CheckCircle2, HeartHandshake, Bus, Hotel, Utensils, Music, Tv, Coffee } from 'lucide-react';
+import { ShieldCheck, Sparkles, Compass, Award, CheckCircle2, HeartHandshake, Bus, Hotel, Utensils, Music, Tv, Coffee, Building2, Users } from 'lucide-react';
 import { TRANSLATIONS } from '../utils/translations';
 
 interface AboutProps {
@@ -11,30 +11,30 @@ export default function About({ lang }: AboutProps) {
   const t = TRANSLATIONS[lang];
 
   return (
-    <section id="about" className="py-20 sm:py-24 bg-gradient-to-b from-white via-slate-50 to-white text-[#0f172a] overflow-hidden relative border-b border-slate-200">
+    <section id="about" className="py-20 sm:py-24 bg-gradient-to-b from-white via-slate-50 to-white text-[#0d1b37] overflow-hidden relative border-b border-slate-200">
       
-      {/* Background Subtle Soft Glow */}
+      {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-orange-400/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-14">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-16">
         
-        {/* Section Heading Header */}
+        {/* SECTION HEADER (Raja-Wisata Style) */}
         <div className="text-center max-w-3xl mx-auto space-y-3.5" id="about-heading">
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-orange-600 font-display font-extrabold text-xs tracking-widest uppercase shadow-sm"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-orange-600 font-display font-extrabold text-xs tracking-widest uppercase shadow-xs"
           >
-            <Compass className="w-4 h-4 text-orange-600" />
-            <span>PROFIL & VISI MISI PERUSAHAAN</span>
+            <Building2 className="w-4 h-4 text-orange-600" />
+            <span>CORPORATE SERVICES & PROFIL PERUSAHAAN</span>
           </motion.div>
 
           <motion.h2 
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-[#0f172a] tracking-tight uppercase leading-tight"
+            className="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-[#0d1b37] tracking-tight uppercase leading-tight"
           >
             CV. ANUGRAH <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-amber-600 to-orange-500">PARIWISATA</span>
           </motion.h2>
@@ -45,14 +45,14 @@ export default function About({ lang }: AboutProps) {
             transition={{ duration: 0.5, delay: 0.15 }}
             className="font-sans text-slate-600 text-sm sm:text-base leading-relaxed font-medium max-w-2xl mx-auto"
           >
-            "WISATA HEMAT BERSAMA TRAVEL HEBAT" — Penyedia Layanan Tour & Travel Pariwisata No. 1 di Padang, Sumatera Barat & Indonesia.
+            "WISATA HEMAT BERSAMA TRAVEL HEBAT" — Perusahaan Tour & Travel Pariwisata No. 1 di Padang, Sumatera Barat & Indonesia.
           </motion.p>
         </div>
 
-        {/* 2-COLUMN VISION & MISSION GRID */}
+        {/* 2-COLUMN ELEGANT CARD CONTAINER (Raja-Wisata Style) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
-          {/* LEFT COLUMN: VISI PERUSAHAAN */}
+          {/* LEFT COLUMN: VISI PERUSAHAAN (3 POINTS) */}
           <motion.div
             initial={{ opacity: 0, x: -25 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -108,7 +108,7 @@ export default function About({ lang }: AboutProps) {
             </div>
           </motion.div>
 
-          {/* RIGHT COLUMN: MISI PERUSAHAAN (7 POINTS) */}
+          {/* RIGHT COLUMN: MISI UTAMA PERUSAHAAN (7 POINTS) */}
           <motion.div
             initial={{ opacity: 0, x: 25 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -123,9 +123,9 @@ export default function About({ lang }: AboutProps) {
                   <ShieldCheck className="w-6 h-6" />
                 </div>
                 <div>
-                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-orange-600 block">7 MISI PELAYANAN</span>
-                  <h3 className="font-display font-black text-xl text-[#0f172a] uppercase tracking-tight">
-                    Komitmen Kualitas Tour
+                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-orange-600 block">7 MISI UTAMA PELAYANAN</span>
+                  <h3 className="font-display font-black text-xl text-[#0d1b37] uppercase tracking-tight">
+                    Komitmen Kualitas Tour & Transportasi
                   </h3>
                 </div>
               </div>
@@ -146,7 +146,7 @@ export default function About({ lang }: AboutProps) {
                 </div>
                 <div className="p-3 rounded-xl bg-orange-50/80 border border-orange-200 flex items-center gap-3 font-semibold text-orange-950">
                   <Bus className="w-4 h-4 text-orange-600 shrink-0" />
-                  <span>4. Armada/Transportasi tour Fasilitas Lengkap: Bus Full AC, Toilet Bersih, Full Karaoke, Selimut & Bantal.</span>
+                  <span>4. Menyediakan Transportasi tour dengan Fasilitas Lengkap: Bus Full AC, Toilet bersih, Full Karaoke, Selimut & Bantal.</span>
                 </div>
                 <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80 flex items-center gap-3">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
@@ -158,7 +158,7 @@ export default function About({ lang }: AboutProps) {
                 </div>
                 <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80 flex items-center gap-3">
                   <Sparkles className="w-4 h-4 text-orange-600 shrink-0" />
-                  <span>7. Memberikan destinasi-destinasi wisata yang Indah & Cantik di Indonesia & Luar Negeri.</span>
+                  <span>7. Memberikan tempat-tempat Destinasi wisata yang Indah & Cantik di Indonesia & luar negeri.</span>
                 </div>
               </div>
 
@@ -170,11 +170,11 @@ export default function About({ lang }: AboutProps) {
         {/* FLEET AMENITIES SHOWCASE */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-sm flex items-center gap-3 text-left">
-            <div className="w-10 h-10 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center shrink-0 font-bold">
+            <div className="w-10 h-10 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center shrink-0 font-extrabold text-xs">
               AC
             </div>
             <div>
-              <span className="font-display font-bold text-xs text-[#0f172a] block">Bus Full AC</span>
+              <span className="font-display font-bold text-xs text-[#0d1b37] block">Bus Full AC</span>
               <span className="text-[10px] text-slate-500 font-medium block">Kabin sejuk merata</span>
             </div>
           </div>
@@ -184,7 +184,7 @@ export default function About({ lang }: AboutProps) {
               <Utensils className="w-5 h-5" />
             </div>
             <div>
-              <span className="font-display font-bold text-xs text-[#0f172a] block">Toilet Bersih</span>
+              <span className="font-display font-bold text-xs text-[#0d1b37] block">Toilet Bersih</span>
               <span className="text-[10px] text-slate-500 font-medium block">Higienis di dalam bus</span>
             </div>
           </div>
@@ -194,7 +194,7 @@ export default function About({ lang }: AboutProps) {
               <Music className="w-5 h-5" />
             </div>
             <div>
-              <span className="font-display font-bold text-xs text-[#0f172a] block">Full Karaoke</span>
+              <span className="font-display font-bold text-xs text-[#0d1b37] block">Full Karaoke</span>
               <span className="text-[10px] text-slate-500 font-medium block">Sound system jernih</span>
             </div>
           </div>
@@ -204,7 +204,7 @@ export default function About({ lang }: AboutProps) {
               <Coffee className="w-5 h-5" />
             </div>
             <div>
-              <span className="font-display font-bold text-xs text-[#0f172a] block">Selimut & Bantal</span>
+              <span className="font-display font-bold text-xs text-[#0d1b37] block">Selimut & Bantal</span>
               <span className="text-[10px] text-slate-500 font-medium block">Istirahat hangat & nyaman</span>
             </div>
           </div>
