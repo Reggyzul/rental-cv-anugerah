@@ -4,7 +4,6 @@ import Hero from './components/Hero';
 import AboutPage from './components/AboutPage';
 import DestinationHighlightsPage from './components/DestinationHighlightsPage';
 import Services from './components/Services';
-import ToursList from './components/ToursList';
 import CarList from './components/CarList';
 import BookingSteps from './components/BookingSteps';
 import Testimonials from './components/Testimonials';
@@ -32,28 +31,11 @@ export default function App() {
       } else {
         setShowScrollTop(false);
       }
-
-      if (currentPage === 'home') {
-        const sections = ['home', 'services', 'cars', 'footer-contact'];
-        const scrollPosition = window.scrollY + 250;
-
-        for (const section of sections) {
-          const el = document.getElementById(section);
-          if (el) {
-            const top = el.offsetTop;
-            const height = el.offsetHeight;
-            if (scrollPosition >= top && scrollPosition < top + height) {
-              setActiveSection(section);
-              break;
-            }
-          }
-        }
-      }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [currentPage]);
+  }, []);
 
   const handleNavClick = (sectionId: string) => {
     if (sectionId === 'about-page' || sectionId === 'about') {
@@ -64,18 +46,18 @@ export default function App() {
       setCurrentPage('highlights');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       setActiveSection('highlights');
+    } else if (sectionId === 'services' || sectionId === 'tours' || sectionId === 'destinations') {
+      setCurrentPage('tours');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setActiveSection('tours');
+    } else if (sectionId === 'cars' || sectionId === 'rentals' || sectionId === 'transport-rent') {
+      setCurrentPage('rentals');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setActiveSection('rentals');
     } else if (sectionId === 'home') {
       setCurrentPage('home');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       setActiveSection('home');
-    } else if (sectionId === 'tours') {
-      setCurrentPage('tours');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      setActiveSection('tours');
-    } else if (sectionId === 'rentals') {
-      setCurrentPage('rentals');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-      setActiveSection('rentals');
     } else {
       if (currentPage !== 'home') {
         setCurrentPage('home');
@@ -129,14 +111,10 @@ export default function App() {
         {currentPage === 'home' ? (
           <>
             <Hero 
-              onExploreClick={() => handleNavClick('services')} 
+              onExploreClick={() => handleNavClick('tours')} 
               lang={lang} 
               onBookingClick={() => setSelectedCar(CARS[0])} 
             />
-
-            <Services lang={lang} />
-
-            <CarList onSelectCar={handleSelectCar} lang={lang} />
 
             <BookingSteps lang={lang} />
 
