@@ -525,24 +525,24 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
           ))}
         </div>
 
-        {/* ELEGANT FLOATING TEXT */}
-        <div className="pt-6 pb-2 flex flex-col items-center justify-center">
+        {/* ELEGANT FLOATING TEXT & BOUNCING DOWN ARROW */}
+        <div className="pt-10 pb-4 flex flex-col items-center justify-center">
           <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
             onClick={onViewAllDestinations}
-            className="group flex flex-col items-center gap-3 cursor-pointer text-center select-none"
+            className="group flex flex-col items-center gap-3 cursor-pointer text-center select-none bg-slate-50 hover:bg-white p-4 px-8 rounded-full border border-slate-200 shadow-md hover:shadow-xl transition-all duration-300"
             id="view-all-destinations-btn"
           >
-            <div className="relative flex flex-col items-center">
-              <span className="font-display font-black text-xs sm:text-sm uppercase tracking-[0.25em] text-slate-800 group-hover:text-[#dc2626] transition-colors duration-300">
+            <div className="relative flex items-center gap-2">
+              <span className="font-display font-black text-xs sm:text-sm uppercase tracking-[0.2em] text-slate-800 group-hover:text-[#dc2626] transition-colors duration-300">
                 {t.dest_view_all}
               </span>
-              <span className="w-8 group-hover:w-full h-0.5 bg-gradient-to-r from-[#dc2626] to-amber-500 transition-all duration-300 rounded-full mt-1" />
+              <span className="text-red-600 font-extrabold text-sm">➔</span>
             </div>
 
-            <div className="w-11 h-11 rounded-full border-2 border-slate-300 group-hover:border-[#dc2626] flex items-center justify-center text-slate-700 group-hover:text-white group-hover:bg-[#dc2626] transition-all duration-300 shadow-sm group-hover:shadow-lg group-hover:shadow-red-600/30 group-hover:scale-110">
-              <ChevronDown className="w-5 h-5 group-hover:translate-y-0.5 transition-transform duration-300" />
+            <div className="w-10 h-10 rounded-full bg-[#dc2626] text-white flex items-center justify-center shadow-lg shadow-red-600/30 group-hover:scale-110 transition-transform duration-300">
+              <ChevronDown className="w-5 h-5 animate-bounce" />
             </div>
           </motion.div>
         </div>

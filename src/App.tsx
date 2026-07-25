@@ -137,6 +137,11 @@ export default function App() {
               onBookingClick={() => setSelectedCar(CARS[0])} 
             />
 
+            <Services 
+              lang={lang} 
+              onViewAllDestinations={() => handleNavClick('destinations')}
+            />
+
             <BookingSteps lang={lang} />
 
             <Testimonials lang={lang} />
