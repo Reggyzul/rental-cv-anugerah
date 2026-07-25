@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { MapPin, Compass, Globe, Star, MessageCircle, CheckCircle2, Sparkles, ArrowRight } from 'lucide-react';
+import { MapPin, Compass, Globe, Star, MessageCircle, CheckCircle2, Sparkles, ChevronDown } from 'lucide-react';
 import { TRANSLATIONS } from '../utils/translations';
 
 interface ServicesProps {
@@ -525,18 +525,28 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
           ))}
         </div>
 
-        {/* BOTTOM PROMINENT BUTTON: LIHAT SELENGKAPNYA WITH ARROW */}
-        <div className="pt-6 text-center">
-          <button
+        {/* ELEGANT FLOATING TEXT + DOWNWARD ARROW (NO BACKGROUND, ULTRA MODERN HIGH-END STYLE) */}
+        <div className="pt-8 pb-4 flex flex-col items-center justify-center">
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
             onClick={onViewAllDestinations}
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-950 hover:from-orange-600 hover:to-red-600 text-white font-display font-black text-xs sm:text-sm uppercase tracking-widest px-8 py-4 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-orange-600/30 transition-all duration-300 group cursor-pointer border border-slate-700 hover:border-orange-500"
+            className="group flex flex-col items-center gap-3 cursor-pointer text-center select-none"
             id="view-all-destinations-btn"
           >
-            <span>Lihat Selengkapnya</span>
-            <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 group-hover:translate-x-1.5 transition-all duration-300">
-              <ArrowRight className="w-4 h-4 text-amber-400 group-hover:text-white" />
+            {/* Floating Classy Modern Text */}
+            <div className="relative flex flex-col items-center">
+              <span className="font-display font-black text-xs sm:text-sm uppercase tracking-[0.25em] text-slate-800 group-hover:text-[#f94a29] transition-colors duration-300">
+                Lihat Selengkapnya
+              </span>
+              <span className="w-8 group-hover:w-full h-0.5 bg-gradient-to-r from-[#f94a29] to-amber-500 transition-all duration-300 rounded-full mt-1" />
             </div>
-          </button>
+
+            {/* Downward Arrow Circle Accent */}
+            <div className="w-11 h-11 rounded-full border-2 border-slate-300 group-hover:border-[#f94a29] flex items-center justify-center text-slate-700 group-hover:text-white group-hover:bg-[#f94a29] transition-all duration-300 shadow-sm group-hover:shadow-lg group-hover:shadow-orange-600/30 group-hover:scale-110">
+              <ChevronDown className="w-5 h-5 group-hover:translate-y-0.5 transition-transform duration-300" />
+            </div>
+          </motion.div>
         </div>
 
       </div>
