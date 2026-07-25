@@ -16,22 +16,22 @@ export default function CarList({ onSelectCar, lang }: CarListProps) {
 
   const categories = [
     { id: 'all', label: 'Semua Armada' },
-    { id: 'bus', label: 'Big Bus & Medium' },
-    { id: 'hiace', label: 'Mobil Hiace Rental' },
-    { id: 'minibus', label: 'Mobil Mini Bus & MPV' }
+    { id: 'cat1', label: 'I. Big Bus Eksekutif/Legrest & Bus Medium' },
+    { id: 'cat2', label: 'II. Mobil Hiace Rental' },
+    { id: 'cat3', label: 'III. Mobil Mini Bus Rental' }
   ];
 
   const filteredCars = CARS.filter(car => {
     if (filterCategory === 'all') return true;
-    if (filterCategory === 'bus') return car.category.toLowerCase().includes('bus');
-    if (filterCategory === 'hiace') return car.category.toLowerCase().includes('hiace') || car.category.toLowerCase().includes('minibus');
-    if (filterCategory === 'minibus') return !car.category.toLowerCase().includes('bus') && !car.category.toLowerCase().includes('hiace');
+    if (filterCategory === 'cat1') return car.category.startsWith('I.');
+    if (filterCategory === 'cat2') return car.category.startsWith('II.');
+    if (filterCategory === 'cat3') return car.category.startsWith('III.');
     return true;
   });
 
   const handleWhatsAppBooking = (carName: string) => {
     const waNumber = '6281234567890';
-    const message = `Halo CV. Anugrah Pariwisata, saya ingin bertanya ketersediaan armada: ${carName}. Mohon informasi penawaran harga & jadwal. Terima kasih!`;
+    const message = `Halo CV. Anugrah Pariwisata, saya ingin berkonsultasi ketersediaan armada: ${carName}. Mohon informasi penawaran harga & jadwal. Terima kasih!`;
     window.open(`https://api.whatsapp.com/send?phone=${waNumber}&text=${encodeURIComponent(message)}`, '_blank', 'noreferrer');
   };
 
@@ -40,30 +40,30 @@ export default function CarList({ onSelectCar, lang }: CarListProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-12 space-y-3" id="cars-heading">
+        <div className="text-center max-w-4xl mx-auto mb-12 space-y-3" id="cars-heading">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-orange-50 border border-orange-200 text-orange-600 font-display font-extrabold text-xs tracking-wider uppercase shadow-sm">
             <Bus className="w-4 h-4 text-orange-600" />
-            <span>KATALOG ARMADA BUS & MOBIL</span>
+            <span>KATALOG ARMADA PARIWISATA</span>
           </div>
 
           <h2 className="font-display font-black text-3xl sm:text-4xl lg:text-5xl text-[#0f172a] tracking-tight uppercase leading-tight">
-            Pilihan Armada <span className="text-orange-600">Pariwisata</span>
+            Jenis Armada <span className="text-orange-600">CV. Anugrah Pariwisata</span>
           </h2>
 
-          <p className="font-sans text-slate-600 text-sm sm:text-base leading-relaxed font-medium">
-            Big Bus Eksekutif Legrest (Zivanes, Nyaman Holiday, Miyor, KYM, Sutan Raya, Wulyudza), Toyota Hiace, dan Mobil Mini Bus (Alphard, Innova, Avanza, Xenia, Calya, Sigra).
+          <p className="font-sans text-slate-600 text-sm sm:text-base leading-relaxed font-medium max-w-2xl mx-auto">
+            Armada transportasi tour terlengkap & terawat dengan fasilitas Full AC, Toilet, Karaoke, Bantal & Selimut.
           </p>
 
-          {/* Filter Category Tabs */}
+          {/* Filter Category Tabs (Roman Numerals Exact Match) */}
           <div className="flex flex-wrap items-center justify-center gap-2 pt-4">
             {categories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setFilterCategory(cat.id)}
-                className={`px-4 py-2 rounded-full font-display font-bold text-xs transition-all cursor-pointer ${
+                className={`px-4 py-2.5 rounded-full font-display font-extrabold text-xs transition-all cursor-pointer ${
                   filterCategory === cat.id
-                    ? 'bg-orange-600 text-white shadow-md shadow-orange-600/20'
-                    : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
+                    ? 'bg-gradient-to-r from-orange-600 to-amber-600 text-white shadow-md shadow-orange-600/20'
+                    : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200/90'
                 }`}
               >
                 {cat.label}

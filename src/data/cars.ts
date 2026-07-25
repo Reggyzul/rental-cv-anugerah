@@ -1,119 +1,119 @@
 import { Car, Testimonial } from '../types';
 
 export const CARS: Car[] = [
-  // CATEGORY 1: BIG BUS & BUS MEDIUM
+  // I. BIG BUS EKSEKUTIF / LEGREST & BUS MEDIUM RENTAL
   {
     id: 'bus-zivanes',
-    name: 'Bus Eksekutif Zivanes',
-    category: 'Big Bus Legrest',
+    name: '1. Zivanes (Big Bus Legrest)',
+    category: 'I. Big Bus & Medium',
     pricePerDay: 0,
-    priceDisplay: 'Hubungi untuk Penawaran Harga Terbaik',
+    priceDisplay: 'Hubungi untuk Penawaran Terbaik',
     image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800',
     seats: 48,
     transmission: 'Manual',
     fuel: 'Diesel High Power',
     includeList: ['Full AC', 'Toilet Bersih', 'Full Karaoke & Audio', 'Selimut & Bantal', 'Bisa Reclining Seats Legrest', 'Kru & Tour Leader Ramah'],
-    description: 'Armada Big Bus Eksekutif Zivanes pilihan utama perjalanan pariwisata jarak jauh dengan kenyamanan tempat duduk Legrest dan fasilitas hiburan lengkap.',
+    description: 'Armada Big Bus Eksekutif Zivanes pilihan utama perjalanan pariwisata jarak jauh dengan tempat duduk Legrest & fasilitas komplit.',
     rating: 4.9,
     reviewsCount: 128,
     specifications: [
       { label: 'Kapasitas', value: '45 - 48 Kursi Legrest' },
       { label: 'Fasilitas Bus', value: 'Full AC, Toilet, Karaoke, Charger, Selimut & Bantal' },
-      { label: 'Pelayanan', value: 'Termasuk Driver Profesional & Kru Tour Leader' }
+      { label: 'Pelayanan', value: 'Driver & Kru Tour Leader Ramah' }
     ]
   },
   {
     id: 'bus-nyaman-holiday',
-    name: 'Nyaman Holiday Bus',
-    category: 'Big Bus Pariwisata',
+    name: '2. Nyaman Holiday (Big Bus Pariwisata)',
+    category: 'I. Big Bus & Medium',
     pricePerDay: 0,
-    priceDisplay: 'Hubungi untuk Penawaran Harga Terbaik',
+    priceDisplay: 'Hubungi untuk Penawaran Terbaik',
     image: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&q=80&w=800',
     seats: 50,
     transmission: 'Manual',
     fuel: 'Diesel High Power',
     includeList: ['Full AC Multi-Zone', 'Toilet Higienis', 'Audio System & Karaoke', 'Bantal & Selimut', 'Tour Leader Berpengalaman'],
-    description: 'Bus Pariwisata Nyaman Holiday menghadirkan suasana wisata yang hangat dan menyenangkan bagi rombongan sekolah, instansi, maupun keluarga besar.',
+    description: 'Bus Pariwisata Nyaman Holiday menghadirkan kenyamanan hangat bagi rombongan tour, instansi, maupun keluarga besar.',
     rating: 4.9,
     reviewsCount: 115,
     specifications: [
       { label: 'Kapasitas', value: '48 - 50 Kursi Penumpang' },
-      { label: 'Fasilitas Bus', value: 'Full AC, Toilet, Full Sound System, USB Charger' },
-      { label: 'Pelayanan', value: 'Driver Berpengalaman & Kru Tour Ramah' }
+      { label: 'Fasilitas Bus', value: 'Full AC, Toilet, Sound Karaoke, Charger Port' },
+      { label: 'Pelayanan', value: 'Driver & Kru Tour Ramah' }
     ]
   },
   {
     id: 'bus-miyor',
-    name: 'Bus Eksekutif Miyor',
-    category: 'Big Bus Luxury',
+    name: '3. Miyor (Big Bus Luxury Legrest)',
+    category: 'I. Big Bus & Medium',
     pricePerDay: 0,
-    priceDisplay: 'Hubungi untuk Penawaran Harga Terbaik',
+    priceDisplay: 'Hubungi untuk Penawaran Terbaik',
     image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800',
     seats: 45,
     transmission: 'Manual',
     fuel: 'Diesel Euro 4',
     includeList: ['Full AC', 'Toilet Bersih', 'Full Karaoke & Smart TV', 'Bantal & Selimut', 'Reclining Seats', 'Dispenser Air Minum'],
-    description: 'Pilihan bus mewah Miyor dengan desain interior eksekutif kelas atas untuk wisata luar provinsi dan mancanegara.',
+    description: 'Bus mewah Miyor dengan desain interior eksekutif kelas atas untuk wisata luar provinsi & mancanegara.',
     rating: 5.0,
     reviewsCount: 142,
     specifications: [
       { label: 'Kapasitas', value: '35 - 45 Kursi Penumpang' },
       { label: 'Fasilitas Bus', value: 'Full AC, Toilet, Smart TV Karaoke, Bantal Selimut' },
-      { label: 'Pelayanan', value: 'Driver Utama & Co-Driver Berlisensi Tour' }
+      { label: 'Pelayanan', value: 'Driver Utama & Co-Driver Lisensi Tour' }
     ]
   },
   {
     id: 'bus-kym',
-    name: 'Bus Pariwisata KYM',
-    category: 'Big Bus Eksekutif',
+    name: '4. KYM (Big Bus Eksekutif)',
+    category: 'I. Big Bus & Medium',
     pricePerDay: 0,
-    priceDisplay: 'Hubungi untuk Penawaran Harga Terbaik',
+    priceDisplay: 'Hubungi untuk Penawaran Terbaik',
     image: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&q=80&w=800',
     seats: 48,
     transmission: 'Manual',
     fuel: 'Diesel',
     includeList: ['Full AC', 'Toilet', 'Audio Karaoke', 'Selimut & Bantal', 'Bagasi Ekstra Luas', 'Kru Tour Ramah'],
-    description: 'Armada bus KYM yang terkenal tangguh dan nyaman melintasi rute Sumatera, Jawa, Bali, hingga antar provinsi.',
+    description: 'Armada bus KYM tangguh dan nyaman melintasi rute Sumatera, Jawa, Bali, hingga antar provinsi.',
     rating: 4.8,
     reviewsCount: 98,
     specifications: [
       { label: 'Kapasitas', value: '48 Kursi Penumpang' },
-      { label: 'Fasilitas Bus', value: 'Full AC, Toilet, Karaoke, Bagasi Bawah Luas' },
-      { label: 'Pelayanan', value: 'Termasuk Kru Tour & BBM' }
+      { label: 'Fasilitas Bus', value: 'Full AC, Toilet, Karaoke, Bagasi Luas' },
+      { label: 'Pelayanan', value: 'Driver & Kru Tour Berpengalaman' }
     ]
   },
   {
     id: 'bus-sutan-raya',
-    name: 'Bus Sutan Raya',
-    category: 'Medium & Big Bus',
+    name: '5. Sutan Raya (Medium & Big Bus)',
+    category: 'I. Big Bus & Medium',
     pricePerDay: 0,
-    priceDisplay: 'Hubungi untuk Penawaran Harga Terbaik',
+    priceDisplay: 'Hubungi untuk Penawaran Terbaik',
     image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800',
     seats: 35,
     transmission: 'Manual',
     fuel: 'Diesel',
     includeList: ['Full AC', 'Audio System', 'Reclining Seats', 'Kabin Bersih & Harum', 'Tour Leader Berpengalaman'],
-    description: 'Bus Sutan Raya sangat cocok untuk rombongan kelas medium yang membutuhkan kelincahan di jalan perbukitan dan destinasi favorit.',
+    description: 'Bus Sutan Raya lincah di jalur perbukitan Sumatera Barat dan rute wisata nusantara.',
     rating: 4.9,
     reviewsCount: 86,
     specifications: [
       { label: 'Kapasitas', value: '31 - 35 Kursi Penumpang' },
       { label: 'Fasilitas Bus', value: 'Full AC, Sound System, Reclining Seats' },
-      { label: 'Pelayanan', value: 'Driver Khusus Spesialis Tour Sumatera & Jawa' }
+      { label: 'Pelayanan', value: 'Driver Khusus Spesialis Tour Sumbar' }
     ]
   },
   {
     id: 'bus-wulyudza',
-    name: 'Bus Wulyudza',
-    category: 'Medium Bus Pariwisata',
+    name: '6. Wulyudza (Medium Bus Pariwisata)',
+    category: 'I. Big Bus & Medium',
     pricePerDay: 0,
-    priceDisplay: 'Hubungi untuk Penawaran Harga Terbaik',
+    priceDisplay: 'Hubungi untuk Penawaran Terbaik',
     image: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&q=80&w=800',
     seats: 33,
     transmission: 'Manual',
     fuel: 'Diesel',
     includeList: ['Full AC', 'Audio Karaoke', 'Kabin Steril', 'Kursi Reclining', 'Kru Pendamping'],
-    description: 'Armada Medium Bus Wulyudza yang ekonomis, terawat, dan lincah untuk kunjungan wisata Sumatera Barat maupun luar daerah.',
+    description: 'Armada Medium Bus Wulyudza yang ekonomis, terawat, dan lincah untuk kunjungan wisata rombongan sedang.',
     rating: 4.8,
     reviewsCount: 74,
     specifications: [
@@ -123,11 +123,11 @@ export const CARS: Car[] = [
     ]
   },
 
-  // CATEGORY 2: MOBIL HIACE RENTAL
+  // II. MOBIL HIACE RENTAL
   {
     id: 'hiace-premio',
-    name: 'Toyota Hiace Premio',
-    category: 'Minibus VIP',
+    name: 'Toyota Hiace Premio (VIP Minibus)',
+    category: 'II. Mobil Hiace Rental',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Terbaik',
     image: '/hiace_premio.png',
@@ -135,7 +135,7 @@ export const CARS: Car[] = [
     transmission: 'Manual',
     fuel: 'Diesel Euro 4',
     includeList: ['Full AC Multi-Zone', 'Reclining Seats VIP', 'Audio Bluetooth & USB', 'Kabin Kedap Suara', 'Driver Profesional'],
-    description: 'Minibus mewah Toyota Hiace Premio dengan tampilan elegan, tempat duduk lega, dan kedap suara untuk kenyamanan eksklusif.',
+    description: 'Minibus mewah Toyota Hiace Premio dengan tampilan elegan, tempat duduk lega, dan kedap suara.',
     rating: 4.9,
     reviewsCount: 110,
     specifications: [
@@ -147,7 +147,7 @@ export const CARS: Car[] = [
   {
     id: 'hiace-commuter',
     name: 'Toyota Hiace Commuter',
-    category: 'Minibus Pariwisata',
+    category: 'II. Mobil Hiace Rental',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Terbaik',
     image: '/hiace.avif',
@@ -155,41 +155,21 @@ export const CARS: Car[] = [
     transmission: 'Manual',
     fuel: 'Diesel',
     includeList: ['Full AC Double Blower', 'Kabin Luas & Steril', 'Audio System Bluetooth', 'Reclining Seats', 'Driver Berpengalaman'],
-    description: 'Pilihan paling favorit untuk rombongan keluarga atau tour grup sedang dengan kapasitas hingga 15 orang penumpang.',
+    description: 'Pilihan paling favorit untuk rombongan keluarga atau tour grup sedang berkapasitas hingga 15 orang.',
     rating: 4.8,
     reviewsCount: 95,
     specifications: [
       { label: 'Kapasitas Penumpang', value: '14 - 15 Kursi Penumpang' },
       { label: 'Fasilitas Utama', value: 'AC Double Blower, Musikal Bluetooth, Charger HP' },
-      { label: 'Pelayanan', value: 'Driver Ramah & Profesional' }
+      { label: 'Pelayanan', value: 'Driver Ramah & Tepat Waktu' }
     ]
   },
 
-  // CATEGORY 3: MOBIL MINI BUS & MPV RENTAL
-  {
-    id: 'alphard',
-    name: 'Toyota Alphard',
-    category: 'Luxury Executive VIP',
-    pricePerDay: 0,
-    priceDisplay: 'Hubungi untuk Penawaran VIP',
-    image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=800',
-    seats: 7,
-    transmission: 'Automatic',
-    fuel: 'Bensin Premium',
-    includeList: ['Captain Seats Leather', 'Sunroof & Moonroof', 'Full AC Climate Control', 'Pilot Seats Massage', 'Driver VIP Khusus'],
-    description: 'Mobil MPV Mewah nomor satu untuk tamu kehormatan, pejabat, pernikahan, dan perjalanan bisnis kelas atas.',
-    rating: 5.0,
-    reviewsCount: 88,
-    specifications: [
-      { label: 'Kapasitas Penumpang', value: '6 - 7 Kursi Captain Seat' },
-      { label: 'Fasilitas Utama', value: 'Pilot Seats, Dual Sunroof, Rear Entertainment' },
-      { label: 'Pelayanan', value: 'Driver Berpakaian Rapi & Pelayanan VIP' }
-    ]
-  },
+  // III. MOBIL MINI BUS RENTAL
   {
     id: 'innova-reborn',
-    name: 'Toyota Innova Reborn / Zenix',
-    category: 'Premium MPV',
+    name: '1. Innova (Innova Reborn / Zenix)',
+    category: 'III. Mobil Mini Bus Rental',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Terbaik',
     image: '/innova3.avif',
@@ -197,19 +177,19 @@ export const CARS: Car[] = [
     transmission: 'Manual / Automatic',
     fuel: 'Diesel / Bensin',
     includeList: ['AC Double Blower', 'Suspensi Empuk & Stabil', 'Audio Touchscreen Bluetooth', 'Kabin Harum & Bersih', 'Driver Berpengalaman'],
-    description: 'Mobil keluarga kelas premium dengan kenyamanan suspensi ekstra lembut dan kabin lapang untuk seluruh anggota keluarga.',
+    description: 'Mobil keluarga premium dengan kenyamanan suspensi lembut dan kabin lapang.',
     rating: 4.9,
     reviewsCount: 135,
     specifications: [
       { label: 'Kapasitas Penumpang', value: '7 Kursi Penumpang' },
       { label: 'Fasilitas Utama', value: 'AC Climate Control, Audio Screen, Rear Charging' },
-      { label: 'Pelayanan', value: 'Driver Berpengalaman Rute Sumatera & Jawa' }
+      { label: 'Pelayanan', value: 'Driver Berpengalaman Rute Sumbar & Nusantara' }
     ]
   },
   {
     id: 'avanza',
-    name: 'Toyota Avanza',
-    category: 'Family MPV',
+    name: '2. Avanza (All New Avanza)',
+    category: 'III. Mobil Mini Bus Rental',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Ekonomis',
     image: '/avanza.avif',
@@ -217,7 +197,7 @@ export const CARS: Car[] = [
     transmission: 'Manual / Automatic',
     fuel: 'Bensin Irit',
     includeList: ['Full AC Double Blower', 'Kabin Bersih & Harum', 'Audio Bluetooth', 'Bagasi Fleksibel', 'Driver Ramah'],
-    description: 'Mobil MPV paling populer dan ekonomis untuk perjalanan tour keluarga keliling Sumatera Barat maupun luar kota.',
+    description: 'Mobil MPV terpopuler dan ekonomis untuk tour keluarga keliling Sumatera Barat maupun luar kota.',
     rating: 4.8,
     reviewsCount: 120,
     specifications: [
@@ -228,8 +208,8 @@ export const CARS: Car[] = [
   },
   {
     id: 'xenia',
-    name: 'Daihatsu Xenia',
-    category: 'Family MPV',
+    name: '3. Xenia (Daihatsu Xenia)',
+    category: 'III. Mobil Mini Bus Rental',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Ekonomis',
     image: '/xenia.avif',
@@ -237,7 +217,7 @@ export const CARS: Car[] = [
     transmission: 'Manual / Automatic',
     fuel: 'Bensin Irit',
     includeList: ['AC Double Blower', 'Kabin Steril', 'Audio Bluetooth', 'Driver Profesional'],
-    description: 'Pilihan kendaraan praktis, lincah, dan hemat untuk kebutuhan wisata hemat bersama keluarga.',
+    description: 'Pilihan kendaraan praktis, lincah, dan hemat untuk kebutuhan wisata keluarga.',
     rating: 4.8,
     reviewsCount: 78,
     specifications: [
@@ -248,8 +228,8 @@ export const CARS: Car[] = [
   },
   {
     id: 'calya',
-    name: 'Toyota Calya',
-    category: 'Compact MPV',
+    name: '4. Calya (Toyota Calya)',
+    category: 'III. Mobil Mini Bus Rental',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Ekonomis',
     image: '/calya.avif',
@@ -268,8 +248,8 @@ export const CARS: Car[] = [
   },
   {
     id: 'sigra',
-    name: 'Daihatsu Sigra',
-    category: 'Compact MPV',
+    name: '5. Sigra (Daihatsu Sigra)',
+    category: 'III. Mobil Mini Bus Rental',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Ekonomis',
     image: '/sigra.avif',
@@ -285,6 +265,26 @@ export const CARS: Car[] = [
       { label: 'Fasilitas Utama', value: 'AC Air Circulator, Audio' },
       { label: 'Pelayanan', value: 'Driver Sopan & Terpercaya' }
     ]
+  },
+  {
+    id: 'alphard',
+    name: '6. Alphard (Toyota Alphard VIP)',
+    category: 'III. Mobil Mini Bus Rental',
+    pricePerDay: 0,
+    priceDisplay: 'Hubungi untuk Penawaran VIP',
+    image: 'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=800',
+    seats: 7,
+    transmission: 'Automatic',
+    fuel: 'Bensin Premium',
+    includeList: ['Captain Seats Leather', 'Sunroof & Moonroof', 'Full AC Climate Control', 'Pilot Seats Massage', 'Driver VIP Khusus'],
+    description: 'Mobil MPV Mewah nomor satu untuk tamu kehormatan, pejabat, pernikahan, dan perjalanan bisnis kelas atas.',
+    rating: 5.0,
+    reviewsCount: 88,
+    specifications: [
+      { label: 'Kapasitas Penumpang', value: '6 - 7 Kursi Captain Seat' },
+      { label: 'Fasilitas Utama', value: 'Pilot Seats, Dual Sunroof, Rear Entertainment' },
+      { label: 'Pelayanan', value: 'Driver Berpakaian Rapi & Pelayanan VIP' }
+    ]
   }
 ];
 
@@ -296,7 +296,7 @@ export const TESTIMONIALS: Testimonial[] = [
     text: 'Sangat puas menggunakan jasa CV. Anugrah Pariwisata! Bus Big Bus nya sangat nyaman, AC dingin, ada toilet bersih, karaoke, selimut bantal lengkap. Tour Leader mas Anton sangat ramah memandu kami sepanjang jalan.',
     rating: 5,
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200',
-    carModel: 'Bus Eksekutif Zivanes',
+    carModel: 'Big Bus Eksekutif Zivanes',
     date: '2026-07-15'
   },
   {
