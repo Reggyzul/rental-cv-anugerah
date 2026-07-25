@@ -60,7 +60,145 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ]
   },
 
-  // 2. TOUR BATAM - BINTAN 2026 (10 HARI PP)
+  // 2. EDISI DANAU TOBA - TITIK NOL SABANG (10 HARI PP)
+  {
+    id: 'tour-danau-toba-sabang',
+    title: 'TOUR DANAU TOBA - TITIK NOL SABANG ACEH',
+    duration: '10 Hari PP',
+    route: ['D. Toba', 'P. Samosir', 'Berastagi', 'Banda Aceh', 'P. Sabang', 'Medan', 'Pekanbaru'],
+    routeDisplay: 'Danau Toba - Pulau Samosir - Berastagi - Banda Aceh - Pulau Sabang - Medan',
+    image: '/gallery_sabang.jpg',
+    badge: '10 Hari PP (22 - 31 Aug 2026)',
+    minPrice: 'Rp 2.750.000',
+    tiers: [
+      {
+        busType: 'Big Bus Eksekutif',
+        capacity: 'Isi 43 Orang',
+        pricePerPerson: 'Rp 2.750.000',
+        hotelDetails: 'Penginapan Hotel di Danau Toba, Banda Aceh & Sabang',
+        notes: 'Periode Keberangkatan: 22 Agustus 2026 - 31 Agustus 2026'
+      },
+      {
+        busType: 'Big Bus Legrest V.I.P',
+        capacity: 'Isi 32 Orang',
+        pricePerPerson: 'Rp 3.750.000',
+        hotelDetails: 'Penginapan Hotel di Danau Toba, Banda Aceh & Sabang',
+        notes: 'Periode Keberangkatan: 22 Agustus 2026 - 31 Agustus 2026'
+      }
+    ],
+    highlights: [
+      'Panorama Megah Danau Toba & Pulau Samosir',
+      'Tugu Nol Kilometer Indonesia di Pulau Sabang Aceh',
+      'Pantai Iboih & Masjid Raya Baiturrahman Banda Aceh',
+      'Wisata Kuliner Medan & Riau'
+    ],
+    includes: [
+      'Transportasi Armada Big Bus AC (Eksekutif 43 seat / VIP Legrest 32 seat)',
+      'Penginapan Hotel di Danau Toba & Banda Aceh',
+      'Penyeberangan Feri Sabang & Danau Toba',
+      'Driver Handal & Paham Rute Sumatera-Aceh'
+    ],
+    excludes: [
+      'Biaya Tiket Masuk Objek Wisata',
+      'Biaya Makan Selama Tour',
+      'Pengeluaran Pribadi'
+    ]
+  },
+
+  // 3. PROMO SPESIAL TOUR 3 NEGARA (MALAYSIA - SINGAPORE - THAILAND)
+  {
+    id: 'tour-3-negara-asia',
+    title: 'TOUR 3 NEGARA (MALAYSIA - SINGAPORE - THAILAND)',
+    duration: 'Multi-Durasi (3 s/d 7 Hari)',
+    route: ['Malaysia', 'Singapore', 'Thailand (Hatyai)'],
+    routeDisplay: 'Malaysia (KL & Genting) - Singapore (Merlion) - Thailand (Hatyai)',
+    image: 'https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&q=80&w=800',
+    badge: 'Internasional Asia Promo',
+    minPrice: 'Rp 2.400.000',
+    tiers: [
+      {
+        busType: 'Tour Short Escape (KL - Genting - Melaka)',
+        capacity: '3 Hari 2 Malam (All In)',
+        pricePerPerson: 'Rp 2.400.000',
+        hotelDetails: 'Hotel Bintang 3* / 4* di Kuala Lumpur & Melaka (Gratis Cable Car Genting)',
+        notes: 'Berangkat Setiap Bulan (Juli - Desember 2026)'
+      },
+      {
+        busType: 'Tour 2 Negara (Malaysia - Singapore)',
+        capacity: '4 Hari 3 Malam (All In)',
+        pricePerPerson: 'Rp 3.500.000',
+        hotelDetails: 'Hotel Bintang 3* / 4* di Kuala Lumpur & Singapore',
+        notes: 'Berangkat Setiap Bulan (Juli - Desember 2026)'
+      },
+      {
+        busType: 'Tour 3 Negara (Malaysia - Singapore - Thailand Hatyai)',
+        capacity: '7 Hari 6 Malam (All In)',
+        pricePerPerson: 'Rp 4.750.000',
+        hotelDetails: 'Hotel Bintang 3* / 4* di Malaysia, Singapore & Hatyai Thailand',
+        notes: 'Berangkat Setiap Bulan (Juli - Desember 2026). Bisa 1 Orang Gabung'
+      }
+    ],
+    highlights: [
+      'Ikon Petronas Twin Towers Kuala Lumpur & Genting Highlands',
+      'Merlion Park & Jewel Changi Airport Singapore',
+      'Wisata Kuliner Malam & Belanja Hatyai Thailand',
+      'Gratis Tiket Cable Car Genting Highlands'
+    ],
+    includes: [
+      'Transportasi Privat (MPV, Van, / Bus Pariwisata AC)',
+      'Penginapan Hotel Bintang 3* & 4*',
+      'Konsumsi Makan Sesuai Program & Air Mineral',
+      'Tour Leader / Guide Berpengalaman & Pengurusan MDAC/MyICA/TDAC',
+      'Asuransi Perjalanan Thailand & Gratis Cable Car Genting'
+    ],
+    excludes: [
+      'Tiket Pesawat PP (Exclude/Optional)',
+      'Tipping SE / Guide (Wajib Per Orang)',
+      'Pengeluaran Pribadi'
+    ]
+  },
+
+  // 4. RUSSIA AURORA 9D7N (MOSCOW - ST. PETERSBURG - MURMANSK)
+  {
+    id: 'tour-russia-aurora',
+    title: 'RUSSIA AURORA 9D7N (NORTHERN LIGHTS)',
+    duration: '9 Hari 7 Malam',
+    route: ['Moscow', 'St. Petersburg', 'Murmansk', 'Moscow'],
+    routeDisplay: 'Moscow - St. Petersburg - Murmansk (Aurora Hunt)',
+    image: 'https://images.unsplash.com/photo-1513326718677-b964603b136d?auto=format&fit=crop&q=80&w=800',
+    badge: 'Internasional Russia',
+    minPrice: 'Rp 37.500.000',
+    tiers: [
+      {
+        busType: 'Flight Emirates + Kereta Sapsan + Bus AC Russia',
+        capacity: 'Keberangkatan 25 November 2025',
+        pricePerPerson: 'Rp 37.500.000',
+        hotelDetails: 'Hotel Bintang 4* di Moscow, St. Petersburg & Murmansk',
+        notes: 'Penerbangan Ekonomi PP dengan Emirates Airlines'
+      }
+    ],
+    highlights: [
+      'Berburu Fenomena Cahaya Aurora Borealis di Murmansk Kutub Utara',
+      'Red Square, Kremlin & Saint Basil Cathedral Moscow',
+      'Hermitage Museum & Palace Square St. Petersburg',
+      'Pengalaman Kereta Cepat Sapsan Rusia'
+    ],
+    includes: [
+      'Tiket Pesawat Internasional Ekonomi PP (Emirates Airlines)',
+      'Tiket Pesawat Domestik Rusia & Tiket Kereta Cepat Sapsan',
+      'Guide & Tour Leader Berpengalaman',
+      'Bagasi Sesuai Maskapai & Makan Sesuai Program',
+      'Transportasi Bus AC & Tiket Masuk Objek Wisata',
+      'Akomodasi Hotel Bintang 4*'
+    ],
+    excludes: [
+      'Tipping Guide & Tour Leader',
+      'Optional Tour & Kelebihan Bagasi',
+      'Asuransi Perjalanan & Pengeluaran Pribadi'
+    ]
+  },
+
+  // 5. TOUR BATAM - BINTAN 2026 (10 HARI PP)
   {
     id: 'tour-batam-bintan-2026',
     title: 'TOUR BATAM - BINTAN 2026',
@@ -105,7 +243,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ]
   },
 
-  // 3. 11D8N WEST EUROPE + VENICE (INTERNASIONAL)
+  // 6. 11D8N WEST EUROPE + VENICE (INTERNASIONAL)
   {
     id: 'tour-west-europe-venice',
     title: '11D8N WEST EUROPE + VENICE',
@@ -150,7 +288,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ]
   },
 
-  // 4. 9D7N WEST USA (INTERNASIONAL)
+  // 7. 9D7N WEST USA (INTERNASIONAL)
   {
     id: 'tour-west-usa-9d7n',
     title: '9D7N WEST USA (LA, LAS VEGAS, SAN FRANCISCO)',
@@ -187,15 +325,15 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ]
   },
 
-  // 5. TOUR LOMBOK - BALI (16 HARI)
+  // 8. TOUR LOMBOK, BALI, BROMO (16 HARI PP)
   {
     id: 'tour-lombok-bali',
-    title: 'TOUR LOMBOK - BALI',
-    duration: '16 Hari',
-    route: ['Lombok', 'Bali', 'Bromo', 'Jogja', 'Jakarta'],
-    routeDisplay: 'Lombok - Bali - Bromo - Jogja - Jakarta',
+    title: 'TOUR LOMBOK - BALI - BROMO',
+    duration: '16 Hari PP',
+    route: ['Bali', 'Lombok', 'Gunung Bromo', 'Jogjakarta', 'Bandung', 'Jakarta'],
+    routeDisplay: 'Bali - Lombok - Gunung Bromo - Jogjakarta - Bandung - Jakarta',
     image: '/dest_lombok.jpg',
-    badge: '16 Hari Spesial Tour',
+    badge: '16 Hari Spesial (26 Apr - 10 Mei 2026)',
     minPrice: 'Rp 3.875.000',
     tiers: [
       {
@@ -203,37 +341,36 @@ export const TOUR_PACKAGES: TourPackage[] = [
         capacity: 'Isi 43 Orang',
         pricePerPerson: 'Rp 3.875.000',
         hotelDetails: 'Hotel 2 Malam di Lombok, 2 Malam di Bali & 2 Malam di Jogja',
-        notes: 'Tidak termasuk Biaya masuk wisata & Biaya makan selama tour'
+        notes: 'Tidak termasuk Biaya masuk wisata & Biaya makan'
       },
       {
         busType: 'Big Bus Legrest V.I.P',
-        capacity: 'Isi 33 Orang',
-        pricePerPerson: 'Rp 4.875.000',
+        capacity: 'Isi 33 Orang (Edisi 26 Apr - 10 Mei 2026)',
+        pricePerPerson: 'Rp 4.775.000',
         hotelDetails: 'Hotel 2 Malam di Lombok, 2 Malam di Bali & 2 Malam di Jogja',
-        notes: 'Tidak termasuk Biaya Masuk destinasi pariwisata & Biaya Makan'
+        notes: 'Periode Spesial: 26 April 2026 - 10 Mei 2026'
       }
     ],
     highlights: [
-      'Menikmati keindahan pantai & gili eksotis Lombok',
-      'Eksplorasi budaya & pantai megah di Bali',
+      'Pantai Pandawa & Pura Bersejarah di Pulau Dewata Bali',
+      'Keindahan Pantai Gili Khas Lombok',
       'Penanjakan Sunrise & Lautan Pasir Gunung Bromo',
-      'Wisata sejarah & budaya Keraton Jogja',
-      'City Tour Ibu Kota Jakarta & Belanja Souvenir'
+      'Wisata Budaya Yogyakarta, Bandung & Jakarta'
     ],
     includes: [
-      'Transportasi Armada Big Bus AC (Eksekutif 43 seat / VIP Legrest 33 seat)',
-      'Penginapan Hotel sesuai rincian per malam di tiap destinasi',
-      'Driver Profesional, Bensin/BBM, Toll & Parkir',
-      'Penyeberangan Kapal Feri Antar Pulau'
+      'Transportasi Big Bus Legrest AC Pariwisata',
+      'Penginapan Hotel di Lombok, Bali, Jogja & Bandung',
+      'Guide Lokal & Tour Leader Berpengalaman',
+      'Penyeberangan Feri Antar Pulau'
     ],
     excludes: [
       'Biaya Tiket Masuk Objek Wisata',
       'Biaya Makan Selama Tour',
-      'Pengeluaran Pribadi & Tips Crew'
+      'Pengeluaran Pribadi'
     ]
   },
 
-  // 6. TOUR SUMBAWA - LOMBOK - BALI (16 HARI)
+  // 9. TOUR SUMBAWA - LOMBOK - BALI (16 HARI)
   {
     id: 'tour-sumbawa-lombok-bali',
     title: 'TOUR SUMBAWA - LOMBOK - BALI',
@@ -279,7 +416,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     ]
   },
 
-  // 7. TOUR BANGKA - BELITUNG (10 HARI)
+  // 10. TOUR BANGKA - BELITUNG (10 HARI)
   {
     id: 'tour-bangka-belitung',
     title: 'TOUR BANGKA - BELITUNG',
@@ -316,52 +453,6 @@ export const TOUR_PACKAGES: TourPackage[] = [
       'Penginapan Hotel 2 Malam Bangka & 2 Malam Belitung',
       'Driver Berpengalaman, BBM, Toll & Penyeberangan Kapal',
       'Air Mineral & Pelayanan Pariwisata'
-    ],
-    excludes: [
-      'Biaya Tiket Masuk Objek Wisata',
-      'Biaya Makan Selama Tour',
-      'Pengeluaran Pribadi'
-    ]
-  },
-
-  // 8. TOUR DANAU TOBA - P. SABANG (TITIK 0 KM)
-  {
-    id: 'tour-danau-toba-sabang',
-    title: 'TOUR DANAU TOBA - P. SABANG (TITIK 0 KM)',
-    duration: '10 Hari',
-    route: ['D. Toba', 'Berastagi', 'P. Sabang', 'Banda Aceh', 'Medan', 'Pekanbaru'],
-    routeDisplay: 'D. Toba - Berastagi - P. Sabang - Banda Aceh - Medan - Pekanbaru',
-    image: '/gallery_sabang.jpg',
-    badge: '10 Hari Ujung Barat Nusantara',
-    minPrice: 'Rp 2.850.000',
-    tiers: [
-      {
-        busType: 'Big Bus Eksekutif',
-        capacity: 'Isi 43 Orang',
-        pricePerPerson: 'Rp 2.850.000',
-        hotelDetails: 'Hotel 1 Malam di D. Toba, 3 Malam di Banda Aceh',
-        notes: 'Tidak termasuk Biaya masuk wisata & Biaya makan selama tour'
-      },
-      {
-        busType: 'Big Bus Legrest V.I.P',
-        capacity: 'Isi 33 Orang',
-        pricePerPerson: 'Rp 3.850.000',
-        hotelDetails: 'Hotel 1 Malam di D. Toba, 3 Malam di Banda Aceh',
-        notes: 'Tidak termasuk biaya masuk wisata & Biaya Makan'
-      }
-    ],
-    highlights: [
-      'Panorama Megah Danau Toba & Air Terjun Sipiso-piso',
-      'Tugu Nol Kilometer Indonesia di Pulau Sabang',
-      'Pantai Iboih, Pulau Rubiah & Masjid Raya Baiturrahman Banda Aceh',
-      'Museum Tsunami Aceh & Kapal Apung PLN',
-      'Kota Medan & Transit Riau'
-    ],
-    includes: [
-      'Transportasi Big Bus AC Pariwisata (Eksekutif 43 / VIP Legrest 33)',
-      'Penginapan Hotel 1 Malam Danau Toba & 3 Malam Banda Aceh',
-      'Penyeberangan Feri Sabang & Danau Toba',
-      'Driver Handal & Paham Rute Sumatera-Aceh'
     ],
     excludes: [
       'Biaya Tiket Masuk Objek Wisata',
