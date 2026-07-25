@@ -186,25 +186,22 @@ export default function App() {
           )}
         </AnimatePresence>
 
-        {/* Character Avatar Floater Badge */}
+        {/* Official WhatsApp Floating Action Button */}
         <motion.div
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
           onClick={handleWhatsAppChat}
-          className="flex items-center gap-2 cursor-pointer group"
-          id="floating-cs-avatar-widget"
+          className="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-2xl hover:bg-[#20ba5a] transition-all cursor-pointer border-2 border-white relative group"
+          id="floating-whatsapp-widget"
+          title="Chat WhatsApp Resmi CV. Anugrah Pariwisata"
         >
-          <div className="bg-gradient-to-r from-amber-400 to-orange-400 text-slate-950 font-sans font-black text-[10px] sm:text-xs px-3 py-1.5 rounded-xl shadow-lg border border-amber-300 uppercase tracking-wider flex items-center gap-1 group-hover:scale-105 transition-transform">
-            <span>Hi, I am CS ANUGRAH</span>
-          </div>
+          {/* Official WhatsApp SVG Logo */}
+          <svg className="w-8 h-8 fill-current" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-1.16 4.237 4.403-1.154z"/>
+          </svg>
 
-          <div className="w-13 h-13 rounded-full bg-gradient-to-br from-amber-400 via-red-500 to-red-700 p-0.5 shadow-2xl border-2 border-white relative shrink-0">
-            <img
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200"
-              alt="CS Anugrah Pariwisata"
-              className="w-full h-full object-cover rounded-full"
-            />
-            <div className="w-3.5 h-3.5 rounded-full bg-green-100 border-2 border-white absolute bottom-0 right-0 shadow-xs" />
-          </div>
+          {/* Online Pulse Status Dot */}
+          <span className="w-3.5 h-3.5 rounded-full bg-emerald-400 border-2 border-white absolute bottom-0 right-0 shadow-xs animate-pulse" />
         </motion.div>
 
       </div>
