@@ -27,7 +27,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
       title: 'Padang',
       subtitle: 'Kota Pantai, Kuliner & Sejarah',
       badge: 'Domestik Sumbar',
-      image: '/dest_padang.jpg',
+      image: '/dest_padang.avif',
       rating: 4.9,
       reviews: 145,
       spots: ['Pantai Air Manis & Malin Kundang', 'Kota Tua Padang & Jembatan Siti Nurbaya', 'Museum Adityawarman', 'Pantai Padang (Taplau) & Kuliner Minang']
@@ -51,7 +51,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
       title: 'Bukittinggi',
       subtitle: 'Jam Gadang & Ngarai Sianok',
       badge: 'Ikon Wisata Sumbar',
-      image: '/dest_bukittinggi.jpg',
+      image: '/dest_bukittinggi.avif',
       rating: 5.0,
       reviews: 185,
       spots: ['Jam Gadang & Pasar Atas', 'Ngarai Sianok & Lobang Jepang', 'Taman Marga Satwa & Benteng Fort de Kock', 'Janjang Koto Gadang (Great Wall Minangkabau)']
@@ -75,7 +75,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
       title: 'Payakumbuh',
       subtitle: 'Lembah Harau & Kelok 9',
       badge: 'Pesona Tebing Alam',
-      image: '/dest_payakumbuh.jpg',
+      image: '/dest_payakumbuh.avif',
       rating: 4.9,
       reviews: 140,
       spots: ['Lembah Harau (Air Terjun & Tebing Granit)', 'Jembatan Layang Kelok 9', 'Kampung Eropa Harau', 'Padang Mangateh (New Zealand van Simalanggang)']
@@ -87,7 +87,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
       title: 'Alahan Panjang',
       subtitle: 'Danau Diatas & Danau Dibawah',
       badge: 'Swiss van Sumatra',
-      image: '/dest_alahan_panjang.jpg',
+      image: '/dest_alahan_panjang.avif',
       rating: 4.8,
       reviews: 98,
       spots: ['Danau Diatas & Danau Dibawah (Danau Kembar)', 'Kebun Teh Alahan Panjang', 'Bukit Cambai 360°', 'Kebun Strawberry & Sayur Segar']
@@ -101,7 +101,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
       title: 'Danau Toba & Samosir',
       subtitle: 'Sumatera Utara',
       badge: 'Destinasi Super Prioritas',
-      image: '/dest_toba.jpg',
+      image: '/dest_toba.avif',
       rating: 4.9,
       reviews: 160,
       spots: ['Pulau Samosir & Tomok', 'Parapat & Berastagi', 'Air Terjun Sipiso-piso', 'Taman Simalem Resort']
@@ -113,7 +113,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
       title: 'Titik O Km Sabang Aceh',
       subtitle: 'Nanggroe Aceh Darussalam',
       badge: 'Ujung Barat Indonesia',
-      image: '/dest_sabang.jpg',
+      image: '/dest_sabang.avif',
       rating: 4.9,
       reviews: 125,
       spots: ['Tugu Nol Kilometer Indonesia', 'Pantai Iboih & Pulau Rubiah', 'Masjid Raya Baiturrahman Banda Aceh', 'Museum Tsunami Aceh']
@@ -125,7 +125,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
       title: 'Pekanbaru',
       subtitle: 'Provinsi Riau',
       badge: 'Wisata Melayu',
-      image: '/dest_pekanbaru.jpg',
+      image: '/dest_pekanbaru.avif',
       rating: 4.8,
       reviews: 95,
       spots: ['Masjid An-Nur Pekanbaru', 'Istana Siak Sri Indrapura', 'Pasar Bawah Pekanbaru', 'Danau Buatan Lembah Sari']
@@ -137,7 +137,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
       title: 'Batam',
       subtitle: 'Kota Bisnis, Bahari & Belanja (Kepulauan Riau)',
       badge: 'Wisata Belanja & Bahari',
-      image: '/dest_batam.jpg',
+      image: '/dest_batam.avif',
       rating: 4.9,
       reviews: 138,
       spots: ['Jembatan Barelang Batam', 'Nagoya Shopping District', 'Welcome to Batam Landmark', 'Kuliner Seafood Harbour Bay']
@@ -149,7 +149,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
       title: 'Pulau Bintan',
       subtitle: 'Resort & Bahari Eksotis (Kepulauan Riau)',
       badge: 'Resort Kelas Dunia',
-      image: '/dest_bintan.jpg',
+      image: '/dest_bintan.avif',
       rating: 4.9,
       reviews: 120,
       spots: ['Treasure Bay Bintan (Kolam Terbesar Asia)', 'Gurun Pasir Telaga Biru Bintan', 'Lagoi Bay Beach', 'Vihara Ksitigarbha Bodhisattva (1000 Patung)']
@@ -173,7 +173,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
       title: 'Pulau Belitung',
       subtitle: 'Surga Laskar Pelangi (Bangka Belitung)',
       badge: 'Laskar Pelangi',
-      image: '/dest_belitung.jpg',
+      image: '/dest_belitung.avif',
       rating: 4.9,
       reviews: 142,
       spots: ['Pantai Tanjung Tinggi (Batu Granit Raksasa)', 'Pulau Lengkuas & Mercusuar Bersejarah', 'Museum Kata Andrea Hirata', 'Danau Kaolin Belitung']
@@ -197,7 +197,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
       title: 'Lombok',
       subtitle: 'Pulau Seribu Masjid & Pantai Eksotis (NTB)',
       badge: 'Gili & Mandalika',
-      image: '/dest_lombok.jpg',
+      image: '/dest_lombok.avif',
       rating: 4.9,
       reviews: 185,
       spots: ['Gili Trawangan, Gili Meno & Gili Air', 'Sirkuit Internasional Mandalika', 'Pantai Pink (Tangsi)', 'Desa Adat Sade & Sukarara']
@@ -209,7 +209,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
       title: 'Sumbawa',
       subtitle: 'Pesona Alam & Island Hopping (NTB)',
       badge: 'Savana Kenawa',
-      image: '/dest_sumbawa.jpg',
+      image: '/dest_sumbawa.avif',
       rating: 4.8,
       reviews: 95,
       spots: ['Pulau Kenawa (Savana & Sunset)', 'Pulau Moyo & Air Terjun Mata Jitu', 'Pantai Lakey (Surfing World Spot)', 'Istana Dalam Loka Sumbawa']
@@ -221,7 +221,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
       title: 'Malang & G. Bromo',
       subtitle: 'Jawa Timur',
       badge: 'Sunrise Favorite',
-      image: '/dest_bromo.jpg',
+      image: '/dest_bromo.avif',
       rating: 5.0,
       reviews: 210,
       spots: ['Penanjakan Sunrise Bromo & Kawah Bromo', 'Pasir Berbisik & Bukit Teletubbies', 'Kota Batu Malang (Jatim Park, Museum Angkut)', 'Petik Apel & Coban Rondo']
@@ -233,7 +233,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
       title: 'Jogja',
       subtitle: 'Kota Budaya, Istimewa & Kuliner (DIY)',
       badge: 'Kota Budaya',
-      image: '/dest_jogja.jpg',
+      image: '/dest_jogja.avif',
       rating: 5.0,
       reviews: 205,
       spots: ['Jalan Malioboro & Keraton Yogyakarta', 'Candi Borobudur & Candi Prambanan', 'Jeep Lava Tour Gunung Merapi', 'Pantai Parangtritis & HeHa Sky View']
@@ -245,7 +245,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
       title: 'Bandung',
       subtitle: 'Kota Kembang, Pegunungan & Belanja (Jawa Barat)',
       badge: 'Kota Kembang',
-      image: '/dest_bandung.jpg',
+      image: '/dest_bandung.avif',
       rating: 4.9,
       reviews: 175,
       spots: ['Gunung Tangkuban Perahu', 'Kawah Putih Ciwidey', 'Dusun Bambu & Farmhouse Lembang', 'Jalan Riau & Cihampelas Shopping District']
@@ -257,7 +257,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
       title: 'Jakarta',
       subtitle: 'Metropolis Capital & Theme Park (DKI Jakarta)',
       badge: 'Metropolitan Tour',
-      image: '/dest_jakarta.jpg',
+      image: '/dest_jakarta.avif',
       rating: 4.8,
       reviews: 160,
       spots: ['Monumen Nasional (Monas) & Kota Tua', 'Taman Impian Jaya Ancol & Dufan', 'Taman Mini Indonesia Indah (TMII)', 'Grand Indonesia & Senayan City']

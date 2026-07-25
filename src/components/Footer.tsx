@@ -51,7 +51,7 @@ export default function Footer({ lang, onNavigateSection }: FooterProps) {
           <div className="md:col-span-5 space-y-5">
             <div className="flex items-center gap-3">
               <img
-                src="/logo_original.jpg"
+                src="/logo_original.avif"
                 alt="CV. Anugrah Pariwisata Logo"
                 className="h-14 w-auto object-contain rounded-lg bg-white p-1 shadow-md shrink-0"
               />
@@ -158,7 +158,7 @@ export default function Footer({ lang, onNavigateSection }: FooterProps) {
           {/* Left: Logo & Copyright Text */}
           <div className="flex items-center gap-3">
             <img
-              src="/logo_original.jpg"
+              src="/logo_original.avif"
               alt="CV. Anugrah Pariwisata"
               className="h-8 w-auto object-contain rounded bg-white p-0.5 shadow-xs shrink-0"
             />

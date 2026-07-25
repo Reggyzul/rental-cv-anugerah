@@ -70,7 +70,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     duration: '10 Hari',
     route: ['D. Toba', 'Brastagi', 'P. Sabang', 'Banda Aceh', 'Medan', 'Pekanbaru'],
     routeDisplay: 'D. Toba - Brastagi - P. Sabang - Banda Aceh - Medan - Pekanbaru',
-    image: '/gallery_sabang.jpg',
+    image: '/gallery_sabang.avif',
     badge: 'Domestik (Jadwal Custom)',
     minPrice: 'Rp 2.850.000',
     tiers: [
@@ -177,7 +177,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     duration: '9 Hari 6 Malam / 9 Hari 7 Malam',
     route: ['Moscow', 'St. Petersburg', 'Murmansk'],
     routeDisplay: 'Moscow - St. Petersburg - Murmansk (Aurora Hunt)',
-    image: '/dest_russia.jpg',
+    image: '/dest_russia.avif',
     badge: 'Internasional Russia (Jadwal Custom)',
     minPrice: 'Rp 31.990.000',
     tiers: [
@@ -225,7 +225,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     duration: '10 Hari',
     route: ['Pulau Batam', 'Pulau Bintan', 'Pekanbaru'],
     routeDisplay: 'P. Batam - P. Bintan - Pekanbaru',
-    image: '/dest_batam.jpg',
+    image: '/dest_batam.avif',
     badge: 'Domestik (Jadwal Custom)',
     minPrice: 'Rp 2.875.000',
     tiers: [
@@ -355,7 +355,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     duration: '16 Hari',
     route: ['Lombok', 'Bali', 'Bromo', 'Jogja', 'Jakarta'],
     routeDisplay: 'Lombok - Bali - Bromo - Jogja - Jakarta',
-    image: '/dest_lombok.jpg',
+    image: '/dest_lombok.avif',
     badge: 'Domestik (Jadwal Custom)',
     minPrice: 'Rp 3.875.000',
     tiers: [
@@ -401,7 +401,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     duration: '16 Hari',
     route: ['Sumbawa', 'Lombok', 'Bali', 'Jogja', 'Jakarta'],
     routeDisplay: 'Sumbawa - Lombok - Bali - Jogja - Jakarta',
-    image: '/dest_sumbawa.jpg',
+    image: '/dest_sumbawa.avif',
     badge: 'Domestik (Jadwal Custom)',
     minPrice: 'Rp 4.275.000',
     tiers: [
@@ -448,7 +448,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     duration: '10 Hari',
     route: ['Bangka', 'Belitung', 'Palembang'],
     routeDisplay: 'Bangka - Belitung - Palembang',
-    image: '/dest_belitung.jpg',
+    image: '/dest_belitung.avif',
     badge: 'Domestik (Jadwal Custom)',
     minPrice: 'Rp 2.975.000',
     tiers: [

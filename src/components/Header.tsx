@@ -61,7 +61,7 @@ export default function Header({
               id="header-logo"
             >
               <img
-                src="/logo_original.jpg"
+                src="/logo_original.avif"
                 alt="CV. Anugrah Pariwisata Tour & Travel"
                 className="h-14 w-auto object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-200"
                 style={{ maxWidth: '160px' }}

@@ -19,7 +19,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       title: 'Tour Silaturahmi Sipiso-Piso & Danau Toba',
       subtitle: 'Keluarga Besar Sepakat bersama CV. Anugrah Pariwisata',
       location: 'Air Terjun Sipiso-Piso, Danau Toba, Sumatera Utara',
-      image: '/gallery_sipisopiso.jpg',
+      image: '/gallery_sipisopiso.avif',
       badge: 'Danau Toba & Sipiso-Piso'
     },
     {
@@ -27,7 +27,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       title: 'Tour Monumen Kapal Apung W.K.B Banda Aceh',
       subtitle: 'Kunjungan Wisata Sejarah & Edukasi Tsunami Aceh',
       location: 'Monumen Kapal Apung PLN, Banda Aceh',
-      image: '/gallery_kapal_apung.jpg',
+      image: '/gallery_kapal_apung.avif',
       badge: 'Banda Aceh Tour'
     },
     {
@@ -35,7 +35,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       title: 'Wisata Keagamaan Masjid Raya Baiturrahman',
       subtitle: 'Momentum Kebersamaan Peserta Tour Aceh CV. Anugrah Pariwisata',
       location: 'Masjid Raya Baiturrahman, Banda Aceh',
-      image: '/gallery_baiturrahman.jpg',
+      image: '/gallery_baiturrahman.avif',
       badge: 'Masjid Baiturrahman'
     },
     {
@@ -43,7 +43,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       title: 'Tour Silaturahmi Senggigi View Lombok',
       subtitle: 'Peserta Tour Nusantara di Spot Ikonik Senggigi',
       location: 'Senggigi View Beach, Lombok, NTB',
-      image: '/gallery_senggigi.jpg',
+      image: '/gallery_senggigi.avif',
       badge: 'Senggigi Lombok'
     },
     {
@@ -51,7 +51,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       title: 'Tour Silaturahmi Candi Prambanan Jogja',
       subtitle: 'Keluarga Besar Sepakat Jelajah Heritage Nusantara',
       location: 'Kompleks Candi Prambanan, DI Yogyakarta',
-      image: '/gallery_prambanan.jpg',
+      image: '/gallery_prambanan.avif',
       badge: 'Candi Prambanan Jogja'
     },
     {
@@ -59,7 +59,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       title: 'Tour Tugu Kilometer 0 Indonesia Sabang',
       subtitle: 'Titik Ujung Barat Indonesia bersama Rombongan Keluarga Besar Sepakat',
       location: 'Tugu Kilometer 0 Indonesia, Sabang, Aceh',
-      image: '/gallery_sabang.jpg',
+      image: '/gallery_sabang.avif',
       badge: 'Sabang Kilometer 0'
     },
     {
@@ -67,7 +67,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       title: 'Tour Wisata Keagamaan Masjid Istiqlal Jakarta',
       subtitle: 'Kunjungan Rombongan Peserta Wisata di Masjid Istiqlal',
       location: 'Masjid Istiqlal, DKI Jakarta',
-      image: '/gallery_istiqlal.jpg',
+      image: '/gallery_istiqlal.avif',
       badge: 'Istiqlal Jakarta'
     },
     {
@@ -75,7 +75,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       title: 'Tour Internasional Petronas Twin Towers',
       subtitle: 'Kunjungan Wisata Mancanegara Kuala Lumpur Malaysia',
       location: 'Petronas Twin Towers, Kuala Lumpur, Malaysia',
-      image: '/gallery_petronas.jpg',
+      image: '/gallery_petronas.avif',
       badge: 'Kuala Lumpur Malaysia'
     },
     {
@@ -83,7 +83,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       title: 'Tour Mancanegara Bangkok & Thailand',
       subtitle: 'Peserta MT. Sakinah Warahmah BMKT Padang Panjang di Patung Sleeping Buddha',
       location: 'Bangkok & Hat Yai, Thailand',
-      image: '/gallery_thailand.jpg',
+      image: '/gallery_thailand.avif',
       badge: 'Thailand Tour'
     },
     {
@@ -91,7 +91,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       title: 'Tour HeHa Sky View & Jogja bersama Bus Zivanes',
       subtitle: 'Kebersamaan Rombongan Anugrah Pariwisata & Team Zivanes Bus',
       location: 'HeHa Sky View, Gunungkidul, Yogyakarta',
-      image: '/gallery_heha.jpg',
+      image: '/gallery_heha.avif',
       badge: 'HeHa Jogja Tour'
     },
     {
@@ -99,7 +99,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       title: 'Tour Jeep Offroad Gunung Bromo & Pasir Berbisik',
       subtitle: 'Petualangan Seru Peserta Rombongan CV. Anugrah Pariwisata di Bromo',
       location: 'Kawasan Wisata Gunung Bromo, Jawa Timur',
-      image: '/gallery_bromo.jpg',
+      image: '/gallery_bromo.avif',
       badge: 'Bromo Offroad'
     },
     {
@@ -107,7 +107,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       title: 'Tour Silaturahmi Jam Gadang Bukittinggi',
       subtitle: 'Keluarga Besar Bagindo bersama Team CV. Anugrah Pariwisata',
       location: 'Taman Jam Gadang, Bukittinggi, Sumatera Barat',
-      image: '/gallery_jam_gadang.jpg',
+      image: '/gallery_jam_gadang.avif',
       badge: 'Jam Gadang Bukittinggi'
     }
   ];
@@ -120,7 +120,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-45 transform scale-105 transition-transform duration-1000"
           style={{
-            backgroundImage: `url('/gallery_sipisopiso.jpg')`
+            backgroundImage: `url('/gallery_sipisopiso.avif')`
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/85 via-slate-950/65 to-slate-950/95" />

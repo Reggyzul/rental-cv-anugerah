@@ -20,7 +20,7 @@ export default function ToursList({ lang }: ToursListProps) {
       description: lang === 'EN' 
         ? 'Best private family trip package covering Mount Bromo sunrise, Batu attractions, and Malang city highlights.'
         : 'Paket trip keluarga terbaik meliputi sunrise Gunung Bromo, objek wisata Batu, dan ikon Kota Malang.',
-      image: '/tours_bromo.jpg',
+      image: '/tours_bromo.avif',
       waMessage: 'Halo Yoga Transport, saya tertarik memesan paket wisata 3D2N Malang Batu Bromo. Mohon info detailnya.'
     },
     {
