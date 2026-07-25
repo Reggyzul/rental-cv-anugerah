@@ -109,29 +109,29 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
             >
               <div className="space-y-4">
                 
-                {/* Photo Header: Full Frame Zoom-Out Display */}
-                <div className="relative aspect-[16/10] overflow-hidden bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 flex items-center justify-center p-2">
+                {/* Photo Header: Original Full-Cover Display */}
+                <div className="relative aspect-[16/10] overflow-hidden bg-slate-900">
                   <img
                     src={car.image}
                     alt={car.name}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 drop-shadow-lg"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent" />
                   
                   {/* Category Badge */}
-                  <div className="absolute top-3 left-3 bg-[#f94a29] text-white font-display font-extrabold text-[10px] uppercase px-3 py-1 rounded-full shadow-md z-10">
+                  <div className="absolute top-3 left-3 bg-[#f94a29] text-white font-display font-extrabold text-[10px] uppercase px-3 py-1 rounded-full shadow-md">
                     {car.category}
                   </div>
 
                   {/* Seat Capacity Badge */}
-                  <div className="absolute top-3 right-3 bg-white/95 text-slate-900 font-sans text-[10px] font-bold px-2.5 py-1 rounded-full border border-slate-200 flex items-center gap-1 shadow-sm z-10">
+                  <div className="absolute top-3 right-3 bg-white/95 text-slate-900 font-sans text-[10px] font-bold px-2.5 py-1 rounded-full border border-slate-200 flex items-center gap-1 shadow-sm">
                     <Users className="w-3 h-3 text-orange-600" />
                     <span>{car.seats} Kursi</span>
                   </div>
 
                   {/* Title */}
-                  <div className="absolute bottom-2.5 left-3 right-3 space-y-1 z-10">
-                    <h3 className="font-display font-black text-lg sm:text-xl text-white tracking-tight leading-snug group-hover:text-amber-300 transition-colors drop-shadow-md">
+                  <div className="absolute bottom-3 left-3 right-3 space-y-1">
+                    <h3 className="font-display font-black text-xl text-white tracking-tight leading-snug group-hover:text-amber-300 transition-colors">
                       {car.name}
                     </h3>
                     <div className="w-16 h-1 bg-amber-400 rounded-full group-hover:w-28 transition-all duration-500" />
