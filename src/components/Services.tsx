@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { MapPin, Compass, Globe, Star, MessageCircle, CheckCircle2, Sparkles } from 'lucide-react';
+import { MapPin, Compass, Globe, Star, MessageCircle, CheckCircle2, Sparkles, ArrowRight } from 'lucide-react';
 import { TRANSLATIONS } from '../utils/translations';
 
 interface ServicesProps {
   lang: 'ID' | 'EN';
+  onViewAllDestinations?: () => void;
 }
 
-export default function Services({ lang }: ServicesProps) {
+export default function Services({ lang, onViewAllDestinations }: ServicesProps) {
   const [activeCategory, setActiveCategory] = useState<'all' | 'in_sumbar' | 'out_sumbar' | 'internasional'>('all');
   const t = TRANSLATIONS[lang];
 
@@ -354,6 +355,9 @@ export default function Services({ lang }: ServicesProps) {
     return item.categoryKey === activeCategory;
   });
 
+  // LANDING PAGE HASIL DIBATASI 6 DESTINASI (2 BARIS X 3 KOLOM)
+  const displayedHighlights = filteredHighlights.slice(0, 6);
+
   return (
     <section id="destinations" className="py-20 bg-white text-[#0d1b37] overflow-hidden relative border-b border-slate-100 text-left">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
@@ -443,9 +447,9 @@ export default function Services({ lang }: ServicesProps) {
 
         </div>
 
-        {/* DESTINATIONS CARDS GRID */}
+        {/* DESTINATIONS CARDS GRID (MAX 6 DESTINATIONS - 2 ROWS) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredHighlights.map((item, index) => (
+          {displayedHighlights.map((item, index) => (
             <motion.div
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -519,6 +523,20 @@ export default function Services({ lang }: ServicesProps) {
 
             </motion.div>
           ))}
+        </div>
+
+        {/* BOTTOM PROMINENT BUTTON: LIHAT SELENGKAPNYA WITH ARROW */}
+        <div className="pt-6 text-center">
+          <button
+            onClick={onViewAllDestinations}
+            className="inline-flex items-center gap-3 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-950 hover:from-orange-600 hover:to-red-600 text-white font-display font-black text-xs sm:text-sm uppercase tracking-widest px-8 py-4 rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-orange-600/30 transition-all duration-300 group cursor-pointer border border-slate-700 hover:border-orange-500"
+            id="view-all-destinations-btn"
+          >
+            <span>Lihat Selengkapnya</span>
+            <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-white/20 group-hover:translate-x-1.5 transition-all duration-300">
+              <ArrowRight className="w-4 h-4 text-amber-400 group-hover:text-white" />
+            </div>
+          </button>
         </div>
 
       </div>
