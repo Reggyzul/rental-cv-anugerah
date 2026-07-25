@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, MapPin, Phone, Compass, Award, ShieldCheck } from 'lucide-react';
+import { Menu, X, Search, ChevronDown, Compass, Award, Phone } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { TRANSLATIONS } from '../utils/translations';
 
@@ -17,18 +17,20 @@ export default function Header({
   activeSection,
   onNavClick,
   lang,
+  setLang,
   currentPage,
   setCurrentPage,
   onBookingClick
 }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [tourDropdownOpen, setTourDropdownOpen] = useState(false);
 
   const t = TRANSLATIONS[lang];
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 30) {
+      if (window.scrollY > 20) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -38,126 +40,137 @@ export default function Header({
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = [
-    { label: t.nav_home, id: 'home', type: 'page', pageId: 'home' },
-    { label: 'Profil & Visi Misi', id: 'about', type: 'section', sectionId: 'about' },
-    { label: 'Destinasi Tour', id: 'services', type: 'section', sectionId: 'services' },
-    { label: 'Armada Bus & Mobil', id: 'cars', type: 'section', sectionId: 'cars' },
-    { label: t.nav_contact, id: 'footer-contact', type: 'section', sectionId: 'footer-contact' }
-  ];
-
-  const handleItemClick = (item: typeof navItems[0]) => {
+  const handleItemClick = (sectionId: string) => {
     setMobileMenuOpen(false);
-    if (item.type === 'page') {
-      setCurrentPage(item.pageId as 'home' | 'about' | 'tours' | 'rentals');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else if (item.type === 'section') {
-      if (currentPage !== 'home') {
-        setCurrentPage('home');
-        setTimeout(() => {
-          const el = document.getElementById(item.sectionId);
-          if (el) el.scrollIntoView({ behavior: 'smooth' });
-        }, 100);
-      } else {
-        const el = document.getElementById(item.sectionId);
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
+    setTourDropdownOpen(false);
+    onNavClick(sectionId);
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 flex flex-col shadow-sm">
+    <header className="fixed top-0 left-0 w-full z-50 flex flex-col transition-all duration-300">
       
-      {/* 1. Top Bar */}
-      <div className="bg-slate-950 text-slate-300 border-b border-slate-800 text-xs py-1.5 hidden md:block">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <div className="flex items-center gap-6 overflow-hidden">
-            <div className="flex items-center gap-1.5 text-slate-300 truncate">
-              <MapPin className="w-3.5 h-3.5 text-orange-500 shrink-0" />
-              <span className="truncate">Kantor Pusat: Salido Painan, Pesisir Selatan | Cabang: Padang Timur</span>
-            </div>
-            <div className="flex items-center gap-1.5 shrink-0">
-              <Phone className="w-3.5 h-3.5 text-orange-500 shrink-0" />
-              <span className="font-semibold text-white">WA Fast Response: 0812-3456-7890</span>
-            </div>
-          </div>
-          <div className="flex items-center gap-4 shrink-0">
-            <div className="flex items-center gap-1.5 text-amber-400 font-extrabold">
-              <Award className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-              <span>Wisata Hemat dengan Travel Hebat</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* 2. Main Navigation Bar */}
+      {/* Main Navigation Bar (Raja-Wisata Inspired Premium Header) */}
       <div
         className={`w-full transition-all duration-300 ${
           isScrolled
-            ? 'bg-white/95 backdrop-blur-md py-1.5 border-b border-slate-200/80 shadow-md'
-            : 'bg-white py-2 border-b border-slate-200/80'
+            ? 'bg-white/95 backdrop-blur-md py-3 shadow-md border-b border-slate-200/90'
+            : 'bg-white py-4 border-b border-slate-200/70'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-14">
+          <div className="flex items-center justify-between">
             
-            {/* Logo Brand */}
+            {/* LOGO BRAND: CV. ANUGRAH PARIWISATA */}
             <div 
-              onClick={() => handleItemClick({ label: t.nav_home, id: 'home', type: 'page', pageId: 'home' })}
+              onClick={() => handleItemClick('home')}
               className="flex items-center gap-3 cursor-pointer group"
               id="header-logo"
             >
-              <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-orange-600 via-amber-600 to-orange-500 flex items-center justify-center text-white font-black font-display text-lg shadow-md shadow-orange-500/20 group-hover:scale-105 transition-transform shrink-0">
+              <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-orange-600 via-amber-600 to-orange-500 flex items-center justify-center text-white font-black font-display text-xl shadow-md shadow-orange-500/20 group-hover:scale-105 transition-transform shrink-0">
                 AP
               </div>
               <div className="flex flex-col text-left">
-                <span className="font-display font-black text-lg sm:text-xl tracking-tight text-[#0f172a] leading-none group-hover:text-orange-600 transition-colors">
-                  CV. ANUGRAH <span className="text-orange-600">PARIWISATA</span>
-                </span>
-                <span className="font-sans text-[10px] font-extrabold text-orange-600 tracking-wider mt-0.5">
+                <div className="flex items-center gap-1.5">
+                  <span className="font-display font-black text-xl tracking-tight text-[#0f172a] leading-none group-hover:text-orange-600 transition-colors">
+                    CV. ANUGRAH <span className="text-orange-600">PARIWISATA</span>
+                  </span>
+                </div>
+                <span className="font-sans text-[10px] font-extrabold text-slate-500 tracking-wider mt-0.5 uppercase">
                   WISATA HEMAT BERSAMA TRAVEL HEBAT
                 </span>
               </div>
             </div>
 
-            {/* Desktop Nav Items */}
-            <nav className="hidden lg:flex items-center gap-6" id="desktop-nav">
-              {navItems.map((item) => {
-                const isItemActive = 
-                  (item.type === 'page' && currentPage === item.pageId) ||
-                  (item.type === 'section' && activeSection === item.sectionId && currentPage === 'home');
-                  
-                return (
-                  <button
-                    key={item.id}
-                    onClick={() => handleItemClick(item)}
-                    className={`font-display text-xs sm:text-sm font-extrabold transition-colors cursor-pointer relative py-2 px-1 ${
-                      isItemActive ? 'text-orange-600' : 'text-slate-700 hover:text-orange-600'
-                    }`}
-                  >
-                    {item.label}
-                    {isItemActive && (
-                      <motion.div
-                        layoutId="activeTab"
-                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-orange-600 rounded-full"
-                      />
-                    )}
-                  </button>
-                );
-              })}
-            </nav>
+            {/* DESKTOP NAVIGATION MENU ITEMS (Exact Raja-Wisata Style) */}
+            <nav className="hidden lg:flex items-center gap-7 text-xs font-sans font-bold text-slate-700" id="desktop-nav">
+              
+              <button
+                onClick={() => handleItemClick('home')}
+                className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
+                  activeSection === 'home' ? 'text-orange-600 border-b-2 border-orange-600 font-extrabold' : ''
+                }`}
+              >
+                About Us
+              </button>
 
-            {/* CTA Booking Button */}
-            <div className="hidden lg:flex items-center gap-3">
+              <button
+                onClick={() => handleItemClick('about')}
+                className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
+                  activeSection === 'about' ? 'text-orange-600 border-b-2 border-orange-600 font-extrabold' : ''
+                }`}
+              >
+                Corporate Services
+              </button>
+
+              {/* Tour Package Dropdown */}
+              <div className="relative group">
+                <button
+                  onClick={() => handleItemClick('services')}
+                  onMouseEnter={() => setTourDropdownOpen(true)}
+                  className={`hover:text-orange-600 transition-colors cursor-pointer py-1 flex items-center gap-1 ${
+                    activeSection === 'services' ? 'text-orange-600 border-b-2 border-orange-600 font-extrabold' : ''
+                  }`}
+                >
+                  <span>Tour Package</span>
+                  <ChevronDown className="w-3.5 h-3.5 text-slate-400 group-hover:text-orange-600" />
+                </button>
+
+                {/* Dropdown Menu */}
+                <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-slate-200/90 py-2 hidden group-hover:block transition-all">
+                  <button
+                    onClick={() => handleItemClick('services')}
+                    className="w-full text-left px-4 py-2 text-xs font-semibold text-slate-700 hover:bg-orange-50 hover:text-orange-600 block"
+                  >
+                    🇲🇨 Tour In Sumatera Barat
+                  </button>
+                  <button
+                    onClick={() => handleItemClick('services')}
+                    className="w-full text-left px-4 py-2 text-xs font-semibold text-slate-700 hover:bg-orange-50 hover:text-orange-600 block"
+                  >
+                    🌋 Tour Out Sumbar (Nusantara)
+                  </button>
+                  <button
+                    onClick={() => handleItemClick('services')}
+                    className="w-full text-left px-4 py-2 text-xs font-semibold text-slate-700 hover:bg-orange-50 hover:text-orange-600 block"
+                  >
+                    ✈️ Tour Internasional Mancanegara
+                  </button>
+                </div>
+              </div>
+
+              <button
+                onClick={() => handleItemClick('cars')}
+                className={`hover:text-orange-600 transition-colors cursor-pointer py-1 ${
+                  activeSection === 'cars' ? 'text-orange-600 border-b-2 border-orange-600 font-extrabold' : ''
+                }`}
+              >
+                Transport Rent
+              </button>
+
+              <button
+                onClick={() => handleItemClick('steps')}
+                className="hover:text-orange-600 transition-colors cursor-pointer py-1"
+              >
+                Portofolio
+              </button>
+
+              <button
+                onClick={() => handleItemClick('footer-contact')}
+                className="hover:text-orange-600 transition-colors cursor-pointer py-1"
+              >
+                Travel Notes
+              </button>
+
+              {/* Search Icon button */}
               <button
                 onClick={onBookingClick}
-                className="bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white font-display font-bold text-xs uppercase px-5 py-2.5 rounded-full shadow-md shadow-orange-600/20 transition-all flex items-center gap-2 cursor-pointer"
-                id="header-booking-btn"
+                className="text-slate-500 hover:text-orange-600 transition-colors p-1.5 cursor-pointer rounded-full hover:bg-slate-100"
+                title="Pencarian / Reservasi Tour"
               >
-                <Compass className="w-4 h-4" />
-                <span>Konsultasi Tour</span>
+                <Search className="w-4 h-4" />
               </button>
-            </div>
+
+            </nav>
 
             {/* Mobile Hamburger Toggle Button */}
             <button
@@ -167,6 +180,7 @@ export default function Header({
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
+
           </div>
         </div>
       </div>
@@ -178,19 +192,40 @@ export default function Header({
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-b border-slate-200 shadow-xl overflow-hidden"
+            className="lg:hidden bg-white border-b border-slate-200 shadow-xl overflow-hidden text-left"
             id="mobile-menu-drawer"
           >
-            <div className="px-4 pt-3 pb-6 space-y-3 text-left">
-              {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => handleItemClick(item)}
-                  className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100"
-                >
-                  {item.label}
-                </button>
-              ))}
+            <div className="px-4 pt-3 pb-6 space-y-3">
+              <button
+                onClick={() => handleItemClick('home')}
+                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100"
+              >
+                About Us
+              </button>
+              <button
+                onClick={() => handleItemClick('about')}
+                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100"
+              >
+                Corporate Services
+              </button>
+              <button
+                onClick={() => handleItemClick('services')}
+                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100"
+              >
+                Tour Package
+              </button>
+              <button
+                onClick={() => handleItemClick('cars')}
+                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2 border-b border-slate-100"
+              >
+                Transport Rent
+              </button>
+              <button
+                onClick={() => handleItemClick('footer-contact')}
+                className="block w-full text-left font-display font-bold text-sm text-slate-800 hover:text-orange-600 py-2"
+              >
+                Travel Notes
+              </button>
 
               <div className="pt-2">
                 <button
@@ -200,7 +235,6 @@ export default function Header({
                   }}
                   className="w-full bg-gradient-to-r from-orange-600 to-amber-600 text-white font-display font-bold text-xs uppercase py-3 rounded-xl shadow-md flex items-center justify-center gap-2"
                 >
-                  <Compass className="w-4 h-4" />
                   <span>Konsultasi Tour WA</span>
                 </button>
               </div>
