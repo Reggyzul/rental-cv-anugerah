@@ -193,14 +193,14 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
       {/* PRECISE & PROFESSIONAL DETAIL MODAL */}
       <AnimatePresence>
         {selectedPackage && selectedTier && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center pt-20 sm:pt-24 pb-4 px-3 sm:px-6 overflow-hidden">
+          <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6 overflow-hidden">
             {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={handleCloseModal}
-              className="absolute inset-0 bg-slate-950/80 backdrop-blur-md"
+              className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-0"
             />
 
             {/* Modal Precision Box */}
@@ -209,19 +209,19 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 10 }}
               transition={{ duration: 0.2 }}
-              className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-10 text-left max-h-[calc(100vh-6.5rem)] flex flex-col my-auto"
+              className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-10 text-left max-h-[88vh] flex flex-col my-auto"
             >
               {/* Header */}
-              <div className="relative bg-slate-900 text-white p-4 sm:p-5 shrink-0 border-b border-slate-800">
+              <div className="relative bg-slate-900 text-white p-4 sm:p-5 shrink-0 border-b border-slate-800 z-20">
                 <button
                   onClick={handleCloseModal}
-                  className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 w-8 h-8 rounded-full bg-red-600 hover:bg-red-700 text-white transition-all flex items-center justify-center shadow-lg cursor-pointer z-20 hover:scale-110"
+                  className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 w-9 h-9 rounded-full bg-red-600 hover:bg-red-700 text-white transition-all flex items-center justify-center shadow-lg cursor-pointer z-30 hover:scale-110 border border-white/20"
                   title="Tutup Modal"
                 >
-                  <X className="w-4 h-4 stroke-[2.5]" />
+                  <X className="w-5 h-5 stroke-[2.5]" />
                 </button>
 
-                <div className="space-y-1.5 pr-10">
+                <div className="space-y-1.5 pr-12">
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="bg-red-600 text-white text-[10px] font-bold uppercase px-2.5 py-0.5 rounded shadow-xs">
                       {t.pkg_modal_duration}: {selectedPackage.duration}
@@ -347,8 +347,8 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
 
               </div>
 
-              {/* Footer */}
-              <div className="p-4 bg-slate-900 text-white flex items-center justify-between gap-4 border-t border-slate-800 shrink-0">
+              {/* Sticky Footer */}
+              <div className="p-4 bg-slate-900 text-white flex items-center justify-between gap-4 border-t border-slate-800 shrink-0 z-20">
                 <div>
                   <span className="text-[10px] text-slate-400 block font-medium">{t.pkg_modal_selected}:</span>
                   <span className="font-display font-bold text-xs text-white">
@@ -358,7 +358,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
 
                 <button
                   onClick={() => handleWhatsAppBooking(selectedPackage, selectedTier)}
-                  className="bg-red-600 hover:bg-red-700 text-white font-display font-bold text-xs uppercase py-2.5 px-5 rounded-xl transition-colors flex items-center gap-2 cursor-pointer shrink-0"
+                  className="bg-red-600 hover:bg-red-700 text-white font-display font-bold text-xs uppercase py-2.5 px-5 rounded-xl transition-colors flex items-center gap-2 cursor-pointer shrink-0 shadow-md"
                 >
                   <MessageCircle className="w-4 h-4 fill-current" />
                   <span>{t.pkg_modal_wa_btn}</span>
