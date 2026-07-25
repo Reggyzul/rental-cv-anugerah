@@ -16,10 +16,10 @@ export const TRANSLATIONS = {
     topbar_service: "Motto: Wisata Hemat dengan Travel Hebat",
 
     // Hero Section
-    hero_explore: "Mari Jelajahi Nusantara",
+    hero_explore: "Mari Jelajahi Nusantara & Dunia (Periode 2026/2027)",
     hero_title_1: "CV. ANUGRAH PARIWISATA",
     hero_motto: "WISATA HEMAT BERSAMA TRAVEL HEBAT",
-    hero_subtitle: "Perusahaan Tour & Travel Terpercaya No. 1 di Padang, Sumatera Barat. Melayani Tour Pariwisata Domestik & Internasional dengan Armada Bus Eksekutif Full AC, Toilet, Karaoke & Kru Tour Ramah.",
+    hero_subtitle: "Perusahaan Tour & Travel Terpercaya No. 1 di Padang, Sumatera Barat. Melayani Tour Pariwisata Domestik & Internasional Periode 2026/2027 dengan Armada Bus Eksekutif Full AC, Toilet, Karaoke & Kru Tour Ramah.",
     hero_cta_wa: "Konsultasi Tour via WA",
     hero_cta_cars: "Lihat Pilihan Bus & Mobil",
     search_dest_cat: "Kategori Destinasi Wisata",
@@ -28,9 +28,9 @@ export const TRANSLATIONS = {
     search_btn: "CARI PAKET TOUR",
 
     // Destinations Section & Page
-    dest_tag: "KATALOG RUTE DESTINASI LENGKAP",
+    dest_tag: "KATALOG RUTE DESTINASI LENGKAP PERIODE 2026/2027",
     dest_title: "Destinasi Pilihan Wisata",
-    dest_desc: "Jelajahi beragam destinasi menakjubkan di Sumatera Barat, Nusantara & Mancanegara bersama CV. Anugrah Pariwisata.",
+    dest_desc: "Jelajahi beragam destinasi menakjubkan di Sumatera Barat, Nusantara & Mancanegara periode 2026/2027 bersama CV. Anugrah Pariwisata.",
     dest_select_cat: "PILIH KATEGORI RUTE DESTINASI",
     dest_cat_subtitle: "Jelajahi Rute Wisata Impian Anda",
     dest_cat_all: "Semua Rute",
@@ -44,10 +44,10 @@ export const TRANSLATIONS = {
     dest_breadcrumb_page: "DESTINASI WISATA",
 
     // Package Tour Page
-    pkg_tag: "PAKET TOUR PERJALANAN RESMI",
-    pkg_title: "PAKET TOUR SPESIAL NUSANTARA & MANCANEGARA",
-    pkg_subtitle: "Pilihan paket perjalanan wisata terpadu Dalam Negeri & Luar Negeri dengan Armada Bus Eksekutif CV. Anugrah Pariwisata.",
-    pkg_filter_heading: "PILIH KATEGORI TUJUAN PAKET TOUR",
+    pkg_tag: "PAKET TOUR RESMI PERIODE 2026 / 2027",
+    pkg_title: "PAKET TOUR SPESIAL NUSANTARA & MANCANEGARA (2026/2027)",
+    pkg_subtitle: "Pilihan paket perjalanan wisata terpadu Dalam Negeri & Luar Negeri Periode 2026/2027 dengan Armada Bus Eksekutif CV. Anugrah Pariwisata.",
+    pkg_filter_heading: "PILIH KATEGORI TUJUAN PAKET TOUR (PERIODE 2026/2027)",
     pkg_filter_all: "Semua Paket Tour",
     pkg_filter_domestik: "Dalam Negeri (Domestik)",
     pkg_filter_internasional: "Luar Negeri (Internasional)",
@@ -56,7 +56,7 @@ export const TRANSLATIONS = {
     pkg_per_person: "/ org",
     pkg_detail_btn: "Lihat Detail Paket",
     pkg_modal_duration: "Durasi Tour",
-    pkg_modal_tier_title: "PILIHAN TIPE BUS & AKOMODASI",
+    pkg_modal_tier_title: "PILIHAN TIPE BUS & AKOMODASI (PERIODE 2026/2027)",
     pkg_modal_hotel: "Fasilitas Hotel",
     pkg_modal_notes: "Catatan",
     pkg_modal_highlights: "Highlight Perjalanan & Destinasi Utama",
@@ -168,10 +168,10 @@ export const TRANSLATIONS = {
     topbar_service: "Motto: Budget Tour with Great Travel",
 
     // Hero Section
-    hero_explore: "Let's Explore The World",
+    hero_explore: "Let's Explore The World (2026/2027 Period)",
     hero_title_1: "CV. ANUGRAH PARIWISATA",
     hero_motto: "BUDGET TOUR WITH GREAT TRAVEL",
-    hero_subtitle: "Number 1 Tour & Travel Company in Padang & West Sumatra. Serving Domestic & International Tours with Executive Full AC Buses, Toilet, Karaoke & Friendly Tour Crew.",
+    hero_subtitle: "Number 1 Tour & Travel Company in Padang & West Sumatra. Serving Domestic & International Tours for 2026/2027 Season with Executive Full AC Buses, Toilet, Karaoke & Friendly Tour Crew.",
     hero_cta_wa: "Consult Tour via WA",
     hero_cta_cars: "View Buses & Fleet",
     search_dest_cat: "Tour Destination Category",
@@ -180,9 +180,9 @@ export const TRANSLATIONS = {
     search_btn: "SEARCH TOUR",
 
     // Destinations Section & Page
-    dest_tag: "FULL DESTINATION CATALOG",
+    dest_tag: "FULL DESTINATION CATALOG (2026/2027 PERIOD)",
     dest_title: "Destination Highlights",
-    dest_desc: "Explore scenic destinations in West Sumatra, Indonesia, and abroad with CV. Anugrah Pariwisata.",
+    dest_desc: "Explore scenic destinations in West Sumatra, Indonesia, and abroad for 2026/2027 season with CV. Anugrah Pariwisata.",
     dest_select_cat: "SELECT DESTINATION CATEGORY",
     dest_cat_subtitle: "Explore Your Dream Tour Routes",
     dest_cat_all: "All Routes",
@@ -196,10 +196,10 @@ export const TRANSLATIONS = {
     dest_breadcrumb_page: "DESTINATIONS",
 
     // Package Tour Page
-    pkg_tag: "OFFICIAL TOUR PACKAGES",
-    pkg_title: "SPECIAL DOMESTIC & INTERNATIONAL PACKAGES",
-    pkg_subtitle: "Integrated Domestic & International travel packages with Executive Fleet by CV. Anugrah Pariwisata.",
-    pkg_filter_heading: "SELECT TOUR CATEGORY",
+    pkg_tag: "OFFICIAL 2026 / 2027 TOUR PACKAGES",
+    pkg_title: "SPECIAL DOMESTIC & INTERNATIONAL PACKAGES (2026/2027)",
+    pkg_subtitle: "Integrated Domestic & International travel packages for 2026/2027 season by CV. Anugrah Pariwisata.",
+    pkg_filter_heading: "SELECT TOUR CATEGORY (2026/2027 SEASON)",
     pkg_filter_all: "All Tour Packages",
     pkg_filter_domestik: "Domestic (Indonesia)",
     pkg_filter_internasional: "International (Overseas)",
@@ -208,7 +208,7 @@ export const TRANSLATIONS = {
     pkg_per_person: "/ person",
     pkg_detail_btn: "View Package Details",
     pkg_modal_duration: "Tour Duration",
-    pkg_modal_tier_title: "SELECT BUS TYPE & ACCOMMODATION",
+    pkg_modal_tier_title: "SELECT BUS TYPE & ACCOMMODATION (2026/2027)",
     pkg_modal_hotel: "Hotel Amenities",
     pkg_modal_notes: "Notes",
     pkg_modal_highlights: "Tour Highlights & Main Destinations",
