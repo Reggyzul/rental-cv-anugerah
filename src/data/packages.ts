@@ -32,7 +32,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     route: ['Gunung Bromo', 'Yogyakarta', 'Bandung', 'Jakarta'],
     routeDisplay: 'Gunung Bromo - Yogyakarta - Bandung - Jakarta',
     image: 'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&q=80&w=800',
-    badge: 'Domestik (Jadwal Custom)',
+    badge: 'Domestik',
     minPrice: 'Rp 2.650.000',
     tiers: [
       {
@@ -71,7 +71,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     route: ['D. Toba', 'Brastagi', 'P. Sabang', 'Banda Aceh', 'Medan', 'Pekanbaru'],
     routeDisplay: 'D. Toba - Brastagi - P. Sabang - Banda Aceh - Medan - Pekanbaru',
     image: '/gallery_sabang.avif',
-    badge: 'Domestik (Jadwal Custom)',
+    badge: 'Domestik',
     minPrice: 'Rp 2.850.000',
     tiers: [
       {
@@ -117,7 +117,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     route: ['Malaysia', 'Singapore', 'Thailand (Hatyai)'],
     routeDisplay: 'Malaysia (KL & Genting) - Singapore (Merlion) - Thailand (Hatyai)',
     image: 'https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&q=80&w=800',
-    badge: 'Internasional Asia (Jadwal Custom)',
+    badge: 'Internasional Asia',
     minPrice: 'Rp 2.400.000',
     tiers: [
       {
@@ -178,7 +178,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     route: ['Moscow', 'St. Petersburg', 'Murmansk'],
     routeDisplay: 'Moscow - St. Petersburg - Murmansk (Aurora Hunt)',
     image: '/dest_russia.avif',
-    badge: 'Internasional Russia (Jadwal Custom)',
+    badge: 'Internasional Russia',
     minPrice: 'Rp 31.990.000',
     tiers: [
       {
@@ -226,7 +226,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     route: ['Pulau Batam', 'Pulau Bintan', 'Pekanbaru'],
     routeDisplay: 'P. Batam - P. Bintan - Pekanbaru',
     image: '/dest_batam.avif',
-    badge: 'Domestik (Jadwal Custom)',
+    badge: 'Domestik',
     minPrice: 'Rp 2.875.000',
     tiers: [
       {
@@ -272,7 +272,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     route: ['France', 'Brussels', 'Netherlands', 'Germany', 'Luxembourg', 'Switzerland', 'Italy'],
     routeDisplay: 'France - Brussels - Netherlands - Germany - Luxembourg - Switzerland - Italy',
     image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=800',
-    badge: 'Internasional Europe (Jadwal Custom)',
+    badge: 'Internasional Europe',
     minPrice: 'Rp 34.650.000',
     tiers: [
       {
@@ -280,14 +280,14 @@ export const TOUR_PACKAGES: TourPackage[] = [
         capacity: 'Paket Standard 3*/4* Hotel',
         pricePerPerson: 'Rp 34.650.000',
         hotelDetails: 'Hotel Bintang 3* / 4* di Kota Utama Eropa (8 Malam Inap)',
-        notes: 'Bebas Tentukan Tanggal Keberangkatan (Custom Schedule Dealing Customer)'
+        notes: 'Bebas Tentukan Tanggal Keberangkatan Sesuai Kesepakatan Dealing'
       },
       {
         busType: 'Flight Etihad + Bus Eksekutif Eropa',
         capacity: 'Paket Executive 4* Hotel',
         pricePerPerson: 'Rp 37.500.000',
         hotelDetails: 'Hotel Bintang 4* di Prancis, Swiss & Italia (8 Malam Inap)',
-        notes: 'Bebas Tentukan Tanggal Keberangkatan (Custom Schedule Dealing Customer)'
+        notes: 'Bebas Tentukan Tanggal Keberangkatan Sesuai Kesepakatan Dealing'
       }
     ],
     highlights: [
@@ -318,7 +318,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     route: ['Los Angeles', 'Las Vegas', 'San Francisco'],
     routeDisplay: 'Los Angeles - Las Vegas - San Francisco',
     image: 'https://images.unsplash.com/photo-1580655653885-65763b2597d0?auto=format&fit=crop&q=80&w=800',
-    badge: 'Internasional USA (Jadwal Custom)',
+    badge: 'Internasional USA',
     minPrice: 'Rp 44.050.000',
     tiers: [
       {
@@ -356,7 +356,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     route: ['Lombok', 'Bali', 'Bromo', 'Jogja', 'Jakarta'],
     routeDisplay: 'Lombok - Bali - Bromo - Jogja - Jakarta',
     image: '/dest_lombok.avif',
-    badge: 'Domestik (Jadwal Custom)',
+    badge: 'Domestik',
     minPrice: 'Rp 3.875.000',
     tiers: [
       {
@@ -402,7 +402,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     route: ['Sumbawa', 'Lombok', 'Bali', 'Jogja', 'Jakarta'],
     routeDisplay: 'Sumbawa - Lombok - Bali - Jogja - Jakarta',
     image: '/dest_sumbawa.avif',
-    badge: 'Domestik (Jadwal Custom)',
+    badge: 'Domestik',
     minPrice: 'Rp 4.275.000',
     tiers: [
       {
@@ -449,7 +449,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     route: ['Bangka', 'Belitung', 'Palembang'],
     routeDisplay: 'Bangka - Belitung - Palembang',
     image: '/dest_belitung.avif',
-    badge: 'Domestik (Jadwal Custom)',
+    badge: 'Domestik',
     minPrice: 'Rp 2.975.000',
     tiers: [
       {
