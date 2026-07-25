@@ -27,7 +27,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
       title: 'Padang',
       subtitle: 'Kota Pantai, Kuliner & Sejarah',
       badge: 'Domestik Sumbar',
-      image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800',
+      image: '/dest_padang.jpg',
       rating: 4.9,
       reviews: 145,
       spots: ['Pantai Air Manis & Malin Kundang', 'Kota Tua Padang & Jembatan Siti Nurbaya', 'Museum Adityawarman', 'Pantai Padang (Taplau) & Kuliner Minang']
@@ -51,7 +51,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
       title: 'Bukittinggi',
       subtitle: 'Jam Gadang & Ngarai Sianok',
       badge: 'Ikon Wisata Sumbar',
-      image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800',
+      image: '/dest_bukittinggi.jpg',
       rating: 5.0,
       reviews: 185,
       spots: ['Jam Gadang & Pasar Atas', 'Ngarai Sianok & Lobang Jepang', 'Taman Marga Satwa & Benteng Fort de Kock', 'Janjang Koto Gadang (Great Wall Minangkabau)']
@@ -75,7 +75,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
       title: 'Payakumbuh',
       subtitle: 'Lembah Harau & Kelok 9',
       badge: 'Pesona Tebing Alam',
-      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
+      image: '/dest_payakumbuh.jpg',
       rating: 4.9,
       reviews: 140,
       spots: ['Lembah Harau (Air Terjun & Tebing Granit)', 'Jembatan Layang Kelok 9', 'Kampung Eropa Harau', 'Padang Mangateh (New Zealand van Simalanggang)']
@@ -87,7 +87,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
       title: 'Alahan Panjang',
       subtitle: 'Danau Diatas & Danau Dibawah',
       badge: 'Swiss van Sumatra',
-      image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800',
+      image: '/dest_alahan_panjang.jpg',
       rating: 4.8,
       reviews: 98,
       spots: ['Danau Diatas & Danau Dibawah (Danau Kembar)', 'Kebun Teh Alahan Panjang', 'Bukit Cambai 360°', 'Kebun Strawberry & Sayur Segar']
