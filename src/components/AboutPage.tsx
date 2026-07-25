@@ -39,7 +39,7 @@ export default function AboutPage({ lang, onNavigateHome }: AboutPageProps) {
       {/* MAIN CONTAINER CONTENT */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14 space-y-16">
         
-        {/* SECTION 1: ABOUT OUR COMPANY (Screenshot 1 Style) */}
+        {/* SECTION 1: ABOUT OUR COMPANY */}
         <section className="space-y-6">
           <span 
             className="font-serif italic text-2xl sm:text-3xl text-[#ff6b52] block"
@@ -50,29 +50,8 @@ export default function AboutPage({ lang, onNavigateHome }: AboutPageProps) {
 
           <div className="space-y-3.5 text-xs sm:text-sm font-sans text-slate-700 leading-relaxed">
             
-            <div className="flex items-start gap-3">
-              <span className="text-[#f94a29] font-black text-base shrink-0 mt-0.5">✓</span>
-              <p>
-                <strong>CV. ANUGRAH PARIWISATA</strong> — Perusahaan Tour & Travel No. 1 di Padang, Sumatera Barat & Indonesia dengan motto <em>"Wisata Hemat dengan Travel Hebat"</em>.
-              </p>
-            </div>
-
-            <div className="flex items-start gap-3">
-              <span className="text-[#f94a29] font-black text-base shrink-0 mt-0.5">✓</span>
-              <p>
-                <strong>Kantor Pusat:</strong> Jl. Rimbo Panjang, Kampung Laban No. 053, Salido Painan, Kec. IV Jurai, Kab. Pesisir Selatan, Prov. Sumatera Barat.
-              </p>
-            </div>
-
-            <div className="flex items-start gap-3">
-              <span className="text-[#f94a29] font-black text-base shrink-0 mt-0.5">✓</span>
-              <p>
-                <strong>Kantor Cabang:</strong> Jl. Andalas I No. 48 F, Kec. Padang Timur, Kodya Padang, Prov. Sumatera Barat.
-              </p>
-            </div>
-
             {/* Visi Perusahaan */}
-            <div className="flex items-start gap-3 pt-2">
+            <div className="flex items-start gap-3">
               <span className="text-[#f94a29] font-black text-base shrink-0 mt-0.5">✓</span>
               <div className="space-y-1">
                 <span className="font-bold text-slate-900 block">Visi Perusahaan:</span>
@@ -104,7 +83,7 @@ export default function AboutPage({ lang, onNavigateHome }: AboutPageProps) {
           </div>
         </section>
 
-        {/* SECTION 2: SCOPE OF SERVICES (Screenshot 2 Style) */}
+        {/* SECTION 2: SCOPE OF SERVICES */}
         <section className="space-y-8 border-t border-slate-100 pt-12">
           <span 
             className="font-serif italic text-2xl sm:text-3xl text-[#ff6b52] block"
@@ -139,7 +118,7 @@ export default function AboutPage({ lang, onNavigateHome }: AboutPageProps) {
           </div>
         </section>
 
-        {/* SECTION 3: NETWORK & FLEET SERVICES (Screenshot 3 Style) */}
+        {/* SECTION 3: NETWORK & FLEET SERVICES */}
         <section className="space-y-8 border-t border-slate-100 pt-12">
           <span 
             className="font-serif italic text-2xl sm:text-3xl text-[#ff6b52] block"
@@ -165,28 +144,13 @@ export default function AboutPage({ lang, onNavigateHome }: AboutPageProps) {
             </div>
 
             {/* Rent Car & Bus */}
-            <div className="space-y-2 pt-2">
+            <div className="space-y-1 pt-2">
               <h4 className="font-display font-bold text-base text-[#0d1b37]">
                 Transport Rent (Big Bus, Hiace & Mini Bus Rental)
               </h4>
               <p className="text-slate-600">
-                Menyediakan armada rental transportasi terawat dengan fasilitas Full AC, Toilet bersih, Full Karaoke, Selimut & Bantal:
+                Menyediakan armada rental transportasi terawat dengan fasilitas Full AC, Toilet bersih, Full Karaoke, Selimut & Bantal untuk seluruh rute wisata domestik & mancanegara.
               </p>
-              
-              <div className="bg-slate-50 p-5 rounded-2xl border border-slate-200 space-y-3">
-                <div>
-                  <span className="font-bold text-slate-900 text-xs block">I. Big Bus Eksekutif/Legrest & Bus Medium Rental:</span>
-                  <span className="text-xs text-slate-600 block">1. Zivanes | 2. Nyaman Holiday | 3. Miyor | 4. KYM | 5. Sutan Raya | 6. Wulyudza</span>
-                </div>
-                <div>
-                  <span className="font-bold text-slate-900 text-xs block">II. Mobil Hiace Rental:</span>
-                  <span className="text-xs text-slate-600 block">Toyota Hiace Premio & Toyota Hiace Commuter</span>
-                </div>
-                <div>
-                  <span className="font-bold text-slate-900 text-xs block">III. Mobil Mini Bus Rental:</span>
-                  <span className="text-xs text-slate-600 block">1. Innova | 2. Avanza | 3. Xenia | 4. Calya | 5. Sigra | 6. Alphard</span>
-                </div>
-              </div>
             </div>
 
             {/* Reporting System */}
