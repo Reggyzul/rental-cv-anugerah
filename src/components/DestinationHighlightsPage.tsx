@@ -101,7 +101,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
       title: 'Danau Toba & Samosir',
       subtitle: 'Sumatera Utara',
       badge: 'Destinasi Super Prioritas',
-      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
+      image: '/dest_toba.jpg',
       rating: 4.9,
       reviews: 160,
       spots: ['Pulau Samosir & Tomok', 'Parapat & Berastagi', 'Air Terjun Sipiso-piso', 'Taman Simalem Resort']
@@ -113,7 +113,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
       title: 'Titik O Km Sabang Aceh',
       subtitle: 'Nanggroe Aceh Darussalam',
       badge: 'Ujung Barat Indonesia',
-      image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800',
+      image: '/dest_sabang.jpg',
       rating: 4.9,
       reviews: 125,
       spots: ['Tugu Nol Kilometer Indonesia', 'Pantai Iboih & Pulau Rubiah', 'Masjid Raya Baiturrahman Banda Aceh', 'Museum Tsunami Aceh']
@@ -125,7 +125,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
       title: 'Pekanbaru',
       subtitle: 'Provinsi Riau',
       badge: 'Wisata Melayu',
-      image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800',
+      image: '/dest_pekanbaru.jpg',
       rating: 4.8,
       reviews: 95,
       spots: ['Masjid An-Nur Pekanbaru', 'Istana Siak Sri Indrapura', 'Pasar Bawah Pekanbaru', 'Danau Buatan Lembah Sari']
@@ -137,7 +137,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
       title: 'Batam',
       subtitle: 'Kota Bisnis, Bahari & Belanja (Kepulauan Riau)',
       badge: 'Wisata Belanja & Bahari',
-      image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=800',
+      image: '/dest_batam.jpg',
       rating: 4.9,
       reviews: 138,
       spots: ['Jembatan Barelang Batam', 'Nagoya Shopping District', 'Welcome to Batam Landmark', 'Kuliner Seafood Harbour Bay']
@@ -149,7 +149,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
       title: 'Pulau Bintan',
       subtitle: 'Resort & Bahari Eksotis (Kepulauan Riau)',
       badge: 'Resort Kelas Dunia',
-      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
+      image: '/dest_bintan.jpg',
       rating: 4.9,
       reviews: 120,
       spots: ['Treasure Bay Bintan (Kolam Terbesar Asia)', 'Gurun Pasir Telaga Biru Bintan', 'Lagoi Bay Beach', 'Vihara Ksitigarbha Bodhisattva (1000 Patung)']
