@@ -42,7 +42,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
       image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
       rating: 4.9,
       reviews: 130,
-      spots: ['Kawasan Wisata Mandeh (Pulau Setan & Kapo-Kapo)', 'Bukit Langkisau Painan', 'Pantai Carocok & Pulau Cingkuak', 'Kampung Laban Salido (Kantor Pusat CV. Anugrah Pariwisata)']
+      spots: ['Kawasan Wisata Mandeh (Pulau Setan & Kapo-Kapo)', 'Bukit Langkisau Painan', 'Pantai Carocok & Pulau Cingkuak', 'Salido Painan (Kantor Pusat CV. Anugrah Pariwisata)']
     },
     {
       id: 'bukittinggi',
@@ -98,7 +98,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
       id: 'danau-toba',
       categoryKey: 'out_sumbar',
       categoryName: 'Out Sumatera Barat',
-      title: '1. Danau Toba',
+      title: '1. Danau Toba & Samosir',
       subtitle: 'Sumatera Utara',
       badge: 'Destinasi Super Prioritas',
       image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
@@ -253,16 +253,28 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
       spots: ['Gunung Fuji & Danau Kawaguchiko', 'Asakusa Sensoji Temple & Skytree Tokyo', 'Shibuya Crossing & Harajuku', 'Universal Studios Japan (Osaka)']
     },
     {
-      id: 'eropa-amerika',
+      id: 'eropa',
       categoryKey: 'internasional',
       categoryName: 'Internasional',
-      title: '6. Eropa & 7. Amerika',
-      subtitle: 'Europe & USA World Tour',
-      badge: 'Global Dream Vacation',
+      title: '6. Eropa',
+      subtitle: 'European Dream Vacation',
+      badge: 'Menara Eiffel & Swiss Alps',
       image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=800',
       rating: 5.0,
-      reviews: 190,
-      spots: ['Prancis (Menara Eiffel & Louvre)', 'Swiss (Mount Titlis & Interlaken)', 'Belanda (Keukenhof & Volendam)', 'Amerika Serikat (New York, LA & Grand Canyon)']
+      reviews: 195,
+      spots: ['Prancis (Menara Eiffel & Louvre)', 'Swiss (Mount Titlis & Interlaken)', 'Belanda (Keukenhof & Volendam)', 'Italia (Koloseum Roma & Venesia)']
+    },
+    {
+      id: 'amerika',
+      categoryKey: 'internasional',
+      categoryName: 'Internasional',
+      title: '7. Amerika',
+      subtitle: 'USA & Canada Discovery',
+      badge: 'New York & Hollywood',
+      image: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&q=80&w=800',
+      rating: 5.0,
+      reviews: 185,
+      spots: ['New York (Times Square & Patung Liberty)', 'Los Angeles (Hollywood & Universal Studios)', 'Las Vegas & Grand Canyon', 'Air Terjun Niagara & Washington D.C.']
     }
   ];
 
@@ -285,7 +297,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/60 to-slate-950/90" />
 
         <div className="relative z-10 text-center space-y-2 px-4">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-600/90 text-white font-extrabold text-[10px] uppercase tracking-widest mb-1 shadow-md">
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-orange-600/90 text-white font-extrabold text-[10px] uppercase tracking-widest mb-1 shadow-md">
             <Sparkles className="w-3.5 h-3.5 text-amber-300" />
             <span>CV. ANUGRAH PARIWISATA OFFICIAL</span>
           </div>
@@ -303,7 +315,7 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
       {/* MAIN CONTAINER CONTENT */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-12">
         
-        {/* PROMINENT TOP CATEGORY BUTTON BAR (Rapi, Mudah Diakses & Profesional) */}
+        {/* PROMINENT TOP CATEGORY BUTTON BAR */}
         <div className="bg-slate-50 p-4 sm:p-5 rounded-3xl border border-slate-200 shadow-md max-w-4xl mx-auto text-center space-y-4">
           
           <div>

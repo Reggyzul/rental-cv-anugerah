@@ -252,16 +252,28 @@ export default function Services({ lang }: ServicesProps) {
       spots: ['Gunung Fuji & Danau Kawaguchiko', 'Asakusa Sensoji Temple & Skytree Tokyo', 'Shibuya Crossing & Harajuku', 'Universal Studios Japan (Osaka)']
     },
     {
-      id: 'eropa-amerika',
+      id: 'eropa',
       categoryKey: 'internasional',
       categoryName: 'Internasional',
-      title: '6. Eropa & 7. Amerika',
-      subtitle: 'Europe & USA World Tour',
-      badge: 'Global Dream Vacation',
+      title: '6. Eropa',
+      subtitle: 'European Dream Vacation',
+      badge: 'Menara Eiffel & Swiss Alps',
       image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=800',
       rating: 5.0,
-      reviews: 190,
-      spots: ['Prancis (Menara Eiffel & Louvre)', 'Swiss (Mount Titlis & Interlaken)', 'Belanda (Keukenhof & Volendam)', 'Amerika Serikat (New York, LA & Grand Canyon)']
+      reviews: 195,
+      spots: ['Prancis (Menara Eiffel & Louvre)', 'Swiss (Mount Titlis & Interlaken)', 'Belanda (Keukenhof & Volendam)', 'Italia (Koloseum Roma & Venesia)']
+    },
+    {
+      id: 'amerika',
+      categoryKey: 'internasional',
+      categoryName: 'Internasional',
+      title: '7. Amerika',
+      subtitle: 'USA & Canada Discovery',
+      badge: 'New York & Hollywood',
+      image: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&q=80&w=800',
+      rating: 5.0,
+      reviews: 185,
+      spots: ['New York (Times Square & Patung Liberty)', 'Los Angeles (Hollywood & Universal Studios)', 'Las Vegas & Grand Canyon', 'Air Terjun Niagara & Washington D.C.']
     }
   ];
 
