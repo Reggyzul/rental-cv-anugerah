@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { TRANSLATIONS } from '../utils/translations';
@@ -57,10 +57,16 @@ export default function Header({
             {/* 1. LEFT: LOGO BRAND */}
             <div 
               onClick={() => handleItemClick('home')}
-              className="flex flex-col items-start cursor-pointer group shrink-0"
+              className="flex items-center gap-2 cursor-pointer group shrink-0"
               id="header-logo"
             >
-              <div className="flex flex-col leading-snug mb-0.5">
+              <img
+                src="/logo_original.jpg"
+                alt="CV. Anugrah Pariwisata Tour & Travel"
+                className="h-14 w-auto object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-200"
+                style={{ maxWidth: '160px' }}
+              />
+              <div className="flex flex-col leading-snug">
                 <span className="font-semibold text-sm sm:text-base uppercase tracking-wide text-red-600 group-hover:text-red-700 transition-colors">
                   CV. ANUGRAH PARIWISATA
                 </span>
@@ -68,12 +74,6 @@ export default function Header({
                   Tour &amp; Travel
                 </span>
               </div>
-              <img
-                src="/logo_original.jpg"
-                alt="CV. Anugrah Pariwisata Tour & Travel"
-                className="h-12 w-auto object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-200"
-                style={{ maxWidth: '150px' }}
-              />
             </div>
 
             {/* 2. CENTER: DESKTOP NAV LINKS (Package Tour Kanan Destinations & Tanpa Contact Us) */}
