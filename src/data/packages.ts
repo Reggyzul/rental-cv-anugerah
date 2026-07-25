@@ -170,7 +170,7 @@ export const TOUR_PACKAGES: TourPackage[] = [
     duration: '9 Hari 6 Malam / 9 Hari 7 Malam',
     route: ['Moscow', 'St. Petersburg', 'Murmansk'],
     routeDisplay: 'Moscow - St. Petersburg - Murmansk (Aurora Hunt)',
-    image: 'https://images.unsplash.com/photo-1513326718677-b964603b136d?auto=format&fit=crop&q=80&w=800',
+    image: '/dest_russia.jpg',
     badge: 'Internasional Russia (Jadwal Custom)',
     minPrice: 'Rp 26.990.000',
     tiers: [
