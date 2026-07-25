@@ -50,7 +50,7 @@ export default function ToursList({ lang }: ToursListProps) {
   ];
 
   const handleWhatsApp = (msg: string) => {
-    const waNumber = '628813305066';
+    const waNumber = '6282178284459';
     window.open(`https://api.whatsapp.com/send?phone=${waNumber}&text=${encodeURIComponent(msg)}`, '_blank', 'noreferrer');
   };
 

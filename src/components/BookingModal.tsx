@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Car } from '../types';
 import { CARS } from '../data/cars';
 import { motion, AnimatePresence } from 'motion/react';
@@ -45,7 +45,7 @@ export default function BookingModal({ car, onClose, lang, onCarChange }: Bookin
       return;
     }
 
-    const waNumber = '6281234567890';
+    const waNumber = '6282178284459';
 
     let routeText = 'Tour In Sumatera Barat';
     if (routeCategory === 'out_sumbar') routeText = 'Tour Out Sumatera Barat (Nusantara)';
@@ -306,7 +306,7 @@ Mohon konfirmasi jadwal, fasilitas hotel/restoran, & penawaran harga terbaik. Te
                           required
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
-                          placeholder="Contoh: 081234567890"
+                          placeholder="Contoh: 082178284459"
                           className="block w-full pl-9 pr-3 py-2.5 border border-slate-200 rounded-xl focus:ring-2 focus:ring-red-500 text-xs font-sans text-slate-900"
                         />
                       </div>

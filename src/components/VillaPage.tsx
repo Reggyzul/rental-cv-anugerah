@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   Waves, 
@@ -26,7 +26,7 @@ export default function VillaPage({ lang }: VillaPageProps) {
   const t = TRANSLATIONS[lang];
   const [selectedImg, setSelectedImg] = useState<string | null>(null);
 
-  const waNumber = '6282219157752';
+  const waNumber = '6282178284459';
   const waMessage = encodeURIComponent(
     lang === 'AR'
       ? 'مرحباً، سواق في اندونيسيا. أود حجز فيلا ديفان هيلز بوغور (Villa Divan Hills Bogor). يرجى تزويدي بالتفاصيل والتوافر.'

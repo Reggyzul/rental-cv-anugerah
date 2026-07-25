@@ -33,13 +33,13 @@ export default function Footer({ lang, onNavigateSection }: FooterProps) {
           </div>
           <div className="md:col-span-4 flex justify-start md:justify-end">
             <a
-              href="https://api.whatsapp.com/send?phone=6281234567890&text=Halo%20CV.%20Anugrah%20Pariwisata,%20saya%20ingin%20konsultasi%20paket%20tour%20dan%20sewa%20armada"
+              href="https://api.whatsapp.com/send?phone=6282178284459&text=Halo%20CV.%20Anugrah%20Pariwisata,%20saya%20ingin%20konsultasi%20paket%20tour%20dan%20sewa%20armada"
               target="_blank"
               rel="noreferrer"
               className="bg-gradient-to-r from-red-700 via-red-600 to-red-500 hover:from-red-600 hover:to-amber-700 text-white font-sans font-bold text-xs uppercase px-7 py-4 rounded-full shadow-lg shadow-red-600/25 transition-all flex items-center gap-2.5 cursor-pointer"
             >
               <MessageCircle className="w-4 h-4 fill-current" />
-              <span>WhatsApp: 0812-3456-7890</span>
+              <span>WhatsApp: 0821-7828-4459</span>
             </a>
           </div>
         </div>

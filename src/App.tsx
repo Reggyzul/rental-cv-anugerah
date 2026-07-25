@@ -107,7 +107,7 @@ export default function App() {
   };
 
   const handleWhatsAppChat = () => {
-    const waNumber = '6281234567890';
+    const waNumber = '6282178284459';
     const text = encodeURIComponent('Halo CV. Anugrah Pariwisata, saya ingin berkonsultasi mengenai reservasi tour & rental armada. Mohon bantuan admin.');
     window.open(`https://api.whatsapp.com/send?phone=${waNumber}&text=${text}`, '_blank', 'noreferrer');
   };

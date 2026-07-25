@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { CARS } from '../data/cars';
 import { Car } from '../types';
 import { Users, CheckCircle2, MessageCircle, Bus, Sparkles } from 'lucide-react';
@@ -31,7 +31,7 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
   });
 
   const handleWhatsAppBooking = (carName: string) => {
-    const waNumber = '6281234567890';
+    const waNumber = '6282178284459';
     const message = `Halo CV. Anugrah Pariwisata, saya berminat sewa armada: ${carName}. Mohon informasi penawaran harga, jadwal & ketersediaan unit. Terima kasih!`;
     window.open(`https://api.whatsapp.com/send?phone=${waNumber}&text=${encodeURIComponent(message)}`, '_blank', 'noreferrer');
   };

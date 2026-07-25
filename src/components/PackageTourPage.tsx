@@ -26,7 +26,7 @@ export default function PackageTourPage({ lang, onNavigateHome }: PackageTourPag
   };
 
   const handleWhatsAppBooking = (pkg: TourPackage, tier: TourTier) => {
-    const waNumber = '6281234567890';
+    const waNumber = '6282178284459';
     const message = `Halo CV. Anugrah Pariwisata, saya ingin berkonsultasi mengenai reservasi paket tour:\n\nPaket Tour: ${pkg.title} (${pkg.duration})\nPilihan Bus: ${tier.busType} (${tier.capacity})\nBiaya: ${tier.pricePerPerson}/org\nFasilitas Hotel: ${tier.hotelDetails}\nRute Perjalanan: ${pkg.routeDisplay}\n\nMohon informasi ketersediaan jadwal & mekanisme reservasi. Terima kasih.`;
     window.open(`https://api.whatsapp.com/send?phone=${waNumber}&text=${encodeURIComponent(message)}`, '_blank', 'noreferrer');
   };
