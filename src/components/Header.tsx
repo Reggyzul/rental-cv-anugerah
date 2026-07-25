@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Feather } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { TRANSLATIONS } from '../utils/translations';
 
@@ -57,23 +57,15 @@ export default function Header({
             {/* 1. LEFT: LOGO BRAND */}
             <div 
               onClick={() => handleItemClick('home')}
-              className="flex items-center gap-3 cursor-pointer group text-left shrink-0"
+              className="flex items-center cursor-pointer group shrink-0"
               id="header-logo"
             >
-              <div className="relative flex items-center justify-center">
-                <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-amber-500 via-orange-500 to-red-500 flex items-center justify-center text-white shadow-md shadow-orange-500/20 group-hover:scale-105 transition-transform">
-                  <Feather className="w-6 h-6 transform -rotate-45" />
-                </div>
-              </div>
-
-              <div className="flex flex-col">
-                <span className="font-display font-black text-xl sm:text-2xl tracking-tight text-[#00685f] leading-none uppercase group-hover:text-emerald-700 transition-colors">
-                  ANUGRAH <span className="text-emerald-700">PARIWISATA</span>
-                </span>
-                <span className="font-sans text-[10px] font-extrabold text-orange-600 tracking-wider mt-0.5 uppercase">
-                  WISATA HEMAT BERSAMA TRAVEL HEBAT
-                </span>
-              </div>
+              <img
+                src="/logo_original.jpg"
+                alt="CV. Anugrah Pariwisata Tour & Travel"
+                className="h-14 w-auto object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-200"
+                style={{ maxWidth: '200px' }}
+              />
             </div>
 
             {/* 2. CENTER: DESKTOP NAV LINKS (Package Tour Kanan Destinations & Tanpa Contact Us) */}
