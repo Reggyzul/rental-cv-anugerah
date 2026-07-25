@@ -62,6 +62,51 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
     },
     {
       id: 6,
+      category: 'gathering',
+      title: 'Tour Tugu Kilometer 0 Indonesia Sabang',
+      subtitle: 'Titik Ujung Barat Indonesia bersama Rombongan Keluarga Besar Sepakat',
+      location: 'Tugu Kilometer 0 Indonesia, Sabang, Aceh',
+      image: '/gallery_sabang.jpg',
+      badge: 'Sabang Kilometer 0'
+    },
+    {
+      id: 7,
+      category: 'gathering',
+      title: 'Tour Wisata Keagamaan Masjid Istiqlal Jakarta',
+      subtitle: 'Kunjungan Rombongan Peserta Wisata di Masjid Istiqlal',
+      location: 'Masjid Istiqlal, DKI Jakarta',
+      image: '/gallery_istiqlal.jpg',
+      badge: 'Istiqlal Jakarta'
+    },
+    {
+      id: 8,
+      category: 'gathering',
+      title: 'Tour Internasional Petronas Twin Towers',
+      subtitle: 'Kunjungan Wisata Mancanegara Kuala Lumpur Malaysia',
+      location: 'Petronas Twin Towers, Kuala Lumpur, Malaysia',
+      image: '/gallery_petronas.jpg',
+      badge: 'Kuala Lumpur'
+    },
+    {
+      id: 9,
+      category: 'gathering',
+      title: 'Tour Mancanegara Bangkok & Thailand',
+      subtitle: 'Peserta MT. Sakinah Warahmah BMKT Padang Panjang di Patung Sleeping Buddha',
+      location: 'Bangkok & Hat Yai, Thailand',
+      image: '/gallery_thailand.jpg',
+      badge: 'Thailand Tour'
+    },
+    {
+      id: 10,
+      category: 'gathering',
+      title: 'Tour HeHa Sky View & Jogja bersama Bus Zivanes',
+      subtitle: 'Kebersamaan Rombongan Anugrah Pariwisata & Team Zivanes Bus',
+      location: 'HeHa Sky View, Gunungkidul, Yogyakarta',
+      image: '/gallery_heha.jpg',
+      badge: 'HeHa Jogja Tour'
+    },
+    {
+      id: 11,
       category: 'armada',
       title: 'Big Bus Eksekutif Zivanes Legrest',
       subtitle: 'Jetbus 3+ Voyager Full AC, Toilet & Sound Karaoke',
@@ -70,7 +115,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: 'Big Bus Zivanes'
     },
     {
-      id: 7,
+      id: 12,
       category: 'armada',
       title: 'Big Bus Pariwisata Nyaman Holiday',
       subtitle: 'Fasilitas Komplit & Kursi Nyaman Reclining',
@@ -79,7 +124,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: 'Nyaman Holiday'
     },
     {
-      id: 8,
+      id: 13,
       category: 'armada',
       title: 'Big Bus Luxury Miyor Holiday',
       subtitle: 'Jetbus 5 Mercedes-Benz Eksekutif Legrest',
@@ -88,7 +133,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: 'Miyor Holiday'
     },
     {
-      id: 9,
+      id: 14,
       category: 'armada',
       title: 'Big Bus Eksekutif KYM Trans',
       subtitle: 'Jetbus 5 Pariwisata Terawat & Tangguh',
@@ -97,7 +142,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: 'KYM Trans'
     },
     {
-      id: 10,
+      id: 15,
       category: 'armada',
       title: 'Skylander R22 Sutan Raya Bus',
       subtitle: 'Pilihan Mewah Rute Sumatera & Jawa',
@@ -106,7 +151,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: 'Sutan Raya'
     },
     {
-      id: 11,
+      id: 16,
       category: 'armada',
       title: 'Medium Bus Wulyudza Tourista',
       subtitle: 'Armada Lincah & Ekonomis Rute Sumatera Barat',
@@ -115,7 +160,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: 'Wulyudza Tourista'
     },
     {
-      id: 12,
+      id: 17,
       category: 'armada',
       title: 'Toyota Alphard HEV & Hiace Premio VIP',
       subtitle: 'Layanan VIP Transfer & Tour Minibus Eksekutif',
@@ -181,7 +226,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
           </h2>
           <div className="w-20 h-1 bg-[#f94a29] mx-auto rounded-full" />
           <p className="font-sans text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
-            Momen kebersamaan peserta rombongan tour silaturahmi CV. Anugrah Pariwisata di berbagai destinasi favorit nusantara (Banda Aceh, Danau Toba, Lombok, Jogja, Bukittinggi) serta keandalan bus eksekutif terawat.
+            Momen kebersamaan peserta rombongan tour silaturahmi CV. Anugrah Pariwisata di berbagai destinasi favorit domestik & mancanegara (Sabang, Danau Toba, Jakarta, Jogja, Lombok, Malaysia, Thailand) serta keandalan armada terawat.
           </p>
         </div>
 
