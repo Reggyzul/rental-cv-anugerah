@@ -131,40 +131,88 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
       spots: ['Masjid An-Nur Pekanbaru', 'Istana Siak Sri Indrapura', 'Pasar Bawah Pekanbaru', 'Danau Buatan Lembah Sari']
     },
     {
-      id: 'batam-bintan',
+      id: 'batam',
       categoryKey: 'out_sumbar',
       categoryName: 'Out Sumatera Barat',
-      title: 'Batam & P. Bintan',
-      subtitle: 'Kepulauan Riau',
-      badge: 'Wisata Bahari & Belanja',
+      title: 'Batam',
+      subtitle: 'Kota Bisnis, Bahari & Belanja (Kepulauan Riau)',
+      badge: 'Wisata Belanja & Bahari',
       image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=800',
       rating: 4.9,
       reviews: 138,
-      spots: ['Jembatan Barelang Batam', 'Gurun Pasir Telaga Biru Bintan', 'Treasure Bay Bintan (Kolam Renang Terbesar)', 'Nagoya Shopping District']
+      spots: ['Jembatan Barelang Batam', 'Nagoya Shopping District', 'Welcome to Batam Landmark', 'Kuliner Seafood Harbour Bay']
     },
     {
-      id: 'bangka-belitung',
+      id: 'bintan',
       categoryKey: 'out_sumbar',
       categoryName: 'Out Sumatera Barat',
-      title: 'P. Bangka & P. Belitung',
-      subtitle: 'Kepulauan Bangka Belitung',
+      title: 'Pulau Bintan',
+      subtitle: 'Resort & Bahari Eksotis (Kepulauan Riau)',
+      badge: 'Resort Kelas Dunia',
+      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
+      rating: 4.9,
+      reviews: 120,
+      spots: ['Treasure Bay Bintan (Kolam Terbesar Asia)', 'Gurun Pasir Telaga Biru Bintan', 'Lagoi Bay Beach', 'Vihara Ksitigarbha Bodhisattva (1000 Patung)']
+    },
+    {
+      id: 'bangka',
+      categoryKey: 'out_sumbar',
+      categoryName: 'Out Sumatera Barat',
+      title: 'Pulau Bangka',
+      subtitle: 'Pantai Granit & Kuliner Khas (Kembang Bangka)',
+      badge: 'Pantai Granit',
+      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
+      rating: 4.8,
+      reviews: 110,
+      spots: ['Pantai Parai Tenggiri', 'Pantai Matras Sungailiat', 'Danau Kaolin Bangka', 'Pusat Otak-otak & Kuliner Bangka']
+    },
+    {
+      id: 'belitung',
+      categoryKey: 'out_sumbar',
+      categoryName: 'Out Sumatera Barat',
+      title: 'Pulau Belitung',
+      subtitle: 'Surga Laskar Pelangi (Bangka Belitung)',
       badge: 'Laskar Pelangi',
       image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
       rating: 4.9,
       reviews: 142,
-      spots: ['Pantai Tanjung Tinggi Belitung', 'Pulau Lengkuas & Mercusuar', 'Danau Kaolin', 'Museum Kata Andrea Hirata']
+      spots: ['Pantai Tanjung Tinggi (Batu Granit Raksasa)', 'Pulau Lengkuas & Mercusuar Bersejarah', 'Museum Kata Andrea Hirata', 'Danau Kaolin Belitung']
     },
     {
-      id: 'bali-lombok-sumbawa',
+      id: 'bali',
       categoryKey: 'out_sumbar',
       categoryName: 'Out Sumatera Barat',
-      title: 'Lombok, Bali & Sumbawa',
-      subtitle: 'Nusa Tenggara Barat & Bali',
-      badge: 'Surga Wisata Dunia',
+      title: 'Bali',
+      subtitle: 'Pulau Dewata & Surga Wisata Dunia',
+      badge: 'Island of Gods',
       image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&q=80&w=800',
       rating: 5.0,
       reviews: 230,
-      spots: ['Kintamani, Tanah Lot & Uluwatu Bali', 'Gili Trawangan & Kuta Mandalika Lombok', 'Pantai Pink & Senggigi', 'Pulau Kenawa Sumbawa']
+      spots: ['Kintamani & Gunung Batur', 'Pura Tanah Lot & Uluwatu Sunset', 'Pantai Kuta, Seminyak & Nusa Dua', 'Tegalalang Rice Terrace & Ubud Art Market']
+    },
+    {
+      id: 'lombok',
+      categoryKey: 'out_sumbar',
+      categoryName: 'Out Sumatera Barat',
+      title: 'Lombok',
+      subtitle: 'Pulau Seribu Masjid & Pantai Eksotis (NTB)',
+      badge: 'Gili & Mandalika',
+      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
+      rating: 4.9,
+      reviews: 185,
+      spots: ['Gili Trawangan, Gili Meno & Gili Air', 'Sirkuit Internasional Mandalika', 'Pantai Pink (Tangsi)', 'Desa Adat Sade & Sukarara']
+    },
+    {
+      id: 'sumbawa',
+      categoryKey: 'out_sumbar',
+      categoryName: 'Out Sumatera Barat',
+      title: 'Sumbawa',
+      subtitle: 'Pesona Alam & Island Hopping (NTB)',
+      badge: 'Savana Kenawa',
+      image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=800',
+      rating: 4.8,
+      reviews: 95,
+      spots: ['Pulau Kenawa (Savana & Sunset)', 'Pulau Moyo & Air Terjun Mata Jitu', 'Pantai Lakey (Surfing World Spot)', 'Istana Dalam Loka Sumbawa']
     },
     {
       id: 'malang-bromo',
@@ -179,16 +227,40 @@ export default function DestinationHighlightsPage({ lang, onNavigateHome }: Dest
       spots: ['Penanjakan Sunrise Bromo & Kawah Bromo', 'Pasir Berbisik & Bukit Teletubbies', 'Kota Batu Malang (Jatim Park, Museum Angkut)', 'Petik Apel & Coban Rondo']
     },
     {
-      id: 'jogja-bandung-jakarta',
+      id: 'jogja',
       categoryKey: 'out_sumbar',
       categoryName: 'Out Sumatera Barat',
-      title: 'Jogja, Bandung & Jakarta',
-      subtitle: 'DIY, Jawa Barat & DKI Jakarta',
-      badge: 'Popular City Tour',
+      title: 'Jogja',
+      subtitle: 'Kota Budaya, Istimewa & Kuliner (DIY)',
+      badge: 'Kota Budaya',
       image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800',
+      rating: 5.0,
+      reviews: 205,
+      spots: ['Jalan Malioboro & Keraton Yogyakarta', 'Candi Borobudur & Candi Prambanan', 'Jeep Lava Tour Gunung Merapi', 'Pantai Parangtritis & HeHa Sky View']
+    },
+    {
+      id: 'bandung',
+      categoryKey: 'out_sumbar',
+      categoryName: 'Out Sumatera Barat',
+      title: 'Bandung',
+      subtitle: 'Kota Kembang, Pegunungan & Belanja (Jawa Barat)',
+      badge: 'Kota Kembang',
+      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
       rating: 4.9,
-      reviews: 190,
-      spots: ['Malioboro, Borobudur & Prambanan (Jogja)', 'Tangkuban Perahu & Kawah Putih (Bandung)', 'Monas, Ancol & Dufan (Jakarta)', 'Puncak Bogor & Dusun Bambu']
+      reviews: 175,
+      spots: ['Gunung Tangkuban Perahu', 'Kawah Putih Ciwidey', 'Dusun Bambu & Farmhouse Lembang', 'Jalan Riau & Cihampelas Shopping District']
+    },
+    {
+      id: 'jakarta',
+      categoryKey: 'out_sumbar',
+      categoryName: 'Out Sumatera Barat',
+      title: 'Jakarta',
+      subtitle: 'Metropolis Capital & Theme Park (DKI Jakarta)',
+      badge: 'Metropolitan Tour',
+      image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800',
+      rating: 4.8,
+      reviews: 160,
+      spots: ['Monumen Nasional (Monas) & Kota Tua', 'Taman Impian Jaya Ancol & Dufan', 'Taman Mini Indonesia Indah (TMII)', 'Grand Indonesia & Senayan City']
     },
 
     // 3. INTERNASIONAL (MANCANEGARA)
