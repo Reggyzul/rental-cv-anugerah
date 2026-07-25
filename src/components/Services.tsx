@@ -233,7 +233,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
       title: 'Jogja',
       subtitle: 'Kota Budaya, Istimewa & Kuliner (DIY)',
       badge: 'Kota Budaya',
-      image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800',
+      image: '/dest_jogja.jpg',
       rating: 5.0,
       reviews: 205,
       spots: ['Jalan Malioboro & Keraton Yogyakarta', 'Candi Borobudur & Candi Prambanan', 'Jeep Lava Tour Gunung Merapi', 'Pantai Parangtritis & HeHa Sky View']
@@ -245,7 +245,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
       title: 'Bandung',
       subtitle: 'Kota Kembang, Pegunungan & Belanja (Jawa Barat)',
       badge: 'Kota Kembang',
-      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800',
+      image: '/dest_bandung.jpg',
       rating: 4.9,
       reviews: 175,
       spots: ['Gunung Tangkuban Perahu', 'Kawah Putih Ciwidey', 'Dusun Bambu & Farmhouse Lembang', 'Jalan Riau & Cihampelas Shopping District']
@@ -257,7 +257,7 @@ export default function Services({ lang, onViewAllDestinations }: ServicesProps)
       title: 'Jakarta',
       subtitle: 'Metropolis Capital & Theme Park (DKI Jakarta)',
       badge: 'Metropolitan Tour',
-      image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800',
+      image: '/dest_jakarta.jpg',
       rating: 4.8,
       reviews: 160,
       spots: ['Monumen Nasional (Monas) & Kota Tua', 'Taman Impian Jaya Ancol & Dufan', 'Taman Mini Indonesia Indah (TMII)', 'Grand Indonesia & Senayan City']
