@@ -107,6 +107,24 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
     },
     {
       id: 11,
+      category: 'gathering',
+      title: 'Tour Jeep Offroad Gunung Bromo & Pasir Berbisik',
+      subtitle: 'Petualangan Seru Peserta Rombongan CV. Anugrah Pariwisata di Bromo',
+      location: 'Kawasan Wisata Gunung Bromo, Jawa Timur',
+      image: '/gallery_bromo.jpg',
+      badge: 'Bromo Offroad'
+    },
+    {
+      id: 12,
+      category: 'gathering',
+      title: 'Tour Silaturahmi Jam Gadang Bukittinggi',
+      subtitle: 'Keluarga Besar Bagindo bersama Team CV. Anugrah Pariwisata',
+      location: 'Taman Jam Gadang, Bukittinggi, Sumatera Barat',
+      image: '/gallery_jam_gadang.jpg',
+      badge: 'Jam Gadang Bukittinggi'
+    },
+    {
+      id: 13,
       category: 'armada',
       title: 'Big Bus Eksekutif Zivanes Legrest',
       subtitle: 'Jetbus 3+ Voyager Full AC, Toilet & Sound Karaoke',
@@ -115,7 +133,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: 'Big Bus Zivanes'
     },
     {
-      id: 12,
+      id: 14,
       category: 'armada',
       title: 'Big Bus Pariwisata Nyaman Holiday',
       subtitle: 'Fasilitas Komplit & Kursi Nyaman Reclining',
@@ -124,7 +142,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: 'Nyaman Holiday'
     },
     {
-      id: 13,
+      id: 15,
       category: 'armada',
       title: 'Big Bus Luxury Miyor Holiday',
       subtitle: 'Jetbus 5 Mercedes-Benz Eksekutif Legrest',
@@ -133,7 +151,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: 'Miyor Holiday'
     },
     {
-      id: 14,
+      id: 16,
       category: 'armada',
       title: 'Big Bus Eksekutif KYM Trans',
       subtitle: 'Jetbus 5 Pariwisata Terawat & Tangguh',
@@ -142,7 +160,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: 'KYM Trans'
     },
     {
-      id: 15,
+      id: 17,
       category: 'armada',
       title: 'Skylander R22 Sutan Raya Bus',
       subtitle: 'Pilihan Mewah Rute Sumatera & Jawa',
@@ -151,7 +169,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: 'Sutan Raya'
     },
     {
-      id: 16,
+      id: 18,
       category: 'armada',
       title: 'Medium Bus Wulyudza Tourista',
       subtitle: 'Armada Lincah & Ekonomis Rute Sumatera Barat',
@@ -160,7 +178,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
       badge: 'Wulyudza Tourista'
     },
     {
-      id: 17,
+      id: 19,
       category: 'armada',
       title: 'Toyota Alphard HEV & Hiace Premio VIP',
       subtitle: 'Layanan VIP Transfer & Tour Minibus Eksekutif',
@@ -226,7 +244,7 @@ export default function GalleryPage({ lang, onNavigateHome }: GalleryPageProps) 
           </h2>
           <div className="w-20 h-1 bg-[#f94a29] mx-auto rounded-full" />
           <p className="font-sans text-slate-600 text-xs sm:text-sm leading-relaxed font-medium">
-            Momen kebersamaan peserta rombongan tour silaturahmi CV. Anugrah Pariwisata di berbagai destinasi favorit domestik & mancanegara (Sabang, Danau Toba, Jakarta, Jogja, Lombok, Malaysia, Thailand) serta keandalan armada terawat.
+            Momen kebersamaan peserta rombongan tour silaturahmi CV. Anugrah Pariwisata di berbagai destinasi favorit domestik & mancanegara (Sabang, Danau Toba, Bromo, Jam Gadang, Jakarta, Jogja, Lombok, Malaysia, Thailand) serta keandalan armada terawat.
           </p>
         </div>
 
