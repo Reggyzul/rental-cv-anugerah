@@ -134,13 +134,6 @@ export default function Header({
                 Contact Us
               </button>
 
-              <button
-                onClick={onBookingClick}
-                className="text-orange-600 hover:text-orange-700 font-bold transition-colors cursor-pointer py-1"
-              >
-                Sign In
-              </button>
-
               {/* BOOK A TOUR CORAL BUTTON */}
               <button
                 onClick={onBookingClick}
