@@ -18,15 +18,15 @@ export default function TransportRentPage({ onSelectCar, lang, onNavigateHome }:
   const categories = [
     { id: 'all', label: 'Semua Armada' },
     { id: 'cat1', label: 'Big Bus Eksekutif/Legrest & Bus Medium' },
-    { id: 'cat2', label: 'Mobil Hiace Rental' },
-    { id: 'cat3', label: 'Mobil Mini Bus Rental' }
+    { id: 'cat2', label: 'Hiace' },
+    { id: 'cat3', label: 'Mini Bus' }
   ];
 
   const filteredCars = CARS.filter(car => {
     if (filterCategory === 'all') return true;
     if (filterCategory === 'cat1') return car.category.includes('Big Bus');
-    if (filterCategory === 'cat2') return car.category.includes('Hiace');
-    if (filterCategory === 'cat3') return car.category.includes('Mini Bus');
+    if (filterCategory === 'cat2') return car.category === 'Hiace';
+    if (filterCategory === 'cat3') return car.category === 'Mini Bus';
     return true;
   });
 

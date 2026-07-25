@@ -123,11 +123,11 @@ export const CARS: Car[] = [
     ]
   },
 
-  // MOBIL HIACE RENTAL
+  // MOBIL HIACE RENTAL -> HIACE
   {
     id: 'hiace-premio',
     name: 'Toyota Hiace Premio (VIP Minibus)',
-    category: 'Mobil Hiace Rental',
+    category: 'Hiace',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Terbaik',
     image: '/hiace_premio.png',
@@ -147,7 +147,7 @@ export const CARS: Car[] = [
   {
     id: 'hiace-commuter',
     name: 'Toyota Hiace Commuter',
-    category: 'Mobil Hiace Rental',
+    category: 'Hiace',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Terbaik',
     image: '/hiace.avif',
@@ -165,11 +165,11 @@ export const CARS: Car[] = [
     ]
   },
 
-  // MOBIL MINI BUS RENTAL
+  // MOBIL MINI BUS RENTAL -> MINI BUS
   {
     id: 'innova-reborn',
     name: 'Innova (Innova Reborn / Zenix)',
-    category: 'Mobil Mini Bus Rental',
+    category: 'Mini Bus',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Terbaik',
     image: '/innova3.avif',
@@ -189,7 +189,7 @@ export const CARS: Car[] = [
   {
     id: 'avanza',
     name: 'Avanza (All New Avanza)',
-    category: 'Mobil Mini Bus Rental',
+    category: 'Mini Bus',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Ekonomis',
     image: '/avanza.avif',
@@ -209,7 +209,7 @@ export const CARS: Car[] = [
   {
     id: 'xenia',
     name: 'Xenia (Daihatsu Xenia)',
-    category: 'Mobil Mini Bus Rental',
+    category: 'Mini Bus',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Ekonomis',
     image: '/xenia.avif',
@@ -229,7 +229,7 @@ export const CARS: Car[] = [
   {
     id: 'calya',
     name: 'Calya (Toyota Calya)',
-    category: 'Mobil Mini Bus Rental',
+    category: 'Mini Bus',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Ekonomis',
     image: '/calya.avif',
@@ -249,7 +249,7 @@ export const CARS: Car[] = [
   {
     id: 'sigra',
     name: 'Sigra (Daihatsu Sigra)',
-    category: 'Mobil Mini Bus Rental',
+    category: 'Mini Bus',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran Ekonomis',
     image: '/sigra.avif',
@@ -269,7 +269,7 @@ export const CARS: Car[] = [
   {
     id: 'alphard',
     name: 'Alphard (Toyota Alphard VIP)',
-    category: 'Mobil Mini Bus Rental',
+    category: 'Mini Bus',
     pricePerDay: 0,
     priceDisplay: 'Hubungi untuk Penawaran VIP',
     image: '/alphard.jpg',
